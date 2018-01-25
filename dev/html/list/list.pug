@@ -1,0 +1,139 @@
+include ../base
+    block head
+        title Москва За Калужской заставой
+    block content
+        .wrap
+            include ../components/header/header
+            .container
+                .col__left
+                    .row
+                        .labels
+                            span.label Фото
+                            span.label Видео
+                    .row
+                        span.section__heading Новости
+                    .row
+                        section.news__preview
+                            .news__preview-img
+                                img()
+                            .news__preview-text
+                                h1.section__title Lorem ipsum dolor sit amet
+                                p.section__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab assumenda cupiditate debitis distinctio error esse facere fuga fugiat id illo in libero nostrum obcaecati officia placeat, qui rem totam vel.
+                            .news__preview-row
+                                .labels
+                                    span.label Фото
+                                    span.label Видео
+                        section.news__preview
+                            .news__preview-img
+                                img()
+                            .news__preview-text
+                                h1.section__title Lorem ipsum dolor sit amet
+                                p.section__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab assumenda cupiditate debitis distinctio error esse facere fuga fugiat id illo in libero nostrum obcaecati officia placeat, qui rem totam vel.
+                            .news__preview-row
+                                .labels
+                                    span.label Фото
+                                    span.label Видео
+                    .row
+                        ul.pagination__list
+                            li.pagination__item
+                                a.pagination__link.pagination__nav--end(href='#')
+                                    i.icon-pagination__nav-left
+                            li.pagination__item
+                                a.pagination__link.pagination__link--activ(href='#') 1
+                            li.pagination__item
+                                a.pagination__link(href='#') 2
+                            li.pagination__item
+                                a.pagination__link(href='#') 3
+                            li.pagination__item
+                                a.pagination__link(href='#') 4
+                            li.pagination__item
+                                a.pagination__link(href='#') 5
+                            li.pagination__item
+                                a.pagination__link(href='#') 6
+                            li.pagination__item
+                                a.pagination__link(href='#') 7
+                            li.pagination__item
+                                a.pagination__link(href='#')
+                                    i.icon-pagination__nav-right
+                    .col__right
+                        section.news__section
+                            a.section__heading(href='#') Новости
+                        .news
+                            .section__img
+                                img()
+                            time.publication__date(datetime="17.02.2018") 17 Февраля 2018
+                            h2.section__title Культ личности означает аутотренинг
+                            p.section__description Воспитание вызывает экзистенциальный доиндустриальный тип политической культуры. Психоз практически начинает классический феномен толпы. Политическая культура неоднозначна.
+                        .news
+                            .section__img
+                                img()
+                            time.publication__date(datetime="17.02.2018") 17 Февраля 2018
+                            h2.section__title Культ личности означает аутотренинг
+                            p.section__description Воспитание вызывает экзистенциальный доиндустриальный тип политической культуры. Психоз практически начинает классический феномен толпы. Политическая культура неоднозначна.
+                        .news
+                            .section__img
+                                img()
+                            time.publication__date(datetime="17.02.2018") 17 Февраля 2018
+                            h2.section__title Культ личности означает аутотренинг
+                            p.section__description Воспитание вызывает экзистенциальный доиндустриальный тип политической культуры. Психоз практически начинает классический феномен толпы. Политическая культура неоднозначна.
+                    .row
+                        section.news__section
+                            a.section__heading(href='#') Анонсы
+                        .news
+                            .section__img
+                                img()
+                            time.publication__date(datetime="17.02.2018") 17 Февраля 2018
+                            h2.section__title Культ личности означает аутотренинг
+                        .news
+                            .section__img
+                                img()
+                            time.publication__date(datetime="17.02.2018") 17 Февраля 2018
+                            h2.section__title Культ личности означает аутотренинг
+                        .news
+                            .section__img
+                                img()
+                            time.publication__date(datetime="17.02.2018") 17 Февраля 2018
+                            h2.section__title Культ личности означает аутотренинг
+                .col__right
+                    section.affiche
+                    .row
+                        section.gallery
+                            a.section__heading Галерея
+                            .gallery__img
+                                img()
+                    .row
+                        section.blog
+                            a.section__heading Колумнистика
+                            .blog__preview
+                                .blog__img
+                                    img()
+                                p.user__name Кристина Иванова
+                                h2.blog__title Феномен толпы
+                            .blog__preview
+                                .blog__img
+                                    img()
+                                p.user__name Кристина Иванова
+                                h2.blog__title Феномен толпы
+                            .blog__preview
+                                .blog__img
+                                    img()
+                                p.user__name Кристина Иванова
+                                h2.blog__title Феномен толпы
+                    .row
+                        section.banners
+                            .banners__img
+                                img()
+                            .banners__img
+                                img()
+                            .banners__img
+                                img()
+                        section.interview
+                            a.section__heading Интервью
+                                .interview__img
+                                    img()
+                        section.quiz
+                            a.section__heading Опрос
+                            span.question Какую соцсеть вы предпочитаете?
+                            span.ansver.ansver__activ да
+                            span.ansver нет
+                include ../components/footer/footer

@@ -1,0 +1,29 @@
+//colors
+$dark__violet: #6c3751;
+$red: #d80000;
+$yellow: #ffc600;
+$black: #000;
+$White : #fff;
+
+// resolutions
+$lg__desktops: 1200px;
+$desktops: 927px;
+$tablets: 767px;
+$phones: 480px;
+$sm__phones: 320px;
+
+//config
+@import "config/fn";
+@import "config/mixin";
+@import "config/tag_reset";
+@import "config/base";
+
+//components
+@import "../components/header/header";
+@import "../components/footer/footer";
+
+//layout
+@import "../home/home";
+@import "../article/article";
+@import "../list/list";
+@import "../gallery/gallety";
