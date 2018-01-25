@@ -45,11 +45,12 @@ function html() {
     return gulp.src(paths.dev + 'html/*/*.pug')
         .pipe(pug({pretty: true}))                  //pretty: true убирает что бы index был читаймым
         // .pipe(rename({ basename: "index" }))
+        .pipe(rename({dirname: ""}))
         .pipe(gulp.dest(paths.build))
 }
 
 function style() {
-    return gulp.src(paths.dev + 'sass/main.scss')
+    return gulp.src(paths.dev + 'scss/main.scss')
         .pipe(sourcemaps.init())
         .pipe(sassGlob())
         .pipe(sass())
@@ -92,21 +93,14 @@ function img() {
 
 //fonts
 function minifyFont(text, cb) {
-    gulp
-        .src('./soucre/fonts/**/*')
-        .pipe(fontmin({
-            text: text
-        }))
-        .pipe(gulp.dest('./build/fonts'))
+    gulp.src(paths.src + 'fonts/*')
+        .pipe(fontmin({text: text}))
+        .pipe(gulp.dest(paths.build + 'fonts'))
         .on('end', cb);
 }
-
 gulp.task('fonts', function (cb) {
-
     var buffers = [];
-
-    gulp
-        .src('./build/index.html')
+    gulp.src('./build/home.html')
         .on('data', function (file) {
             buffers.push(file.contents);
         })
@@ -114,7 +108,6 @@ gulp.task('fonts', function (cb) {
             var text = Buffer.concat(buffers).toString('utf-8');
             minifyFont(text, cb);
         });
-
 });
 
 //svg
@@ -160,7 +153,6 @@ exports.html = html;
 exports.style = style;
 exports.script = script;
 exports.img = img;
-exports.fonts = minifyFont;
 exports.svg = svg;
 exports.remov = remov;
 exports.watch = watch;

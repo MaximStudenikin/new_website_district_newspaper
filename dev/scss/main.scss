@@ -19,11 +19,11 @@ $sm__phones: 320px;
 @import "config/base";
 
 //components
-@import "../components/header/header";
-@import "../components/footer/footer";
+@import "../html/components/header/header";
+@import "../html/components/footer/footer";
 
 //layout
-@import "../home/home";
-@import "../article/article";
-@import "../list/list";
-@import "../gallery/gallety";
+@import "../html/home/home";
+@import "../html/article/article";
+@import "../html/list/list";
+@import "../html/gallery/gallety";
