@@ -3,7 +3,7 @@ $dark__violet: #6c3751;
 $red: #d80000;
 $yellow: #ffc600;
 $black: #000;
-$White : #fff;
+$white : #fff;
 
 // resolutions
 $lg__desktops: 1200px;
@@ -13,10 +13,12 @@ $phones: 480px;
 $sm__phones: 320px;
 
 //config
-@import "config/fn";
-@import "config/mixin";
+@import "config/fonst";
 @import "config/tag_reset";
 @import "config/base";
+@import "config/adjustment";
+@import "config/fn";
+@import "config/mixin";
 
 //components
 @import "../html/components/header/header";

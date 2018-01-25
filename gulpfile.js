@@ -57,7 +57,7 @@ function style() {
         .pipe(groupMediaCSSQueries())
         .pipe(cleanCSS())
         .pipe(autoPref({
-            browsers: ['last 15 versions'],
+            browsers: ['last 2 versions'],
             cascade: false
         }))
         .pipe(rename({suffix: '.min'}))
@@ -75,7 +75,7 @@ function script() {
 
 //img
 function img() {
-    return gulp.src(paths.src + 'img/*')
+    return gulp.src(paths.src + 'img/**/*.{jpg,png}')
         .pipe(image({
             pngquant: true,
             optipng: false,
@@ -126,8 +126,8 @@ function remov() {
 
 //watch
 function watch() {
-    gulp.watch(paths.dev + 'html/*.pug', html);
-    gulp.watch(paths.dev + 'sass/*.scss', style);
+    gulp.watch(paths.dev + 'html/**/*.pug', html);
+    gulp.watch(paths.dev + '/**/*.scss', style);
     gulp.watch(paths.dev + 'js/*.js', script);
 }
 
@@ -166,6 +166,6 @@ gulp.task('build', gulp.series(
 
 gulp.task('default', gulp.series(
     remov,
-    gulp.parallel(style, script, html),
+    gulp.parallel(style, script, html,img),
     gulp.parallel(watch, serve)
 ));

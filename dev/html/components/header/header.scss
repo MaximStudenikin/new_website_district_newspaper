@@ -1,0 +1,42 @@
+.header{
+  width: 100%;
+  height: 100px;
+  background: $dark__violet;
+  &__container{
+    width: 95%;
+    min-width: 320px;
+    display: flex;
+    align-content: center;
+    padding: rem(40px) 0;
+  }
+}
+
+.logo{
+  width: 200px;
+  padding: 0 rem(40px) 0 0;
+  &__img{
+    display: block;
+    width: 100%;
+  }
+}
+
+.nav{
+  &__list{
+    display: flex;
+  }
+  &__item{
+    &:after{
+      content:'|';
+      color: $white;
+      padding: 0 15px;
+    }
+  }
+  &__link{
+    color: $white;
+  }
+}
+
+.nav__item:last-child:after{
+  content: none;
+  display: none;
+}
