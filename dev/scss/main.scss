@@ -13,12 +13,12 @@ $phones: 480px;
 $sm__phones: 320px;
 
 //config
+@import "config/fn";
+@import "config/mixin";
 @import "config/fonst";
 @import "config/tag_reset";
 @import "config/base";
 @import "config/adjustment";
-@import "config/fn";
-@import "config/mixin";
 
 //components
 @import "../html/components/header/header";

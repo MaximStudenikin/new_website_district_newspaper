@@ -1,0 +1,60 @@
+.footer{
+  display: flex;
+  background: $dark__violet;
+
+  &__container{
+    display: flex;
+    padding: rem(15px) 0;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    width: 95%;
+    max-width: 1200px;
+    min-width: 320px;
+  }
+
+  &__col{
+    width: 33%;
+    padding: 0 3% 0 0;
+    &:last-child{
+      padding: 0;
+    }
+  }
+
+  &__nav{
+    display: flex;
+  }
+
+  &__heading{
+    font-size: rem(16px);
+    color: $yellow;
+  }
+
+  &__text{
+    font-size: rem(10px);
+    p{
+      margin: rem(15px) 0 0 0;
+    }
+  }
+  &__text-white{
+    color: $white;
+  }
+  &__text-yellow{
+    color: $yellow;
+  }
+  &__text-red{
+    color: $red;
+  }
+
+  &__nav-item{
+    margin: rem(15px) 0 0 0;
+  }
+
+  &__nav-link{
+    color: $white;
+    font-size: rem(10px);
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+}

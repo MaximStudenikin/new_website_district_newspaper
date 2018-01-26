@@ -1,0 +1,51 @@
+.slider{
+  position: relative;
+  width: 800px;
+  height: 380px;
+  
+  &__img{
+    display: flex;
+    max-width: 800px;
+    height: 380px;
+    overflow: hidden;
+    align-items: center;
+    &:after{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: $black;
+      opacity: .5;
+    }
+  }
+
+  &__text{
+    position: absolute;
+    display: flex;
+    top: 20px;
+    color: $white;
+    flex-direction: column;
+    padding: 0 4%;
+  }
+
+  &__row{
+    margin:rem(75px) 0 0 0;
+  }
+
+}
+
+.labels{
+  display: flex;
+}
+
+.label{
+  color: $black;
+  padding: rem(10px);
+  margin: 0 rem(10px) 0 0;
+  background: $yellow;
+  &:last-child{
+    margin: 0;
+  }
+}

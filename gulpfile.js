@@ -56,10 +56,10 @@ function style() {
         .pipe(sass())
         .pipe(groupMediaCSSQueries())
         .pipe(cleanCSS())
-        .pipe(autoPref({
-            browsers: ['last 2 versions'],
-            cascade: false
-        }))
+        // .pipe(autoPref({
+        //     browsers: ['last 2 versions'],
+        //     cascade: false
+        // }))
         .pipe(rename({suffix: '.min'}))
         .pipe(sourcemaps.write('/'))
         .pipe(gulp.dest(paths.build + 'css/'))
@@ -100,7 +100,7 @@ function minifyFont(text, cb) {
 }
 gulp.task('fonts', function (cb) {
     var buffers = [];
-    gulp.src('./build/home.html')
+    gulp.src('./build/index.html')
         .on('data', function (file) {
             buffers.push(file.contents);
         })

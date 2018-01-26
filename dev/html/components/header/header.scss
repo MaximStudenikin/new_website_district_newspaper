@@ -1,38 +1,66 @@
 .header{
+  display: flex;
   width: 100%;
   height: 100px;
   background: $dark__violet;
+
   &__container{
-    width: 95%;
-    min-width: 320px;
+    padding: 15px 0;
     display: flex;
-    align-content: center;
-    padding: rem(40px) 0;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: auto;
+    width: 95%;
+    max-width: 1200px;
+    min-width: 320px;
   }
+
+  &__top,&__bottom{
+    display: flex;
+    height: 50%;
+  }
+
+  &__bottom{
+    justify-content: flex-end;
+  }
+
 }
 
 .logo{
-  width: 200px;
+  width: 300px;
   padding: 0 rem(40px) 0 0;
+
   &__img{
     display: block;
     width: 100%;
   }
+
 }
 
 .nav{
+
   &__list{
     display: flex;
+    white-space: nowrap;
   }
+
   &__item{
+    height: 25px;
+
     &:after{
       content:'|';
       color: $white;
       padding: 0 15px;
     }
+
   }
   &__link{
     color: $white;
+
+    &:hover{
+      color: $yellow;
+    }
+
   }
 }
 
