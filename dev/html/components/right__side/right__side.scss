@@ -1,0 +1,85 @@
+.gallery{
+  position: relative;
+  &__title{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-transform: uppercase;
+    color: $white;
+    background: rgba( 255, 198, 0, 0 );
+    font:{
+      family: $noto__sans-bold;
+      size: rem(26px);
+    }
+    &:hover{
+      color: $black;
+      background: rgba( 255, 198, 0, .8 );
+    }
+  }
+}
+
+.blog{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  &__preview{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+
+    &:after{
+      content: '';
+      margin: rem(15px) 0 0 0;
+      width: 100%;
+      height: 2px;
+      background: $black;
+      opacity: .2;
+    }
+  }
+}
+
+.user__img{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.interview{
+  &__preview{
+    position: relative;
+    width: 280px;
+    height: 400px;
+    overflow: hidden;
+  }
+  &__link{
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  &__name{
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    font:{
+      family: $noto__sans-bold;
+      size: 20px;
+    }
+    color: $white;
+    text-transform: uppercase;
+    z-index: 2;
+  }
+  &__img{
+    width: 100%;
+    &:hover{
+      filter: brightness(120%);
+    }
+  }
+}

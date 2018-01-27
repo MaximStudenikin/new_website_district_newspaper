@@ -1,27 +1,33 @@
 section.affiche
 .row
     section.gallery
-        a.section__heading Галерея
+        a.gallery__title(href='gallery.html') Галерея
         .gallery__img
             img(src='./img/_img_09_min.jpg')
 .row
     section.blog
-        a.section__heading Колумнистика
-        .blog__preview
-            .blog__img
-                img(src='./img/_img_01_min.jpg')
-            p.user__name Кристина Иванова
-            h2.blog__title Феномен толпы
-        .blog__preview
-            .blog__img
-                img(src='./img/_img_03_min.jpg')
-            p.user__name Кристина Иванова
-            h2.blog__title Феномен толпы
-        .blog__preview
-            .blog__img
-                img(src='./img/_img_10_min.jpg')
-            p.user__name Кристина Иванова
-            h2.blog__title Феномен толпы
+        a.section__heading.text__center(href='list.html') Колумнистика
+        .row
+            .blog__preview
+                img.user__img(src='./img/_img_01_min.jpg')
+                .section__row
+                    p.user__name Кристина Иванова
+                .section__row
+                    a.section__title(href='article.html') Феномен толпы
+        .row
+            .blog__preview
+                 img.user__img(src='./img/_img_03_min.jpg')
+                 .section__row
+                     p.user__name Кристина Иванова
+                 .section__row
+                     a.section__title(href='article.html') Феномен толпы
+        .row
+            .blog__preview
+                img.user__img(src='./img/_img_10_min.jpg')
+                .section__row
+                    p.user__name Кристина Иванова
+                .section__row
+                    a.section__title(href='article.html') Феномен толпы
 .row
     section.banners
         .banners__img
@@ -30,12 +36,11 @@ section.affiche
             img(src='./img/_img_07_min.jpg')
         .banners__img
             img(src='./img/_img_08_min.jpg')
+.row
     section.interview
-        a.section__heading Интервью
-            .interview__img
-                img(src='./img/man_min.jpg')
-    section.quiz
-        a.section__heading Опрос
-        span.question Какую соцсеть вы предпочитаете?
-        span.ansver.ansver__activ да
-        span.ansver нет
+        a.section__heading.text__center(href='list.html') Интервью
+            .section__row
+               a.interview__link(href='article.html')
+                    .interview__preview
+                        span.interview__name Алексей Быстрый
+                        img.interview__img(src='./img/man_min.jpg')

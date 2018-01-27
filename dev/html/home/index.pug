@@ -6,7 +6,7 @@ include ../base
             include ../components/header/header
             .container
                 .col__left
-                    .slider
+                    section.slider
                         .slider__img
                             img(src='./img/_img_05_min.jpg',alt='alt')
                         .slider__text
@@ -14,7 +14,8 @@ include ../base
                                 span.label Фото
                                 span.label Видео
                             .slider__row
-                                time.publication__date(datetime="17.02.2018") 17 Февраля 2018
+                                    time.publication__date(datetime="17.02.2018") 17 Февраля 2018
+                            a.slider__link(href='article.html')
                                 h1 Экспериментальный феномен толпы
                                 p Воспитание вызывает экзистенциальный доиндустриальный тип политической культуры. Психоз практически начинает классический феномен толпы. Политическая культура неоднозначна. Воспитание вызывает экзистенциальный доиндустриальный тип политической культуры.
                         .slider__controls
