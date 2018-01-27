@@ -27,31 +27,3 @@
     width: 25%;
   }
 }
-
-.news__section{
-  display: flex;
-  flex-direction: column;
-}
-
-.section__heading{
- font:{
-   family: $noto__sans-bold;
-   size: rem(26px);
- }
-  text-transform: uppercase;
-}
-
-.news{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  margin: rem(45px) 0 0 0;
-  &__col{
-    width: 35%;
-    padding: 0 rem(25px) 0 0;
-  }
-}
-
-.section__img{
-  width: 254px;
-}
