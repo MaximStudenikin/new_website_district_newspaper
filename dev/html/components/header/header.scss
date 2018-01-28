@@ -7,28 +7,27 @@
   &__container{
     padding: 15px 0;
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     margin: auto;
     width: 95%;
     max-width: 1200px;
     min-width: 320px;
   }
+}
 
-  &__top,&__bottom{
-    display: flex;
-    height: 50%;
-  }
-
-  &__bottom{
-    justify-content: flex-end;
-  }
-
+.header__left{
+  position: relative;
+  width: 20%;
+  display: flex;
+  right: 16px;
+}
+.header__right{
+  width: 80%;
 }
 
 .logo{
-  width: 300px;
-  padding: 0 rem(40px) 0 0;
+  width: 185px;
+  height: 50px;
 
   &__img{
     display: block;
@@ -50,7 +49,7 @@
     &:after{
       content:'|';
       color: $white;
-      padding: 0 15px;
+      padding: 0 5px;
     }
 
   }
