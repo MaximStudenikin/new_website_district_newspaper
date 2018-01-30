@@ -7,37 +7,81 @@ include ../base
             .container
                 .row
                     section.gallery__photo
-                        span.section__title Фото
-                        .gallery__slider
-                            .gallery__slider-cell
-                                .gallery__slider-img
-                                    img()
-                                h5.section__description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!
-                            .gallery__slider-cell
-                                .gallery__slider-img
-                                    img()
-                                h5.section__description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!
-                            .gallery__slider-cell
-                                .gallery__slider-img
-                                    img()
-                                h5.section__description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!
-                            .row
+                        span.section__heading Фото
+                        .row
+                            .gallery__slider
                                 .gallery__slider-cell
-                                    .gallery__slider-img
-                                        img()
-                                    h5.section__description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!
+                                    a.gallery__link(data-fancybox data-type="ajax" data-src="gallery__photo.html")
+                                        img.gallery__slider-img(src='https://source.unsplash.com/user/nikolayv/1200x900',alt='alt')
+                                    .section__row
+                                        h5.section__description.gallery__description-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!
                                 .gallery__slider-cell
-                                    .gallery__slider-img
-                                        img()
-                                    h5.section__description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!
+                                    a.gallery__link(href='https://source.unsplash.com/random/1200x900', data-fancybox="images")
+                                        img.gallery__slider-img(src='https://source.unsplash.com/user/elijahsad/1200x900',alt='alt')
+                                    .section__row
+                                        h5.section__description.gallery__description-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!
                                 .gallery__slider-cell
-                                    .gallery__slider-img
-                                        img()
-                                    h5.section__description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!
+                                    a.gallery__link(href='https://source.unsplash.com/random/1200x900', data-fancybox="images")
+                                        img.gallery__slider-img(src='https://source.unsplash.com/user/goian/1200x900',alt='alt')
+                                    .section__row
+                                        h5.section__description.gallery__description-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!
+                                .gallery__slider-cell
+                                    a.gallery__link(href='https://source.unsplash.com/random/1200x900', data-fancybox="images")
+                                        img.gallery__slider-img(src='https://source.unsplash.com/user/marcojodoin/1200x900',alt='alt')
+                                    .section__row
+                                        h5.section__description.gallery__description-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!
+                                .gallery__slider-cell
+                                    a.gallery__link(href='https://source.unsplash.com/random/1200x900', data-fancybox="images")
+                                        img.gallery__slider-img(src='https://source.unsplash.com/user/jaycalabresephotography/1200x900',alt='alt')
+                                    .section__row
+                                        h5.section__description.gallery__description-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!
+                                .gallery__slider-cell
+                                    a.gallery__link(href='https://source.unsplash.com/random/1200x900', data-fancybox="images")
+                                        img.gallery__slider-img(src='https://source.unsplash.com/user/alexb/1200x900',alt='alt')
+                                    .section__row
+                                        h5.section__description.gallery__description-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!
+                    .row
+                        .pagination.gallery__pagination
+                            ul.pagination__list.gallery__pagination-list
+                                li.pagination__item
+                                    a.pagination__link.pagination__link--activ(href='#') 1
+                                li.pagination__item
+                                    a.pagination__link(href='#') 2
+                                li.pagination__item
+                                    a.pagination__link(href='#') 3
+                                li.pagination__item
+                                    a.pagination__link(href='#') 4
+                                li.pagination__item
+                                    a.pagination__link(href='#') 5
+                                li.pagination__item
+                                    a.pagination__link(href='#') 6
+                                li.pagination__item
+                                    a.pagination__link(href='#') 7
+                            .pagination__controls.gallery__controls
+                                a.controls__btn.controls__btn__next(href='#')
+                                    i.controls__btn-arrow__right
+                                a.controls__btn.controls__btn__prev(href='#')
+                                    i.controls__btn-arrow__left
                     .row
                         section.gallery__video
-                                span.section__title Видео
-                                .gallery__slider
+                            span.section__heading.text__center Видео
+                            .gallery__slider
+                                .gallery__slider-cell
+                                    .gallery__slider-img
+                                        i.gallery__slider-play__btn
+                                        img()
+                                    h5.section__description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!
+                                .gallery__slider-cell
+                                    .gallery__slider-img
+                                        i.gallery__slider-play__btn
+                                        img()
+                                    h5.section__description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!
+                                .gallery__slider-cell
+                                    .gallery__slider-img
+                                        i.gallery__slider-play__btn
+                                        img()
+                                    h5.section__description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!
+                                .row
                                     .gallery__slider-cell
                                         .gallery__slider-img
                                             i.gallery__slider-play__btn
@@ -53,21 +97,5 @@ include ../base
                                             i.gallery__slider-play__btn
                                             img()
                                         h5.section__description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!
-                                    .row
-                                        .gallery__slider-cell
-                                            .gallery__slider-img
-                                                i.gallery__slider-play__btn
-                                                img()
-                                            h5.section__description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!
-                                        .gallery__slider-cell
-                                            .gallery__slider-img
-                                                i.gallery__slider-play__btn
-                                                img()
-                                            h5.section__description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!
-                                        .gallery__slider-cell
-                                            .gallery__slider-img
-                                                i.gallery__slider-play__btn
-                                                img()
-                                            h5.section__description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!
 
-                    include ../components/footer/footer
+            include ../components/footer/footer
