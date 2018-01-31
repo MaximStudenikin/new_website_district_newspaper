@@ -1,10 +1,10 @@
-.wrap{
+.wrap {
   position: relative;
   width: 100%;
   overflow: hidden;
 }
 
-.container{
+.container {
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -16,24 +16,35 @@
   padding: 0 0 rem(45px) 0;
 }
 
-.section__description{
+.section__description {
   font-size: rem(16px);
 }
 
-.text__center{
+.text__center {
   display: block;
   text-align: center;
 }
 
-.row{
+.row {
   margin: rem(45px) 0 0 0;
 }
 
-.col{
-  &__left{
+.col {
+  &__left {
     width: 70%;
   }
   &__right {
     width: 25%;
+  }
+}
+
+.hr__end {
+  &:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: $black;
+    opacity: 0.2;
+    margin: rem(60px) 0 0 0;
   }
 }
