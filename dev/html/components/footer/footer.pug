@@ -71,14 +71,17 @@ footer.footer
                             a.footer__nav-link(href="#") Lorem ipsum
         .footer__col
             .footer__app
-                span.footer__heading Мобильное приложение
+                span.footer__heading.text__center Мобильное приложение
                 ul.app__list
                     li.app__item
                         a.app__link(href='#')
                             svg.app__icon
+                                use(xlink:href='./img/svg/svg/symbols.svg' + '#' + 'windows')
                     li.app__item
                         a.app__link(href='#')
                             svg.app__icon
+                                use(xlink:href='./img/svg/svg/symbols.svg' + '#' + 'app-store')
                     li.app__item
                         a.app__link(href='#')
                             svg.app__icon
+                                use(xlink:href='./img/svg/svg/symbols.svg' + '#' + 'play-store')

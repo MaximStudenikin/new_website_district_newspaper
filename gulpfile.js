@@ -112,12 +112,12 @@ gulp.task('fonts', function (cb) {
 
 //svg
 function svg() {
-    return gulp.src('soucre/svg/*.svg')
+    return gulp.src(paths.src + 'svg/*.svg')
         .pipe(svgSprite({
             baseSize: 16,
             mode: "symbols"
         }))
-        .pipe(gulp.dest(paths.build + "img/"))
+        .pipe(gulp.dest(paths.build + "img/svg"))
 }
 
 function remov() {
@@ -144,7 +144,7 @@ function serve() {
             scroll: true
         },
         port: 3000,
-        online: false
+        online: true
     });
     browserSync.watch(paths.build + '**/*.*', browserSync.reload);
 }
