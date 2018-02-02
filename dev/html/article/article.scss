@@ -1,5 +1,6 @@
 .article {
   line-height: 1.2;
+
   &__top {
     display: flex;
     justify-content: space-between;
@@ -10,13 +11,45 @@
   &__social-btn {
     flex-basis: 80%;
   }
-
   //text
   h1 {
     font-size: $noto__sans-bold;
   }
   p {
     margin: rem(15px) 0 0 0;
+  }
+}
+
+//links
+.article__internal-link{
+  color: $dark__violet;
+  font-family: $roboto__bold;
+  padding: 0 rem(10px);
+  &:before{
+    content: '';
+    width: 15px;
+    height: 15px;
+    padding: 0 rem(10px) 0 0;
+    background: url("../img/svg/svg/symbols.svg#link") no-repeat;
+  }
+  &:hover{
+    background-color: $yellow;
+  }
+}
+
+.article__out-link{
+  color: $dark__violet;
+  font-family: $roboto__bold;
+  padding: 0 rem(10px);
+  &:before{
+    content: '';
+    width: 15px;
+    height: 15px;
+    padding: 0 rem(10px) 0 0;
+    background: url("../img/svg/svg/symbols.svg#out-link") no-repeat;
+  }
+  &:hover{
+    background-color: $yellow;
   }
 }
 
