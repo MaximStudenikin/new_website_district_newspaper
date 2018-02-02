@@ -41,6 +41,9 @@
   &-img-prev {
     display: block;
     width: 100%;
+
+  }
+  &-img{
     filter: grayscale(70%);
   }
   &-img-active {

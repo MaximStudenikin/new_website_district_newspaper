@@ -1,0 +1,1 @@
+$(document).ready(function(){$("[data-fancybox]").fancybox({toolbar:!0})});
