@@ -41,7 +41,7 @@
   &-img-prev {
     display: block;
     width: 100%;
-    filter: grayscale(60%);
+    filter: grayscale(70%);
   }
   &-img-active {
     filter: grayscale(0);
@@ -49,7 +49,7 @@
   }
   &-controls {
     position: absolute;
-    top: 45%;
+    top: 40%;
     width: 100%;
     opacity: .4;
     &:hover {
