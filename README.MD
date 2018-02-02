@@ -1,6 +1,6 @@
 Обновленный дизайн сайта газеты "Москва За Калужской заставой"
 (ОАО "Окружная газета Юго-Западного административного округа")
 
-   Демо: https://maximstudenikin.github.io/new_website_district_newspaper/article.html
+   Демо: https://maximstudenikin.github.io/new_website_district_newspaper
 
 Дизайн и верстка: Максим Студеникин
