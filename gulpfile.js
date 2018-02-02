@@ -166,6 +166,7 @@ gulp.task('build', gulp.series(
 
 gulp.task('default', gulp.series(
     remov,
-    gulp.parallel(style, script, html,img),
+    gulp.parallel(style, script, html, svg, img),
+    gulp.series(['fonts']),
     gulp.parallel(watch, serve)
 ));
