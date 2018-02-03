@@ -22,34 +22,41 @@
 
 //links
 .article__internal-link{
-  color: $dark__violet;
+  color: $yellow;
   font-family: $roboto__bold;
   padding: 0 rem(10px);
+  white-space: nowrap;
   &:before{
+    content: '';
+    display: inline-block;
     content: '';
     width: 15px;
     height: 15px;
-    padding: 0 rem(10px) 0 0;
-    background: url("../img/svg/svg/symbols.svg#link") no-repeat;
+    padding: 0 rem(5px) 0 0;
+    background-size: 15px;
+    background: url("../img/link.svg") no-repeat;
   }
   &:hover{
-    background-color: $yellow;
+    text-decoration: underline;
   }
 }
 
 .article__out-link{
-  color: $dark__violet;
+  color: $yellow;
   font-family: $roboto__bold;
   padding: 0 rem(10px);
+  white-space: nowrap;
   &:before{
+    display: inline-block;
     content: '';
     width: 15px;
     height: 15px;
-    padding: 0 rem(10px) 0 0;
-    background: url("../img/svg/svg/symbols.svg#out-link") no-repeat;
+    padding: 0 rem(5px) 0 0;
+    background-size: 15px;
+    background: url(../img/out-link.svg) no-repeat;
   }
   &:hover{
-    background-color: $yellow;
+    text-decoration: underline;
   }
 }
 

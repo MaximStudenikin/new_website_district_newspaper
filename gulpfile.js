@@ -144,7 +144,8 @@ function serve() {
             scroll: true
         },
         port: 3000,
-        online: true
+        browser: "chrome",
+        online: false
     });
     browserSync.watch(paths.build + '**/*.*', browserSync.reload);
 }
