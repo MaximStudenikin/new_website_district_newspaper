@@ -98,3 +98,15 @@
     }
   }
 }
+.delimiter__section{
+  @include tablets{
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+.section__left,.section__right{
+  @include tablets{
+    width: 45%;
+  }
+}

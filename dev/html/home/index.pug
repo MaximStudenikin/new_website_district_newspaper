@@ -5,8 +5,25 @@ include ../base
         .wrap
             include ../components/header/header
             .container
+                section.slider__tablet
+                    .slider__img
+                        img(src='https://source.unsplash.com/user/hellocolor/1200x900',alt='alt')
+                    .slider__text
+                        .labels
+                            span.label Фото
+                            span.label Видео
+                        .slider__row
+                            time.publication__date(datetime="17.02.2018") 17 Февраля 2018
+                        a.slider__link(href='article.html')
+                            h1 Экспериментальный феномен толпы
+                            p Воспитание вызывает экзистенциальный доиндустриальный тип политической культуры. Психоз практически начинает классический феномен толпы. Политическая культура неоднозначна. Воспитание вызывает экзистенциальный доиндустриальный тип политической культуры.
+                    .slider__controls.disabled__item-tablets
+                        a.controls__btn.controls__btn__next(href='#')
+                            i.controls__btn-arrow__right
+                        a.controls__btn.controls__btn__prev(href='#')
+                            i.controls__btn-arrow__left
                 .col__left
-                    section.slider
+                    section.slider.disabled__item-tablets
                         .slider__img
                             img(src='https://source.unsplash.com/user/hellocolor/1200x900',alt='alt')
                         .slider__text
@@ -18,7 +35,7 @@ include ../base
                             a.slider__link(href='article.html')
                                 h1 Экспериментальный феномен толпы
                                 p Воспитание вызывает экзистенциальный доиндустриальный тип политической культуры. Психоз практически начинает классический феномен толпы. Политическая культура неоднозначна. Воспитание вызывает экзистенциальный доиндустриальный тип политической культуры.
-                        .slider__controls
+                        .slider__controls.disabled__item-tablets
                             a.controls__btn.controls__btn__next(href='#')
                                 i.controls__btn-arrow__right
                             a.controls__btn.controls__btn__prev(href='#')
@@ -46,7 +63,7 @@ include ../base
                                         a.section__title(href='article.html') Культ личности означает аутотренинг
                                     .section__row
                                         p.section__description Воспитание вызывает экзистенциальный доиндустриальный тип политической культуры.
-                                .news__col
+                                .news__col.disabled__item-all
                                     .section__img
                                         img(src='https://source.unsplash.com/user/samuelzeller/1200x900',alt='alt')
                                     .section__row
@@ -74,7 +91,7 @@ include ../base
                                         time.publication__date(datetime="17.02.2018") 17 Февраля 2018
                                     .section__row
                                         a.section__title(href='article.html') Культ личности означает аутотренинг
-                                .news__col
+                                .news__col.disabled__item-all
                                     .section__img
                                         img(src='https://source.unsplash.com/user/lucabravo/1200x900',alt='alt')
                                     .section__row
@@ -96,7 +113,7 @@ include ../base
                                         img(src='https://source.unsplash.com/user/alexb/1200x900',alt='alt')
                                     .section__row
                                         a.section__title(href='article.html') Культ личности означает аутотренинг
-                                .news__col
+                                .news__col.disabled__item-all
                                     .section__img
                                         img(src='https://source.unsplash.com/user/marcojodoin/1200x900',alt='alt')
                                     .section__row
@@ -168,7 +185,7 @@ include ../base
                                         .horizontal__slider-img
                                             img(src='https://source.unsplash.com/user/goian/1200x900',alt='alt')
                                     a.horizontal__slider-link(href='http://yandex.ru')
-                                        .horizontal__slider-img
+                                        .horizontal__slider-img.disabled__item-all
                                             img(src='https://source.unsplash.com/user/elijahsad/1200x900',alt='alt')
                                 .horizontal__slider-controls
                                     a.controls__btn.controls__btn__next(href='#')

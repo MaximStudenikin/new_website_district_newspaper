@@ -23,6 +23,29 @@ img{
   width: 100%;
 }
 
+
+.disabled__item-all{
+  @include desktop{
+    display: none;
+  }
+  @include tablets{
+    display: none;
+  }
+}
+
+
+.disabled__item-desktop{
+  @include desktop{
+    display: none;
+  }
+}
+
+.disabled__item-tablets{
+  @include tablets{
+    display: none;
+  }
+}
+
 .visuallyhidden:not(:focus):not(:active) {
   position: absolute;
   width: 1px;

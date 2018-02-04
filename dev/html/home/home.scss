@@ -1,4 +1,5 @@
-.slider {
+.slider,
+.slider__tablet {
   position: relative;
   width: 100%;
   height: 380px;
@@ -42,6 +43,13 @@
     margin: rem(75px) 0 0 0;
   }
 
+}
+
+.slider__tablet{
+  display: none;
+  @include tablets{
+    display: flex;
+  }
 }
 
 .labels {

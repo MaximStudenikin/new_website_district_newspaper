@@ -42,6 +42,9 @@
 
 .header__right {
   width: 80%;
+  @include desktop{
+    display: flex;
+  }
 }
 
 .logo {
@@ -60,15 +63,27 @@
   &__list {
     display: flex;
     white-space: nowrap;
+    @include desktop{
+      width: 100%;
+      flex-wrap: wrap;
+    }
   }
 
   &__item {
     display: flex;
-
+    @include desktop{
+      padding: 0 rem(5px);
+      &:last-child{
+        padding: 0;
+      }
+    }
     &:after {
       content: '|';
       color: $white;
       padding: 0 rem(5px);
+      @include desktop{
+        content: none;
+      }
     }
 
   }

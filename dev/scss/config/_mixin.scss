@@ -1,6 +1,6 @@
 //resolutions
 @mixin large__devices {
-  @media screen and (max-width: $large__devices) {
+  @media screen and (max-width: $lg__desktops) {
     @content;
   }
 }
