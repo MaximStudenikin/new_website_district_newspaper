@@ -22,10 +22,24 @@
     &:last-child{
       padding: 0;
     }
+    @include phones{
+      margin: rem(45px) 0 0 0;
+      width: 100%;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      &:first-child{
+        margin: 0;
+      }
+    }
   }
 
   &__nav{
     display: flex;
+    @include phones{
+      flex-direction: column;
+    }
   }
 
   &__heading{

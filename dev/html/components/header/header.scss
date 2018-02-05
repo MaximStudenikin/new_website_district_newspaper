@@ -51,9 +51,9 @@
   width: 185px;
   height: 50px;
 
-  &__img {
-    display: block;
-    width: 100%;
+  @include phones{
+    width: 80%;
+    height: auto;
   }
 
 }

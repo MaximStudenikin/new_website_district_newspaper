@@ -41,6 +41,16 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  &__content {
+    display: flex;
+    flex-direction: column;
+    @include phones {
+      flex-direction: row;
+      overflow: hidden;
+      width: 100%;
+      justify-content: space-between;
+    }
+  }
   &__preview {
     display: flex;
     justify-content: space-around;
@@ -54,6 +64,15 @@
       height: 2px;
       background: $black;
       opacity: .2;
+      @include phones{
+        content: none;
+      }
+    }
+
+    @include phones{
+      position: relative;
+      right: 0;
+      padding: 0 30%;
     }
   }
 }
@@ -98,21 +117,22 @@
     }
   }
 }
-.delimiter__section{
-  @include tablets{
+
+.delimiter__section {
+  @include tablets {
     display: flex;
     justify-content: space-around;
   }
-  @include phones{
+  @include phones {
     flex-direction: column;
   }
 }
 
-.section__left,.section__right{
-  @include tablets{
+.section__left, .section__right {
+  @include tablets {
     width: 45%;
   }
-  @include phones{
+  @include phones {
     width: 100%;
   }
 }

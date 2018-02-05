@@ -9,27 +9,33 @@
         .row
             section.blog
                 a.section__heading.text__center(href='list.html') Колумнистика
-            .row
-                .blog__preview
-                    img.user__img(src='https://source.unsplash.com/user/michaeldam/200x200')
-                    .section__row
-                        p.user__name Кристина Иванова
-                    .section__row
-                        a.section__title(href='article.html') Феномен толпы
-            .row
-                .blog__preview
-                    img.user__img(src='https://source.unsplash.com/user/chrisjoelcampbell/200x200')
-                    .section__row
-                        p.user__name Кристина Иванова
-                    .section__row
-                        a.section__title(href='article.html') Феномен толпы
-            .row
-                .blog__preview
-                    img.user__img(src='https://source.unsplash.com/user/alexandruz/200x200')
-                    .section__row
-                        p.user__name Кристина Иванова
-                    .section__row
-                        a.section__title(href='article.html') Феномен толпы
+                .blog__content
+                    .blog__preview.row
+                        img.user__img(src='https://source.unsplash.com/user/michaeldam/200x200')
+                        .section__row
+                            p.user__name Кристина Иванова
+                        .section__row
+                            a.section__title(href='article.html') Феномен толпы
+                    .blog__preview.row
+                        img.user__img(src='https://source.unsplash.com/user/chrisjoelcampbell/200x200')
+                        .section__row
+                            p.user__name Кристина Иванова
+                        .section__row
+                            a.section__title(href='article.html') Феномен толпы
+                    .blog__preview.row
+                        img.user__img(src='https://source.unsplash.com/user/alexandruz/200x200')
+                        .section__row
+                            p.user__name Кристина Иванова
+                        .section__row
+                            a.section__title(href='article.html') Феномен толпы
+                .pagination.row
+                    ul.pagination__list
+                        li.pagination__item
+                            a.pagination__link.pagination__link--activ(href='#') 1
+                        li.pagination__item
+                            a.pagination__link(href='#') 2
+                        li.pagination__item
+                            a.pagination__link(href='#') 3
     .section__right
         .row
             section.banners

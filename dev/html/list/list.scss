@@ -21,8 +21,9 @@
 .pagination{
   position: relative;
   display: flex;
-  margin: auto;
   width: 100%;
+  @include phones{
+  }
 
   &__list{
     display: flex;
@@ -33,6 +34,7 @@
       family: $roboto__regular;
       size: rem(26px);
     }
+    justify-content: center;
   }
   &__link{
     color: $black;
