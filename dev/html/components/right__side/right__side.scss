@@ -103,10 +103,16 @@
     display: flex;
     justify-content: space-around;
   }
+  @include phones{
+    flex-direction: column;
+  }
 }
 
 .section__left,.section__right{
   @include tablets{
     width: 45%;
+  }
+  @include phones{
+    width: 100%;
   }
 }

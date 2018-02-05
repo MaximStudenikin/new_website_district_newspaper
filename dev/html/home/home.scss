@@ -1,11 +1,10 @@
-.slider,
-.slider__tablet {
+.slider {
   position: relative;
   width: 100%;
   height: 380px;
   overflow: hidden;
 
-  &__controls{
+  &__controls {
     position: absolute;
     bottom: 50px;
     width: 100%;
@@ -45,10 +44,14 @@
 
 }
 
-.slider__tablet{
+.slider__adaptiv {
   display: none;
-  @include tablets{
+  position: relative;
+  @include tablets {
     display: flex;
+  }
+  @include phones {
+    height: 100%;
   }
 }
 
@@ -175,16 +178,16 @@
 
 }
 
-.controls__btn{
+.controls__btn {
   position: relative;
 }
 
-.controls__btn__next{
+.controls__btn__next {
   position: absolute;
   right: 0;
 }
 
-.controls__btn__prev{
+.controls__btn__prev {
   position: absolute;
 }
 
@@ -214,4 +217,12 @@
   width: 50px;
   height: 50px;
   background: $yellow;
+}
+
+.news__slider{
+  display: none;
+  @include phones{
+    display: flex;
+    flex-direction: column;
+  }
 }

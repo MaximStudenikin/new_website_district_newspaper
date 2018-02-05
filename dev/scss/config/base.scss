@@ -46,6 +46,12 @@ img{
   }
 }
 
+.disabled__item-phones{
+  @include phones{
+    display: none;
+  }
+}
+
 .visuallyhidden:not(:focus):not(:active) {
   position: absolute;
   width: 1px;
