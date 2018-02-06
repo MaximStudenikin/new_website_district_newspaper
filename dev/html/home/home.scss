@@ -93,8 +93,13 @@
 
 .news {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  justify-content: flex-start;
+  overflow: hidden;
+  @include phones {
+    position: relative;
+    width: 100%;
+  }
+
   &__col {
     padding: 0 rem(15px) 0 0;
     display: flex;
@@ -103,12 +108,20 @@
     &:last-child {
       padding: 0;
     }
+
+    @include phones {
+      display: flex;
+      position: relative;
+      right: 0;
+    }
   }
 }
 
 .section__img {
-  max-width: 270px;
-  width: 270px;
+  width: 270%;
+  @include phones {
+    width: 410px;
+  }
 }
 
 .section__title {
@@ -219,9 +232,9 @@
   background: $yellow;
 }
 
-.news__slider{
+.news__slider {
   display: none;
-  @include phones{
+  @include phones {
     display: flex;
     flex-direction: column;
   }
