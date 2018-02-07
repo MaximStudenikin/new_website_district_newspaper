@@ -61,3 +61,33 @@
     margin: rem(60px) 0 0 0;
   }
 }
+
+.disabled__item-all {
+  @include desktop {
+    display: none;
+  }
+  @include tablets {
+    display: none;
+  }
+}
+
+.disabled__item-tablets {
+  @include tablets {
+    display: none;
+  }
+}
+
+.disabled__item-phones {
+  @include phones {
+    display: none;
+  }
+}
+
+.show__blok-phones{
+  @media screen and (max-width: 3200px) {
+    display: none;
+  }
+  @include phones{
+    display: flex;
+  }
+}

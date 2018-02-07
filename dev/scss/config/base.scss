@@ -1,6 +1,6 @@
 html,
 body {
-  width:100%;
+  width: 100%;
   height: 100%;
 }
 
@@ -18,39 +18,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-img{
+img {
   display: block;
   width: 100%;
 }
 
 
-.disabled__item-all{
-  @include desktop{
-    display: none;
-  }
-  @include tablets{
-    display: none;
-  }
-}
-
-
-.disabled__item-desktop{
-  @include desktop{
-    display: none;
-  }
-}
-
-.disabled__item-tablets{
-  @include tablets{
-    display: none;
-  }
-}
-
-.disabled__item-phones{
-  @include phones{
-    display: none;
-  }
-}
 
 .visuallyhidden:not(:focus):not(:active) {
   position: absolute;
