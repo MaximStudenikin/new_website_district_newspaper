@@ -176,9 +176,17 @@ include ../base
                                         .horizontal__slider-img
                                             img(src='https://source.unsplash.com/user/goian/1200x900',alt='alt')
                                     a.horizontal__slider-link(href='http://yandex.ru')
-                                        .horizontal__slider-img.disabled__item-all
+                                        .horizontal__slider-img
                                             img(src='https://source.unsplash.com/user/elijahsad/1200x900',alt='alt')
-                                .horizontal__slider-controls
+                                .pagination.row.show__blok-phones
+                                    ul.pagination__list
+                                        li.pagination__item
+                                            a.pagination__link.pagination__link--activ(href='#') 1
+                                        li.pagination__item
+                                            a.pagination__link(href='#') 2
+                                        li.pagination__item
+                                            a.pagination__link(href='#') 3
+                                .horizontal__slider-controls.disabled__item-phones
                                     a.controls__btn.controls__btn__next(href='#')
                                         i.controls__btn-arrow__right
                                     a.controls__btn.controls__btn__prev(href='#')
