@@ -83,6 +83,40 @@
   }
 }
 
+.show__block-desctop{
+  @media screen and (max-width: 3200px) {
+    display: none;
+  }
+  @include desktop{
+    display: flex;
+  }
+}
+
+.hide__block-lg_desctop{
+  @include large__devices{
+    display: none;
+  }
+}
+
+.hide__block-desktop{
+  display: none;
+  @include desktop{
+    display: none;
+  }
+}
+
+.show__block-desktop{
+  @include desktop{
+    display: flex;
+  }
+}
+
+.hide__block-phones{
+  @include phones{
+    display: none;
+  }
+}
+
 .show__blok-phones{
   @media screen and (max-width: 3200px) {
     display: none;

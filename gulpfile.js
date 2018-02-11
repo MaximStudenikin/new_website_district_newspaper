@@ -1,6 +1,7 @@
 'use strict';
 
 const gulp = require('gulp');
+const plumber = require('gulp-plumber');
 
 //var sass
 const sass = require('gulp-sass');
@@ -36,118 +37,120 @@ const browserSync = require('browser-sync').create();
 
 //paths
 const paths = {
-    build: './build/',       //Готовый продукт
-    dev: './dev/',          //Все наше сокровище
-    src: './source/' //исходники для работы (шрифты, картинки и тд)
+	build: './build/',       //Готовый продукт
+	dev: './dev/',          //Все наше сокровище
+	src: './source/' //исходники для работы (шрифты, картинки и тд)
 };
 
 function html() {
-    return gulp.src(paths.dev + 'html/*/*.pug')
-        .pipe(pug({pretty: true}))                  //pretty: true убирает что бы index был читаймым
-        // .pipe(rename({ basename: "index" }))
-        .pipe(rename({dirname: ""}))
-        .pipe(gulp.dest(paths.build))
+	return gulp.src(paths.dev + 'html/*/*.pug')
+		.pipe(plumber())
+		.pipe(pug({pretty: true}))                  //pretty: true убирает что бы index был читаймым
+		// .pipe(rename({ basename: "index" }))
+		.pipe(rename({dirname: ""}))
+		.pipe(gulp.dest(paths.build))
 }
 
 function style() {
-    return gulp.src(paths.dev + 'scss/main.scss')
-        .pipe(sourcemaps.init())
-        .pipe(sassGlob())
-        .pipe(sass())
-        .pipe(groupMediaCSSQueries())
-        .pipe(cleanCSS())
-        // .pipe(autoPref({
-        //     browsers: ['last 2 versions'],
-        //     cascade: false
-        // }))
-        .pipe(rename({suffix: '.min'}))
-        .pipe(sourcemaps.write('/'))
-        .pipe(gulp.dest(paths.build + 'css/'))
+	return gulp.src(paths.dev + 'scss/main.scss')
+		.pipe(plumber())    
+		.pipe(sourcemaps.init())
+		.pipe(sassGlob())
+		.pipe(sass())
+		.pipe(groupMediaCSSQueries())
+		.pipe(cleanCSS())
+		// .pipe(autoPref({
+		//     browsers: ['last 15 versions'],
+		//     cascade: false
+		// }))
+		.pipe(rename({suffix: '.min'}))
+		.pipe(sourcemaps.write('/'))
+		.pipe(gulp.dest(paths.build + 'css/'))
 }
 
 
 //js
 function script() {
-    return gulp.src(paths.dev + 'js/*.js')
-        .pipe(uglify())
-        .pipe(gulp.dest(paths.build + 'js/'))
+	return gulp.src(paths.dev + 'js/*.js')
+		.pipe(uglify())
+		.pipe(gulp.dest(paths.build + 'js/'))
 }
 
 //img
 function img() {
-    return gulp.src(paths.src + 'img/**/*.{jpg,png}')
-        .pipe(image({
-            pngquant: true,
-            optipng: false,
-            zopflipng: true,
-            jpegRecompress: false,
-            mozjpeg: true,
-            guetzli: false,
-            gifsicle: true,
-            svgo: true,
-            concurrent: 10
-        }))
-        .pipe(rename({suffix: "_min"}))
-        .pipe(gulp.dest(paths.build + 'img/'))
+	return gulp.src(paths.src + 'img/**/*.{jpg,png}')
+		.pipe(image({
+			pngquant: true,
+			optipng: false,
+			zopflipng: true,
+			jpegRecompress: false,
+			mozjpeg: true,
+			guetzli: false,
+			gifsicle: true,
+			svgo: true,
+			concurrent: 10
+		}))
+		.pipe(rename({suffix: "_min"}))
+		.pipe(gulp.dest(paths.build + 'img/'))
 }
 
 //fonts
 function minifyFont(text, cb) {
-    gulp.src(paths.src + 'fonts/*')
-        .pipe(fontmin({text: text}))
-        .pipe(gulp.dest(paths.build + 'fonts'))
-        .on('end', cb);
+	gulp.src(paths.src + 'fonts/*')
+		.pipe(fontmin({text: text}))
+		.pipe(gulp.dest(paths.build + 'fonts'))
+		.on('end', cb);
 }
 gulp.task('fonts', function (cb) {
-    var buffers = [];
-    gulp.src('./build/index.html')
-        .on('data', function (file) {
-            buffers.push(file.contents);
-        })
-        .on('end', function () {
-            var text = Buffer.concat(buffers).toString('utf-8');
-            minifyFont(text, cb);
-        });
+	var buffers = [];
+	gulp.src('./build/index.html')
+		.on('data', function (file) {
+			buffers.push(file.contents);
+		})
+		.on('end', function () {
+			var text = Buffer.concat(buffers).toString('utf-8');
+			minifyFont(text, cb);
+		});
 });
 
 //svg
 function svg() {
-    return gulp.src(paths.src + 'svg/*.svg')
-        .pipe(svgSprite({
-            baseSize: 16,
-            mode: "symbols"
-        }))
-        .pipe(gulp.dest(paths.build + "img/svg"))
+	return gulp.src(paths.src + 'svg/*.svg')
+		.pipe(svgSprite({
+			baseSize: 16,
+			mode: "symbols"
+		}))
+		.pipe(gulp.dest(paths.build + "img/svg"))
 }
 
 function remov() {
-    return del('build/')
+	return del('build/')
 }
 
 //watch
 function watch() {
-    gulp.watch(paths.dev + 'html/**/*.pug', html);
-    gulp.watch(paths.dev + '/**/*.scss', style);
-    gulp.watch(paths.dev + 'js/*.js', script);
+	gulp.watch(paths.dev + 'html/**/*.pug', html);
+	gulp.watch(paths.dev + '/**/*.scss', style);
+	gulp.watch(paths.dev + 'js/*.js', script);
 }
 
 
 function serve() {
 
-    browserSync.init({
-        server: {
-            baseDir: paths.build
-        },
-        ghostMode: {
-            clicks: true,
-            forms: true,
-            scroll: true
-        },
-        port: 3000,
-        browser: "chrome",
-        online: true
-    });
-    browserSync.watch(paths.build + '**/*.*', browserSync.reload);
+	browserSync.init({
+		server: {
+			baseDir: paths.build
+		},
+		ghostMode: {
+			clicks: true,
+			forms: true,
+			scroll: true
+		},
+		port: 3000,
+		browser: "chrome",
+		online: true
+	});
+	browserSync.watch(paths.build + '**/*.*', browserSync.reload);
 }
 
 exports.html = html;
@@ -159,15 +162,15 @@ exports.remov = remov;
 exports.watch = watch;
 
 gulp.task('build', gulp.series(
-    remov,
-    html,
-    style,
-    script
+	remov,
+	html,
+	style,
+	script
 ));
 
 gulp.task('default', gulp.series(
-    remov,
-    gulp.parallel(style, script, html, svg, img),
-    gulp.series(['fonts']),
-    gulp.parallel(watch, serve)
+	remov,
+	gulp.parallel(style, script, html, svg, img),
+	gulp.series(['fonts']),
+	gulp.parallel(watch, serve)
 ));

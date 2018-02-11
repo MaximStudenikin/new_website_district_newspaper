@@ -1,47 +1,75 @@
-.news__preview{
+.news__preview {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  &-img{
-    width: 500px;
+  @include tablets{
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  @include sm__phones{
+    display: block;
+  }
+
+  &-img {
+    width: 70%;
+    height: 100%;
     overflow: hidden;
     padding: 0 rem(15px) 0 0;
+    @include tablets{
+      width: 100%;
+      padding: 0;
+    }
   }
-  &-text{
+
+  &-text {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 100%;
   }
-  &-link{
+
+  &-link {
     color: $black;
+  }
+
+  &-info {
+    display: flex;
+    @include desktop {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+    }
+    @include tablets {
+      flex-direction: row-reverse
+    }
+
   }
 }
 
-.pagination{
+.pagination {
   position: relative;
   display: flex;
   width: 100%;
 
-  &__list{
+  &__list {
     display: flex;
     margin: auto;
     color: $black;
     width: 65%;
-    font:{
+    font: {
       family: $roboto__regular;
       size: rem(26px);
     }
     justify-content: center;
   }
-  &__link{
+  &__link {
     color: $black;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 30px;
     height: 30px;
-    &:hover{
+    &:hover {
       color: $dark__violet;
     }
     &--activ {
@@ -52,13 +80,13 @@
       color: $white;
     }
   }
-  &__item{
+  &__item {
     padding: 0 rem(15px) 0 0;
-    &:last-child{
+    &:last-child {
       padding: 0;
     }
   }
-  &__controls{
+  &__controls {
     position: absolute;
     width: 100%;
     top: -10px;
