@@ -1,128 +1,124 @@
 include ../base
-    block head
-        title Москва За Калужской заставой
-    block content
-        .wrap
-            include ../components/header/header
-            .container
-                .row
-                    section.gallery__photo.hr__end
-                        span.section__heading Фото
-                        .row
-                            .gallery__slider
-                                .gallery__slider-cell
-                                    a.gallery__link(data-fancybox data-type="ajax" data-src="gallery__content.html")
-                                        img.gallery__img-prev(src='https://source.unsplash.com/user/nikolayv/1200x900',alt='alt')
-                                    .section__row
-                                        h5.section__description.gallery__description-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!
-                                .gallery__slider-cell
-                                    a.gallery__link(data-fancybox data-type="ajax" data-src="gallery__content.html")
-                                        img.gallery__img-prev(src='https://source.unsplash.com/user/elijahsad/1200x900',alt='alt')
-                                    .section__row
-                                        h5.section__description.gallery__description-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!
-                                .gallery__slider-cell
-                                    a.gallery__link(data-fancybox data-type="ajax" data-src="gallery__content.html")
-                                        img.gallery__img-prev(src='https://source.unsplash.com/user/goian/1200x900',alt='alt')
-                                    .section__row
-                                        h5.section__description.gallery__description-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!
-                                .gallery__slider-cell
-                                    a.gallery__link(data-fancybox data-type="ajax" data-src="gallery__content.html")
-                                        img.gallery__img-prev(src='https://source.unsplash.com/user/marcojodoin/1200x900',alt='alt')
-                                    .section__row
-                                        h5.section__description.gallery__description-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!
-                                .gallery__slider-cell
-                                    a.gallery__link(data-fancybox data-type="ajax" data-src="gallery__content.html")
-                                        img.gallery__img-prev(src='https://source.unsplash.com/user/jaycalabresephotography/1200x900',alt='alt')
-                                    .section__row
-                                        h5.section__description.gallery__description-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!
-                                .gallery__slider-cell
-                                    a.gallery__link(data-fancybox data-type="ajax" data-src="gallery__content.html")
-                                        img.gallery__img-prev(src='https://source.unsplash.com/user/alexb/1200x900',alt='alt')
-                                    .section__row
-                                        h5.section__description.gallery__description-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!
-                            .row
-                                .pagination.gallery__pagination
-                                    ul.pagination__list.gallery__pagination-list
-                                        li.pagination__item
-                                            a.pagination__link.pagination__link--activ(href='#') 1
-                                        li.pagination__item
-                                            a.pagination__link(href='#') 2
-                                        li.pagination__item
-                                            a.pagination__link(href='#') 3
-                                        li.pagination__item
-                                            a.pagination__link(href='#') 4
-                                        li.pagination__item
-                                            a.pagination__link(href='#') 5
-                                        li.pagination__item
-                                            a.pagination__link(href='#') 6
-                                        li.pagination__item
-                                            a.pagination__link(href='#') 7
-                                    .pagination__controls.gallery__controls
-                                        a.controls__btn.controls__btn__next(href='#')
-                                            i.controls__btn-arrow__right
-                                        a.controls__btn.controls__btn__prev(href='#')
-                                            i.controls__btn-arrow__left
-                    .row
-                        section.gallery__video
-                            span.section__heading Видео
-                            .row
-                                .gallery__slider
-                                    .gallery__slider-cell
-                                        a.gallery__link(data-fancybox data-src="https://youtu.be/Q0XPhwTnLpk")
-                                            .palay__btn
-                                            img.gallery__img-prev(src='//img.youtube.com/vi/Q0XPhwTnLpk/mqdefault.jpg', alt='')
-                                        .section__row
-                                            h5.section__description.gallery__description-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!
-                                    .gallery__slider-cell
-                                        a.gallery__link(data-fancybox data-src="https://www.youtube.com/watch?v=HhwoaN8Yx-8")
-                                            .palay__btn
-                                            img.gallery__img-prev(src='//img.youtube.com/vi/HhwoaN8Yx-8/mqdefault.jpg', alt='')
-                                        .section__row
-                                            h5.section__description.gallery__description-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!
-                                    .gallery__slider-cell
-                                        aa.gallery__link(data-fancybox data-src="https://www.youtube.com/watch?v=dVkK36KOcqs")
-                                            .palay__btn
-                                            img.gallery__img-prev(src='//img.youtube.com/vi/dVkK36KOcqs/mqdefault.jpg', alt='')
-                                        .section__row
-                                            h5.section__description.gallery__description-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!
-                                    .gallery__slider-cell
-                                        a.gallery__link(data-fancybox data-src="https://www.youtube.com/watch?v=rN6nlNC9WQA")
-                                            .palay__btn
-                                            img.gallery__img-prev(src='//img.youtube.com/vi/rN6nlNC9WQA/mqdefault.jpg', alt='')
-                                        .section__row
-                                            h5.section__description.gallery__description-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!
-                                    .gallery__slider-cell
-                                        a.gallery__link(data-fancybox data-src="https://www.youtube.com/watch?v=uzpxrx7NZBA")
-                                            .palay__btn
-                                            img.gallery__img-prev(src='//img.youtube.com/vi/uzpxrx7NZBA/mqdefault.jpg', alt='')
-                                        .section__row
-                                            h5.section__description.gallery__description-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!
-                                    .gallery__slider-cell
-                                        a.gallery__link(data-fancybox data-src="https://www.youtube.com/watch?v=NM2wtte1JRE")
-                                            .palay__btn
-                                            img.gallery__img-prev(src='//img.youtube.com/vi/NM2wtte1JRE/mqdefault.jpg', alt='')
-                                        .section__row
-                                            h5.section__description.gallery__description-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!
-                                .row
-                                    .pagination.gallery__pagination
-                                        ul.pagination__list.gallery__pagination-list
-                                            li.pagination__item
-                                                a.pagination__link.pagination__link--activ(href='#') 1
-                                            li.pagination__item
-                                                a.pagination__link(href='#') 2
-                                            li.pagination__item
-                                                a.pagination__link(href='#') 3
-                                            li.pagination__item
-                                                a.pagination__link(href='#') 4
-                                            li.pagination__item
-                                                a.pagination__link(href='#') 5
-                                            li.pagination__item
-                                                a.pagination__link(href='#') 6
-                                            li.pagination__item
-                                                a.pagination__link(href='#') 7
-                                        .pagination__controls.gallery__controls
-                                            a.controls__btn.controls__btn__next(href='#')
-                                                i.controls__btn-arrow__right
-                                            a.controls__btn.controls__btn__prev(href='#')
-                                                i.controls__btn-arrow__left
-            include ../components/footer/footer
+	block head
+		title Москва За Калужской заставой
+	block content
+		.wrap
+			include ../components/header/header
+			.container
+				section.gallery__photo.hr__end.row
+					span.section__heading Фото
+					.gallery__slider.row
+						.gallery__slider-cell
+							a.gallery__link(data-fancybox data-type="ajax" data-src="gallery__content.html")
+								img.gallery__img-prev(src='https://source.unsplash.com/user/nikolayv/1200x900',alt='alt')
+							.section__row
+								h5.section__description.gallery__description-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!
+						.gallery__slider-cell
+							a.gallery__link(data-fancybox data-type="ajax" data-src="gallery__content.html")
+								img.gallery__img-prev(src='https://source.unsplash.com/user/elijahsad/1200x900',alt='alt')
+							.section__row
+								h5.section__description.gallery__description-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!
+						.gallery__slider-cell
+							a.gallery__link(data-fancybox data-type="ajax" data-src="gallery__content.html")
+								img.gallery__img-prev(src='https://source.unsplash.com/user/goian/1200x900',alt='alt')
+							.section__row
+								h5.section__description.gallery__description-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!
+						.gallery__slider-cell
+							a.gallery__link(data-fancybox data-type="ajax" data-src="gallery__content.html")
+								img.gallery__img-prev(src='https://source.unsplash.com/user/marcojodoin/1200x900',alt='alt')
+							.section__row
+								h5.section__description.gallery__description-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!
+						.gallery__slider-cell
+							a.gallery__link(data-fancybox data-type="ajax" data-src="gallery__content.html")
+								img.gallery__img-prev(src='https://source.unsplash.com/user/jaycalabresephotography/1200x900',alt='alt')
+							.section__row
+								h5.section__description.gallery__description-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!
+						.gallery__slider-cell
+							a.gallery__link(data-fancybox data-type="ajax" data-src="gallery__content.html")
+								img.gallery__img-prev(src='https://source.unsplash.com/user/alexb/1200x900',alt='alt')
+							.section__row
+								h5.section__description.gallery__description-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!
+					.pagination.gallery__pagination.row
+					ul.pagination__list.gallery__pagination-list
+						li.pagination__item
+							a.pagination__link.pagination__link--activ(href='#') 1
+						li.pagination__item
+							a.pagination__link(href='#') 2
+						li.pagination__item
+							a.pagination__link(href='#') 3
+						li.pagination__item
+							a.pagination__link(href='#') 4
+						li.pagination__item
+							a.pagination__link(href='#') 5
+						li.pagination__item
+							a.pagination__link(href='#') 6
+						li.pagination__item
+							a.pagination__link(href='#') 7
+					.gallery__controls		
+						.pagination__controls
+							a.controls__btn.controls__btn__next(href='#')
+								i.controls__btn-arrow__right
+							a.controls__btn.controls__btn__prev(href='#')
+								i.controls__btn-arrow__left
+				section.gallery__video.row
+					span.section__heading Видео
+					.gallery__slider.row
+						.gallery__slider-cell
+				a.gallery__link(data-fancybox data-src="https://youtu.be/Q0XPhwTnLpk")
+					.palay__btn
+					img.gallery__img-prev(src='//img.youtube.com/vi/Q0XPhwTnLpk/mqdefault.jpg', alt='')
+				.section__row
+					h5.section__description.gallery__description-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!
+			.gallery__slider-cell
+				a.gallery__link(data-fancybox data-src="https://www.youtube.com/watch?v=HhwoaN8Yx-8")
+					.palay__btn
+					img.gallery__img-prev(src='//img.youtube.com/vi/HhwoaN8Yx-8/mqdefault.jpg', alt='')
+				.section__row
+					h5.section__description.gallery__description-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!
+			.gallery__slider-cell
+				aa.gallery__link(data-fancybox data-src="https://www.youtube.com/watch?v=dVkK36KOcqs")
+					.palay__btn
+					img.gallery__img-prev(src='//img.youtube.com/vi/dVkK36KOcqs/mqdefault.jpg', alt='')
+				.section__row
+					h5.section__description.gallery__description-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!
+			.gallery__slider-cell
+				a.gallery__link(data-fancybox data-src="https://www.youtube.com/watch?v=rN6nlNC9WQA")
+					.palay__btn
+					img.gallery__img-prev(src='//img.youtube.com/vi/rN6nlNC9WQA/mqdefault.jpg', alt='')
+				.section__row
+					h5.section__description.gallery__description-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!
+			.gallery__slider-cell
+				a.gallery__link(data-fancybox data-src="https://www.youtube.com/watch?v=uzpxrx7NZBA")
+					.palay__btn
+					img.gallery__img-prev(src='//img.youtube.com/vi/uzpxrx7NZBA/mqdefault.jpg', alt='')
+				.section__row
+					h5.section__description.gallery__description-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!
+			.gallery__slider-cell
+				a.gallery__link(data-fancybox data-src="https://www.youtube.com/watch?v=NM2wtte1JRE")
+					.palay__btn
+					img.gallery__img-prev(src='//img.youtube.com/vi/NM2wtte1JRE/mqdefault.jpg', alt='')
+				.section__row
+					h5.section__description.gallery__description-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!
+			.row
+				.pagination.gallery__pagination
+					ul.pagination__list.gallery__pagination-list
+						li.pagination__item
+							a.pagination__link.pagination__link--activ(href='#') 1
+						li.pagination__item
+							a.pagination__link(href='#') 2
+						li.pagination__item
+							a.pagination__link(href='#') 3
+						li.pagination__item
+							a.pagination__link(href='#') 4
+						li.pagination__item
+							a.pagination__link(href='#') 5
+						li.pagination__item
+							a.pagination__link(href='#') 6
+						li.pagination__item
+							a.pagination__link(href='#') 7
+					.pagination__controls.gallery__controls
+						a.controls__btn.controls__btn__next(href='#')
+							i.controls__btn-arrow__right
+						a.controls__btn.controls__btn__prev(href='#')
+							i.controls__btn-arrow__left				
+			include ../components/footer/footer
