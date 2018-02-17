@@ -4,9 +4,15 @@
   &__top {
     display: flex;
     justify-content: space-between;
+    @include desktop {
+      flex-direction: column-reverse;
+    }
   }
   &__publication-date {
     align-self: flex-end;
+    @include desktop{
+      align-self: flex-start;
+    }
   }
   &__social-btn {
     flex-basis: 80%;
