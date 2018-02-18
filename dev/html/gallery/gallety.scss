@@ -1,90 +1,101 @@
 .gallery {
-  &__photo, &__video {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    position: relative;
-  }
-  &__slider {
-    display: flex;
-    flex-wrap: wrap;
-    width: 80%;
-    margin: auto;
-    justify-content: space-between;
-  }
-  &__content {
-    display: flex;
-  }
-  &__slider-cell {
-    position: relative;
-    width: 33%;
-    overflow: hidden;
-  }
-  &__link {
-    cursor: pointer;
-  }
-  &__img-prev {
-    width: 300px;
-    height: 220px;
-    filter: grayscale(70%);
-    overflow: hidden;
-    &:hover{
-      filter: grayscale(0);
+    &__container {
+        display: flex;
+        flex-direction: column;
     }
-  }
-  &-img{
-    width: 100%;
-    display: block;
-  }
-  &__description-text {
-    width: 80%;
-  }
-  &__pagination-list {
-    width: auto;
-  }
-  &__pagination {
-    position: static;
-    width: 100%;
-  }
-  &__photos {
-    width: 60%;
-    p {
-      margin: rem(15px) 0 0 0;
-      width: 60%;
+    &__photo,
+    &__video {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        position: relative;
     }
-  }
-}
-
-.gallery__controls {
-  top: 40%;
-  @include desktop{
-    top: auto;
-  }
+    &__slider {
+        display: flex;
+        flex-wrap: wrap;
+        width: 80%;
+        justify-content: space-between;
+    }
+    &__content {
+        display: flex;
+    }
+    &__slider-cell {
+        position: relative;
+        width: 33%;
+        overflow: hidden;
+    }
+    &__controls {
+        top: 35%;
+        .controls__btn__next {
+            position: absolute;
+            right: 13%;
+        }
+        .controls__btn__prev {
+            position: absolute;
+            left: -7%;
+        }
+        @include desktop {
+            top: auto;
+        }
+    }
+    &__link {
+        cursor: pointer;
+    }
+    &__img-prev {
+        width: 300px;
+        height: 220px;
+        filter: grayscale(70%);
+        overflow: hidden;
+        &:hover {
+            filter: grayscale(0);
+        }
+    }
+    &-img {
+        width: 100%;
+        display: block;
+    }
+    &__description-text {
+        width: 80%;
+    }
+    &__pagination-list {
+        width: auto;
+    }
+    &__pagination {
+        position: static;
+        width: 100%;
+    }
+    &__photos {
+        width: 60%;
+        p {
+            margin: rem(15px) 0 0 0;
+            width: 60%;
+        }
+    }
 }
 
 //video
 .palay__btn {
-  position: absolute;
-  left: 40%;
-  top: 30%;
-  cursor: pointer;
-  z-index: 1;
-  &:before {
-    content: '';
     position: absolute;
-    width: 50px;
-    height: 50px;
-    background: $yellow;
-  }
-  &:after {
-    position: absolute;
-    content: '';
-    border: 0;
-    border-style: solid;
-    border-width: 15px 0 15px 20px;
-    border-color: transparent transparent transparent #202020;
-    top: 10px;
-    left: 15px;
-  }
+    left: 40%;
+    top: 30%;
+    cursor: pointer;
+    z-index: 1;
+    &:before {
+        content: '';
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        background: $yellow;
+    }
+    &:after {
+        position: absolute;
+        content: '';
+        border: 0;
+        border-style: solid;
+        border-width: 15px 0 15px 20px;
+        border-color: transparent transparent transparent #202020;
+        top: 10px;
+        left: 15px;
+    }
 }
