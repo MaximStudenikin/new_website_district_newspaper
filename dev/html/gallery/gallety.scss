@@ -1,101 +1,129 @@
 .gallery {
-    &__container {
-        display: flex;
-        flex-direction: column;
-    }
-    &__photo,
-    &__video {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        position: relative;
-    }
-    &__slider {
-        display: flex;
-        flex-wrap: wrap;
-        width: 80%;
-        justify-content: space-between;
-    }
-    &__content {
-        display: flex;
-    }
-    &__slider-cell {
-        position: relative;
-        width: 33%;
-        overflow: hidden;
-    }
-    &__controls {
-        top: 35%;
-        .controls__btn__next {
-            position: absolute;
-            right: 13%;
-        }
-        .controls__btn__prev {
-            position: absolute;
-            left: -7%;
-        }
-        @include desktop {
-            top: auto;
-        }
-    }
-    &__link {
-        cursor: pointer;
-    }
-    &__img-prev {
-        width: 300px;
-        height: 220px;
-        filter: grayscale(70%);
-        overflow: hidden;
-        &:hover {
-            filter: grayscale(0);
-        }
-    }
-    &-img {
-        width: 100%;
-        display: block;
-    }
-    &__description-text {
-        width: 80%;
-    }
-    &__pagination-list {
-        width: auto;
-    }
-    &__pagination {
-        position: static;
-        width: 100%;
-    }
-    &__photos {
-        width: 60%;
-        p {
-            margin: rem(15px) 0 0 0;
-            width: 60%;
-        }
-    }
-}
+	&__container {
+			display: flex;
+			flex-direction: column;
+	}
+	&__photo, &__video {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			width: 100%;
+			position: relative;
+	}
+	&__slider {
+			display: flex;
+			flex-wrap: wrap;
+			width: 80%;
+			justify-content: space-between;
+			@include tablets{
+				width: 98%;
+				overflow: hidden;
+			}
+	}
+		
+	&__content {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			@include tablets{
+				position: relative;
+        right: 0%;
+			}
+	}
+	&__slider-row{
+		display: flex;
+		justify-content: space-between;
+	}
+	&__slider-cell {
+		position: relative;
+		width: 33%;
+		overflow: hidden;
+			@include tablets{
+				padding: 0 3%;
+			}
+	}
+	&__controls {
+		position: absolute;
+		top: 45%;
+		@include desktop {
+			position: absolute;
+    	top: 720px;
+    	width: 75%;
+    	padding: 0 15%;
+		}
+	.controls__btn__prev {
+			left: -7%;
+			@include desktop{
+				left: auto;
+			}
+		}
+		.controls__btn__next {
+			right: 15%;
+			}
+		}
+		&__link {
+			cursor: pointer;
+		}
+		&__img-prev {
+			height: 220px;
+			width: 300px;
+			filter: grayscale(70%);
+			overflow: hidden;
+			&:hover {
+				filter: grayscale(0);
+			}
+		}
+		&-img {
+			width: 100%;
+			display: block;
+		}
+		&__description-text {
+			width: 80%;
+		}
+		&__pagination-list {
+			width: auto;
+		}
+		&__pagination {
+			position: relative;
+			width: 100%;
+		}
+		&__photos {
+			width: 60%;
+			p {
+				margin: rem(15px) 0 0 0;
+				width: 60%;
+				}
+			}
+	}
 
-//video
+	//video
 .palay__btn {
-    position: absolute;
-    left: 40%;
-    top: 30%;
-    cursor: pointer;
-    z-index: 1;
-    &:before {
-        content: '';
-        position: absolute;
-        width: 50px;
-        height: 50px;
-        background: $yellow;
-    }
-    &:after {
-        position: absolute;
-        content: '';
-        border: 0;
-        border-style: solid;
-        border-width: 15px 0 15px 20px;
-        border-color: transparent transparent transparent #202020;
-        top: 10px;
-        left: 15px;
-    }
+	position: absolute;
+	left: 40%;
+	top: 30%;
+	cursor: pointer;
+	z-index: 1;
+@include tablets{
+	left: 44%;
+	top: 25%;
 }
+	&:before {
+		content: '';
+		position: absolute;
+		width: 50px;
+		height: 50px;
+		background: $yellow;
+	}
+
+		&:after {
+			position: absolute;
+			content: '';
+			border: 0;
+			border-style: solid;
+			border-width: 15px 0 15px 20px;
+			border-color: transparent transparent transparent #202020;
+			top: 10px;
+			left: 15px;
+		}
+
+	}
