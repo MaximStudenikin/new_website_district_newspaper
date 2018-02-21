@@ -1,0 +1,53 @@
+h2.section__heading Закажите доставку
+form#order_form.teg__form(method='post', action='mail.php')
+  .form__content
+    .form__section-one
+      .form__row
+        label.form__block(for='user_name')
+          .form__block-title Имя
+          input#user_name.form__input(type='text', name='user_name', required='')
+        label.form__block(for='user_phone')
+          .form__block-title Телефон
+          input#user_phone.form__input(type='text', name='user_phone', required='')
+      .form__row
+        label.form__block(for='user_street')
+          .form__block-title Улица
+          input#user_street.form__input(type='text', name='user_street', required='')
+      .form__row
+        label.form__block(for='user_home')
+          .form__block-title Дом
+          input#user_home.form__input(type='text', name='user_home', required='')
+        label.form__block(for='user_block')
+          .form__block-title Корпус
+          input#user_block.form__input(type='text', name='user_block')
+        label.form__block(for='user_room')
+          .form__block-title Квартира
+          input#user_room.form__input(type='text', name='user_room')
+        label.form__block(for='user_floor')
+          .form__block-title Этаж
+          input#user_floor.form__input(type='text', name='user_floor')
+    .form__section-two
+      .form__row
+        .form__texarea
+          label.form__block-title(for='user_message') Комментарий
+          textarea#user_message.form__big-text-input(name='user_message', placeholder='...')
+      .form__buttons
+        .form__row
+          .form__radios
+            .form__radios-container
+              .form__radio
+                input#pay_cash.form__radio-elem(type='radio', name='pay_option', value='налом', checked='')
+                label.form__block-title(id='сash', for='pay_cash') Потребуеться сдача
+              .form__radio
+                input#pay_card.form__radio-elem(type='radio', name='pay_option', value='картой')
+                label.form__block-title(for='pay_card') Оплата по карте
+        .form__row
+          .form__checkbox
+            input#dont_disturb.form__radio-elem(name='dont_disturb', type='checkbox', value='disturb_no')
+            label.form__block-title(for='dont_disturb') Не перезванивать
+        .form__row
+          .form__control
+            button.btn.form__submit(type='submit')
+              .form__submit-text Заказать
+            button.form__reset(type='reset')
+              .form__submit-text Очистить
