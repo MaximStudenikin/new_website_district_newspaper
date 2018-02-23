@@ -1,33 +1,28 @@
-.form
-  h3.form__title Обратная связь
-  .form__fields
-    form#callBackForm.form__tag(method='post', action='http://gazetauzao.ru/mail_callBackForm.php')
-      .form__inputs
-        .form__row
-          .form__elem
-            label.form__elem-title(for='user_name') Ваше имя и фамилия
-            input#user_name.form__input(placeholder='Обязательное для заполнения', required='', type='text')
-          .form__elem
-            label.form__elem-title(for='user_email') Ваш E-Mail
-            input#user_email.form__input(pattern='[^@]+@[^@]+\.[a-zA-Z]{2,6}', placeholder='email@email.ru', required='', type='email')
-          .form__elem
-            label.form__elem-title(for='user_phone') Ваш телефон
-            input#user_phone.form__input(pattern='8\([0-9]{3}\)[0-9]{3}-[0-9]{2}-[0-9]{2}', placeholder='8(000)000-00-00', required='', type='tel')
-        .form__row
-          .form__texarea
-            label.form__elem-title(for='user_message') Текст обращения
-            textarea#user_message.form__big-text-input(placeholder='Обязательное для заполнения', required='')
-        .form__row
-          .form__file
-            label.form__file-title(for='user_file') Прикрепить файл в формате JPEG или PNG:
-            input#user_file.form__file-input(name='form__input-file-img', accept='image/jpeg,image/png', type='file')
-        .form__buttons
-          .form__radios
-            .form__radios-container
-              .form__radio
-                input#form__radio-ansver-yes.form__radio-elem(name='#', type='checkbox')
-                .form__radios-title
-                  | Нажимая кнопку «Отправить», я подтверждаю, что ознакомился и принимаю
-                  a.form__radios-link(href='#') правила регистрации и конфиденциальности
-            .form__control
-              button.form__submit(type='submit') Отправить
+.form__feedback
+	.section__title Письмо в редакцию
+	.form__fields
+		form#callBackForm.form__tag(method='post', action='mail.php')
+			.form__inputs
+					.form__elem.form__row
+						label.form__elem-title(for='user_name') Тема сообщения
+						input#user_name.form__input(placeholder='Обязательное для заполнения', required='', type='text')
+						label.form__elem-title(for='user_name') Ваше имя
+						input#user_name.form__input(placeholder='Обязательное для заполнения', required='', type='text')
+					.form__elem.form__row
+						label.form__elem-title(for='user_email') E-Mail для ответа
+						input#user_email.form__input(pattern='[^@]+@[^@]+\.[a-zA-Z]{2,6}', placeholder='email@email.ru', required='', type='email')
+						label.form__file-title(for='user_file') Файлы для отправки
+						input#user_file.form__file-input(name='form__input-file-img', accept='image/jpeg,image/png', type='file')
+					.form__texarea.form__row
+						label.form__elem-title(for='user_message') Ваше сообщение
+						textarea#user_message.form__big-text-input(placeholder='Обязательное для заполнения', required='')
+			.form__buttons.form__row
+				.form__radios
+					.form__radios-container
+						.form__radio
+							input#form__radio-ansver-yes.form__radio-elem(name='#', type='checkbox')
+							.form__radios-title
+								| Нажимая кнопку «Отправить», я подтверждаю, что ознакомился и принимаю
+								a.form__radios-link(href='#') правила регистрации и конфиденциальности
+					.form__control
+						button.form__submit(type='submit') Отправить
