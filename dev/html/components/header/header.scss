@@ -21,6 +21,9 @@
     &:first-child{
       margin: 0;
     }
+    @include tablets{
+      margin: 0;
+    }
   }
 
   &__serch {
@@ -44,7 +47,9 @@
   width: 80%;
   @include desktop{
     display: flex;
+    justify-content: flex-end;
   }
+
 }
 
 .logo {

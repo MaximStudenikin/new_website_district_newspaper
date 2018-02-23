@@ -22,28 +22,28 @@
   },
   "homepage": "https://github.com/MaximStudenikin/new_website_district_newspaper#readme",
   "devDependencies": {
-    "browser-sync": "^2.18.13",
+    "browser-sync": "^2.23.6",
     "del": "^3.0.0",
     "gulp": "github:gulpjs/gulp#4.0",
-    "gulp-autoprefixer": "^4.0.0",
+    "gulp-autoprefixer": "^4.1.0",
     "gulp-cleancss": "^0.2.2",
     "gulp-concat": "^2.6.1",
     "gulp-fontmin": "^0.7.4",
-    "gulp-group-css-media-queries": "^1.2.0",
-    "gulp-image": "^4.1.0",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-image": "^4.3.0",
     "gulp-plumber": "^1.2.0",
     "gulp-pug": "^3.3.0",
     "gulp-rename": "^1.2.2",
     "gulp-replace": "^0.6.1",
     "gulp-sass": "^3.1.0",
     "gulp-sass-glob": "^1.0.8",
-    "gulp-sourcemaps": "^2.6.1",
+    "gulp-sourcemaps": "^2.6.4",
     "gulp-svg-sprites": "^4.1.2",
     "gulp-uglify": "^3.0.0",
     "postcss-pxtorem": "^4.0.1"
   },
   "dependencies": {
-    "jquery": "^3.2.1",
+    "jquery": "^3.3.1",
     "normalize.css": "^7.0.0"
   }
 }
