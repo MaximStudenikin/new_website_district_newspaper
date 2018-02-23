@@ -1,28 +1,40 @@
 .form__feedback
-	.section__title Письмо в редакцию
-	.form__fields
-		form#callBackForm.form__tag(method='post', action='mail.php')
-			.form__inputs
-					.form__elem.form__row
-						label.form__elem-title(for='user_name') Тема сообщения
-						input#user_name.form__input(placeholder='Обязательное для заполнения', required='', type='text')
-						label.form__elem-title(for='user_name') Ваше имя
-						input#user_name.form__input(placeholder='Обязательное для заполнения', required='', type='text')
-					.form__elem.form__row
-						label.form__elem-title(for='user_email') E-Mail для ответа
-						input#user_email.form__input(pattern='[^@]+@[^@]+\.[a-zA-Z]{2,6}', placeholder='email@email.ru', required='', type='email')
-						label.form__file-title(for='user_file') Файлы для отправки
-						input#user_file.form__file-input(name='form__input-file-img', accept='image/jpeg,image/png', type='file')
-					.form__texarea.form__row
-						label.form__elem-title(for='user_message') Ваше сообщение
-						textarea#user_message.form__big-text-input(placeholder='Обязательное для заполнения', required='')
-			.form__buttons.form__row
-				.form__radios
-					.form__radios-container
+	.form__content
+		.form__title Письмо в редакцию
+		.h__menu-close
+			span.close-icon
+		.form__fields
+			form#callBackForm.form__tag(method='post', action='mail.php')
+				.form__inputs
+					.form__row
+						.form__elem
+							label.form__elem-title(for='user_name') Тема сообщения
+							input.section__row#user_name.form__input(placeholder='Обязательное для заполнения', required='', type='text')
+						.form__elem
+							label.form__elem-title(for='user_name') Ваше имя
+							input.section__row#user_name.form__input(placeholder='Обязательное для заполнения', required='', type='text')
+					.form__row
+						.form__elem
+							label.form__elem-title(for='user_email') E-Mail для ответа
+							input.section__row#user_email.form__input(pattern='[^@]+@[^@]+\.[a-zA-Z]{2,6}', placeholder='email@email.ru', required='', type='email')
+						.form__elem
+							label.form__elem-title(for='user_file') Файлы для отправки
+							input.section__row#user_file.form__file-input(name='form__input-file-img', accept='image/jpeg,image/png', type='file')
+					.form__row
+						.form__elem
+							label.form__elem-title(for='user_message') Ваше сообщение
+							textarea.section__row#user_message.form__big-text-input(placeholder='Обязательное для заполнения', required='')
+				.form__buttons.form__row
 						.form__radio
-							input#form__radio-ansver-yes.form__radio-elem(name='#', type='checkbox')
-							.form__radios-title
+							input.form__radio-checkbox#form__radio-checkbox__deal(name='form__radio-checkbox__deal', type='checkbox')
+							label.form__radios-checkbox__title(for='form__radio-checkbox__deal')
 								| Нажимая кнопку «Отправить», я подтверждаю, что ознакомился и принимаю
-								a.form__radios-link(href='#') правила регистрации и конфиденциальности
-					.form__control
-						button.form__submit(type='submit') Отправить
+								a.form__radios-link.form__radios-link--hover(href='#') правила регистрации и конфиденциальности
+						.form__control.form__row
+							.g-recaptcha(data-sitekey='6LdlJkgUAAAAAJCkjdliKIWqeymfYsBzqDLliUXk')
+							button.form__submit(type='submit') Отправить
+				.form__footer.form__row
+					p.form__alert Все поля обезательны для запонения
+					.form__info
+						p.form__text Наш телефон
+						a.form__tel.form__tel--hover(href='+7(499)800-88-88') 8 (499) 800-88-88
