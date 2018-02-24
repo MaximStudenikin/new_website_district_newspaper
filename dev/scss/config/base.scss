@@ -16,6 +16,10 @@ body {
   line-height: 1.42;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  @include phones{
+    font-size: rem(14px);
+  }
+
 }
 
 img {
