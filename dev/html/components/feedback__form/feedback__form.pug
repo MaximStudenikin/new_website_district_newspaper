@@ -1,8 +1,9 @@
 .form__feedback
 	.form__content
-		.form__title Письмо в редакцию
-		.h__menu-close
-			span.close-icon
+		.form__header
+			.form__title Письмо в редакцию
+			.close__batton.close__batton-feedback
+				span.close-icon.close-icon-feedback
 		.form__fields
 			form#callBackForm.form__tag(method='post', action='mail.php')
 				.form__inputs
@@ -18,8 +19,9 @@
 							label.form__elem-title(for='user_email') E-Mail для ответа
 							input.section__row#user_email.form__input(pattern='[^@]+@[^@]+\.[a-zA-Z]{2,6}', placeholder='email@email.ru', required='', type='email')
 						.form__elem
-							label.form__elem-title(for='user_file') Файлы для отправки
+							label.form__elem-title(for='#') Файлы для отправки
 							input.section__row#user_file.form__file-input(name='form__input-file-img', accept='image/jpeg,image/png', type='file')
+							label.form__input-file__batton(for='user_file')
 					.form__row
 						.form__elem
 							label.form__elem-title(for='user_message') Ваше сообщение
@@ -37,4 +39,4 @@
 					p.form__alert Все поля обезательны для запонения
 					.form__info
 						p.form__text Наш телефон
-						a.form__tel.form__tel--hover(href='+7(499)800-88-88') 8 (499) 800-88-88
+						a.form__tel.form__tel--hover(href='tel:+7 (499) 800-88-88') 8 (499) 800-88-88
