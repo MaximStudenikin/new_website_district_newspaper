@@ -28,6 +28,7 @@ const svgSprite = require('gulp-svg-sprites');
 
 //js
 const uglify = require('gulp-uglify');
+const babel = require('gulp-babel');
 
 //del
 const del = require('del');
@@ -45,15 +46,15 @@ const paths = {
 function html() {
 	return gulp.src(paths.dev + 'html/*/*.pug')
 		.pipe(plumber())
-		.pipe(pug({pretty: true}))                  //pretty: true убирает что бы index был читаймым
+		.pipe(pug({ pretty: true }))                  //pretty: true убирает что бы index был читаймым
 		// .pipe(rename({ basename: "index" }))
-		.pipe(rename({dirname: ""}))
+		.pipe(rename({ dirname: "" }))
 		.pipe(gulp.dest(paths.build))
 }
 
 function style() {
 	return gulp.src(paths.dev + 'scss/main.scss')
-		.pipe(plumber())    
+		.pipe(plumber())
 		.pipe(sourcemaps.init())
 		.pipe(sassGlob())
 		.pipe(sass())
@@ -63,7 +64,7 @@ function style() {
 		//     browsers: ['last 15 versions'],
 		//     cascade: false
 		// }))
-		.pipe(rename({suffix: '.min'}))
+		.pipe(rename({ suffix: '.min' }))
 		.pipe(sourcemaps.write('/'))
 		.pipe(gulp.dest(paths.build + 'css/'))
 }
@@ -72,6 +73,9 @@ function style() {
 //js
 function script() {
 	return gulp.src(paths.dev + 'js/*.js')
+		.pipe(babel({
+			presets: ['env']
+		}))
 		.pipe(uglify())
 		.pipe(gulp.dest(paths.build + 'js/'))
 }
@@ -90,14 +94,14 @@ function img() {
 			svgo: true,
 			concurrent: 10
 		}))
-		.pipe(rename({suffix: "_min"}))
+		.pipe(rename({ suffix: "_min" }))
 		.pipe(gulp.dest(paths.build + 'img/'))
 }
 
 //fonts
 function minifyFont(text, cb) {
 	gulp.src(paths.src + 'fonts/*')
-		.pipe(fontmin({text: text}))
+		.pipe(fontmin({ text: text }))
 		.pipe(gulp.dest(paths.build + 'fonts'))
 		.on('end', cb);
 }
