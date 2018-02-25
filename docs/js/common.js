@@ -1,1 +1,1 @@
-$(document).ready(function(){$("[data-fancybox]").fancybox({toolbar:!0})});
+"use strict";$(document).ready(function(){document;var e=function(e,n,t){$(e).click(function(e){e.preventDefault(),$(n).toggleClass("visuallyhidden")}),$(t).click(function(e){e.preventDefault(),$(n).toggleClass("visuallyhidden")})};e(".open__form",".form__feedback",".close__batton-feedback"),e(".h__menu-link",".h__menu",".h__menu-close__batton"),$("[data-fancybox]").fancybox({toolbar:!0})});
