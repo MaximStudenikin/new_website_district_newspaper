@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(() =>{
 
     //app global var zon
     
@@ -34,31 +34,33 @@ $(document).ready(function() {
 
     const moveSlide = (cont, slideNum) => {
 
-        const items = cont.find('.slaider__item'),
-            activeSlide = items.filter('.active'),
+        const items = cont.find('.slider__item'),
+            activeSlide = items.filter('.active__slide'),
             reqItem = items.eq(slideNum),
             reqIndex = reqItem.index(),
-            list = cont.find('.slaider__list'),
+            list = cont.find('.slider__list'),
             dur = 500;
+            
 
         if (reqItem.length) {
             list.animate({
                 'left': -reqIndex * 100 + '%'
             }, dur, () => {
-                activeSlide.removeClass('active');
-                reqItem.addClass('active');
+                activeSlide.removeClass('active__slide');
+                reqItem.addClass('active__slide');
             });
         }
+        
 
     };
 
     $('.slider__controls').on('click', event => {
         event.preventDefault();
 
-        const $this = $(event.currentTarget),
-            cont = $this.closest('.slaider__teg'),
-            items = $('.slaider__item', cont),
-            activeItem = items.filter('.active');
+        const $this = $(event.target),
+            cont = $this.closest('.slider__teg'),
+            items = $('.slider__item', cont),
+            activeItem = items.filter('.active__slide');
         let existedItem,
             edgeItem,
             reqItem;
@@ -78,7 +80,6 @@ $(document).ready(function() {
         moveSlide(cont, reqItem);
 
     });
-
    
     //Галерея
 
