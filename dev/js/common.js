@@ -55,7 +55,7 @@ $(document).ready(function() {
     $('.slider__controls').on('click', event => {
         event.preventDefault();
 
-        const $this = $(event.currentTarget),
+        const $this = $(event.target),
             cont = $this.closest('.slaider__teg'),
             items = $('.slaider__item', cont),
             activeItem = items.filter('.active');
