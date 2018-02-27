@@ -73,10 +73,11 @@ function style() {
 //js
 function script() {
 	return gulp.src(paths.dev + 'js/*.js')
-		.pipe(babel({
-			presets: ['env']
-		}))
-		.pipe(uglify())
+		// .pipe(plumber())
+		// .pipe(babel({
+		// 	presets: ['env']
+		// }))
+		// .pipe(uglify())
 		.pipe(gulp.dest(paths.build + 'js/'))
 }
 
