@@ -1,288 +1,271 @@
 .slider {
-  position: relative;
-  width: 100%;
-  height: 380px;
-  overflow: hidden;
-
-  &__list{
-    display: flex;
-    justify-content: flex-start;
     position: relative;
-    left: 0;
-  }
-
-  &__item{
     width: 100%;
-    display: flex;
     height: 380px;
-    position: relative;
-  }
-
-  &__controls {
-    position: absolute;
-    bottom: 50px;
-    width: 100%;
-  }
-
-  &__img {
-    display: flex;
-    align-items: center;
-    position: relative;
-    width: 840px;
-    height: 380px;
-    &:after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: $black;
-      opacity: .5;
+    overflow: hidden;
+    &__list {
+        display: flex;
+        justify-content: flex-start;
+        position: relative;
+        left: 0;
     }
-  }
-
-  &__text {
-    position: absolute;
-    display: flex;
-    top: 20px;
-    flex-direction: column;
-    padding: 0 4%;
-    color: $white;
-  }
-
-  &__link {
-    color: $white;
-  }
-
-  &__row {
-    margin: rem(75px) 0 0 0;
-  }
-
+    &__item {
+        width: 100%;
+        display: flex;
+        height: 380px;
+        position: relative;
+    }
+    &__controls {
+        position: absolute;
+        bottom: 50px;
+        width: 100%;
+    }
+    &__img {
+        display: flex;
+        align-items: center;
+        position: relative;
+        width: 840px;
+        height: 380px;
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: $black;
+            opacity: .5;
+        }
+    }
+    &__text {
+        position: absolute;
+        display: flex;
+        top: 20px;
+        flex-direction: column;
+        padding: 0 4%;
+        color: $white;
+    }
+    &__link {
+        color: $white;
+    }
+    &__row {
+        margin: rem(75px) 0 0 0;
+    }
 }
 
 .slider__adaptiv {
-  display: none;
-  position: relative;
-  @include tablets {
-    display: flex;
-  }
-  @include phones {
-    height: 100%;
-  }
+    display: none;
+    position: relative;
+    @include tablets {
+        display: flex;
+    }
+    @include phones {
+        height: 100%;
+    }
 }
 
 .labels {
-  display: flex;
+    display: flex;
 }
 
 .label {
-  color: $black;
-  padding: rem(10px);
-  margin: 0 rem(10px) 0 0;
-  background: $yellow;
-  &:last-child {
-    margin: 0;
-  }
+    color: $black;
+    padding: rem(10px);
+    margin: 0 rem(10px) 0 0;
+    background: $yellow;
+    &:last-child {
+        margin: 0;
+    }
 }
 
 .news__section {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 .section__row {
-  margin: rem(15px) 0 0 0;
+    margin: rem(15px) 0 0 0;
 }
 
 .section__heading {
-  font: {
-    family: $noto__sans-bold;
-    size: rem(26px);
-  }
-  color: $black;
-  text-transform: uppercase;
-  &:hover {
-    background: $yellow;
+    font: {
+        family: $noto__sans-bold;
+        size: rem(26px);
+    }
     color: $black;
-  }
+    text-transform: uppercase;
+    &:hover {
+        background: $yellow;
+        color: $black;
+    }
 }
 
-.news{
-  position: relative;
-  display: flex;
-  width: 100%;
-  overflow: hidden;
-  
-&__list {
-  display: flex;
-  justify-content: flex-start;
-  @include phones {
+.news {
     position: relative;
-    width: 100%;
-    right: 0;
-  }
-}
-  &__item {
-    padding: 0 rem(15px) 0 0;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    &:last-child {
-      padding: 0;
+    width: 100%;
+    overflow: hidden;
+    &__list {
+        display: flex;
+        justify-content: flex-start;
+        @include phones {
+            position: relative;
+            width: 100%;
+            right: 0;
+        }
     }
-
-    @include phones {
-      display: flex;
-      position: relative;
-      padding: 0;
+    &__item {
+        padding: 0 rem(15px) 0 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        &:last-child {
+            padding: 0;
+        }
+        @include phones {
+            display: flex;
+            position: relative;
+            padding: 0;
+        }
     }
-  }
 }
 
 .section__img {
-  width: 100%;
-  @include phones {
-    width: 393px;
-  }
+    width: 100%;
+    @include phones {
+        width: 393px;
+    }
 }
 
 .section__title {
-  font: {
-    family: $noto__sans-bold;
-    size: rem(16px);
-  }
-  color: $black;
-  &:hover {
-    color: $red;
-  }
+    font: {
+        family: $noto__sans-bold;
+        size: rem(16px);
+    }
+    color: $black;
+    &:hover {
+        color: $red;
+    }
 }
 
 .cloud {
-  &__tegs {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  &__teg {
-    font-size: rem(13px);
-    color: $black;
-    opacity: .5;
-    padding: 0 rem(5px);
-    &:hover {
-      opacity: .9;
+    &__tegs {
+        display: flex;
+        flex-wrap: wrap;
     }
-
-  }
-
-  &__pop__teg {
-    color: $red;
-    text-transform: uppercase;
-    opacity: .6;
-  }
+    &__teg {
+        font-size: rem(13px);
+        color: $black;
+        opacity: .5;
+        padding: 0 rem(5px);
+        &:hover {
+            opacity: .9;
+        }
+    }
+    &__pop__teg {
+        color: $red;
+        text-transform: uppercase;
+        opacity: .6;
+    }
 }
 
 .horizontal__slider {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
 }
 
 .horizontal__slider-item {
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-  padding: 0 7%;
-  @include tablets {
-    justify-content: flex-start;
-  }
-  @include phones{
-    padding: 0;
-  }
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 0 7%;
+    @include tablets {
+        justify-content: flex-start;
+    }
+    @include phones {
+        padding: 0;
+    }
 }
 
 .horizontal__slider-link {
-  @include tablets {
-    padding: 0 8% 0 0;
-    &:last-child {
-      padding: 0;
+    @include tablets {
+        padding: 0 8% 0 0;
+        &:last-child {
+            padding: 0;
+        }
+        @include phones {
+            width: 100%;
+        }
     }
-    @include phones {
-      width: 100%;
-    }
-  }
 }
 
 .horizontal__slider-img {
-  filter: grayscale(70%);
-  width: 215px;
-  overflow: hidden;
-
-  &:hover {
-    filter: grayscale(0);
-  }
-
-  @include phones {
-    width: 420px;
-  }
+    filter: grayscale(70%);
+    width: 215px;
+    overflow: hidden;
+    &:hover {
+        filter: grayscale(0);
+    }
+    @include phones {
+        width: 420px;
+    }
 }
 
 .horizontal__slider-controls {
-  position: absolute;
-  top: 35%;
-  width: 100%;
-
-  .horizontal__slider-btn__next {
-    right: 0;
-  }
-
+    position: absolute;
+    top: 35%;
+    width: 100%;
+    .horizontal__slider-btn__next {
+        right: 0;
+    }
 }
 
 .controls__btn {
-  position: relative;
+    position: relative;
 }
 
 .controls__btn__next {
-  position: absolute;
-  right: 0;
+    position: absolute;
+    right: 0;
 }
 
 .controls__btn__prev {
-  position: absolute;
+    position: absolute;
 }
 
 .controls__btn-arrow__right,
 .controls__btn-arrow__left {
-  border: solid black;
-  border-width: 0 2px 2px 0;
-  display: inline-block;
-  padding: rem(5px);
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: rem(5px);
 }
 
 .controls__btn-arrow__right {
-  position: relative;
-  transform: rotate(-45deg);
-  top: 15px;
-  left: 15px;
+    position: relative;
+    transform: rotate(-45deg);
+    top: 15px;
+    left: 15px;
 }
 
 .controls__btn-arrow__left {
-  position: relative;
-  transform: rotate(135deg);
-  top: 15px;
-  left: 20px;
+    position: relative;
+    transform: rotate(135deg);
+    top: 15px;
+    left: 20px;
 }
 
 .controls__btn {
-  width: 50px;
-  height: 50px;
-  background: $yellow;
+    width: 50px;
+    height: 50px;
+    background: $yellow;
 }
 
 .news__slider {
-  display: none;
-  @include phones {
-    display: flex;
-    flex-direction: column;
-  }
+    display: none;
+    @include phones {
+        display: flex;
+        flex-direction: column;
+    }
 }

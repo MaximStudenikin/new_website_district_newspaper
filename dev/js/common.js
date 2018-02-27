@@ -40,7 +40,6 @@ $(document).ready(() =>{
             reqIndex = reqItem.index(),
             list = cont.find('.slider__list'),
             dur = 500;
-            
 
         if (reqItem.length) {
             list.animate({
@@ -48,6 +47,7 @@ $(document).ready(() =>{
             }, dur, () => {
                 activeSlide.removeClass('active__slide');
                 reqItem.addClass('active__slide');
+                activeSlide(slideNum);
             });
         }
         
@@ -80,6 +80,59 @@ $(document).ready(() =>{
         moveSlide(cont, reqItem);
 
     });
+
+        //color active slide
+
+        var activeSlide = (index)=>{
+            $('.news')
+                .find('.pagination__item')
+                .eq(index)
+                .addClass('.pagination__link--activ')
+                .siblings()
+                .removeClass('.pagination__item');
+        }
+
+        var faintSliders = (slideNum) =>{
+
+            const   container = $('.news'),
+                    reqSlider = container.eq(slideNum);
+            for(){
+                //...
+            }
+        }
+
+        faintSliders();
+    
+        //generation number of slide
+    
+        var generateNumber = () => {
+
+            let numberSlide = 1;
+    
+            $('.news__item').each((numberSlide)=>{
+                let number = $('<li>',{
+                    attr : {
+                        class: 'pagination__item'
+                    },
+                    html : '<a class="pagination__link">'+ numberSlide +'</a>'
+                });
+                $('.pagination__list').append(number);
+            })
+        };
+    
+        generateNumber();
+
+    //click on pugination
+
+   $('body').on('click', '.pagination__item', (event)=>{
+    event.preventDefault();
+    var $this = $(this),
+    container = $this.closest('.news'),
+    index = $this.index();
+
+    moveSlide(container, index);
+    activeSlide(index);
+   });
    
     //Галерея
 
