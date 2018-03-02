@@ -1,4 +1,4 @@
-$(document).ready(() =>{
+$(document).ready(function(){
 
     //app global var zon
     
@@ -34,11 +34,11 @@ $(document).ready(() =>{
 
     const moveSlide = (cont, slideNum) => {
 
-        const items = cont.find('.slider__item'),
+        const items = cont.find('.news__item'),
             activeSlide = items.filter('.active__slide'),
             reqItem = items.eq(slideNum),
             reqIndex = reqItem.index(),
-            list = cont.find('.slider__list'),
+            list = cont.find('.news__list'),
             dur = 500;
 
         if (reqItem.length) {
@@ -58,8 +58,8 @@ $(document).ready(() =>{
         event.preventDefault();
 
         const $this = $(event.target),
-            cont = $this.closest('.slider__teg'),
-            items = $('.slider__item', cont),
+            cont = $this.closest('.news'),
+            items = $('.news__item', cont),
             activeItem = items.filter('.active__slide');
         let existedItem,
             edgeItem,
@@ -84,24 +84,18 @@ $(document).ready(() =>{
         //color active slide
 
         var activeSlide = (index)=>{
-            $('.news')
-                .find('.pagination__item')
-                .eq(index)
-                .addClass('.pagination__link--activ')
-                .siblings()
-                .removeClass('.pagination__item');
+            $('.news').find('.pagination__item').eq(index).addClass('.pagination__link--activ').siblings().removeClass('.pagination__link--activ');
         }
 
-        var faintSliders = (slideNum) =>{
+        // const faintSliders = () => {
 
-            const   container = $('.news'),
-                    reqSlider = container.eq(slideNum);
-            for(){
-                //...
-            }
-        }
+        //     const sliders = $('.news'),
+        //     sliderIndex = sliders.index();
 
-        faintSliders();
+        //     for(let index = 0; index < sliderIndex.length; ++index ){
+        //         return sliderIndex[index]
+        //     }
+        // }
     
         //generation number of slide
     
@@ -119,8 +113,10 @@ $(document).ready(() =>{
                 $('.pagination__list').append(number);
             })
         };
-    
+
         generateNumber();
+    
+        
 
     //click on pugination
 
