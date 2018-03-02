@@ -36,21 +36,26 @@ $(document).ready(function(){
 
      var generatePagination = () => {
 
-        var slidrs = $('.slider__teg'),
-            list = slidrs.find('.pagination__list');
+        var sliders = $('.slider__teg');
 
-        console.log()
+        for(var index = 0; index < sliders.length; ++index){
 
-                $('.slider__item').each(()=>{
-                    let paginationItem = $('<li>',{
-                        attr : {
-                            class: 'pagination__item'
-                        },
-                        html : '<a class="pagination__link">0</a>'
-                    });
-                    
-                    list.append(paginationItem);
-                })
+            var slidersIndex = sliders[index];
+
+           var needSlider = $('.slider__item', slidersIndex);
+
+            }
+
+            needSlider.each((index)=>{
+
+                let paginationItem = $('<li>',{
+                    attr : {
+                        class: 'pagination__item'
+                    },
+                    html : '<a class="pagination__link">'+ ( index +1 ) + '</a>'
+                });
+                $('.pagination__list').append(paginationItem);
+            })
             
     };
 
@@ -84,7 +89,7 @@ $(document).ready(function(){
             }, dur, () => {
                 activeSlide.removeClass('active__slide');
                 reqItem.addClass('active__slide');
-                // activeSlide(slideNum);
+                activeSlide(slideNum);
             });
         }
 
