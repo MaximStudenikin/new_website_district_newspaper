@@ -32,26 +32,13 @@ $(document).ready(function () {
 
     //slider
 
-    //color active pagination slide
+    var colorAtiveItem = function (container, index) {
 
-    var colorAtiveItem = function (index) {
-
-        var sliders = $('.slider__teg'),
-            slidersPagination = sliders.find('.pagination__list');
-
-        for (var indexAtiveItem = 0; indexAtiveItem < slidersPagination.length; indexAtiveItem++) {
-            currentPagination = slidersPagination[indexAtiveItem];
-            console.log(currentPagination)
-
-            $(currentPagination)
-                .find('.pagination__item')
-                .eq(index)
-                .addClass('pagination__item--activ')
-                .siblings()
-                .removeClass('pagination__item--activ');
-        }
-
-
+            $('.pagination__item',container)
+            .eq(index)
+            .addClass('pagination__item--activ')
+            .siblings()
+            .removeClass('pagination__item--activ');
     }
 
     //generation number of slide
@@ -79,7 +66,7 @@ $(document).ready(function () {
 
     generateItems();
 
-    //listing slid
+    //searh number slid and activ slid 
 
     var moveSlide = function (cont, slideNum) {
 
@@ -140,7 +127,7 @@ $(document).ready(function () {
             index = $this.index();
 
         moveSlide(container, index);
-        activeSlide(index);
+        colorAtiveItem(container, index);
     });
 
     //Галерея
