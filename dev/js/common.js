@@ -1,25 +1,25 @@
-$(document).ready(function(){
+$(document).ready(function () {
 
     //app global var zon
-    
-    const doc = document;
+
+    var doc = document;
 
     //Открыть элементы
-   const popUpComponents = (buttonToShow, needComponents, buttonToHide) => {
+    var popUpComponents = (buttonToShow, needComponents, buttonToHide) => {
 
-   
 
-        $(buttonToShow).click(function(buttonToShow){
+
+        $(buttonToShow).click(function (buttonToShow) {
 
             buttonToShow.preventDefault();
 
             $(needComponents).toggleClass('visuallyhidden');
 
         })
-        
-        
 
-        $(buttonToHide).click(function(buttonToHide){
+
+
+        $(buttonToHide).click(function (buttonToHide) {
 
             buttonToHide.preventDefault();
 
@@ -32,51 +32,58 @@ $(document).ready(function(){
 
     //slider
 
-     //generation number of slide
+    //color active pagination slide
 
-     var generatePagination = () => {
+    var colorAtiveItem = function (index) {
+
+        var sliders = $('.slider__teg'),
+            slidersPagination = sliders.find('.pagination__list');
+
+        for (var indexAtiveItem = 0; indexAtiveItem < slidersPagination.length; indexAtiveItem++) {
+            currentPagination = slidersPagination[indexAtiveItem];
+            console.log(currentPagination)
+
+            $(currentPagination)
+                .find('.pagination__item')
+                .eq(index)
+                .addClass('pagination__item--activ')
+                .siblings()
+                .removeClass('pagination__item--activ');
+        }
+
+
+    }
+
+    //generation number of slide
+
+    var generateItems = function () {
 
         var sliders = $('.slider__teg');
 
-        for(var index = 0; index < sliders.length; ++index){
+        for (var indexSlider = 0; indexSlider < sliders.length; indexSlider++) {
+            currentSliders = sliders[indexSlider];
 
-            var slidersIndex = sliders[index];
+            $('.slider__item', currentSliders).each(function (indexNumber) {
 
-           var needSlider = $('.slider__item', slidersIndex);
-
-            }
-
-            needSlider.each((index)=>{
-
-                let paginationItem = $('<li>',{
-                    attr : {
+                var paginationItem = $('<li>', {
+                    attr: {
                         class: 'pagination__item'
                     },
-                    html : '<a class="pagination__link">'+ ( index +1 ) + '</a>'
+                    html: '<a class="pagination__link">' + (indexNumber + 1) + '</a>'
                 });
-                $('.pagination__list').append(paginationItem);
+
+                $('.pagination__list', currentSliders).append(paginationItem);
             })
-            
+        }
     };
 
-    generatePagination();
+    generateItems();
 
-       //color active pagination slide
+    //listing slid
 
-       var activeSlide = (index)=>{
-        $('.slider__teg')
-            .find('.pagination__item')
-            .eq(index)
-            .addClass('.pagination__link--activ')
-            .siblings()
-            .removeClass('.pagination__link--activ');
-    }
+    var moveSlide = function (cont, slideNum) {
 
-       //listing slid
-
-       const moveSlide = (cont, slideNum) => {
-
-        const items = cont.find('.slider__item'),
+        var items = cont.find('.slider__item'),
             activeSlide = items.filter('.active__slide'),
             reqItem = items.eq(slideNum),
             reqIndex = reqItem.index(),
@@ -86,10 +93,10 @@ $(document).ready(function(){
         if (reqItem.length) {
             list.animate({
                 'left': -reqIndex * 100 + '%'
-            }, dur, () => {
+            }, dur, function () {
                 activeSlide.removeClass('active__slide');
                 reqItem.addClass('active__slide');
-                activeSlide(slideNum);
+                colorAtiveItem(slideNum);
             });
         }
 
@@ -97,14 +104,14 @@ $(document).ready(function(){
 
     //click ruls btn
 
-    $('.slider__controls').on('click', event => {
+    $('.slider__controls').on('click', function (event) {
         event.preventDefault();
 
-        const $this = $(event.target),
+        var $this = $(event.target),
             cont = $this.closest('.slider__teg'),
             items = $('.slider__item', cont),
             activeItem = items.filter('.active__slide');
-        let existedItem,
+        var existedItem,
             edgeItem,
             reqItem;
 
@@ -126,21 +133,20 @@ $(document).ready(function(){
 
     //click on pugination
 
-   $('body').on('click', '.pagination__item', event => {
-    event.preventDefault();
+    $('body').on('click', '.pagination__item', function () {
 
-    var $this = $(this),
-    container = $this.closest('.slider__teg'),
-    index = $this.index();
+        var $this = $(this),
+            container = $this.closest('.slider__teg'),
+            index = $this.index();
 
-    moveSlide(container, index);
-    activeSlide(index);
-   });
+        moveSlide(container, index);
+        activeSlide(index);
+    });
 
     //Галерея
 
     $('[data-fancybox]').fancybox({
-        toolbar  : true
+        toolbar: true
     });
 
 });

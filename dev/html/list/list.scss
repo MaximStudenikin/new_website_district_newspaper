@@ -72,18 +72,19 @@
     &:hover {
       color: $dark__violet;
     }
+  
+  }
+  &__item {
+    padding: 0 rem(15px) 0 0;
+    &:last-child {
+      padding: 0;
+    }
     &--activ {
       color: $white;
       background: $dark__violet;
       pointer-events: none;
       cursor: default;
       color: $white;
-    }
-  }
-  &__item {
-    padding: 0 rem(15px) 0 0;
-    &:last-child {
-      padding: 0;
     }
   }
   &__controls {
