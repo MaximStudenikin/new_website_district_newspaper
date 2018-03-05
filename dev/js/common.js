@@ -31,31 +31,6 @@ $(document).ready(function () {
     popUpComponents('.h__menu-link', '.h__menu', '.h__menu-close__batton')
 
     //slider
-    var slider_def = function (sliderContainer, sliderList, sliderItem, activeSlide, sliderControlBtn, 
-                                btnPrev, btnNext, paginationList, pagItem, pagItemActiv) {
-    
-    //searh number slid and activ slid 
-
-    var moveSlide = function (cont, slideNum) {
-
-        var items = cont.find('.slider__item'),
-            activeSlide = items.filter('.active__slide'),
-            reqItem = items.eq(slideNum),
-            reqIndex = reqItem.index(),
-            list = cont.find('.slider__list'),
-            dur = 500;
-
-        if (reqItem.length) {
-            list.animate({
-                'left': -reqIndex * 100 + '%'
-            }, dur, function () {
-                activeSlide.removeClass('active__slide');
-                reqItem.addClass('active__slide');
-                colorAtiveItem(cont, slideNum);
-            });
-        }
-
-    };
 
     //click ruls btn
 
@@ -86,16 +61,39 @@ $(document).ready(function () {
 
     });
 
+    //searh number slid and activ slide
+
+    var moveSlide = function (cont, slideNum) {
+
+        var items = cont.find('.slider__item'),
+            activeSlide = items.filter('.active__slide'),
+            reqItem = items.eq(slideNum),
+            reqIndex = reqItem.index(),
+            list = cont.find('.slider__list'),
+            dur = 500;
+
+        if (reqItem.length) {
+            list.animate({
+                'left': -reqIndex * 100 + '%'
+            }, dur, function () {
+                activeSlide.removeClass('active__slide');
+                reqItem.addClass('active__slide');
+                colorAtiveItem(cont, slideNum);
+            });
+        }
+
+    };
+
     //generation number of slide
 
-    var generateItems = function () {
+    var generateItems = function (sliderContainer, sliderItem, paginationList) {
 
-        var sliders = $('.slider__teg');
+        var sliders = $(sliderContainer);
 
         for (var indexSlider = 0; indexSlider < sliders.length; indexSlider++) {
             currentSliders = sliders[indexSlider];
 
-            $('.slider__item', currentSliders).each(function (indexNumber) {
+            $(sliderItem, currentSliders).each(function (indexNumber) {
 
                 var paginationItem = $('<li>', {
                     attr: {
@@ -104,10 +102,10 @@ $(document).ready(function () {
                     html: '<a class="pagination__link">' + (indexNumber + 1) + '</a>'
                 });
 
-                $('.pagination__list', currentSliders).append(paginationItem);
+                $(paginationList, currentSliders).append(paginationItem);
             })
         }
-    }();
+    };
 
     // color active item pagination
 
@@ -120,19 +118,73 @@ $(document).ready(function () {
             .removeClass('pagination__item--activ');
     }
 
-    //click on pugination
+    //click on pugination slider
 
     $('body').on('click', '.pagination__item', function () {
 
         var $this = $(this),
-            container = $this.closest('.slider__teg'),
+            container = $this.closest('.news'),
             index = $this.index();
 
-        moveSlide(container, index);
+        movePuginationSlide(container, index);
         colorAtiveItem(container, index);
     });
 
-}();
+
+    // news sliders
+
+    //searh number slid and activ news
+
+    var movePuginationSlide = function (newsContainer, newsNum) {
+
+        var 
+            items = newsContainer.find('.news__item'),
+            activeNews = items.filter('.active__news'),
+            reqItem = items.eq(newsNum),
+            reqIndex = reqItem.index(),
+            list = newsContainer.find('.news__list'),
+            dur = 500;
+
+        if (reqItem.length) {
+            list.animate({
+                'left': -reqIndex * 100 + '%'
+            }, dur, function () {
+                activeNews.removeClass('active__news');
+                reqItem.addClass('active__news');
+                colorAtiveItem(newsContainer, newsNum);
+            });
+        }
+
+    };
+
+    //generation number of news
+
+    generateItems('.news', '.news__item', '.pagination__list');
+
+    // color active item news pagination
+
+    var colorAtiveItem = function (newsContainer, index) {
+
+        $('.pagination__item', newsContainer)
+            .eq(index)
+            .addClass('pagination__item--activ')
+            .siblings()
+            .removeClass('pagination__item--activ');
+    }
+
+    //click on pugination news
+
+    $('body').on('click', '.pagination__item', function () {
+
+        var $this = $(this),
+            newsContainer = $this.closest('.news'),
+            index = $this.index();
+
+        movePuginationSlide(newsContainer, index);
+        colorAtiveItem(newsContainer, index);
+    });
+
+
     //gallery
 
     $('[data-fancybox]').fancybox({
