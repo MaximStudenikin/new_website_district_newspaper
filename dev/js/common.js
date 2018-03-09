@@ -71,6 +71,7 @@ $(document).ready(function () {
             reqIndex = reqItem.index(),
             list = cont.find('.slider__list'),
             dur = 500;
+            console.log(reqItem)
 
         if (reqItem.length) {
             list.animate({
@@ -137,7 +138,7 @@ $(document).ready(function () {
 
     var movePuginationSlide = function (newsContainer, newsNum) {
 
-        var 
+        var
             items = newsContainer.find('.news__item'),
             activeNews = items.filter('.active__news'),
             reqItem = items.eq(newsNum),
@@ -183,6 +184,94 @@ $(document).ready(function () {
         movePuginationSlide(newsContainer, index);
         colorAtiveItem(newsContainer, index);
     });
+
+    //slidershow
+
+    var sliderShow = function (container, slideShowNum) {
+
+        var list = container.find('.slidershow__list'),
+            items = $('.slidershow__item', list),
+            activeItem = items.filter('.slidershow__item--activ'),
+            links = $('.slidershow__link', items)
+            reqitems = items.eq(slideShowNum),
+            reqIndex = reqitems.index();
+            console.log(reqitems)
+
+            if (reqitems.length) {
+                list.animate(function () {
+                    activeSlide.removeClass('slidershow__item--activ');
+                    reqItem.addClass('slidershow__item--activ');
+                });
+            }
+    }
+
+    //slidershow controls
+
+    $('.slidershow__controls').on('click', function (event) {
+        event.preventDefault();
+
+        var $this = $(event.target),
+            container = $this.closest('.slidershow'),
+            items = $('.slidershow__item', container),
+            links = $('.slidershow__link', items),
+            path = links.attr('href'),
+            browsingReview = $('.slidershow__review', container),
+            browsingLink = $('.browsing__link', container);
+
+        var existedLink,
+            edgeLink,
+            reqLink;
+
+        if ($this.hasClass('controls__btn__next')) {
+            existedLink = items.next();
+            
+            browsingReview.fadeOut(function () {
+                browsingReview.attr('src', path).on('load', function () {
+                    browsingLink.attr('href', path);
+                    browsingReview.fadeIn();
+                })
+            })
+
+            edgeLink = items.first();
+           
+        }
+
+        if ($this.hasClass('controls__btn__prev')) {
+            existedLink = items.prev();
+            
+            browsingReview.fadeOut(function () {
+                browsingReview.attr('src', path).on('load', function () {
+                    browsingLink.attr('href', path);
+                    browsingReview.fadeIn();
+                })
+            })
+
+            edgeLink = items.last();
+        }
+
+        reqLink = existedLink.length ? existedLink.index() : edgeLink.index();
+
+        sliderShow(container, reqLink);
+
+    })
+
+    $('.slidershow__link').on('click', function (event) {
+        event.preventDefault();
+
+        var $this = $(event.currentTarget),
+            container = $this.closest('.slidershow'),
+            path = $this.attr('href'),
+            browsingReview = container.find('.slidershow__review');
+            browsingLink = container.find('.browsing__link');
+
+            browsingReview.fadeOut(function () {
+                browsingReview.attr('src', path).on('load', function () {
+                    browsingLink.attr('href', path);
+                    browsingReview.fadeIn();
+            })
+        })
+
+    })
 
 
     //gallery
