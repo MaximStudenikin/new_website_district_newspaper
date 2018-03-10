@@ -1,55 +1,49 @@
 .delimiter__section
-    .section__left
-        section.affiche
-        .row
-            section.gallery
-                a.gallery__title(href='gallery.html') Галерея
-                .gallery__img
-                    img(src='https://source.unsplash.com/user/oria_hector/720x500')
-        .row
-            section.blog
-                a.section__heading.text__center(href='list.html') Колумнистика
-                .blog__content
-                    .blog__preview.row
-                        img.user__img(src='https://source.unsplash.com/user/michaeldam/200x200')
-                        .section__row
-                            p.user__name Кристина Иванова
-                        .section__row
-                            a.section__title(href='article.html') Феномен толпы
-                    .blog__preview.row
-                        img.user__img(src='https://source.unsplash.com/user/chrisjoelcampbell/200x200')
-                        .section__row
-                            p.user__name Кристина Иванова
-                        .section__row
-                            a.section__title(href='article.html') Феномен толпы
-                    .blog__preview.row
-                        img.user__img(src='https://source.unsplash.com/user/alexandruz/200x200')
-                        .section__row
-                            p.user__name Кристина Иванова
-                        .section__row
-                            a.section__title(href='article.html') Феномен толпы
-                //- .pagination.row.show__blok-phones
-                    //- ul.pagination__list
-                    //-     li.pagination__item
-                    //-         a.pagination__link.pagination__link--activ(href='#') 1
-                    //-     li.pagination__item
-                    //-         a.pagination__link(href='#') 2
-                    //-     li.pagination__item
-                    //-         a.pagination__link(href='#') 3
-    .section__right
-        .row
-            section.banners
-                .banners__img
-                    img(src='https://source.unsplash.com/1600x900/?type')
-                .banners__img
-                    img(src='https://source.unsplash.com/1600x900/?technology')
-                .banners__img
-                    img(src='https://source.unsplash.com/1600x900/?screen')
-        .row
-            section.interview
-                a.section__heading.text__center(href='list.html') Интервью
-                    .section__row
-                        a.interview__link(href='article.html')
-                            .interview__preview
-                                span.interview__name Алексей Быстрый
-                                img.interview__img(src='https://source.unsplash.com/240x600/?person')
+	.section__left
+		section.affiche
+		.row
+			section.gallery
+				a.gallery__title(href='gallery.html') Галерея
+				.gallery__img
+					img(src='https://source.unsplash.com/user/oria_hector/720x500')
+		.row
+			section.blog
+				a.section__heading.text__center(href='list.html') Колумнистика
+				ul.blog__list
+					li.blog__item.row
+						img.user__img(src='https://source.unsplash.com/user/michaeldam/200x200')
+						.section__row
+							p.user__name Кристина Иванова
+						.section__row
+							a.section__title(href='article.html') Феномен толпы
+					li.blog__item.row
+						img.user__img(src='https://source.unsplash.com/user/chrisjoelcampbell/200x200')
+						.section__row
+							p.user__name Кристина Иванова
+						.section__row
+							a.section__title(href='article.html') Феномен толпы
+					li.blog__item.row
+						img.user__img(src='https://source.unsplash.com/user/alexandruz/200x200')
+						.section__row
+							p.user__name Кристина Иванова
+						.section__row
+							a.section__title(href='article.html') Феномен толпы
+				.pagination.row.show__blok-phones
+					ul.pagination__list
+	.section__right
+		.row
+			section.banners
+				.banners__img
+					img(src='https://source.unsplash.com/1600x900/?type')
+				.banners__img
+					img(src='https://source.unsplash.com/1600x900/?technology')
+				.banners__img
+					img(src='https://source.unsplash.com/1600x900/?screen')
+		.row
+			section.interview
+				a.section__heading.text__center(href='list.html') Интервью
+					.section__row
+						a.interview__link(href='article.html')
+							.interview__preview
+								span.interview__name Алексей Быстрый
+								img.interview__img(src='https://source.unsplash.com/240x600/?person')

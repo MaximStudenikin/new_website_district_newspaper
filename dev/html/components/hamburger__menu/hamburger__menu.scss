@@ -51,7 +51,11 @@
   height: rem(22px);
   align-items: center;
   margin-left: rem(30px);
-  display: flex;
+  display: none;
+
+  @include phones{
+    display: flex;
+  }
 }
 
 .h__menu-link__bars {
