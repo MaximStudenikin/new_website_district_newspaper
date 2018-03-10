@@ -193,16 +193,9 @@ $(document).ready(function () {
             items = $('.slidershow__item', list),
             activeItem = items.filter('.slidershow__item--activ'),
             links = $('.slidershow__link', items)
-            reqitems = items.eq(slideShowNum),
-            reqIndex = reqitems.index();
-            console.log(reqitems)
-
-            if (reqitems.length) {
-                list.animate(function () {
-                    activeSlide.removeClass('slidershow__item--activ');
-                    reqItem.addClass('slidershow__item--activ');
-                });
-            }
+            reqItems = items.eq(slideShowNum);
+            reqIndex = items.index();
+            console.log(reqItems)
     }
 
     //slidershow controls
@@ -213,56 +206,61 @@ $(document).ready(function () {
         var $this = $(event.target),
             container = $this.closest('.slidershow'),
             items = $('.slidershow__item', container),
-            links = $('.slidershow__link', items),
-            path = links.attr('href'),
+            activeItem = items.filter('.slidershow__item--activ'),
             browsingReview = $('.slidershow__review', container),
             browsingLink = $('.browsing__link', container);
-
-        var existedLink,
-            edgeLink,
-            reqLink;
+        var existedItem,
+            edgeItem,
+            reqItems;
 
         if ($this.hasClass('controls__btn__next')) {
-            existedLink = items.next();
+            existedItem = activeItem.next();
+            edgeItem = items.first();
+
+            nextPath = existedItem.attr('href');
             
             browsingReview.fadeOut(function () {
-                browsingReview.attr('src', path).on('load', function () {
-                    browsingLink.attr('href', path);
+                browsingReview.attr('src', nextPath).on('load', function () {
+                    browsingLink.attr('href', nextPath);
                     browsingReview.fadeIn();
                 })
-            })
-
-            edgeLink = items.first();
-           
+            })           
         }
 
         if ($this.hasClass('controls__btn__prev')) {
-            existedLink = items.prev();
+            existedItem = activeItem.prev();
+            edgeItem = items.last();
+
+            prevPath = existedItem.attr('href');
             
             browsingReview.fadeOut(function () {
-                browsingReview.attr('src', path).on('load', function () {
-                    browsingLink.attr('href', path);
+                browsingReview.attr('src', prevPath).on('load', function () {
+                    browsingLink.attr('href', prevPath);
                     browsingReview.fadeIn();
                 })
             })
-
-            edgeLink = items.last();
         }
 
-        reqLink = existedLink.length ? existedLink.index() : edgeLink.index();
+        reqItems = existedItem.length ? existedItem.index() : edgeItem.index();
 
-        sliderShow(container, reqLink);
+        sliderShow(container, reqItems);
 
     })
+
+    //click on pagination
 
     $('.slidershow__link').on('click', function (event) {
         event.preventDefault();
 
         var $this = $(event.currentTarget),
             container = $this.closest('.slidershow'),
+            targetItem = $this.closest('.slidershow__item'),
             path = $this.attr('href'),
-            browsingReview = container.find('.slidershow__review');
+            browsingReview = container.find('.slidershow__review'),
             browsingLink = container.find('.browsing__link');
+
+            targetItem.addClass('slidershow__item--activ');
+            targetItem.siblings().removeClass('slidershow__item--activ');
 
             browsingReview.fadeOut(function () {
                 browsingReview.attr('src', path).on('load', function () {
@@ -270,7 +268,6 @@ $(document).ready(function () {
                     browsingReview.fadeIn();
             })
         })
-
     })
 
 
