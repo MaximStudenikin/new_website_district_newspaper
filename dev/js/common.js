@@ -198,6 +198,7 @@ $(document).ready(function () {
             activeItem = items.filter('.slidershow__item--activ'),
             browsingReview = $('.slidershow__review', container),
             browsingLink = $('.browsing__link', container),
+            preloader = $('.slidershow__preloader', container),
             existedItem,
             edgeItem,
             reqItems;
@@ -209,9 +210,11 @@ $(document).ready(function () {
             nextPath = $('.slidershow__link', '.slidershow__item--activ').attr('href');
             
             browsingReview.fadeOut(function () {
+                preloader.show();
                 browsingReview.attr('src', nextPath).on('load', function () {
                     browsingLink.attr('href', nextPath);
                     browsingReview.fadeIn();
+                    preloader.hide();
                 })
             })
            var nextIndex = existedItem.index();
@@ -226,11 +229,14 @@ $(document).ready(function () {
             existedItem = activeItem.prev();
             existedItem.addClass('slidershow__item--activ');
             existedItem.siblings().removeClass('slidershow__item--activ');
-            prevPath = $('.slidershow__link', '.slidershow__item--activ').attr('href');     
+            prevPath = $('.slidershow__link', '.slidershow__item--activ').attr('href'); 
+
             browsingReview.fadeOut(function () {
+                preloader.show();
                 browsingReview.attr('src', prevPath).on('load', function () {
                     browsingLink.attr('href', prevPath);
                     browsingReview.fadeIn();
+                    preloader.hide();
                 })
             })
             prevIndex = existedItem.index();
@@ -254,15 +260,18 @@ $(document).ready(function () {
             targetItem = $this.closest('.slidershow__item'),
             path = $this.attr('href'),
             browsingReview = container.find('.slidershow__review'),
-            browsingLink = container.find('.browsing__link');
+            browsingLink = container.find('.browsing__link'),
+            preloader = $('.slidershow__preloader', container);
 
             targetItem.addClass('slidershow__item--activ');
             targetItem.siblings().removeClass('slidershow__item--activ');
 
             browsingReview.fadeOut(function () {
+                preloader.show();
                 browsingReview.attr('src', path).on('load', function () {
                     browsingLink.attr('href', path);
                     browsingReview.fadeIn();
+                    preloader.hide();
             })
         })
     })
