@@ -1,132 +1,110 @@
 .article {
-  line-height: 1.2;
-
-  &__top {
-    display: flex;
-    justify-content: space-between;
-    @include desktop {
-      flex-direction: column-reverse;
+    line-height: 1.2;
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        @include desktop {
+            flex-direction: column-reverse;
+        }
     }
-  }
-  &__publication-date {
-    align-self: flex-end;
-    @include desktop{
-      align-self: flex-start;
+    &__publication_date {
+        align-self: flex-end;
+        @include desktop {
+            align-self: flex-start;
+        }
     }
-  }
-  &__social-btn {
-    flex-basis: 80%;
-  }
-  //text
-  h1 {
-    font-size: $noto__sans-bold;
-  }
-  p {
-    margin: rem(15px) 0 0 0;
-  }
-}
+    &__social_btn {
+        flex-basis: 80%;
+    } //text
+    h1 {
+        font-size: $noto__sans-bold;
+    }
+    p {
+        margin: rem(15px) 0 0 0;
+    }
 
 //links
-.article__internal-link {
-  color: $yellow;
-  font-family: $roboto__bold;
-  padding: 0 rem(10px);
-  white-space: nowrap;
-  &:before {
-    content: '';
-    display: inline-block;
-    content: '';
-    width: 15px;
-    height: 15px;
-    padding: 0 rem(5px) 0 0;
-    background-size: 15px;
-    background: url("../img/link.svg") no-repeat;
-  }
-  &:hover {
-    text-decoration: underline;
-  }
-}
-
-.article__out-link {
-  color: $yellow;
-  font-family: $roboto__bold;
-  padding: 0 rem(10px);
-  white-space: nowrap;
-  &:before {
-    display: inline-block;
-    content: '';
-    width: 15px;
-    height: 15px;
-    padding: 0 rem(5px) 0 0;
-    background-size: 15px;
-    background: url(../img/out-link.svg) no-repeat;
-  }
-  &:hover {
-    text-decoration: underline;
-  }
-}
-
-.slidershow{
-  
-  position: relative;
-  display: flex;
-  flex-direction: column;
-
-  &__browsing {
-    width: 100%;
-    overflow: hidden;
-  }
-
-  &__review {
-    display: block;
-    width: 100%;
-  }
-
-  &__preloader{
-    position: absolute;
-    display: none;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-    background: url(./img/icon/preloader.gif);
-    width: 64px;
-    height: 64px;
-  }
-
-  &__list {
-    display: flex;
-    width: 100%;
-    overflow: hidden;
-  }
-
-  &__item{
-    filter: grayscale(70%);
-    display: flex;
-   
-  }
-
-  &__item--activ {
-    border: 5px solid $yellow;
-    filter: grayscale(0);
-  }
-
-  &__prev {
-    display: block;
-    width: 100%;
-    height: 100%;
-  }
-
-
-
-  &__controls {
-    position: absolute;
-    top: 40%;
-    width: 100%;
-    opacity: .4;
-    &:hover {
-      opacity: 1;
+    &__link {
+        color: $yellow;
+        font-family: $roboto__bold;
+        padding: 0 rem(10px);
+        white-space: nowrap;
+        &:before {
+            content: '';
+            display: inline-block;
+            content: '';
+            width: 15px;
+            height: 15px;
+            padding: 0 rem(5px) 0 0;
+            background-size: 15px;
+            background: url("../img/link.svg") no-repeat;
+        }
     }
-  }
+    &__link--out {
+        &:before {
+            display: inline-block;
+            content: '';
+            width: 15px;
+            height: 15px;
+            padding: 0 rem(5px) 0 0;
+            background-size: 15px;
+            background: url(../img/out-link.svg) no-repeat;
+        }
+    }
+    &__link--hover:hover {
+        text-decoration: underline;
+    }
+}
+
+.slidershow {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    &__browsing {
+        width: 100%;
+        overflow: hidden;
+    }
+    &__review {
+        display: block;
+        width: 100%;
+    }
+    &__preloader {
+        position: absolute;
+        display: none;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        background: url(./img/icon/preloader.gif);
+        width: 64px;
+        height: 64px;
+    }
+    &__list {
+        display: flex;
+        width: 100%;
+        overflow: hidden;
+    }
+    &__item {
+        filter: grayscale(70%);
+        display: flex;
+    }
+    &__item--activ {
+        border: 5px solid $yellow;
+        filter: grayscale(0);
+    }
+    &__prev {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    &__controls {
+        position: absolute;
+        top: 40%;
+        width: 100%;
+        opacity: .4;
+    }
+    &__controls--hover:hover {
+        opacity: 1;
+    }
 }
