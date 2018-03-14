@@ -32,6 +32,9 @@
 
 .row {
     margin: rem(45px) 0 0 0;
+    @include phones{
+        margin: rem(25px) 0 0 0;
+    }
 }
 
 .col {

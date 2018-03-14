@@ -34,12 +34,12 @@ $(document).ready(function () {
 
     //click ruls btn
 
-    $('.slider__controls').on('click', function (event) {
+    $('[data-class="slider__controls"]').on('click', function (event) {
         event.preventDefault();
 
         var $this = $(event.target),
-            cont = $this.closest('.slider__teg'),
-            items = $('.slider__item', cont),
+            cont = $this.closest('[data-class="slider__teg"]'),
+            items = $('[data-class="slider__item"]', cont),
             activeItem = items.filter('.active__slide');
         var existedItem,
             edgeItem,
@@ -65,13 +65,12 @@ $(document).ready(function () {
 
     var moveSlide = function (cont, slideNum) {
 
-        var items = cont.find('.slider__item'),
+        var items = cont.find('[data-class="slider__item"]'),
             activeSlide = items.filter('.active__slide'),
             reqItem = items.eq(slideNum),
             reqIndex = reqItem.index(),
-            list = cont.find('.slider__list'),
+            list = cont.find('[data-class="slider__list"]'),
             dur = 500;
-            console.log(reqItem)
 
         if (reqItem.length) {
             list.animate({
@@ -87,9 +86,9 @@ $(document).ready(function () {
 
     //generation number of slide
 
-    var generateItems = function (sliderContainer, sliderItem, paginationList) {
+    var generateItems = function (cont, sliderItem, paginationList) {
 
-        var sliders = $(sliderContainer);
+        var sliders = $(cont);
 
         for (var indexSlider = 0; indexSlider < sliders.length; indexSlider++) {
             currentSliders = sliders[indexSlider];
@@ -108,6 +107,8 @@ $(document).ready(function () {
         }
     };
 
+    generateItems('[data-class="slider__teg"]', '[data-class="slider__item"]', '[data-class="pagination__list"]');
+
     // color active item pagination
 
     var colorAtiveItem = function (container, index) {
@@ -124,65 +125,11 @@ $(document).ready(function () {
     $('body').on('click', '.pagination__item', function () {
 
         var $this = $(this),
-            container = $this.closest('.news'),
+            container = $this.closest('[data-class="slider__teg"]'),
             index = $this.index();
 
-        movePuginationSlide(container, index);
+        moveSlide(container, index);
         colorAtiveItem(container, index);
-    });
-
-
-    // news sliders
-
-    //searh number slid and activ news
-
-    var movePuginationSlide = function (newsContainer, newsNum) {
-
-        var
-            items = newsContainer.find('.news__item'),
-            activeNews = items.filter('.active__news'),
-            reqItem = items.eq(newsNum),
-            reqIndex = reqItem.index(),
-            list = newsContainer.find('.news__list'),
-            dur = 500;
-
-        if (reqItem.length) {
-            list.animate({
-                'left': -reqIndex * 100 + '%'
-            }, dur, function () {
-                activeNews.removeClass('active__news');
-                reqItem.addClass('active__news');
-                colorAtiveItem(newsContainer, newsNum);
-            });
-        }
-
-    };
-
-    //generation number of news
-
-    generateItems('.news', '.news__item', '.pagination__list');
-
-    // color active item news pagination
-
-    var colorAtiveItem = function (newsContainer, index) {
-
-        $('.pagination__item', newsContainer)
-            .eq(index)
-            .addClass('pagination__item--activ')
-            .siblings()
-            .removeClass('pagination__item--activ');
-    }
-
-    //click on pugination news
-
-    $('body').on('click', '.pagination__item', function () {
-
-        var $this = $(this),
-            newsContainer = $this.closest('.news'),
-            index = $this.index();
-
-        movePuginationSlide(newsContainer, index);
-        colorAtiveItem(newsContainer, index);
     });
 
     //slidershow
