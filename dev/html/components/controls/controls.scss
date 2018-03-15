@@ -1,0 +1,37 @@
+.controls {
+    position: relative;
+    bottom: 50px;
+    width: 100%;
+    &__btn {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        background: $yellow;
+    }
+    &__btn_next {
+        position: absolute;
+        right: 0;
+    }
+    &__btn_prev {
+        position: absolute;
+    }
+    &__arrow_right,
+    &__arrow_left {
+        border: solid black;
+        border-width: 0 2px 2px 0;
+        display: inline-block;
+        padding: rem(5px);
+    }
+    &__arrow_left {
+        position: relative;
+        transform: rotate(135deg);
+        top: 15px;
+        left: 20px;
+    }
+    &__arrow_right {
+        position: relative;
+        transform: rotate(-45deg);
+        top: 15px;
+        left: 15px;
+    }
+}

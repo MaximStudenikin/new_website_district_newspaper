@@ -45,12 +45,12 @@ $(document).ready(function () {
             edgeItem,
             reqItem;
 
-        if ($this.hasClass('controls__btn__next')) {
+        if ($this.hasClass('controls__btn_next')) {
             existedItem = activeItem.next();
             edgeItem = items.first();
         }
 
-        if ($this.hasClass('controls__btn__prev')) {
+        if ($this.hasClass('controls__btn_prev')) {
             existedItem = activeItem.prev();
             edgeItem = items.last();
         }
@@ -150,12 +150,12 @@ $(document).ready(function () {
             edgeItem,
             reqItems;
 
-        if ($this.hasClass('controls__btn__next')) {
+        if ($this.hasClass('controls__btn_next')) {
             existedItem = activeItem.next();
             existedItem.addClass('slidershow__item--activ');
             existedItem.siblings().removeClass('slidershow__item--activ');
             nextPath = $('.slidershow__link', '.slidershow__item--activ').attr('href');
-            
+
             browsingReview.fadeOut(function () {
                 preloader.show();
                 browsingReview.attr('src', nextPath).on('load', function () {
@@ -164,19 +164,19 @@ $(document).ready(function () {
                     preloader.hide();
                 })
             })
-           var nextIndex = existedItem.index();
-        }     
-        if (nextIndex == -1){
+            var nextIndex = existedItem.index();
+        }
+        if (nextIndex == -1) {
             edgeItem = items.first();
             edgeItem.addClass('slidershow__item--activ');
             edgeItem.siblings().removeClass('slidershow__item--activ');
-            nextPath = $('.slidershow__link', '.slidershow__item--activ').attr('href');   
+            nextPath = $('.slidershow__link', '.slidershow__item--activ').attr('href');
         }
-        if ($this.hasClass('controls__btn__prev')) {
+        if ($this.hasClass('controls__btn_prev')) {
             existedItem = activeItem.prev();
             existedItem.addClass('slidershow__item--activ');
             existedItem.siblings().removeClass('slidershow__item--activ');
-            prevPath = $('.slidershow__link', '.slidershow__item--activ').attr('href'); 
+            prevPath = $('.slidershow__link', '.slidershow__item--activ').attr('href');
 
             browsingReview.fadeOut(function () {
                 preloader.show();
@@ -187,8 +187,8 @@ $(document).ready(function () {
                 })
             })
             prevIndex = existedItem.index();
-        } 
-        if (prevIndex == -1){
+        }
+        if (prevIndex == -1) {
             edgeItem = items.last();
             edgeItem.addClass('slidershow__item--activ');
             edgeItem.siblings().removeClass('slidershow__item--activ');
@@ -210,15 +210,15 @@ $(document).ready(function () {
             browsingLink = container.find('.browsing__link'),
             preloader = $('.slidershow__preloader', container);
 
-            targetItem.addClass('slidershow__item--activ');
-            targetItem.siblings().removeClass('slidershow__item--activ');
+        targetItem.addClass('slidershow__item--activ');
+        targetItem.siblings().removeClass('slidershow__item--activ');
 
-            browsingReview.fadeOut(function () {
-                preloader.show();
-                browsingReview.attr('src', path).on('load', function () {
-                    browsingLink.attr('href', path);
-                    browsingReview.fadeIn();
-                    preloader.hide();
+        browsingReview.fadeOut(function () {
+            preloader.show();
+            browsingReview.attr('src', path).on('load', function () {
+                browsingLink.attr('href', path);
+                browsingReview.fadeIn();
+                preloader.hide();
             })
         })
     })
