@@ -1,0 +1,44 @@
+.pagination {
+  position: relative;
+  display: flex;
+  width: 100%;
+  &__list {
+      display: flex;
+      margin: auto;
+      color: $black;
+      width: 65%;
+      font: {
+          family: $roboto__regular;
+          size: rem(26px);
+      }
+      justify-content: center;
+  }
+  &__link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+      &:hover {
+          color: $dark__violet;
+      }
+  }
+  &__item {
+      padding: 0 rem(15px) 0 0;
+      &:last-child {
+          padding: 0;
+      }
+      &--activ {
+          color: $white;
+          background: $dark__violet;
+          pointer-events: none;
+          cursor: default;
+          color: $white;
+      }
+  }
+  &__controls {
+      position: absolute;
+      width: 100%;
+      top: -10px;
+  }
+}

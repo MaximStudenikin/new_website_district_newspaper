@@ -1,147 +1,126 @@
 .gallery {
-	&__container {
-			display: flex;
-			flex-direction: column;
-	}
-	&__photo, &__video {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			width: 100%;
-			position: relative;
-	}
-	&__slider {
-			display: flex;
-			flex-wrap: wrap;
-			width: 80%;
-			justify-content: space-between;
-			@include desktop{
-				width: 100%;
-			}
-			@include tablets{
-				width: 98%;
-				overflow: hidden;
-			}
-			@include phones{
-				width: 99%;
-			}
-	}
-		
-	&__content {
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: space-between;
-			@include tablets{
-				position: relative;
-        right: 0%;
-			}
-	}
-	&__slider-row{
-		display: flex;
-		justify-content: space-between;
-		@include tablets{
-			justify-content: flex-start;
-		}
-	}
-	&__slider-cell {
-		display: flex;
-		position: relative;
-		width: 33%;
-		overflow: hidden;
-			@include tablets{
-				padding: 0 2% 0 0;
-			}
-			@include phones{
-				padding: 0 1%;
-			}
-	}
-	&__controls {
-		position: absolute;
-		top: 45%;
-		@include desktop {
-			position: absolute;
-    	top: 720px;
-    	width: 75%;
-		}
-	.controls__btn__prev {
-			left: -7%;
-			@include desktop{
-				left: 34%;
-			}
-		}
-	.controls__btn__next {
-			right: 0;
-		@include large__devices{
-			right: 14%;
-		}
-		@include desktop{
-			right: 0;
-		}
-	}
-}
-		&__link {
-			cursor: pointer;
-		}
-		&__img-prev {
-			height: 220px;
-			width: 300px;
-			filter: grayscale(70%);
-			overflow: hidden;
-			@include phones{
-				height: 350px;
-    		width: 350px;
-			}
-			&:hover {
-				filter: grayscale(0);
-			}
-		}
-		&-img {
-			width: 100%;
-			display: block;
-		}
-		&__description-text {
-			width: 80%;
-		}
-		&__pagination-list {
-			width: auto;
-		}
-		&__pagination {
-			position: relative;
-			width: 100%;
-		}
-		&__photos {
-			width: 60%;
-			p {
-				margin: rem(15px) 0 0 0;
-				width: 60%;
-				}
-			}
-	}
-
-	//video
+    &__container {
+        display: flex;
+        flex-direction: column;
+    }
+    &__slider {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        position: relative;
+    }
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        width: 80%;
+        justify-content: space-between;
+        @include desktop {
+            width: 100%;
+        }
+        @include tablets {
+            width: 98%;
+            overflow: hidden;
+        }
+        @include phones {
+            width: 99%;
+        }
+    }
+    &__item {
+        display: flex;
+        position: relative;
+        width: 33%;
+        overflow: hidden;
+        @include tablets {
+            padding: 0 2% 0 0;
+        }
+        @include phones {
+            padding: 0 1%;
+        }
+    }
+    &__controls {
+        position: absolute;
+        top: 45%;
+        @include desktop {
+            position: absolute;
+            top: 720px;
+            width: 75%;
+        }
+        .controls__btn__prev {
+            left: -7%;
+            @include desktop {
+                left: 34%;
+            }
+        }
+        .controls__btn__next {
+            right: 0;
+            @include large__devices {
+                right: 14%;
+            }
+            @include desktop {
+                right: 0;
+            }
+        }
+    }
+    &__link {
+        cursor: pointer;
+    }
+    &__img-prev {
+        height: 220px;
+        width: 300px;
+        filter: grayscale(70%);
+        overflow: hidden;
+        @include phones {
+            height: 350px;
+            width: 350px;
+        }
+        &:hover {
+            filter: grayscale(0);
+        }
+    }
+    &-img {
+        width: 100%;
+        display: block;
+    }
+    &__description-text {
+        width: 80%;
+    }
+    &__pagination-list {
+        width: auto;
+    }
+    &__pagination {
+        position: relative;
+        width: 100%;
+    }
+    &__photos {
+        width: 60%;
+        p {
+            margin: rem(15px) 0 0 0;
+            width: 60%;
+        }
+    }
+} //video
 .palay__btn {
-	position: absolute;
-	left: 40%;
-	top: 30%;
-	cursor: pointer;
-	z-index: 1;
-	&:before {
-		content: '';
-		position: absolute;
-		width: 50px;
-		height: 50px;
-		background: $yellow;
-	}
-
-		&:after {
-			position: absolute;
-			content: '';
-			border: 0;
-			border-style: solid;
-			border-width: 15px 0 15px 20px;
-			border-color: transparent transparent transparent #202020;
-			top: 10px;
-			left: 15px;
-		}
-
-	}
+    position: absolute;
+    left: 40%;
+    top: 30%;
+    cursor: pointer;
+    z-index: 1;
+    &:before {
+        content: '';
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        background: $yellow;
+    }
+    &:after {
+        position: absolute;
+        content: '';
+        border: 0;
+        border-style: solid;
+        border-width: 15px 0 15px 20px;
+        border-color: transparent transparent transparent #202020;
+        top: 10px;
+        left: 15px;
+    }
+}
