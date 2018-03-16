@@ -1,7 +1,7 @@
 .wrap {
     position: relative;
     width: 100%;
-    overflow: hidden;
+    height: 100%;
 }
 
 .container {
@@ -62,7 +62,11 @@
         background: $black;
         opacity: 0.2;
         margin: rem(60px) 0 0 0;
+        @include desktop{
+            margin: rem(120px) 0 0 0;
+        }
     }
+   
 }
 
 .close-icon {

@@ -1,5 +1,6 @@
 .gallery {
     &__container {
+        height: 100%;
         display: flex;
         flex-direction: column;
     }
@@ -9,18 +10,16 @@
         align-items: center;
         width: 100%;
         position: relative;
+        overflow: hidden;
     }
     &__list {
         display: flex;
-        flex-wrap: wrap;
-        width: 80%;
-        justify-content: space-between;
-        @include desktop {
-            width: 100%;
-        }
+        position: relative;
+        justify-content: flex-start;
+        width: 100%;
+        left: 0;
         @include tablets {
             width: 98%;
-            overflow: hidden;
         }
         @include phones {
             width: 99%;
@@ -28,9 +27,33 @@
     }
     &__item {
         display: flex;
+        flex-direction: column;
+        padding: 0 8%;
+    }
+    &__row {
+        display: flex;
+        width: 100%;
+    }
+    &__controls {
+        top: 45%;
+        height: 6%;
+        @include desktop {
+            position: absolute;
+            top: 720px;
+            width: 75%;
+        }
+    }
+    &__link {
         position: relative;
-        width: 33%;
-        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        width: 340px;
+        cursor: pointer;
+        filter: grayscale(70%);
+        padding: 0 10px 0 0;
+        &:last-child{
+            padding: 0;
+        }
         @include tablets {
             padding: 0 2% 0 0;
         }
@@ -38,52 +61,25 @@
             padding: 0 1%;
         }
     }
-    &__controls {
-        position: absolute;
-        top: 45%;
-        @include desktop {
-            position: absolute;
-            top: 720px;
-            width: 75%;
-        }
-        .controls__btn__prev {
-            left: -7%;
-            @include desktop {
-                left: 34%;
-            }
-        }
-        .controls__btn__next {
-            right: 0;
-            @include large__devices {
-                right: 14%;
-            }
-            @include desktop {
-                right: 0;
-            }
-        }
+    &__link--hover:hover {
+        filter: grayscale(0);
     }
-    &__link {
-        cursor: pointer;
-    }
-    &__img-prev {
-        height: 220px;
-        width: 300px;
-        filter: grayscale(70%);
-        overflow: hidden;
-        @include phones {
-            height: 350px;
-            width: 350px;
-        }
-        &:hover {
-            filter: grayscale(0);
-        }
-    }
+    // &__img-prev {
+    //     height: 220px;
+    //     width: 300px;
+    //     filter: grayscale(70%);
+    //     overflow: hidden;
+    //     @include phones {
+    //         height: 350px;
+    //         width: 350px;
+    //     }
+    //     &:hover {
+    //         filter: grayscale(0);
+    //     }
+    // }
     &-img {
         width: 100%;
         display: block;
-    }
-    &__description-text {
-        width: 80%;
     }
     &__pagination-list {
         width: auto;
