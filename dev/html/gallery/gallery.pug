@@ -8,7 +8,7 @@ include ../base
 				section.gallery__slider(data-class='slider__teg').hr__end.row
 					span.section__heading Фото
 					ul.gallery__list(data-class='slider__list').row
-						li.gallery__item.active__slide(data-class='slider__item')
+						li.gallery__item(data-class='slider__item').active__slide
 							.gallery__row
 								a.gallery__link.gallery__link--hover(data-fancybox data-type="ajax" data-src="gallery__content.html")
 									.section__img
@@ -36,6 +36,19 @@ include ../base
 										img.img__teg(src='https://source.unsplash.com/user/alexb/1200x900',alt='alt')
 									span.section__row.section__description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!
 						li.gallery__item(data-class='slider__item')
+							.gallery__row.row
+									a.gallery__link.gallery__link--hover(data-fancybox data-type="ajax" data-src="gallery__content.html")
+										.section__img
+											img.img__teg(src='https://source.unsplash.com/user/marcojodoin/1200x900',alt='alt')
+										span.section__row.section__description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!
+									a.gallery__link.gallery__link--hover(data-fancybox data-type="ajax" data-src="gallery__content.html")
+										.section__img
+											img.img__teg(src='https://source.unsplash.com/user/jaycalabresephotography/1200x900',alt='alt')
+										span.section__row.section__description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!
+									a.gallery__link.gallery__link--hover(data-fancybox data-type="ajax" data-src="gallery__content.html")
+										.section__img
+											img.img__teg(src='https://source.unsplash.com/user/alexb/1200x900',alt='alt')
+										span.section__row.section__description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!
 							.gallery__row
 								a.gallery__link.gallery__link--hover(data-fancybox data-type="ajax" data-src="gallery__content.html")
 									.section__img
@@ -48,19 +61,6 @@ include ../base
 								a.gallery__link.gallery__link--hover(data-fancybox data-type="ajax" data-src="gallery__content.html")
 									.section__img
 										img.img__teg(src='https://source.unsplash.com/user/goian/1200x900',alt='alt')
-									span.section__row.section__description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!
-							.gallery__row.row
-								a.gallery__link.gallery__link--hover(data-fancybox data-type="ajax" data-src="gallery__content.html")
-									.section__img
-										img.img__teg(src='https://source.unsplash.com/user/marcojodoin/1200x900',alt='alt')
-									span.section__row.section__description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!
-								a.gallery__link.gallery__link--hover(data-fancybox data-type="ajax" data-src="gallery__content.html")
-									.section__img
-										img.img__teg(src='https://source.unsplash.com/user/jaycalabresephotography/1200x900',alt='alt')
-									span.section__row.section__description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!
-								a.gallery__link.gallery__link--hover(data-fancybox data-type="ajax" data-src="gallery__content.html")
-									.section__img
-										img.img__teg(src='https://source.unsplash.com/user/alexb/1200x900',alt='alt')
 									span.section__row.section__description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!			
 					.pagination.row
 						ul.pagination__list(data-class='pagination__list').gallery__pagination-list
@@ -69,46 +69,82 @@ include ../base
 							i.controls__arrow_right
 						a.controls__btn.controls__btn_prev(href='#')
 							i.controls__arrow_left
-				//- section.gallery__slider.row
-				//- 	span.section__heading Видео
-				//- 	ul.gallery__list.row
-				//- 		li.gallery__item
-				//- 			a.gallery__link(data-fancybox data-src="https://youtu.be/Q0XPhwTnLpk")
-				//- 				i.palay__btn
-				//- 				img.gallery__img-prev(src='//img.youtube.com/vi/Q0XPhwTnLpk/mqdefault.jpg', alt='')
-				//- 				h5.section__row.section__description.gallery__description-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!
-				//- 		li.gallery__item
-				//- 			a.gallery__link(data-fancybox data-src="https://www.youtube.com/watch?v=HhwoaN8Yx-8")
-				//- 				i.palay__btn
-				//- 				img.gallery__img-prev(src='//img.youtube.com/vi/HhwoaN8Yx-8/mqdefault.jpg', alt='')
-				//- 				h5.section__row.section__description.gallery__description-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!
-				//- 		li.gallery__item
-				//- 			a.gallery__link(data-fancybox data-src="https://www.youtube.com/watch?v=dVkK36KOcqs")
-				//- 				i.palay__btn
-				//- 				img.gallery__img-prev(src='//img.youtube.com/vi/dVkK36KOcqs/mqdefault.jpg', alt='')
-				//- 				h5.section__row.section__description.gallery__description-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!
-				//- 		li.gallery__item
-				//- 			a.gallery__link(data-fancybox data-src="https://www.youtube.com/watch?v=rN6nlNC9WQA")
-				//- 				i.palay__btn
-				//- 				img.gallery__img-prev(src='//img.youtube.com/vi/rN6nlNC9WQA/mqdefault.jpg', alt='')
-				//- 				h5.section__row.section__description.gallery__description-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!
-				//- 		li.gallery__item
-				//- 			a.gallery__link(data-fancybox data-src="https://www.youtube.com/watch?v=uzpxrx7NZBA")
-				//- 				i.palay__btn
-				//- 				img.gallery__img-prev(src='//img.youtube.com/vi/uzpxrx7NZBA/mqdefault.jpg', alt='')
-				//- 				h5.section__row.section__description.gallery__description-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!
-				//- 		li.gallery__item
-				//- 			a.gallery__link(data-fancybox data-src="https://www.youtube.com/watch?v=NM2wtte1JRE")
-				//- 				i.palay__btn
-				//- 				img.gallery__img-prev(src='//img.youtube.com/vi/NM2wtte1JRE/mqdefault.jpg', alt='')
-				//- 				h5.section__row.section__description.gallery__description-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!
-				//- 	.pagination.row
-				//- 		ul.pagination__list.gallery__pagination-list
-				//- 	.controls.pagination__controls.hide__block-tablets.gallery__controls
-				//- 		a.controls__btn.controls__btn_next(href='#')
-				//- 			i.controls__arrow_right
-				//- 		a.controls__btn.controls__btn_prev(href='#')
-				//- 			i.controls__arrow_left
+				section.gallery__slider(data-class='slider__teg').row
+					span.section__heading Видео
+					ul.gallery__list(data-class='slider__list').row
+						li.gallery__item(data-class='slider__item').active__slide
+							.gallery__row
+								a.gallery__link.gallery__link--hover(data-fancybox data-src="https://youtu.be/Q0XPhwTnLpk")
+									i.palay__btn
+									.section__img
+										img.img__teg(src='//img.youtube.com/vi/Q0XPhwTnLpk/mqdefault.jpg', alt='')
+									span.section__row.section__description Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+								a.gallery__link.gallery__link--hover(data-fancybox data-src="https://www.youtube.com/watch?v=HhwoaN8Yx-8")
+									i.palay__btn
+									.section__img
+										img.img__teg(src='//img.youtube.com/vi/HhwoaN8Yx-8/mqdefault.jpg', alt='')
+									span.section__row.section__description Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+								a.gallery__link.gallery__link--hover(data-fancybox data-src="https://www.youtube.com/watch?v=dVkK36KOcqs")
+									i.palay__btn
+									.section__img
+										img.img__teg(src='//img.youtube.com/vi/dVkK36KOcqs/mqdefault.jpg', alt='')
+									span.section__row.section__description Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+							.gallery__row
+								a.gallery__link.gallery__link--hover(data-fancybox data-src="https://www.youtube.com/watch?v=rN6nlNC9WQA")
+									i.palay__btn
+									.section__img
+										img.img__teg(src='//img.youtube.com/vi/rN6nlNC9WQA/mqdefault.jpg', alt='')
+									span.section__row.section__description Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+								a.gallery__link.gallery__link--hover(data-fancybox data-src="https://www.youtube.com/watch?v=uzpxrx7NZBA")
+									i.palay__btn
+									.section__img
+										img.img__teg(src='//img.youtube.com/vi/uzpxrx7NZBA/mqdefault.jpg', alt='')
+									span.section__row.section__description Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+								a.gallery__link.gallery__link--hover(data-fancybox data-src="https://www.youtube.com/watch?v=NM2wtte1JRE")
+									i.palay__btn
+									.section__img
+										img.img__teg(src='//img.youtube.com/vi/NM2wtte1JRE/mqdefault.jpg', alt='')
+									span.section__row.section__description.gallery__description-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!
+						li.gallery__item(data-class='slider__item').active__slide
+							.gallery__row
+									a.gallery__link.gallery__link--hover(data-fancybox data-src="https://www.youtube.com/watch?v=rN6nlNC9WQA")
+										i.palay__btn
+										.section__img
+											img.img__teg(src='//img.youtube.com/vi/rN6nlNC9WQA/mqdefault.jpg', alt='')
+										span.section__row.section__description Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+									a.gallery__link.gallery__link--hover(data-fancybox data-src="https://www.youtube.com/watch?v=uzpxrx7NZBA")
+										i.palay__btn
+										.section__img
+											img.img__teg(src='//img.youtube.com/vi/uzpxrx7NZBA/mqdefault.jpg', alt='')
+										span.section__row.section__description Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+									a.gallery__link.gallery__link--hover(data-fancybox data-src="https://www.youtube.com/watch?v=NM2wtte1JRE")
+										i.palay__btn
+										.section__img
+											img.img__teg(src='//img.youtube.com/vi/NM2wtte1JRE/mqdefault.jpg', alt='')
+										span.section__row.section__description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!	
+							.gallery__row
+								a.gallery__link.gallery__link--hover(data-fancybox data-src="https://youtu.be/Q0XPhwTnLpk")
+									i.palay__btn
+									.section__img
+										img.img__teg(src='//img.youtube.com/vi/Q0XPhwTnLpk/mqdefault.jpg', alt='')
+									span.section__row.section__description Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+								a.gallery__link(data-fancybox data-src="https://www.youtube.com/watch?v=HhwoaN8Yx-8")
+									i.palay__btn
+									.section__img
+										img.img__teg(src='//img.youtube.com/vi/HhwoaN8Yx-8/mqdefault.jpg', alt='')
+									span.section__row.section__description Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+								a.gallery__link.gallery__link--hover(data-fancybox data-src="https://www.youtube.com/watch?v=dVkK36KOcqs")
+									i.palay__btn
+									.section__img
+										img.img__teg(src='//img.youtube.com/vi/dVkK36KOcqs/mqdefault.jpg', alt='')
+									span.section__row.section__description Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+					.pagination.row
+						ul.pagination__list(data-class='pagination__list').gallery__pagination-list
+					.controls(data-class='slider__controls').pagination__controls.hide__block-tablets.gallery__controls
+						a.controls__btn.controls__btn_next(href='#')
+							i.controls__arrow_right
+						a.controls__btn.controls__btn_prev(href='#')
+							i.controls__arrow_left
 			include ../components/footer/footer
 include ../components/hamburger__menu/hamburger__menu
 include ../components/feedback__form/feedback__form
