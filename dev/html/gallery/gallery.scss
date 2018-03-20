@@ -36,6 +36,12 @@
 								padding: 0 30%;
 						}
 				}
+				@include phones{
+					padding: 0;
+					&:first-child {
+						padding: 0 2%;
+				}
+				}
 		}
 		&__row {
 				display: flex;

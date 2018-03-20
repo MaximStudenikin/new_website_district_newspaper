@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
     <script src="https://www.google.com/recaptcha/api.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
     <link rel="stylesheet" href="./css/main.min.css">
@@ -16,7 +16,8 @@
     <div class="wrap">
       <header class="header">
         <div class="header__container">
-          <div class="header__left"><a class="logo" href="index.html"><img class="logo__img" src="./img/logo/logo_min.png"></a></div>
+          <div class="header__left"><a class="logo" href="index.html">
+              <div class="logo__img"><img class="img__teg" src="./img/logo/logo_min.png"></div></a></div>
           <div class="header__right">
             <div class="header__right-row disabled__item-tablets">
               <ul class="nav__list">
@@ -61,84 +62,67 @@
         </div>
       </header>
       <div class="container gallery__container">
-        <section class="gallery__photo hr__end row"><span class="section__heading">Фото</span>
-          <div class="gallery__slider row">
-            <div class="gallery__content">
-              <div class="gallery__slider-row">
-                <div class="gallery__slider-cell"><a class="gallery__link" data-fancybox data-type="ajax" data-src="gallery__content.html"><img class="gallery__img-prev" src="https://source.unsplash.com/user/nikolayv/1200x900" alt="alt">
-                    <h5 class="section__row section__description gallery__description-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!</h5></a></div>
-                <div class="gallery__slider-cell"><a class="gallery__link" data-fancybox data-type="ajax" data-src="gallery__content.html"><img class="gallery__img-prev" src="https://source.unsplash.com/user/elijahsad/1200x900" alt="alt">
-                    <h5 class="section__row section__description gallery__description-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!</h5></a></div>
-                <div class="gallery__slider-cell"><a class="gallery__link" data-fancybox data-type="ajax" data-src="gallery__content.html"><img class="gallery__img-prev" src="https://source.unsplash.com/user/goian/1200x900" alt="alt">
-                    <h5 class="section__row section__description gallery__description-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!</h5></a></div>
-              </div>
-              <div class="gallery__slider-row row">
-                <div class="gallery__slider-cell"><a class="gallery__link" data-fancybox data-type="ajax" data-src="gallery__content.html"><img class="gallery__img-prev" src="https://source.unsplash.com/user/marcojodoin/1200x900" alt="alt">
-                    <h5 class="section__row section__description gallery__description-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!</h5></a></div>
-                <div class="gallery__slider-cell"><a class="gallery__link" data-fancybox data-type="ajax" data-src="gallery__content.html"><img class="gallery__img-prev" src="https://source.unsplash.com/user/jaycalabresephotography/1200x900" alt="alt">
-                    <h5 class="section__row section__description gallery__description-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!</h5></a></div>
-                <div class="gallery__slider-cell"><a class="gallery__link" data-fancybox data-type="ajax" data-src="gallery__content.html"><img class="gallery__img-prev" src="https://source.unsplash.com/user/alexb/1200x900" alt="alt">
-                    <h5 class="section__row section__description gallery__description-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!</h5></a></div>
-              </div>
-            </div>
-            <div class="pagination gallery__pagination row">
-              <ul class="pagination__list gallery__pagination-list">
-                <li class="pagination__item"><a class="pagination__link pagination__link--activ" href="#">1</a></li>
-                <li class="pagination__item"><a class="pagination__link" href="#">2</a></li>
-                <li class="pagination__item"><a class="pagination__link" href="#">3</a></li>
-                <li class="pagination__item"><a class="pagination__link" href="#">4</a></li>
-                <li class="pagination__item"><a class="pagination__link" href="#">5</a></li>
-                <li class="pagination__item"><a class="pagination__link" href="#">6</a></li>
-                <li class="pagination__item"><a class="pagination__link" href="#">7</a></li>
-              </ul>
-            </div>
-            <div class="pagination__controls hide__block-tablets gallery__controls"><a class="controls__btn controls__btn__next" href="#"><i class="controls__btn-arrow__right"></i></a><a class="controls__btn controls__btn__prev" href="#"><i class="controls__btn-arrow__left"></i></a></div>
+        <section class="gallery__slider hr__end row" data-class="slider__teg"><span class="section__heading">Фото</span>
+          <ul class="gallery__list row" data-class="slider__list">
+            <li class="gallery__item active__slide" data-class="slider__item">
+              <div class="gallery__row"><a class="gallery__link gallery__link--hover" data-fancybox data-type="ajax" data-src="gallery__content.html">
+                  <div class="section__img"><img class="img__teg" src="https://source.unsplash.com/user/nikolayv/1200x900" alt="alt"></div><span class="section__row section__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!</span></a><a class="gallery__link gallery__link--hover" data-fancybox data-type="ajax" data-src="gallery__content.html">
+                  <div class="section__img"><img class="img__teg" src="https://source.unsplash.com/user/elijahsad/1200x900" alt="alt"></div><span class="section__row section__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!</span></a><a class="gallery__link gallery__link--hover" data-fancybox data-type="ajax" data-src="gallery__content.html">
+                  <div class="section__img"><img class="img__teg" src="https://source.unsplash.com/user/goian/1200x900" alt="alt"></div><span class="section__row section__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!</span></a></div>
+              <div class="gallery__row row"><a class="gallery__link gallery__link--hover" data-fancybox data-type="ajax" data-src="gallery__content.html">
+                  <div class="section__img"><img class="img__teg" src="https://source.unsplash.com/user/marcojodoin/1200x900" alt="alt"></div><span class="section__row section__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!</span></a><a class="gallery__link gallery__link--hover" data-fancybox data-type="ajax" data-src="gallery__content.html">
+                  <div class="section__img"><img class="img__teg" src="https://source.unsplash.com/user/jaycalabresephotography/1200x900" alt="alt"></div><span class="section__row section__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!</span></a><a class="gallery__link gallery__link--hover" data-fancybox data-type="ajax" data-src="gallery__content.html">
+                  <div class="section__img"><img class="img__teg" src="https://source.unsplash.com/user/alexb/1200x900" alt="alt"></div><span class="section__row section__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!</span></a></div>
+            </li>
+            <li class="gallery__item" data-class="slider__item">
+              <div class="gallery__row row"><a class="gallery__link gallery__link--hover" data-fancybox data-type="ajax" data-src="gallery__content.html">
+                  <div class="section__img"><img class="img__teg" src="https://source.unsplash.com/user/marcojodoin/1200x900" alt="alt"></div><span class="section__row section__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!</span></a><a class="gallery__link gallery__link--hover" data-fancybox data-type="ajax" data-src="gallery__content.html">
+                  <div class="section__img"><img class="img__teg" src="https://source.unsplash.com/user/jaycalabresephotography/1200x900" alt="alt"></div><span class="section__row section__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!</span></a><a class="gallery__link gallery__link--hover" data-fancybox data-type="ajax" data-src="gallery__content.html">
+                  <div class="section__img"><img class="img__teg" src="https://source.unsplash.com/user/alexb/1200x900" alt="alt"></div><span class="section__row section__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!</span></a></div>
+              <div class="gallery__row"><a class="gallery__link gallery__link--hover" data-fancybox data-type="ajax" data-src="gallery__content.html">
+                  <div class="section__img"><img class="img__teg" src="https://source.unsplash.com/user/nikolayv/1200x900" alt="alt"></div><span class="section__row section__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!</span></a><a class="gallery__link gallery__link--hover" data-fancybox data-type="ajax" data-src="gallery__content.html">
+                  <div class="section__img"><img class="img__teg" src="https://source.unsplash.com/user/elijahsad/1200x900" alt="alt"></div><span class="section__row section__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!</span></a><a class="gallery__link gallery__link--hover" data-fancybox data-type="ajax" data-src="gallery__content.html">
+                  <div class="section__img"><img class="img__teg" src="https://source.unsplash.com/user/goian/1200x900" alt="alt"></div><span class="section__row section__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!			</span></a></div>
+            </li>
+          </ul>
+          <div class="pagination row">
+            <ul class="pagination__list gallery__pagination-list" data-class="pagination__list"></ul>
           </div>
+          <div class="controls pagination__controls hide__block-tablets gallery__controls" data-class="slider__controls"><a class="controls__btn controls__btn_next" href="#"><i class="controls__arrow_right"></i></a><a class="controls__btn controls__btn_prev" href="#"><i class="controls__arrow_left"></i></a></div>
         </section>
-        <section class="gallery__video row"><span class="section__heading">Видео</span>
-          <div class="gallery__slider row">
-            <div class="gallery__content">
-              <div class="gallery__slider-row">
-                <div class="gallery__slider-cell"><a class="gallery__link" data-fancybox data-src="https://youtu.be/Q0XPhwTnLpk">
-                    <div class="palay__btn"></div><img class="gallery__img-prev" src="//img.youtube.com/vi/Q0XPhwTnLpk/mqdefault.jpg" alt="">
-                    <h5 class="section__row section__description gallery__description-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!</h5></a></div>
-                <div class="gallery__slider-cell"><a class="gallery__link" data-fancybox data-src="https://www.youtube.com/watch?v=HhwoaN8Yx-8">
-                    <div class="palay__btn"></div><img class="gallery__img-prev" src="//img.youtube.com/vi/HhwoaN8Yx-8/mqdefault.jpg" alt="">
-                    <h5 class="section__row section__description gallery__description-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!</h5></a></div>
-                <div class="gallery__slider-cell"><a class="gallery__link" data-fancybox data-src="https://www.youtube.com/watch?v=dVkK36KOcqs">
-                    <div class="palay__btn"></div><img class="gallery__img-prev" src="//img.youtube.com/vi/dVkK36KOcqs/mqdefault.jpg" alt="">
-                    <h5 class="section__row section__description gallery__description-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!</h5></a></div>
-              </div>
-              <div class="gallery__slider-row row">
-                <div class="gallery__slider-cell"><a class="gallery__link" data-fancybox data-src="https://www.youtube.com/watch?v=rN6nlNC9WQA">
-                    <div class="palay__btn"></div><img class="gallery__img-prev" src="//img.youtube.com/vi/rN6nlNC9WQA/mqdefault.jpg" alt="">
-                    <h5 class="section__row section__description gallery__description-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!</h5></a></div>
-                <div class="gallery__slider-cell"><a class="gallery__link" data-fancybox data-src="https://www.youtube.com/watch?v=uzpxrx7NZBA">
-                    <div class="palay__btn"></div><img class="gallery__img-prev" src="//img.youtube.com/vi/uzpxrx7NZBA/mqdefault.jpg" alt="">
-                    <h5 class="section__row section__description gallery__description-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!</h5></a></div>
-                <div class="gallery__slider-cell"><a class="gallery__link" data-fancybox data-src="https://www.youtube.com/watch?v=NM2wtte1JRE">
-                    <div class="palay__btn"></div><img class="gallery__img-prev" src="//img.youtube.com/vi/NM2wtte1JRE/mqdefault.jpg" alt="">
-                    <h5 class="section__row section__description gallery__description-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!</h5></a></div>
-              </div>
-            </div>
-            <div class="pagination gallery__pagination row">
-              <ul class="pagination__list gallery__pagination-list">
-                <li class="pagination__item"><a class="pagination__link pagination__link--activ" href="#">1</a></li>
-                <li class="pagination__item"><a class="pagination__link" href="#">2</a></li>
-                <li class="pagination__item"><a class="pagination__link" href="#">3</a></li>
-                <li class="pagination__item"><a class="pagination__link" href="#">4</a></li>
-                <li class="pagination__item"><a class="pagination__link" href="#">5</a></li>
-                <li class="pagination__item"><a class="pagination__link" href="#">6</a></li>
-                <li class="pagination__item"><a class="pagination__link" href="#">7</a></li>
-              </ul>
-            </div>
-            <div class="pagination__controls hide__block-tablets gallery__controls"><a class="controls__btn controls__btn__next" href="#"><i class="controls__btn-arrow__right"></i></a><a class="controls__btn controls__btn__prev" href="#"><i class="controls__btn-arrow__left"></i></a></div>
+        <section class="gallery__slider row" data-class="slider__teg"><span class="section__heading">Видео</span>
+          <ul class="gallery__list row" data-class="slider__list">
+            <li class="gallery__item active__slide" data-class="slider__item">
+              <div class="gallery__row"><a class="gallery__link gallery__link--hover" data-fancybox data-src="https://youtu.be/Q0XPhwTnLpk"><i class="palay__btn"></i>
+                  <div class="section__img"><img class="img__teg" src="//img.youtube.com/vi/Q0XPhwTnLpk/mqdefault.jpg" alt=""></div><span class="section__row section__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </span></a><a class="gallery__link gallery__link--hover" data-fancybox data-src="https://www.youtube.com/watch?v=HhwoaN8Yx-8"><i class="palay__btn"></i>
+                  <div class="section__img"><img class="img__teg" src="//img.youtube.com/vi/HhwoaN8Yx-8/mqdefault.jpg" alt=""></div><span class="section__row section__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </span></a><a class="gallery__link gallery__link--hover" data-fancybox data-src="https://www.youtube.com/watch?v=dVkK36KOcqs"><i class="palay__btn"></i>
+                  <div class="section__img"><img class="img__teg" src="//img.youtube.com/vi/dVkK36KOcqs/mqdefault.jpg" alt=""></div><span class="section__row section__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </span></a></div>
+              <div class="gallery__row"><a class="gallery__link gallery__link--hover" data-fancybox data-src="https://www.youtube.com/watch?v=rN6nlNC9WQA"><i class="palay__btn"></i>
+                  <div class="section__img"><img class="img__teg" src="//img.youtube.com/vi/rN6nlNC9WQA/mqdefault.jpg" alt=""></div><span class="section__row section__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </span></a><a class="gallery__link gallery__link--hover" data-fancybox data-src="https://www.youtube.com/watch?v=uzpxrx7NZBA"><i class="palay__btn"></i>
+                  <div class="section__img"><img class="img__teg" src="//img.youtube.com/vi/uzpxrx7NZBA/mqdefault.jpg" alt=""></div><span class="section__row section__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </span></a><a class="gallery__link gallery__link--hover" data-fancybox data-src="https://www.youtube.com/watch?v=NM2wtte1JRE"><i class="palay__btn"></i>
+                  <div class="section__img"><img class="img__teg" src="//img.youtube.com/vi/NM2wtte1JRE/mqdefault.jpg" alt=""></div><span class="section__row section__description gallery__description-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!</span></a></div>
+            </li>
+            <li class="gallery__item active__slide" data-class="slider__item">
+              <div class="gallery__row"><a class="gallery__link gallery__link--hover" data-fancybox data-src="https://www.youtube.com/watch?v=rN6nlNC9WQA"><i class="palay__btn"></i>
+                  <div class="section__img"><img class="img__teg" src="//img.youtube.com/vi/rN6nlNC9WQA/mqdefault.jpg" alt=""></div><span class="section__row section__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </span></a><a class="gallery__link gallery__link--hover" data-fancybox data-src="https://www.youtube.com/watch?v=uzpxrx7NZBA"><i class="palay__btn"></i>
+                  <div class="section__img"><img class="img__teg" src="//img.youtube.com/vi/uzpxrx7NZBA/mqdefault.jpg" alt=""></div><span class="section__row section__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </span></a><a class="gallery__link gallery__link--hover" data-fancybox data-src="https://www.youtube.com/watch?v=NM2wtte1JRE"><i class="palay__btn"></i>
+                  <div class="section__img"><img class="img__teg" src="//img.youtube.com/vi/NM2wtte1JRE/mqdefault.jpg" alt=""></div><span class="section__row section__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero!	</span></a></div>
+              <div class="gallery__row"><a class="gallery__link gallery__link--hover" data-fancybox data-src="https://youtu.be/Q0XPhwTnLpk"><i class="palay__btn"></i>
+                  <div class="section__img"><img class="img__teg" src="//img.youtube.com/vi/Q0XPhwTnLpk/mqdefault.jpg" alt=""></div><span class="section__row section__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </span></a><a class="gallery__link" data-fancybox data-src="https://www.youtube.com/watch?v=HhwoaN8Yx-8"><i class="palay__btn"></i>
+                  <div class="section__img"><img class="img__teg" src="//img.youtube.com/vi/HhwoaN8Yx-8/mqdefault.jpg" alt=""></div><span class="section__row section__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </span></a><a class="gallery__link gallery__link--hover" data-fancybox data-src="https://www.youtube.com/watch?v=dVkK36KOcqs"><i class="palay__btn"></i>
+                  <div class="section__img"><img class="img__teg" src="//img.youtube.com/vi/dVkK36KOcqs/mqdefault.jpg" alt=""></div><span class="section__row section__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </span></a></div>
+            </li>
+          </ul>
+          <div class="pagination row">
+            <ul class="pagination__list gallery__pagination-list" data-class="pagination__list"></ul>
           </div>
+          <div class="controls pagination__controls hide__block-tablets gallery__controls" data-class="slider__controls"><a class="controls__btn controls__btn_next" href="#"><i class="controls__arrow_right"></i></a><a class="controls__btn controls__btn_prev" href="#"><i class="controls__arrow_left"></i></a></div>
         </section>
       </div>
       <footer class="footer">
         <div class="footer__container">
-          <div class="footer__col"><a class="logo" href="index.html"><img class="logo__img" src="./img/logo/logo_min.png"></a>
+          <div class="footer__col"><a class="logo" href="index.html">
+              <div class="logo__img"><img class="img__teg" src="./img/logo/logo_min.png"></div></a>
             <div class="footer__text">
               <p>Сетевое издание "Москва Зa Кaлужcкoй зacтaвoй" зарегистрировано в Федеральной службе по надзору в сфере связи и массовых коммуникаций.</p>
               <p class="footer__text-white">Свидетельство о регистрации СМИ :</p>
@@ -211,3 +195,70 @@
     </div>
   </body>
 </html>
+<aside class="h__menu visuallyhidden">
+  <div class="close__batton h__menu-close__batton"><span class="close-icon"></span></div>
+  <ul class="h__menu-list">
+    <li class="h__menu-item"><a class="h__menu-link" href="list.html">Новости</a></li>
+    <li class="h__menu-item"><a class="h__menu-link" href="list.html">Новости ЮЗАО</a></li>
+    <li class="h__menu-item"><a class="h__menu-link" href="list.html">Статьи</a></li>
+    <li class="h__menu-item"><a class="h__menu-link" href="list.html">Персональный блог</a></li>
+    <li class="h__menu-item"><a class="h__menu-link" href="gallery.html">Фото</a></li>
+    <li class="h__menu-item"><a class="h__menu-link open__form" href="#">Письмо в редакцию</a></li>
+  </ul>
+</aside>
+<div class="form__feedback visuallyhidden">
+  <div class="form__content">
+    <div class="form__header">
+      <div class="form__title">Письмо в редакцию</div>
+      <div class="close__batton close__batton-feedback"><span class="close-icon close-icon-feedback"></span></div>
+    </div>
+    <div class="form__fields">
+      <form class="form__tag" id="callBackForm" method="post" action="mail.php">
+        <div class="form__inputs">
+          <div class="form__row">
+            <div class="form__elem">
+              <label class="form__elem-title" for="user_name">Тема сообщения</label>
+              <input class="section__row form__input" id="user_name" placeholder="Обязательное для заполнения" required="" type="text">
+            </div>
+            <div class="form__elem">
+              <label class="form__elem-title" for="user_name">Ваше имя</label>
+              <input class="section__row form__input" id="user_name" placeholder="Обязательное для заполнения" required="" type="text">
+            </div>
+          </div>
+          <div class="form__row">
+            <div class="form__elem">
+              <label class="form__elem-title" for="user_email">E-Mail для ответа</label>
+              <input class="section__row form__input" id="user_email" pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}" placeholder="email@email.ru" required="" type="email">
+            </div>
+            <div class="form__elem">
+              <label class="form__elem-title" for="#">Файлы для отправки</label>
+              <input class="section__row form__file-input" id="user_file" name="form__input-file-img" accept="image/jpeg,image/png" type="file">
+              <label class="form__input-file__batton" for="user_file"></label>
+            </div>
+          </div>
+          <div class="form__row">
+            <div class="form__elem">
+              <label class="form__elem-title" for="user_message">Ваше сообщение</label>
+              <textarea class="section__row form__big-text-input" id="user_message" placeholder="Обязательное для заполнения" required=""></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="form__buttons form__row">
+          <div class="form__radio">
+            <input class="form__radio-checkbox" id="form__radio-checkbox__deal" name="form__radio-checkbox__deal" type="checkbox">
+            <label class="form__radios-checkbox__title" for="form__radio-checkbox__deal">Нажимая кнопку «Отправить», я подтверждаю, что ознакомился и принимаю<a class="form__radios-link form__radios-link--hover" href="#">правила регистрации и конфиденциальности</a></label>
+          </div>
+          <div class="form__control form__row">
+            <button class="form__submit" type="submit">Отправить</button>
+          </div>
+        </div>
+        <div class="form__footer form__row">
+          <p class="form__alert">Все поля обезательны для запонения</p>
+          <div class="form__info">
+            <p class="form__text">Наш телефон</p><a class="form__tel form__tel--hover" href="tel:+7 (499) 800-88-88">8 (499) 800-88-88</a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
