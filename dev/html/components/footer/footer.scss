@@ -43,12 +43,12 @@
   }
 
   &__heading{
-    font-size: rem(16px);
+    font-size: rem(20px);
     color: $yellow;
   }
 
   &__text{
-    font-size: rem(10px);
+    font-size: rem(16px);
     p{
       margin: rem(15px) 0 0 0;
     }
@@ -69,7 +69,7 @@
 
   &__nav-link{
     color: $white;
-    font-size: rem(10px);
+    font-size: rem(14px);
     &:hover{
       text-decoration: underline;
     }

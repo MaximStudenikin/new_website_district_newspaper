@@ -5,17 +5,9 @@ $yellow: #ffc600;
 $black: #000;
 $white : #fff;
 
-// resolutions
-$lg__desktop: 3200px;
-$md_desktop: 1200px;
-$desktop: 979px;
-$tablets: 767px;
-$phones: 480px;
-$sm__phones: 320px;
-
 //config
 @import "config/fn";
-@import "config/mixin";
+@import "config/resolutions";
 @import "config/fonst";
 @import "config/tag_reset";
 @import "config/base";
@@ -23,7 +15,7 @@ $sm__phones: 320px;
 
 //components
 @import "../html/components/header/header";
-@import "../html/components/footer/footer";
+@import "../html/components/footer/footer.scss";
 @import "../html/components/right__side/right__side";
 @import "../html/components/slider/slider";
 @import "../html/components/controls/controls";

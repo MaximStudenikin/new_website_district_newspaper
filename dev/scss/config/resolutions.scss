@@ -1,4 +1,12 @@
-//resolutions
+// resolutions
+$lg__desktop: 3200px;
+$md_desktop: 1200px;
+$desktop: 979px;
+$tablets: 767px;
+$phones: 480px;
+$sm__phones: 320px;
+
+//resolutions mixin
 @mixin large__devices {
   @media screen and (max-width: $lg__desktop) {
     @content;

@@ -15,6 +15,11 @@
       }
   }
   &__link {
+        padding: 0 1% 0 0;
+        &:last-child {
+            width: 330px;
+            padding: 0;
+        }
       @include tablets {
           padding: 0 8% 0 0;
           &:last-child {
@@ -27,18 +32,15 @@
   }
   &__img {
       filter: grayscale(70%);
-      width: 215px;
+      width: 100%;
       overflow: hidden;
       &:hover {
           filter: grayscale(0);
       }
-      @include phones {
-          width: 420px;
-      }
   }
   &__controls {
-      position: absolute;
-      top: 35%;
-      width: 100%;
+    bottom: 100px;
+    position: absolute;
+    height: auto;
   }
 }
