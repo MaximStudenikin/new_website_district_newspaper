@@ -29,6 +29,9 @@
         @include tablets {
             margin: 0;
         }
+        @include tablets__h {
+            margin: 0;
+        }
     }
     &__serch {
         padding: 0 rem(25px) 0 0;
@@ -84,6 +87,10 @@
         white-space: nowrap;
         @include desktop {
             width: 100%;
+            flex-wrap: wrap;
+        }
+        @include tablets__h {
+            width: 95%;
             flex-wrap: wrap;
         }
     }

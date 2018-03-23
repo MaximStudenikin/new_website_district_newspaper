@@ -12,6 +12,12 @@
         width: 100vw;
         overflow: hidden;
       }
+      @include tablets__h {
+        right: -5.5%;
+      }
+      @include phones{
+        right: -5.5%;
+      }
   }
   &__list {
       display: flex;
@@ -53,6 +59,7 @@
       top: 20px;
       flex-direction: column;
       padding: 0 4%;
+      right: 0; // уберает баг с текстом у разныз устройств
       color: $white;
   }
   &__link {
@@ -60,8 +67,11 @@
   }
   &__row {
       margin: rem(75px) 0 0 0;
-      @include tablets{
-          margin: rem(25px) 0 0 0; 
+      @include desktop{
+          margin: rem(15px) 0 0 0; 
       }
+      @include desktop{
+        margin: rem(15px) 0 0 0; 
+    }
   }
 }

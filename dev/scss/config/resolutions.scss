@@ -3,6 +3,7 @@ $lg__desktop: 3200px;
 $md_desktop: 1200px;
 $desktop: 979px;
 $tablets: 767px;
+$tablets__h: 1024px;
 $phones: 480px;
 $sm__phones: 320px;
 
@@ -27,6 +28,12 @@ $sm__phones: 320px;
 
 @mixin tablets {
   @media screen and (max-width: $tablets) {
+    @content;
+  }
+}
+
+@mixin tablets__h {
+  @media screen and (max-width: $tablets__h) {
     @content;
   }
 }

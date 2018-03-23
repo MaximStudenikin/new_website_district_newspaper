@@ -6,26 +6,26 @@ $black: #000;
 $white : #fff;
 
 //config
-@import "config/fn";
-@import "config/resolutions";
-@import "config/fonst";
-@import "config/tag_reset";
-@import "config/base";
-@import "config/adjustment";
+@import "config/fn.scss";
+@import "config/resolutions.scss";
+@import "config/fonst.scss";
+@import "config/tag_reset.scss";
+@import "config/base.scss";
+@import "config/adjustment.scss";
 
 //components
-@import "../html/components/header/header";
+@import "../html/components/header/header.scss";
 @import "../html/components/footer/footer.scss";
-@import "../html/components/right__side/right__side";
-@import "../html/components/slider/slider";
-@import "../html/components/controls/controls";
-@import "../html/components/banners/banners";
-@import "../html/components/pagination/pagination";
-@import "../html/components/hamburger__menu/hamburger__menu";
-@import "../html/components/feedback__form/feedback__form";
+@import "../html/components/right__side/right__side.scss";
+@import "../html/components/slider/slider.scss";
+@import "../html/components/controls/controls.scss";
+@import "../html/components/banners/banners.scss";
+@import "../html/components/pagination/pagination.scss";
+@import "../html/components/hamburger__menu/hamburger__menu.scss";
+@import "../html/components/feedback__form/feedback__form.scss";
 
 //layout
-@import "../html/index/index";
-@import "../html/article/article";
-@import "../html/list/list";
-@import "../html/gallery/gallery";
+@import "../html/index/index.scss";
+@import "../html/article/article.scss";
+@import "../html/list/list.scss";
+@import "../html/gallery/gallery.scss";
