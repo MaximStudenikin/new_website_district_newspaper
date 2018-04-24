@@ -6,10 +6,9 @@ $black: #000;
 $white : #fff;
 
 //config
-@import "config/fn.scss";
+@import "config/mixin.scss";
 @import "config/resolutions.scss";
 @import "config/fonst.scss";
-@import "config/tag_reset.scss";
 @import "config/base.scss";
 @import "config/adjustment.scss";
 
@@ -18,6 +17,9 @@ $white : #fff;
 @import "../html/components/footer/footer.scss";
 @import "../html/components/right__side/right__side.scss";
 @import "../html/components/slider/slider.scss";
+@import "../html/components/banners-slider/banners-slider.scss";
+@import "../html/components/section-news/section-news.scss";
+@import "../html/components/teg-cloud/teg-cloud.scss";
 @import "../html/components/controls/controls.scss";
 @import "../html/components/banners/banners.scss";
 @import "../html/components/pagination/pagination.scss";

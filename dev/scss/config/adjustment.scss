@@ -32,7 +32,7 @@
 
 .row {
     margin: rem(45px) 0 0 0;
-    @include phones{
+    @include phones {
         margin: rem(25px) 0 0 0;
     }
 }
@@ -62,11 +62,10 @@
         background: $black;
         opacity: 0.2;
         margin: rem(60px) 0 0 0;
-        @include desktop{
+        @include desktop {
             margin: rem(120px) 0 0 0;
         }
     }
-   
 }
 
 .close-icon {
@@ -75,25 +74,43 @@
     width: 50px;
     height: 50px;
     overflow: hidden;
-  
     &:before {
-      transform: rotate(45deg);
+        transform: rotate(45deg);
     }
     &:after {
-      transform: rotate(-45deg);
+        transform: rotate(-45deg);
     }
-    &:after, &:before {
-      content: '';
-      position: absolute;
-      width: 50%;
-      top: 50%;
-      left: 0;
-      background: $white;
-      height: 4px;
-      margin-top: -4px;
-      border-radius: 2px;
+    &:after,
+    &:before {
+        content: '';
+        position: absolute;
+        width: 50%;
+        top: 50%;
+        left: 0;
+        background: $white;
+        height: 4px;
+        margin-top: -4px;
+        border-radius: 2px;
     }
-  }
+}
+
+.img__teg {
+    display: block;
+    width: 100%;
+}
+
+.visuallyhidden:not(:focus):not(:active) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
 
 .disabled__item-all {
     @include desktop {
@@ -171,9 +188,9 @@
     }
 }
 
-.item__center-tablets{
-  @include tablets{
-    display: flex;
-    justify-content: space-between;
-  }
+.item__center-tablets {
+    @include tablets {
+        display: flex;
+        justify-content: space-between;
+    }
 }

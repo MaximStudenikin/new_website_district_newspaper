@@ -60,10 +60,10 @@ function style() {
 		.pipe(sass())
 		.pipe(groupMediaCSSQueries())
 		.pipe(cleanCSS())
-		// .pipe(autoPref({
-		//     browsers: ['last 15 versions'],
-		//     cascade: false
-		// }))
+		.pipe(autoPref({
+		    browsers: ['last 15 versions'],
+		    cascade: false
+		}))
 		.pipe(rename({ suffix: '.min' }))
 		.pipe(sourcemaps.write('/'))
 		.pipe(gulp.dest(paths.build + 'css/'))
