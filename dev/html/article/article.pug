@@ -21,40 +21,8 @@ include ../base
 						.section__row
 							h1 Астероидный апогей: актуальная национальная задача
 							strong Ионный хвост слабопроницаем. Не-текст аннигилирует речевой акт. Комета Хейла-Боппа вызывает космический возмущающий фактор. Расстояния планет от Солнца возрастают приблизительно в геометрической прогрессии (правило Тициуса — Боде): г = 0,4 + 0,3 · 2n (а.е.), где метафора иллюстрирует эпизодический подтекст.
-						.section__row
-							.slidershow
-								.slidershow__browsing
-									.slidershow__preloader
-									a.browsing__link(href='https://source.unsplash.com/user/von_co/1200x900', data-fancybox="images")
-										img.slidershow__review(src='https://source.unsplash.com/user/von_co/1200x900', alt='alt')
-								.slidershow__prev.disabled__item-tablets
-									ul.slidershow__list
-										li.slidershow__item.slidershow__item--activ
-											a.slidershow__link(href='https://source.unsplash.com/user/von_co/1200x900', data-fancybox="images")
-												img.slidershow__prev(src='https://source.unsplash.com/user/von_co/1200x900', alt='alt')
-										li.slidershow__item
-											a.slidershow__link(href='https://source.unsplash.com/user/a2eorigins/1200x900', data-fancybox="images")
-												img.slidershow__prev(src='https://source.unsplash.com/user/a2eorigins/1200x900' , alt='alt')
-										li.slidershow__item
-											a.slidershow__link(href='https://source.unsplash.com/user/samuelzeller/1200x900', data-fancybox="images")
-												img.slidershow__prev(src='https://source.unsplash.com/user/samuelzeller/1200x900' , alt='alt')
-										li.slidershow__item
-											a.slidershow__link(href='https://source.unsplash.com/user/andersjilden/1200x900', data-fancybox="images")
-												img.slidershow__prev(src='https://source.unsplash.com/user/andersjilden/1200x900' , alt='alt')
-										li.slidershow__item
-											a.slidershow__link(href='https://source.unsplash.com/user/withluke/1200x900', data-fancybox="images")
-												img.slidershow__prev(src='https://source.unsplash.com/user/withluke/1200x900' , alt='alt')
-										li.slidershow__item
-											a.slidershow__link(href='https://source.unsplash.com/user/nate_dumlao/1200x900', data-fancybox="images")
-												img.slidershow__prev(src='https://source.unsplash.com/user/nate_dumlao/1200x900' , alt='alt')
-										li.slidershow__item
-											a.slidershow__link(href='https://source.unsplash.com/user/calebdlucas/1200x900', data-fancybox="images")
-												img.slidershow__prev(src='https://source.unsplash.com/user/calebdlucas/1200x900' , alt='alt')
-								div.controls.slidershow__controls.slidershow__controls--hover.disabled__item-tablets
-									a.controls__btn.controls__btn_next(href='#')
-										i.controls__arrow_right
-									a.controls__btn.controls__btn_prev(href='#')
-										i.controls__arrow_left
+						.slidershow.section__row
+							include ../components/slidershow/slidershow
 						.section__row
 							p Ионный хвост слабопроницаем. Не-текст аннигилирует речевой акт. Комета
 								| Хейла-Боппа вызывает
@@ -65,31 +33,9 @@ include ../base
 								a.article__link.article__link--hover(href='#') аннигилирует
 								| речевой акт. Комета Хейла-Боппа вызывает космический возмущающий фактор. Расстояния планет от Солнца возрастают приблизительно в геометрической прогрессии (правило Тициуса — Боде): г = 0,4 + 0,3 · 2n (а.е.), где метафора иллюстрирует эпизодический подтекст
 							p Комбинаторное приращение дает словесный поперечник. Прустрация на следующий год, когда было лунное затмение и сгорел древний храм Афины в Афинах (при эфоре Питии и афинском архонте Каллии), ищет диалектический характер. Газопылевое облако существенно диссонирует литературный радиант. Апогей осознаёт близкий зачин, об этом свидетельствуют краткость и завершенность формы, бессюжетность, своеобразие тематического развертывания. Амфибрахий отталкивает дактиль. Дольник гасит реликтовый ледник.
-					section.news__section.row
-						a.section__heading(href='list.html') Новости
-						div.news(data-class='slider__teg').row
-							ul.news__list(data-class='slider__list')
-								li.news__item.active__slide(data-class='slider__item')
-										.section__img
-											img.img__teg(src='https://source.unsplash.com/user/nikolayv/1200x900',	alt='alt')
-										time.publication__date.section__row(datetime="17.02.2018") 17 Февраля 2018
-										a.section__title.section__row(href='article.html') Культ личности 	означает аутотренинг
-										p.section__description.section__row Воспитание вызывает экзистенциальный 	доиндустриальный тип политической культуры.
-								li.news__item(data-class='slider__item')
-										.section__img
-											img.img__teg(src='https://source.unsplash.com/user/jaycalabresephotography/1200x900', alt='alt')
-										time.publication__date.section__row(datetime="17.02.2018") 17 Февраля 2018
-										a.section__title.section__row(href='article.html') Культ личности 	означает аутотренинг
-										p.section__description.section__row Воспитание вызывает экзистенциальный 	доиндустриальный тип политической культуры.
-								li.news__item.disabled__item-all(data-class='slider__item')
-										.section__img
-											img.img__teg(src='https://source.unsplash.com/user/samuelzeller/1200x900', alt='alt')
-										time.publication__date.section__row(datetime="17.02.2018") 17 Февраля 2018
-										a.section__title.section__row(href='article.html') Культ личности 	означает аутотренинг
-										p.section__description.section__row Воспитание вызывает экзистенциальный 	доиндустриальный тип политической культуры.
-							.pagination.row.show__blok-phones
-								ul.pagination__list(data-class='pagination__list')
-					section.news__section.row
+					section.news-section.row
+						include ../components/section-news/section-news
+					section.news-section.row
 						a.section__heading(href='list.html') Анонсы
 						div.news(data-class='slider__teg').row
 							ul.news__list(data-class='slider__list')

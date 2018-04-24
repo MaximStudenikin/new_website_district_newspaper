@@ -6,11 +6,13 @@ $black: #000;
 $white : #fff;
 
 //config
-@import "config/mixin.scss";
+@import "../../node_modules/fast-grid/fast-grid";
 @import "config/resolutions.scss";
+@import "config/mixin.scss";
 @import "config/fonst.scss";
 @import "config/base.scss";
 @import "config/adjustment.scss";
+@import "config/grid.scss";
 
 //components
 @import "../html/components/header/header.scss";
@@ -25,6 +27,7 @@ $white : #fff;
 @import "../html/components/pagination/pagination.scss";
 @import "../html/components/hamburger__menu/hamburger__menu.scss";
 @import "../html/components/feedback__form/feedback__form.scss";
+@import "../html/components/slidershow/slidershow.scss";
 
 //layout
 @import "../html/index/index.scss";

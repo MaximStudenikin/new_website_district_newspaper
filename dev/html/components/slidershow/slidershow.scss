@@ -1,0 +1,52 @@
+.slidershow {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  &__browsing {
+      width: 100%;
+      overflow: hidden;
+  }
+  &__review {
+      display: block;
+      width: 100%;
+  }
+  &__preloader {
+      position: absolute;
+      display: none;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      background: url(../img/icon/preloader.gif);
+      width: 64px;
+      height: 64px;
+  }
+  &__list {
+      display: flex;
+      width: 100%;
+      overflow: hidden;
+  }
+  &__item {
+      filter: grayscale(70%);
+      display: flex;
+  }
+  &__item--activ {
+      border: 5px solid $yellow;
+      filter: grayscale(0);
+  }
+  &__prev {
+      display: block;
+      width: 100%;
+      height: 100%;
+  }
+  &__controls {
+      position: absolute;
+      top: 40%;
+      width: 100%;
+      opacity: .4;
+  }
+  &__controls--hover:hover {
+      opacity: 1;
+  }
+}
