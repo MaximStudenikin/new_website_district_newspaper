@@ -1,3 +1,5 @@
+<!-- Главная стрница  -->
+
 {* post stream (list): default view mode *} {* $wa->currentUrl()|@debug_print_var *} {if $wa->currentUrl() != $wa_app_url}
 {foreach $posts as $post}
 <section class="post" id="post-{$post.id}" {if $wa->param('blog_url')}itemprop="blogPosts" {/if}itemscope itemtype="http://schema.org/BlogPosting">

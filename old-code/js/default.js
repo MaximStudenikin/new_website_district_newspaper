@@ -1,4 +1,4 @@
-/*Алгоритм мимизации: YUI Compressor Version 2.4.8pre*/
+// логика из коробки
 
 (function (d) {
   var e, a;

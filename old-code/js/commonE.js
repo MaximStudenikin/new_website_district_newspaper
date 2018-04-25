@@ -1,3 +1,5 @@
+// Код от всякого
+
 $(document).ready(function () {
 
   // del old banner 

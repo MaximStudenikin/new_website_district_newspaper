@@ -1,3 +1,5 @@
+// слайдер
+
 var surveySwiper = new Swiper('.swiper-survey', {
   // Optional parameters
   direction: 'horizontal',
