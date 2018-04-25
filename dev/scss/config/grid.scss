@@ -8,7 +8,7 @@ $grid: (
       lg: 1980px
       ),
       columns: 12,
-      gap: 0px,
+      gap: 15px,
       mode: flex
   );
 
@@ -38,20 +38,9 @@ $grid: (
 
 .col {
   &__left {
-    //   width: 70%;
-    @include grid-col(12 6 8 8);
-      @include tablets {
-          width: 90%;
-          margin: 0 auto;
-      }
+    @include grid-col(12 8 8 8);
   }
   &__right {
-    //   width: 25%;
-
     @include grid-col(12 4 4 4);
-      @include tablets {
-          width: 90%;
-          margin: 0 auto;
-      }
   }
 }

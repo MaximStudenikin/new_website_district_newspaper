@@ -127,10 +127,5 @@
 }
 
 .section__left, .section__right {
-  @include tablets {
-    width: 45%;
-  }
-  @include phones {
-    width: 100%;
-  }
+  @include grid-col(12 12 12 12);
 }
