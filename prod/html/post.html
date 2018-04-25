@@ -1,0 +1,153 @@
+<!-- Страница постов -->
+
+<meta name="twitter:card" content="gallery">
+<meta name="twitter:creator" content="@gazetauzao">
+<div itemscope itemtype="http://schema.org/BlogPosting">
+  <!--<audio controls>-->
+  <!--  {foreach $audio as $item}-->
+  <!--  {if $item}-->
+  <!--  <source src="/wa-data/public/blog/audio/{$post.id}/{$item}">-->
+  <!--    {/if}-->
+  <!--    {/foreach}-->
+  <!--  </audio>-->
+  <!--  {$audio = blogViewEasyHelper::getAudio($post.id)}-->
+  <!--  {if $audio != null}-->
+  <!--  {/if}-->
+  <article class="readRemainingGauge post" role="main" id="post-{$post.id}">
+    <!-- Кнопки соц сетей в фото -->
+    {*{$wa->block("laikbuttonphoto")}*}
+    <!-- /Кнопки соц сетей в фото -->
+    {* @event prepare_posts_frontend.%plugin_id%.post_title *} {if !empty($post.plugins.post_title)} {foreach $post.plugins.post_title
+    as $plugin => $output}{$output}{/foreach} {/if}
+
+    <!-- Кнопки соц сетей под заголовком -->
+    <div class="print">
+      {$wa->block("WhatsNext")}
+    </div>
+    <!-- /Кнопки соц сетей под заголовком -->
+
+    <div class="credentials print">
+      <meta itemprop="datePublished" content="{$post.datetime|date_format:'Y-m-d\TH:i'}"> {*
+      <a href="ADD_YOUR_GOOGLE_PLUS_PROFILE_URL_HERE" rel="author">
+        <i class="icon16 google"></i>
+      </a>*}
+      <span class="hint date" title="{$post.datetime|wa_datetime}">{$post.datetime|wa_datetime:"humandate"}</span>
+    </div>
+
+    <header>
+      <h1>
+        <span itemprop="name">{$post.title}</span>
+      </h1>
+    </header>
+
+    {* @event prepare_posts_frontend.%plugin_id%.before *} {if !empty($post.plugins.before)}
+    <div class="text_before print">
+      {foreach $post.plugins.before as $plugin => $output}{$output}{/foreach}
+    </div>
+    {/if}
+    <div class="text" itemprop="articleBody">
+      {$post.text}
+    </div>
+    {if $post.album_id && $post.album.id && $post.album.photos} {/if} {* @event prepare_posts_frontend.%plugin_id%.after *} {if
+    !empty($post.plugins.after)} {/if}
+    <div class="text_after print">
+      <div class="tegi-text">{foreach $post.plugins.after as $plugin => $output}{$output}{/foreach}</div>
+    </div>
+  </article>
+
+  <!-- Кнопки соц сетей в конце новости -->
+  {*
+  <div class="share">
+  </div>*}
+  <!-- /Кнопки соц сетей в конце новости -->
+
+  {$img_path = blogViewEasyHelper::getSliderImgPath()}
+  <!--Блок новостей-->
+  <div class="content--newsList" style="margin-top:80px">
+    <h2 class="content--newsList_title">
+      <a href="/category/novosti-goroda/">Новости</a>
+    </h2>
+
+    <!-- 1,2 - id рубрик новостей -->
+    {$lenta = blogViewEasyHelper::getLentaNews(3)}
+
+    <div class="row content-bxlider">
+      {foreach $lenta as $item}
+      <div class="col-lg-4 col-md-6 col-sm-6 content--newsList_item">
+        <!-- <h4>{$item.datetime|wa_datetime:"humandate"}</h4> -->
+        {$previewImg = blogViewEasyHelper::getPreviewImg($item.id)} {if !$previewImg.slider_img == ''}
+        <a href="/{$item.url}">
+          <img src="{$img_path}{$item.id}/{$previewImg.slider_img}">
+        </a>
+        {else}
+        <a href="/{$item.url}">
+          <img src="{$img_path}/95.jpg">
+        </a>
+        {/if} {*
+        <a href="/{$item.url}">
+          <img class="img-responsive" src="{$img_url}">
+        </a>*}
+        <span>{$item.datetime|wa_datetime:"humandate"}</span>
+        <p>
+          <a href="/{$item.url}">{$item.title}</a>
+        </p>
+      </div>
+      {/foreach}
+    </div>
+  </div>
+  <!--/Блок новостей-->
+
+  <!-- Блок статей -->
+  <div class="content--articleList">
+    <h2 class="content--articleList_title">
+      <a href="/category/stati-iz-gazety/">Статьи</a>
+    </h2>
+
+
+    {$lastPages = blogViewEasyHelper::getPapperNews()}
+
+    <div class="row content-bxlider">
+      {foreach $lastPages as $item name=news_iterator}
+      <div class="col-lg-4 col-md-6 col-sm-6 content--articleList_item">
+        {$previewImg = blogViewEasyHelper::getPreviewImg($item.id)} {if !$previewImg.slider_img == ''}
+        <a href="/{$item.url}">
+          <img src="{$img_path}{$item.id}/{$previewImg.slider_img}">
+        </a>
+        {else}
+        <a href="/{$item.url}">
+          <img src="{$img_path}/95.jpg">
+        </a>
+        {/if} {*
+
+        <a href="/{$item.url}">
+          <img class="img-responsive" src="{$img_url}">
+        </a>*}
+        <span>{$item.datetime|wa_datetime:"humandate"}</span>
+        <p>
+          <a href="/{$item.url}">{$item.title}</a>
+        </p>
+      </div>
+      {if $smarty.foreach.news_iterator.iteration == 3} {/if} {/foreach}
+    </div>
+  </div>
+
+  <!--<div class="row">-->
+  <!--<div class="battons__all">-->
+  <!--<a style="text-decoration: none!important;" href="/category/stati-iz-gazety/">Все статьи</a>-->
+  <!--</div>-->
+  <!--</div>-->
+
+  <!--/Блок статей-->
+
+</div>
+
+<!-- VK Widget -->
+<!--<div id="vk_community_messages"></div>-->
+
+
+
+{* @event frontend_post.%plugin_id%.footer *} {foreach $frontend_post as $plugin => $output} {if !empty($output.footer)}{$output.footer}{/if}
+{/foreach} {if $show_comments && $post.comments_allowed} {if $post.status eq blogPostModel::STATUS_PUBLISHED} {include 'comments.html'
+inline} {else}
+<h4>[`Comments for non published posts are disabled`]</h4>
+{/if} {/if}
