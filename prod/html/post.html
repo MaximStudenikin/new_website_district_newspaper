@@ -3,42 +3,31 @@
 <meta name="twitter:card" content="gallery">
 <meta name="twitter:creator" content="@gazetauzao">
 <div itemscope itemtype="http://schema.org/BlogPosting">
-  <!--<audio controls>-->
-  <!--  {foreach $audio as $item}-->
-  <!--  {if $item}-->
-  <!--  <source src="/wa-data/public/blog/audio/{$post.id}/{$item}">-->
-  <!--    {/if}-->
-  <!--    {/foreach}-->
-  <!--  </audio>-->
-  <!--  {$audio = blogViewEasyHelper::getAudio($post.id)}-->
-  <!--  {if $audio != null}-->
-  <!--  {/if}-->
-  <article class="readRemainingGauge post" role="main" id="post-{$post.id}">
-    <!-- Кнопки соц сетей в фото -->
-    {*{$wa->block("laikbuttonphoto")}*}
-    <!-- /Кнопки соц сетей в фото -->
+
+  <article class="article row readRemainingGauge post" role="main" id="post-{$post.id}">
+
+      <div class="article__top">
+          <div class="article__publication_date hide__block-phones hide__block-tablets show__block-desktop">
+            <time class="publication__date" itemprop="datePublished" datetime="{$post.datetime|wa_datetime}">{$post.datetime|wa_datetime:"humandate"}</time>
+          </div>
+          <div class="article__social_btn">
+            <div class="addthis_inline_share_toolbox"></div>
+          </div>
+        </div>
     {* @event prepare_posts_frontend.%plugin_id%.post_title *} {if !empty($post.plugins.post_title)} {foreach $post.plugins.post_title
     as $plugin => $output}{$output}{/foreach} {/if}
 
-    <!-- Кнопки соц сетей под заголовком -->
-    <div class="print">
-      {$wa->block("WhatsNext")}
-    </div>
-    <!-- /Кнопки соц сетей под заголовком -->
-
-    <div class="credentials print">
+<!-- ??? -->
+    <!-- <div class="credentials print">
       <meta itemprop="datePublished" content="{$post.datetime|date_format:'Y-m-d\TH:i'}"> {*
       <a href="ADD_YOUR_GOOGLE_PLUS_PROFILE_URL_HERE" rel="author">
         <i class="icon16 google"></i>
       </a>*}
       <span class="hint date" title="{$post.datetime|wa_datetime}">{$post.datetime|wa_datetime:"humandate"}</span>
-    </div>
+    </div> -->
 
-    <header>
-      <h1>
-        <span itemprop="name">{$post.title}</span>
-      </h1>
-    </header>
+    <div class="section__row">
+      <h1 itemprop="name">{$post.title}</h1>
 
     {* @event prepare_posts_frontend.%plugin_id%.before *} {if !empty($post.plugins.before)}
     <div class="text_before print">
@@ -55,47 +44,35 @@
     </div>
   </article>
 
-  <!-- Кнопки соц сетей в конце новости -->
-  {*
-  <div class="share">
-  </div>*}
-  <!-- /Кнопки соц сетей в конце новости -->
+  <!-- Можно добавить кнопки соц сетей в конце новости -->
 
   {$img_path = blogViewEasyHelper::getSliderImgPath()}
   <!--Блок новостей-->
-  <div class="content--newsList" style="margin-top:80px">
-    <h2 class="content--newsList_title">
-      <a href="/category/novosti-goroda/">Новости</a>
-    </h2>
 
-    <!-- 1,2 - id рубрик новостей -->
-    {$lenta = blogViewEasyHelper::getLentaNews(3)}
+  <!-- 1,2 - id рубрик новостей -->
+  {$lenta = blogViewEasyHelper::getLentaNews(3)}
 
-    <div class="row content-bxlider">
-      {foreach $lenta as $item}
-      <div class="col-lg-4 col-md-6 col-sm-6 content--newsList_item">
-        <!-- <h4>{$item.datetime|wa_datetime:"humandate"}</h4> -->
+  <section class="news-section row">
+    <a class="section__heading" href="/category/novosti-goroda/">Новости</a>
+    {foreach $lenta as $item}
+    <div class="news row" data-class="slider__teg">
         {$previewImg = blogViewEasyHelper::getPreviewImg($item.id)} {if !$previewImg.slider_img == ''}
-        <a href="/{$item.url}">
-          <img src="{$img_path}{$item.id}/{$previewImg.slider_img}">
-        </a>
-        {else}
-        <a href="/{$item.url}">
-          <img src="{$img_path}/95.jpg">
-        </a>
-        {/if} {*
-        <a href="/{$item.url}">
-          <img class="img-responsive" src="{$img_url}">
-        </a>*}
-        <span>{$item.datetime|wa_datetime:"humandate"}</span>
-        <p>
-          <a href="/{$item.url}">{$item.title}</a>
-        </p>
+      <ul class="news__list" data-class="slider__list">
+        <li class="news__item active__slide" data-class="slider__item">
+          <div class="section__img">
+            <img class="img__teg" src="{$img_path}{$item.id}/{$previewImg.slider_img}" alt="alt">
+          </div>
+          <time class="publication__date section__row" datetime="{$item.datetime|wa_datetime:"humandate"}">{$item.datetime|wa_datetime:"humandate"}</time>
+          <a class="section__title section__row" href="/{$item.url}">{$item.title}</a>
+          <p class="section__description section__row">...</p>
+        </li>
+        {/foreach}
+      </ul>
+      <div class="pagination row show__blok-phones">
+        <ul class="pagination__list" data-class="pagination__list"></ul>
       </div>
-      {/foreach}
     </div>
-  </div>
-  <!--/Блок новостей-->
+  </section>
 
   <!-- Блок статей -->
   <div class="content--articleList">
@@ -131,20 +108,9 @@
     </div>
   </div>
 
-  <!--<div class="row">-->
-  <!--<div class="battons__all">-->
-  <!--<a style="text-decoration: none!important;" href="/category/stati-iz-gazety/">Все статьи</a>-->
-  <!--</div>-->
-  <!--</div>-->
-
   <!--/Блок статей-->
 
 </div>
-
-<!-- VK Widget -->
-<!--<div id="vk_community_messages"></div>-->
-
-
 
 {* @event frontend_post.%plugin_id%.footer *} {foreach $frontend_post as $plugin => $output} {if !empty($output.footer)}{$output.footer}{/if}
 {/foreach} {if $show_comments && $post.comments_allowed} {if $post.status eq blogPostModel::STATUS_PUBLISHED} {include 'comments.html'
