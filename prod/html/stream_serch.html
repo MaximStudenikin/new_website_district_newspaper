@@ -1,4 +1,4 @@
-<!-- Главная стрница  -->
+<!-- Cтрница c топом материалов (работает) -->
 
 {* post stream (list): minimalistic view mode; used for post filtering by tags, author, search, etc. *}
 
@@ -8,45 +8,38 @@
 
 {$img_path = blogViewEasyHelper::getSliderImgPath()} {foreach $posts as $post}
 
-<section class="anime post search-match" id="post-{$post.id}" {if $wa->param('blog_url')}itemprop="blogPosts"{/if} itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="row">
-    {$previewImg = blogViewEasyHelper::getPreviewImg($post.id)}
-    <div class="col-lg-4 col-md-4">
-      {if !empty($previewImg.slider_img)}
-      <div class='post_img-preview'>
+
+<section class="preview__news row" id="post-{$post.id}" {if $wa->param('blog_url')}itemprop="blogPosts"{/if} itemscope itemtype="http://schema.org/BlogPosting">
+  <span class="row section__heading">Новости</span>
+  <ul class="preview__list">
+      {$previewImg = blogViewEasyHelper::getPreviewImg($post.id)}
+    <li class="preview__item row">
+        {if !empty($previewImg.slider_img)}
+      <div class="preview__img">
         <img class="img__teg" src="{$img_path}{$post.id}/{$previewImg.slider_img}" alt="{$previewImg.alt_img}" title="{$previewImg.alt_img}">
       </div>
       {else} {if $wa->currentUrl() == '/category/video/'}
-      <div class='post_img-preview'>
+      <div class='preview__img'>
         <img class="img__teg" src="{$img_path}/ZKZKZK_500x404[1].jpg" alt="default-mini-pic">
       </div>
       {else}
-      <div class='post_img-preview'>
+      <div class='preview__img'>
         <img class="img__teg" src="{$img_path}/95.jpg" alt="default-mini-pic">
       </div>
       {/if} {/if}
-    </div>
-    <div class="col-lg-8 col-md-8 post_description">
-      <span class="hint">{$post.datetime|wa_datetime:"humandate"}</span>
-      <h3>
-        <a href="{$post.link}" itemprop="url">{$post.title}</a>
-      </h3>
-      {*if $post.cutted}
-      <p>{$post.text|strip_tags}</p>
-      <a style="margin-bottom: 20px; display: block;" href="{$post.link}">{$post.cut_link_label|default:'[`Continue reading →`]'}</a>
-      {else}
-      <p>{$post.text|strip_tags|truncate:200}</p>
-      {/if*}
-      <p>{$post.text|strip_tags|truncate:200}</p>
-    </div>
-    <!--Теги-->
-    {*
-    <div class="text_after">
-      <div class="tegi-text">{foreach $post.plugins.after as $plugin => $output}{$output}{/foreach}</div>
-    </div>
-    *}
-    <!--/Теги-->
-  </div>
+      <div class="preview__text">
+        <div class="preview__info">
+          <time class="publication__date" datetime="{$post.datetime|wa_datetime:"humandate"}">{$post.datetime|wa_datetime:"humandate"}</time>
+        <a class="preview__link" href="{$post.link}">
+          <span class="section__title" itemprop="url">{$post.title}</span>
+        </a>
+          <a class="preview__link" href="{$post.link}">
+          <p class="section__text">{$post.text|strip_tags|truncate:200}</p>
+        </a>
+
+      </li>
+  </ul>
 </section>
+
 {foreachelse} {if !isset($page) || $page lt 2} {_w('%d post','%d posts',0)} {/if} {/foreach} {if $wa->currentUrl() == '/category/video/'}
 {literal} {/literal} {/if}
