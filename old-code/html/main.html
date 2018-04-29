@@ -1,16 +1,16 @@
-<!-- //Страница с контетом -->
-
 <div class="page-content" itemscope itemtype="http://schema.org/WebPage">
 
   {if empty($posts) && $wa->currentUrl() == $wa_app_url}
 
   <div class="welcome">
     <h1>[`Welcome to your new blog!`]</h1>
-    <p>{sprintf('[`Start by
-      <a href="%s">writing a post</a> in your blog backend.`]', $wa_backend_url|cat:'blog/')}</p>
+    <p>{sprintf('[`Start by <a href="%s">writing a post</a> in your blog backend.`]', $wa_backend_url|cat:'blog/')}</p>
   </div>
 
-  {else} {if $wa->currentUrl() != $wa_app_url}
+  {else}
+
+
+  {if $wa->currentUrl() != $wa_app_url}
   <div class="container">
     <div class="row">
       <div class="col-lg-9 col-md-9 sub-pages">
@@ -33,19 +33,19 @@
               <div class="calendar-container">
                 <table id="calendar2" class="calendar-table">
                   <thead>
-                    <tr>
-                      <td class="calendar__prev">‹
-                        <td colspan="5" class='calendar-head'>
-                          <td class="calendar__next">›
-                            <tr>
-                              <td>Пн
-                                <td>Вт
-                                  <td>Ср
-                                    <td>Чт
-                                      <td>Пт
-                                        <td>Сб
-                                          <td>Вс
-                                            <tbody>
+                  <tr>
+                    <td class="calendar__prev">‹
+                    <td colspan="5" class='calendar-head'>
+                    <td class="calendar__next">›
+                  <tr>
+                    <td>Пн
+                    <td>Вт
+                    <td>Ср
+                    <td>Чт
+                    <td>Пт
+                    <td>Сб
+                    <td>Вс
+                  <tbody>
                 </table>
               </div>
             </div>
@@ -53,7 +53,8 @@
 
 
             <!--Галерея-->
-            {$lastPhotoId = photosViewHelper::lastPhotoId()} {$lastPhoto = photosViewHelper::lastPhoto('id/{$lastPhotoId}')}
+            {$lastPhotoId = photosViewHelper::lastPhotoId()}
+            {$lastPhoto = photosViewHelper::lastPhoto('id/{$lastPhotoId}')}
             <div class="col-lg-12 col-md-12 col-sm-6 sidebar--gallery" style="background: url({$lastPhoto.thumb_970x0.url}) no-repeat top center; background-size: cover;">
               <a href="/gallery/">Галерея</a>
             </div>
@@ -63,7 +64,8 @@
           <div class="row">
             <!--Колумнистика-->
             <div class="col-lg-12 col-md-12 col-sm-6 sidebar--columnistic">
-              {$columnistika = blogViewEasyHelper::getColumnistikaNews()} {$img_path = blogViewEasyHelper::getSliderImgPath()}
+              {$columnistika = blogViewEasyHelper::getColumnistikaNews()}
+              {$img_path = blogViewEasyHelper::getSliderImgPath()}
 
               <!--<h2 class="h2 bold yel">Колумнистика</h2>-->
               <h3>
@@ -71,14 +73,13 @@
               </h3>
 
               <div class="columnistic-bxslider">
-                {foreach $columnistika as $item} {$previewImg = blogViewEasyHelper::getPreviewImg($item.id)}
+                {foreach $columnistika as $item}
+                {$previewImg = blogViewEasyHelper::getPreviewImg($item.id)}
                 <div class="col-lg-12 col-xs-12 sidebar--columnistic_content">
                   <div>
                     <img src="{$img_path}{$item.id}/{$previewImg.slider_img}" class="userpic" alt="">
                   </div>
-                  <p>
-                    <a class="thumbs__link" href="/{$item.url}">{$item.title}</a>
-                  </p>
+                  <p><a class="thumbs__link" href="/{$item.url}">{$item.title}</a></p>
                 </div>
                 {/foreach}
               </div>
@@ -110,7 +111,9 @@
               <h3>
                 <a href="/category/zvanyy-gost/">Званый гость</a>
               </h3>
-              {$guest = blogViewEasyHelper::getGuests()} {$img_path = blogViewEasyHelper::getSliderImgPath()} {foreach $guest as $item}
+              {$guest = blogViewEasyHelper::getGuests()}
+              {$img_path = blogViewEasyHelper::getSliderImgPath()}
+              {foreach $guest as $item}
               <div class="sidebar--guest_content" style="background: url({$img_path}{$item.id}/{$item.slider_img}) no-repeat top center; background-size: cover;">
                 <a href="/{$item.url}">
                   <p>{$item.title|strip_tags|truncate:20}
@@ -135,7 +138,9 @@
               {$wa->ecalc->getStyles()}
               <div class="swiper-survey" style="width: 251px; height: 190px; margin-left: 13px; overflow: hidden">
                 <div class="swiper-wrapper">
-                  {$wa->ecalc->getEnabledCalcs()} {*ecalcViewHelper::getCalcHtml('opros')*} {*ecalcViewHelper::getEnabledCalcs()*}
+                  {$wa->ecalc->getEnabledCalcs()}
+                  {*ecalcViewHelper::getCalcHtml('opros')*}
+                  {*ecalcViewHelper::getEnabledCalcs()*}
                 </div>
 
                 <div class="swiper-pagination">
@@ -144,7 +149,8 @@
                   <div class="swiper-button-next" style="margin-right: -20px"></div> -->
               </div>
               {$wa->ecalc->getJS()}
-              <script type="text/javascript" src="{$wa_active_theme_url}swiperStreamInit.js?v{$wa_theme_version}"></script>
+              <script type="text/javascript"
+                      src="{$wa_active_theme_url}swiperStreamInit.js?v{$wa_theme_version}"></script>
             </div>
             <!--/Опрос-->
           </div>
@@ -170,12 +176,19 @@
           </div>
         </div>
       </div>
-    </div>
-  </div>
+ </div>
+</div>
 </div>
 
 
-{else} {$content} {/if} {/if}
+{else}
+
+{$content}
+
+{/if}
+
+
+{/if}
 
 <div class="clear-both"></div>
 
