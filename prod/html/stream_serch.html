@@ -2,15 +2,11 @@
 
 {* post stream (list): minimalistic view mode; used for post filtering by tags, author, search, etc. *}
 
-<div id="tabs">
-
-</div>
+<div id="tabs"></div>
 
 {$img_path = blogViewEasyHelper::getSliderImgPath()} {foreach $posts as $post}
 
-
 <section class="preview__news row" id="post-{$post.id}" {if $wa->param('blog_url')}itemprop="blogPosts"{/if} itemscope itemtype="http://schema.org/BlogPosting">
-  <span class="row section__heading">Новости</span>
   <ul class="preview__list">
       {$previewImg = blogViewEasyHelper::getPreviewImg($post.id)}
     <li class="preview__item row">
@@ -36,10 +32,9 @@
           <a class="preview__link" href="{$post.link}">
           <p class="section__text">{$post.text|strip_tags|truncate:200}</p>
         </a>
-
       </li>
   </ul>
 </section>
 
-{foreachelse} {if !isset($page) || $page lt 2} {_w('%d post','%d posts',0)} {/if} {/foreach} {if $wa->currentUrl() == '/category/video/'}
-{literal} {/literal} {/if}
+{foreachelse} {if !isset($page) || $page lt 2} {_w('%d post','%d posts',0)} {/if} {/foreach} 
+{if $wa->currentUrl() == '/category/video/'} {/if}
