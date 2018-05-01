@@ -11,8 +11,6 @@
 		<meta property="og:title" content="{$wa->title()|escape}" />
 		<link rel="canonical" href="{$canonical}" /> {/if}
 		<meta name="theme-color" content="#ffc20f">
-		<meta name="msapplication-navbutton-color" content="#ffc20f">
-		<meta name="apple-mobile-web-app-status-bar-style" content="#ffc20f">
 		<link rel="shortcut icon" href="/favicon.ico" /> {if $wa->blog}
 		<!-- rss -->
 		{$rss=$wa->blog->rssUrl()} {if $rss}
@@ -49,9 +47,9 @@
 		<link href="{$wa_theme_url}default.css?v{$wa_theme_version}" rel="stylesheet" />
 		<link href="{$wa_theme_url}waslidemenu/waslidemenu.css?v{$wa_theme_version}" rel="stylesheet" />
 		<link href="{$wa_theme_url}addonStyles.css?v{$wa_theme_version}" rel="stylesheet">
-		<link href="{$wa_active_theme_url}style2018.css?v{$wa_theme_version}" rel="stylesheet">
 		<link href="{$wa_active_theme_url}media.css?v{$wa_theme_version}" rel="stylesheet">
 		<link href="{$wa_theme_url}style.css?v{$wa_theme_version}" rel="stylesheet" />
+		<link href="{$wa_active_theme_url}style2018.css?v{$wa_theme_version}" rel="stylesheet">
 		<!--[if lt IE 9]>
 		<script>
 				document.createElement('header');
@@ -155,8 +153,6 @@
 										<span class="icon-bar"></span>
 									</button>
 								</div>
-								<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-								</div>
 							</nav>
 							<ul class="social__list">
 								<li class="social__item">
@@ -196,9 +192,7 @@
 			<main class="maincontent {if $theme_settings.custom_background} custom-background{if $theme_settings.custom_background_stretch} stretched{/if}{/if}"
 			  role="main">
 				<div class="container">
-					<div class="page">
 						{include file="`$wa_active_theme_path`/main.html" inline}
-					</div>
 				</div>
 			</main>
 			<!-- FOOTER -->
@@ -274,7 +268,7 @@
 				<div class="feedback_submit_text"></div>
 		</div> -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-		<script src="{$wa_active_theme_url}commonE.js?v{$wa_theme_version}"></script>
+		<script src="{$wa_active_theme_url}common2018.js?v{$wa_theme_version}"></script>
 		<script type="text/javascript" src="{$wa_static_url}wa-content/js/jquery/jquery-1.11.1.min.js"></script> 
 		{* when optimizing your production environment, consider loading jQuery 1.11.1 from CDN instead of local load, e.g. *}
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
