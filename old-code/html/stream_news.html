@@ -365,7 +365,9 @@
     </div>
 </div>
 
-{/if} {$is_lazyloading = false} {if !$is_lazyloading && $wa->currentUrl() != $wa_app_url}
+{/if} 
+
+{$is_lazyloading = false} {if !$is_lazyloading && $wa->currentUrl() != $wa_app_url}
 <div id="post-stream" role="main" class="lazyloading" {if $wa->param('blog_url')}itemscope itemtype="http://schema.org/Blog"{/if}> {/if} {if !$is_lazyloading and !empty($stream_title)}
     <h1>{$stream_title|escape}</h1>{/if} {if $wa->currentUrl() == '/category/primaries/'}
     <a href="http://pg.er.ru/">
