@@ -1,195 +1,117 @@
-<div class="page-content" itemscope itemtype="http://schema.org/WebPage">
+{if empty($posts) && $wa->currentUrl() == $wa_app_url}
 
-  {if empty($posts) && $wa->currentUrl() == $wa_app_url}
-
-  <div class="welcome">
-    <h1>[`Welcome to your new blog!`]</h1>
-    <p>{sprintf('[`Start by <a href="%s">writing a post</a> in your blog backend.`]', $wa_backend_url|cat:'blog/')}</p>
-  </div>
-
-  {else}
-
-
-  {if $wa->currentUrl() != $wa_app_url}
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-9 col-md-9 sub-pages">
-        <!-- страница второго уровня -->
-
-        {$content}
-
-        <!-- конец контента для страницы второго уровня -->
-      </div>
-
-      <div class="col-lg-3 col-md-3 print">
-        <div class="maincontent__sidebar">
-
-          <div class="row">
-            <!--Афиша-->
-            <div class="col-lg-12 col-md-12 col-sm-6 hidden-xs sidebar--calendar calendar">
-              <h3>
-                <a href="/category/afisha/">Афиша</a>
-              </h3>
-              <div class="calendar-container">
-                <table id="calendar2" class="calendar-table">
-                  <thead>
+<div class="welcome">
+  <h1>[`Welcome to your new blog!`]</h1>
+  <p>{sprintf('[`Start by
+    <a href="%s">writing a post</a> in your blog backend.`]', $wa_backend_url|cat:'blog/')}</p>
+</div>
+{else} {if $wa->currentUrl() != $wa_app_url}
+<div class="container">
+  <div class="row">
+    <div class="col-lg-9 col-md-9 sub-pages">
+      <!-- страница второго уровня -->
+      {$content}
+      <!-- конец контента для страницы второго уровня -->
+    </div>
+    <div class="col-lg-3 col-md-3 print">
+      <div class="maincontent__sidebar">
+        <div class="row">
+          <!--Афиша-->
+          <div class="col-lg-12 col-md-12 col-sm-6 hidden-xs sidebar--calendar calendar">
+            <h3>
+              <a href="/category/afisha/">Афиша</a>
+            </h3>
+            <div class="calendar-container">
+              <table id="calendar2" class="calendar-table">
+                <thead>
                   <tr>
                     <td class="calendar__prev">‹
-                    <td colspan="5" class='calendar-head'>
-                    <td class="calendar__next">›
-                  <tr>
-                    <td>Пн
-                    <td>Вт
-                    <td>Ср
-                    <td>Чт
-                    <td>Пт
-                    <td>Сб
-                    <td>Вс
-                  <tbody>
-                </table>
-              </div>
+                      <td colspan="5" class='calendar-head'>
+                        <td class="calendar__next">›
+                          <tr>
+                            <td>Пн
+                              <td>Вт
+                                <td>Ср
+                                  <td>Чт
+                                    <td>Пт
+                                      <td>Сб
+                                        <td>Вс
+                                          <tbody>
+              </table>
             </div>
-            <!--/Афиша-->
-
-
-            <!--Галерея-->
-            {$lastPhotoId = photosViewHelper::lastPhotoId()}
-            {$lastPhoto = photosViewHelper::lastPhoto('id/{$lastPhotoId}')}
-            <div class="col-lg-12 col-md-12 col-sm-6 sidebar--gallery" style="background: url({$lastPhoto.thumb_970x0.url}) no-repeat top center; background-size: cover;">
-              <a href="/gallery/">Галерея</a>
-            </div>
-            <!--/Галерея-->
           </div>
-
-          <div class="row">
-            <!--Колумнистика-->
-            <div class="col-lg-12 col-md-12 col-sm-6 sidebar--columnistic">
-              {$columnistika = blogViewEasyHelper::getColumnistikaNews()}
-              {$img_path = blogViewEasyHelper::getSliderImgPath()}
-
-              <!--<h2 class="h2 bold yel">Колумнистика</h2>-->
-              <h3>
-                <a href="/category/kolumnistika/">Колумнистика</a>
-              </h3>
-
-              <div class="columnistic-bxslider">
-                {foreach $columnistika as $item}
-                {$previewImg = blogViewEasyHelper::getPreviewImg($item.id)}
-                <div class="col-lg-12 col-xs-12 sidebar--columnistic_content">
-                  <div>
-                    <img src="{$img_path}{$item.id}/{$previewImg.slider_img}" class="userpic" alt="">
-                  </div>
-                  <p><a class="thumbs__link" href="/{$item.url}">{$item.title}</a></p>
+          <!--Галерея-->
+          {$lastPhotoId = photosViewHelper::lastPhotoId()} 
+          {$lastPhoto = photosViewHelper::lastPhoto('id/{$lastPhotoId}')}
+          <div class="col-lg-12 col-md-12 col-sm-6 sidebar--gallery" style="background: url({$lastPhoto.thumb_970x0.url}) no-repeat top center; background-size: cover;">
+            <a href="/gallery/">Галерея</a>
+          </div>
+        </div>
+        <div class="row">
+          <!--Колумнистика-->
+          <div class="col-lg-12 col-md-12 col-sm-6 sidebar--columnistic">
+            {$columnistika = blogViewEasyHelper::getColumnistikaNews()} {$img_path = blogViewEasyHelper::getSliderImgPath()}
+            <h3>
+              <a href="/category/kolumnistika/">Колумнистика</a>
+            </h3>
+            <div class="columnistic-bxslider">
+              {foreach $columnistika as $item} 
+              {$previewImg = blogViewEasyHelper::getPreviewImg($item.id)}
+              <div class="col-lg-12 col-xs-12 sidebar--columnistic_content">
+                <div>
+                  <img src="{$img_path}{$item.id}/{$previewImg.slider_img}" class="userpic" alt="">
                 </div>
-                {/foreach}
-              </div>
-            </div>
-            <!--/Колумнистика-->
-
-            <!--Баннеры-->
-            <div class="col-lg-12 col-md-12 col-sm-6 col-xs-12 sidebar--banners">
-              {$wa->block("Bannerinobosti")}
-            </div>
-            <!--/Баннеры-->
-          </div>
-
-          {*$wa->block("widgetsocial")*}
-
-          <!-- /Новый год -->
-
-
-          <!--<div class="block-title add-button clear-both">
-          <a href="/category/kapremont/">Капремонт</a>
-          </div>
-          <div class="block-title add-button">
-          <a href="/category/pobeda/">Победа</a>
-          </div>-->
-
-          <!--Гость-->
-          <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-6 sidebar--guest">
-              <h3>
-                <a href="/category/zvanyy-gost/">Званый гость</a>
-              </h3>
-              {$guest = blogViewEasyHelper::getGuests()}
-              {$img_path = blogViewEasyHelper::getSliderImgPath()}
-              {foreach $guest as $item}
-              <div class="sidebar--guest_content" style="background: url({$img_path}{$item.id}/{$item.slider_img}) no-repeat top center; background-size: cover;">
-                <a href="/{$item.url}">
-                  <p>{$item.title|strip_tags|truncate:20}
-                    </br>
-                    {$item.text|strip_tags|truncate:60}</p>
-                </a>
+                <p>
+                  <a class="thumbs__link" href="/{$item.url}">{$item.title}</a>
+                </p>
               </div>
               {/foreach}
             </div>
-            <!--/Гость-->
-
-            <!--Опрос-->
-            <div class="col-lg-12 col-md-12 col-sm-6 hidden-xs sidebar--quiz">
-              <!--<div class="block-title" style="margin-bottom: 0px;">-->
-              <!--  <h2 class="title bold" style="margin-bottom: 0px;">Опрос</h2>-->
-              <h3>
-                <a href="/arkhiv-golosovaniy/">Опрос</a>
-              </h3>
-              <!--  <a href="/arkhiv-golosovaniy/" style="float: right; margin-top: -27px; margin-right: 10px; color: rgb(121, 121, 121);">Все опросы</a>-->
-              <!--</div>-->
-
-              {$wa->ecalc->getStyles()}
-              <div class="swiper-survey" style="width: 251px; height: 190px; margin-left: 13px; overflow: hidden">
-                <div class="swiper-wrapper">
-                  {$wa->ecalc->getEnabledCalcs()}
-                  {*ecalcViewHelper::getCalcHtml('opros')*}
-                  {*ecalcViewHelper::getEnabledCalcs()*}
-                </div>
-
-                <div class="swiper-pagination">
-                </div>
-                <!-- <div class="swiper-button-prev" style="margin-left: -20px"></div>
-                  <div class="swiper-button-next" style="margin-right: -20px"></div> -->
-              </div>
-              {$wa->ecalc->getJS()}
-              <script type="text/javascript"
-                      src="{$wa_active_theme_url}swiperStreamInit.js?v{$wa_theme_version}"></script>
-            </div>
-            <!--/Опрос-->
           </div>
-
-
-          <!--<div class="block-title print">-->
-          <!--  <h2 class="title bold">Званый гость<a href="/category/zvanyy-gost/" class="title-add">архив</a></h2>-->
-          <!--  {$guest = blogViewEasyHelper::getGuests()}-->
-          <!--  {$img_path = blogViewEasyHelper::getSliderImgPath()}-->
-          <!--  {foreach $guest as $item}-->
-          <!--  <a href="/{$item.url}" target="_self" class="block-link">-->
-          <!--    <img class="block-img" src="{$img_path}{$item.id}/{$item.slider_img}" title="Званый гость" alt="Званый гость">-->
-          <!--  </a>-->
-          <!--  {/foreach}-->
-
-          <!--</div>-->
-          <div class="block-title print">
-
-            <a href="/wa-data/public/blog/archive/{blogViewEasyHelper::getLastFromArchiveLink()}/index.html" class="block-link" target="_self">
-              <img class="block-img" src="/wa-data/public/blog/themes/gazeta/banners/vypusk.png" title="Свежий выпуск" alt="Свежий выпуск">
-            </a>
-
+          <!--Баннеры-->
+          <div class="col-lg-12 col-md-12 col-sm-6 col-xs-12 sidebar--banners">
+            {$wa->block("Bannerinobosti")}
           </div>
         </div>
+        {*$wa->block("widgetsocial")*}
+        <!--Гость-->
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-6 sidebar--guest">
+            <h3>
+              <a href="/category/zvanyy-gost/">Званый гость</a>
+            </h3>
+            {$guest = blogViewEasyHelper::getGuests()} {$img_path = blogViewEasyHelper::getSliderImgPath()} {foreach $guest as $item}
+            <div class="sidebar--guest_content" style="background: url({$img_path}{$item.id}/{$item.slider_img}) no-repeat top center; background-size: cover;">
+              <a href="/{$item.url}">
+                <p>{$item.title|strip_tags|truncate:20}
+                  </br>
+                  {$item.text|strip_tags|truncate:60}</p>
+              </a>
+            </div>
+            {/foreach}
+          </div>
+          <!--Опрос-->
+          <div class="col-lg-12 col-md-12 col-sm-6 hidden-xs sidebar--quiz">
+            <h3>
+              <a href="/arkhiv-golosovaniy/">Опрос</a>
+            </h3>
+            {$wa->ecalc->getStyles()}
+            <div class="swiper-survey" style="width: 251px; height: 190px; margin-left: 13px; overflow: hidden">
+              <div class="swiper-wrapper">
+                {$wa->ecalc->getEnabledCalcs()} {*ecalcViewHelper::getCalcHtml('opros')*} {*ecalcViewHelper::getEnabledCalcs()*}
+              </div>
+              <div class="swiper-pagination">
+              </div>
+            </div>
+            {$wa->ecalc->getJS()}
+            <script type="text/javascript" src="{$wa_active_theme_url}swiperStreamInit.js?v{$wa_theme_version}"></script>
+          </div>
+        </div>
+        <div class="block-title print">
+          <a href="/wa-data/public/blog/archive/{blogViewEasyHelper::getLastFromArchiveLink()}/index.html" class="block-link" target="_self">
+            <img class="block-img" src="/wa-data/public/blog/themes/gazeta/banners/vypusk.png" title="Свежий выпуск" alt="Свежий выпуск">
+          </a>
+        </div>
       </div>
- </div>
-</div>
-</div>
-
-
-{else}
-
-{$content}
-
-{/if}
-
-
-{/if}
-
-<div class="clear-both"></div>
-
-</div>
+    </div>
+    {else} {$content} {/if} {/if}
