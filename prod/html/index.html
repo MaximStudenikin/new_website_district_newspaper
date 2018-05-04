@@ -1,24 +1,13 @@
 <!DOCTYPE html>
 <html{if $wa->globals('isMyAccount')} class="my"{/if}>
-
 	<head>
-		<title>{$wa->title()|escape}</title>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<meta name="viewport" content="width=device-width,initial-scale=1">
-		<meta property="og:image" content="{$post_image_url|escape}" />
-		<meta name="Keywords" content="{$wa->meta('keywords')|escape}" />
-		<meta name="Description" content="{$wa->meta('description')|escape}" /> {if !empty($canonical)}
-		<meta property="og:title" content="{$wa->title()|escape}" />
-		<link rel="canonical" href="{$canonical}" /> {/if}
-		<meta name="theme-color" content="#ffc20f">
-		<link rel="shortcut icon" href="/favicon.ico" /> {if $wa->blog}
-		<!-- rss -->
-		{$rss=$wa->blog->rssUrl()} {if $rss}
-		<link rel="alternate" type="application/rss+xml" title="{$wa->accountName()}" href="{$rss}"> {/if}{/if}
-		<!-- swiper -->
-		<script type="text/javascript" src="{$wa_theme_url}swiper.min.js"></script>
-		<script src="https://vk.com/js/api/openapi.js?143" type="text/javascript"></script>
-		{literal}
+		<script type="text/javascript" src="http://yastatic.net/jquery/2.1.3/jquery.min.js"></script>
+		{$wa->js()} 
+		{* links active plugins JS *} 
+		{include file="`$wa_active_theme_path`/head.html" inline} 
+		{$wa->headJs()}
+				{literal}
+				
 		<script type="text/javascript">
 			VK.Widgets.CommunityMessages("vk_community_messages", 63378622, {
 				expandTimeout: "5000",
@@ -28,28 +17,15 @@
 			});
 		</script>
 		{/literal}
-		<!--normalize-->
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.min.css">
-		<!--bootstrap -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-		  crossorigin="anonymous">
-		<!--bxslider -->
-		<link href="{$wa_theme_url}bxslider/jquery.bxslider.css" rel="stylesheet" />
-		<!-- fixedsticky -->
-		<link href="{$wa_theme_url}fixedsticky.css" rel="stylesheet" />
-		<!-- swiper -->
-		<link href="{$wa_theme_url}swiper.min.css" rel="stylesheet" />
-		<!--fancybox -->
-		<link href="{$wa_theme_url}jquery.fancybox.css" rel="stylesheet" />
-		<!--tooltipster -->
-		<link href="{$wa_theme_url}tooltipster.css" rel="stylesheet" />
-		<!-- css -->
-		<link href="{$wa_theme_url}default.css?v{$wa_theme_version}" rel="stylesheet" />
-		<link href="{$wa_theme_url}waslidemenu/waslidemenu.css?v{$wa_theme_version}" rel="stylesheet" />
-		<link href="{$wa_theme_url}addonStyles.css?v{$wa_theme_version}" rel="stylesheet">
-		<link href="{$wa_active_theme_url}media.css?v{$wa_theme_version}" rel="stylesheet">
-		<link href="{$wa_theme_url}style.css?v{$wa_theme_version}" rel="stylesheet" />
-		<link href="{$wa_active_theme_url}style2018.css?v{$wa_theme_version}" rel="stylesheet">
+		<!--VK pixl -->
+			{literal}
+		<script type="text/javascript">
+			(window.Image ?
+				(new Image()) :
+				document.createElement('img'))
+			.src = 'https://vk.com/rtrg?p=VK-RTRG-190189-3xhlY';
+		</script>
+		{/literal}
 		<!--[if lt IE 9]>
 		<script>
 				document.createElement('header');
@@ -63,147 +39,20 @@
 				document.createElement('menu');
 		</script>
 		<![endif]-->
-		<!--VK pixl -->
-		{literal}
-		<script type="text/javascript">
-			(window.Image ?
-				(new Image()) :
-				document.createElement('img'))
-			.src = 'https://vk.com/rtrg?p=VK-RTRG-190189-3xhlY';
-		</script>
-		{/literal}
 	</head>
-
 	<body>
 		<div class="wrap">
-			<header class="header">
-				<div class="header__container">
-					<!-- EXTENDED HEADER with in-app navigation -->
-					<div class="header__left">
-						<a class="logo" href="http://gazetauzao.ru">
-							<img class="img__teg" src="/wa-data/public/site/data/img/banners/zaka.png" alt='Москва. За Калужской заставой'>
-						</a>
-					</div>
-					<div class="header__right">
-						{$catsWithSubCats = blogViewEasyHelper::getCategoriesWithSubcategories()}
-						<ul class="nav__list">
-							<li class='nav__item'>
-								<a class="nav__link" href="/ob-izdanii/">Об издании</a>
-							</li>
-							<li class='nav__item'>
-								<a class="nav__link" href="/arkhiv-nomerov">Архив номеров</a>
-							</li>
-							<li class="nav__item dropdown">
-								<a class="nav__item dropdown-toggle" href="#">Разделы</a>
-								<ul class="dropdown-menu dropdown_sub-menu" role="menu">
-									{foreach $catsWithSubCats as $parentItemUrl => $parentItem}
-									<li {if count($parentItem.child_urls)> 0} class="dropdown" {/if}> {if count($parentItem.child_urls) > 0}
-										<a href="/category/{$parentItemUrl}/" class="dropdown-toggle" data-toggle="dropdown">{$parentItem.name}</a>
-										<ul class="dropdown-menu" role="menu">
-											{foreach $parentItem.child_urls as $childItemUrl => $childItemName}
-											<li>
-												<a href="/category/{$childItemUrl}/">{$childItemName}</a>
-											</li>
-											{/foreach}
-										</ul>
-										{else}
-										<a href="/category/{$parentItemUrl}/">{$parentItem.name}</a>
-										{/if}
-									</li>
-									{/foreach}
-									<li>
-										<a href="/gallery/">Фото</a>
-									</li>
-									<li>
-										<a href="/category/mck">МЦК</a>
-									</li>
-								</ul>
-							</li>
-							<li class='nav__item'>
-								<a class="nav__link" href="/category/long">Московское долголетие</a>
-							</li>
-							<li class='nav__item'>
-								<a class="nav__link" href="/poleznaya-informatsiya">Полезная информация</a>
-							</li>
-							<li class='nav__item'>
-								<a class="nav__link" href="http://uzao.mos.ru" target='_blank'>Префектура</a>
-							</li>
-							<li class='nav__item'>
-								<a class="nav__link" href="/rayony-yuzao">Районы ЮЗАО</a>
-							</li>
-							<li class='nav__item'>
-								<a class="nav__link feedback_url" href="#">Обратная связь</a>
-							</li>
-						</ul>
-						<div class="header__right-row disabled__item-tablets">
-							<div class="rss-and-search">
-								<div class="sb-search" id="sb-search">
-									<form method="get" action="{$wa_app_url}" {if !empty($blog_query)}value="{$blog_query}" {/if}>
-										<input class="sb-search-input" placeholder="Поиск по сайту" type="search" value="" name="query" id="search">
-										<input class="sb-search-submit" type="submit" value="">
-										<span class="sb-icon-search icon-search"></span>
-									</form>
-								</div>
-							</div>
-							<nav class="globalheader__navbar" role="navigation">
-								<div class="navbar-header">
-									<button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-										<span class="icon-bar"></span>
-										<span class="icon-bar"></span>
-										<span class="icon-bar"></span>
-									</button>
-								</div>
-							</nav>
-							<ul class="social__list">
-								<li class="social__item">
-									<a class="socila__link" href="http://vk.com/gazetauzao">
-										<svg class="social__icon">
-											<use xlink:href="/wa-data/public/site/data/img/svg/symbols.svg#vk"></use>
-										</svg>
-									</a>
-								</li>
-								<li class="social__item">
-									<a class="socila__link" href="https://www.facebook.com/gazetauzao">
-										<svg class="social__icon">
-											<use xlink:href="/wa-data/public/site/data/img/svg/symbols.svg#fb"></use>
-										</svg>
-									</a>
-								</li>
-								<li class="social__item">
-									<a class="socila__link" href="https://twitter.com/gazetauzao">
-										<svg class="social__icon">
-											<use xlink:href="/wa-data/public/site/data/img/svg/symbols.svg#tw"></use>
-										</svg>
-									</a>
-								</li>
-								<li class="social__item">
-									<a class="socila__link" href="https://instagram.com/uzaomedia/">
-										<svg class="social__icon">
-											<use xlink:href="/wa-data/public/site/data/img/svg/symbols.svg#inst"></use>
-										</svg>
-									</a>
-								</li>
-							</ul>
-						</div>	
-					</div>
-				</div>
-			</header>
-			<!-- APP CONTENT -->
+		<!--header -->
+			{include file="`$wa_active_theme_path`/header.html" inline}
+			<!-- CONTENT -->
 			<main class="maincontent {if $theme_settings.custom_background} custom-background{if $theme_settings.custom_background_stretch} stretched{/if}{/if}"
 			  role="main">
 				<div class="container">
-						{include file="`$wa_active_theme_path`/main.html" inline}
+					{include file="`$wa_active_theme_path`/main.html" inline}
 				</div>
 			</main>
 			<!-- FOOTER -->
-			<footer class="footer globalfooter" role="contentinfo">
-				<div class="footer__container">
-					{include file="`$wa_active_theme_path`/footer.html" inline}
-				</div>
-				<div class="easy-it print">
-					<a href="http://easy-it.ru/">easy-it.ru</a>
-				</div>
-			</footer>
+			{include file="`$wa_active_theme_path`/footer.html" inline}
 		</div>
 		<!-- Форма для писем(надо переписывать) -->
 		<!-- <div class="feedback_form__fields">
@@ -274,11 +123,7 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 		<script type="text/javascript" src="{$wa_static_url}wa-content/js/jquery/jquery-migrate-1.2.1.min.js"></script>
 		<script type="text/javascript" src="{$wa_theme_url}default.js?v{$wa_theme_version}"></script>
-		<script type="text/javascript" src="{$wa_theme_url}waslidemenu/jquery.waslidemenu.min.js?v{$wa_theme_version}"></script> 
-		{$wa->js()} 
-		{* links active plugins JS *} 
-		{include file="`$wa_active_theme_path`/head.html" inline} 
-		{$wa->headJs()}
+		<script type="text/javascript" src="{$wa_theme_url}waslidemenu/jquery.waslidemenu.min.js?v{$wa_theme_version}"></script>
 		{* links Google Analytics tracking code and site's custom JS (defined in Site app settings) *}
 		<!-- common js file -->
 		<script type="text/javascript" src="http://yastatic.net/bootstrap/3.3.1/js/bootstrap.min.js"></script>
@@ -292,11 +137,13 @@
 		<script type="text/javascript" src="{$wa_theme_url}jquery.tooltipster.min.js"></script>
 		<script type="text/javascript" src="{$wa_theme_url}classie.js"></script>
 		<script type="text/javascript" src="{$wa_theme_url}uisearch.js"></script>
+		<script type="text/javascript" src="{$wa_active_theme_url}plugins/simple_pagination/jquery.simplePagination.js"></script>
+		<!-- blog js -->
+		<script type="text/javascript" src="/wa-data/public/blog/themes/gazeta/default.blog.js?v2.2.2.1525427397"></script>
 		<script>
 			new UISearch(document.getElementById('sb-search'));
 		</script>
 		<!-- ?? -->
 		<script type="text/javascript" src="{$wa_theme_url}js/script.js"></script>
 	</body>
-
 	</html>
