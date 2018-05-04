@@ -1,0 +1,26 @@
+{if empty($posts) && $wa->currentUrl() == $wa_app_url}
+
+<div class="welcome">
+  <h1>[`Welcome to your new blog!`]</h1>
+  <p>{sprintf('[`Start by
+    <a href="%s">writing a post</a> in your blog backend.`]', $wa_backend_url|cat:'blog/')}</p>
+</div>
+{else} 
+{if $wa->currentUrl() != $wa_app_url}
+    <div class="col-lg-9 col-md-9 sub-pages">
+      <!-- страница второго уровня -->
+      {$content}
+      <!-- конец контента для страницы второго уровня -->
+    </div>
+    <div class="col-lg-3 col-md-3 print">
+      <div class="maincontent__sidebar">
+        {include file="`$wa_active_theme_path`/right-col.html" inline}
+<!--тут был div сейчас он все он наверное в right-col.html -->
+    </div>
+
+    {else}
+       
+    {$content}
+ 
+    {/if} 
+    {/if}

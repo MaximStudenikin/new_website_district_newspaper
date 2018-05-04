@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html{if $wa->globals('isMyAccount')} class="my"{/if}>
+	<head>
+		<script type="text/javascript" src="http://yastatic.net/jquery/2.1.3/jquery.min.js"></script>
+		{$wa->js()} 
+		{* links active plugins JS *} 
+		{include file="`$wa_active_theme_path`/head.html" inline} 
+		{$wa->headJs()}
+				{literal}
+				
+		<script type="text/javascript">
+			VK.Widgets.CommunityMessages("vk_community_messages", 63378622, {
+				expandTimeout: "5000",
+				disableExpandChatSound: "1",
+				disableNewMessagesSound: "1",
+				disableButtonTooltip: "1"
+			});
+		</script>
+		{/literal}
+		<!--VK pixl -->
+			{literal}
+		<script type="text/javascript">
+			(window.Image ?
+				(new Image()) :
+				document.createElement('img'))
+			.src = 'https://vk.com/rtrg?p=VK-RTRG-190189-3xhlY';
+		</script>
+		{/literal}
+		<!--[if lt IE 9]>
+		<script>
+				document.createElement('header');
+				document.createElement('nav');
+				document.createElement('section');
+				document.createElement('article');
+				document.createElement('aside');
+				document.createElement('footer');
+				document.createElement('figure');
+				document.createElement('hgroup');
+				document.createElement('menu');
+		</script>
+		<![endif]-->
+	</head>
+	<body>
+		<div class="wrap">
+		<!--header -->
+			{include file="`$wa_active_theme_path`/header.html" inline}
+			<!-- CONTENT -->
+			<main class="maincontent {if $theme_settings.custom_background} custom-background{if $theme_settings.custom_background_stretch} stretched{/if}{/if}"
+			  role="main">
+				<div class="container">
+					{include file="`$wa_active_theme_path`/main.html" inline}
+				</div>
+			</main>
+			<!-- FOOTER -->
+			{include file="`$wa_active_theme_path`/footer.html" inline}
+		</div>
+		<!-- Форма для писем(надо переписывать) -->
+		<!-- <div class="feedback_form__fields">
+				<form id="feedback_form" enctype="multipart/form-data">
+					<div class="feedback_form__inputs">
+						<div class="feedback_form__row">
+							<div class="feedback_form__elem">
+								<label for="" class="feedback_form__elem-title">Тема сообщения</label>
+								<input class="feedback_form__input" name="feedback_theme" required="" type="text">
+							</div>
+							<div class="feedback_form__elem">
+								<label for="" class="feedback_form__elem-title">Ваше имя</label>
+								<input class="feedback_form__input" name="feedback_name" required="" type="text">
+							</div>
+						</div>
+						<div class="feedback_form__row">
+							<div class="feedback_form__elem">
+								<label for="" class="feedback_form__elem-title">E-Mail для ответа</label>
+								<input class="feedback_form__input" name="feedback_email" required="" type="email">
+							</div>
+							<div class="feedback_form__file">
+								<label for="" class="feedback_form__file-title">Файлы для отправки</label>
+								<div class="fileform">
+									<div id="fileformlabel"></div>
+									<div class="selectbutton">Обзор</div>
+									<input type="file" name="feedback_upload" id="upload" accept="image/jpeg,image/png" onchange="getName(this.value);" />
+								</div>
+							</div>
+						</div>
+						<div class="feedback_form__row">
+							<div class="feedback_form__texarea">
+								<label for="" class="feedback_form__elem-title">Ваше сообщение</label>
+								<textarea class="feedback_form__big-text-input" name="feedback_message" required=""></textarea>
+							</div>
+						</div>
+						<div class="feedback_form__row">
+							<div class="feedback_form__radio">
+								<input class="form__radio-checkbox" name="feedback_terms" id="feedback_form__radio--ansver-yes" type="checkbox" required="">
+								<label class="feedback_form__radios-title" for="feedback_form__radio--ansver-yes">Нажимая кнопку «Отправить», я подтверждаю, что ознакомился и принимаю</label>
+								<a class="feedback_form__radios-link" href="#">правила регистрации и конфиденциальности</a>
+							</div>
+						</div>
+						<div class="feedback_form__row">
+							<div class="feedback_form__control">
+								<button type="submit" class="feedback_form__submit">
+									<div class="feedback_form__submit-text">Отправить</div>
+								</button>
+							</div>
+							<div class="g-recaptcha" data-sitekey="6LcKzSMTAAAAAE_3U6yicS3zHIUlQ_kT1q3TDy1X">
+							</div>
+						</div>
+						<div class="feedback_form__row">
+							<div class="feedback_form__bottom_text">
+								Все поля обязательны для заполения
+							</div>
+							<div class="feedback_form__bottom_phone">
+								Наш телефон 8(499)127-18-39
+							</div>
+						</div>
+					</div>
+				</form>
+				<div class="feedback_submit_text"></div>
+		</div> -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+		<script src="{$wa_active_theme_url}common2018.js?v{$wa_theme_version}"></script>
+		<script type="text/javascript" src="{$wa_static_url}wa-content/js/jquery/jquery-1.11.1.min.js"></script> 
+		{* when optimizing your production environment, consider loading jQuery 1.11.1 from CDN instead of local load, e.g. *}
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script type="text/javascript" src="{$wa_static_url}wa-content/js/jquery/jquery-migrate-1.2.1.min.js"></script>
+		<script type="text/javascript" src="{$wa_theme_url}default.js?v{$wa_theme_version}"></script>
+		<script type="text/javascript" src="{$wa_theme_url}waslidemenu/jquery.waslidemenu.min.js?v{$wa_theme_version}"></script>
+		{* links Google Analytics tracking code and site's custom JS (defined in Site app settings) *}
+		<!-- common js file -->
+		<script type="text/javascript" src="http://yastatic.net/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+		<!-- bxslider -->
+		<script type="text/javascript" src="{$wa_theme_url}bxslider/jquery.bxslider.min.js"></script>
+		<!-- fixedsticky -->
+		<script type="text/javascript" src="{$wa_theme_url}fixedsticky.js"></script>
+		<!-- fancybox -->
+		<script type="text/javascript" src="{$wa_theme_url}jquery.fancybox.js"></script>
+		<!-- tooltipster -->
+		<script type="text/javascript" src="{$wa_theme_url}jquery.tooltipster.min.js"></script>
+		<script type="text/javascript" src="{$wa_theme_url}classie.js"></script>
+		<script type="text/javascript" src="{$wa_theme_url}uisearch.js"></script>
+		<script type="text/javascript" src="{$wa_active_theme_url}plugins/simple_pagination/jquery.simplePagination.js"></script>
+		<!-- blog js -->
+		<script type="text/javascript" src="/wa-data/public/blog/themes/gazeta/default.blog.js?v2.2.2.1525427397"></script>
+		<script>
+			new UISearch(document.getElementById('sb-search'));
+		</script>
+		<!-- ?? -->
+		<script type="text/javascript" src="{$wa_theme_url}js/script.js"></script>
+	</body>
+	</html>

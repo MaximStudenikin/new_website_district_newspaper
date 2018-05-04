@@ -1,0 +1,914 @@
+<!-- Главная стрница  -->
+
+{* post stream (list) wrapper *} {* главная страница или нет *} {if $wa->currentUrl() == $wa_app_url}
+
+<div class="row">
+  <div class="col-md-6">
+    <h2 class="h2 bold main-title">ГЛАВНЫЕ НОВОСТИ</h2>
+    <div class="main-slider slider-common">
+      {$mainSliderNews = blogViewEasyHelper::getMainSliderNews()} {$img_path = blogViewEasyHelper::getSliderImgPath()}
+      <ul class="main-bxlider">
+        {foreach $mainSliderNews as $item}
+        <li>
+          <div class="news">
+            <img src="{$img_path}{$item.id}/{$item.slider_img}" alt="{$item.alt_img}" title="{$item.alt_img}">
+            <p>
+              <span class="date">{$item.datetime|wa_datetime:"humandate"}</span>
+              <br>
+              <a class="link-item" href="/{$item.url}">{$item.title}</a>
+            </p>
+            <div class="announcement">{$item.announcement}</div>
+          </div>
+        </li>
+        {/foreach}
+      </ul>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <!-- 1,2 - id рубрик новостей -->
+    {$lenta = blogViewEasyHelper::getLentaNews(7)}
+    <!-- для ленты колумнистики  -->
+    {$lenta1 = blogViewEasyHelper::getLentaNews(3)}
+    <!-- /для ленты колумнистики  -->
+    <ul class="thumbs">
+      <h2 class="h2 bold yel">НОВОСТИ</h2>
+      {foreach $lenta as $item}
+      <li class="thumbs__item">
+        <!--                     <h4>{$item.datetime|wa_datetime:"humandate"}</h4> -->
+
+        <p>
+          <span class="thumbs__date">{$item.datetime|wa_datetime:"humandate"}</span>
+        </p>
+        <p>
+          <a class="thumbs__link" href="/{$item.url}">{$item.title}</a>
+        </p>
+      </li>
+      {/foreach}
+
+    </ul>
+    <div class='thumbs__all'>
+      <a href="/category/novosti-goroda/">Все новости</a>
+    </div>
+  </div>
+  <div class="col-md-3">
+    {$columnistika = blogViewEasyHelper::getColumnistikaNews()}
+    <ul class="thumbs" style='padding-right: 0;'>
+      <h2 class="h2 bold yel">Колумнистика</h2>
+      {foreach $columnistika as $item}
+      <li class="thumbs__item">
+        <p>
+          <span class="thumbs__date">{$item.datetime|wa_datetime:"humandate"}</span>
+        </p>
+        <p>
+          <a class="thumbs__link" href="/{$item.url}">{$item.title}</a>
+        </p>
+      </li>
+      {/foreach}
+    </ul>
+    <div class="thumbs__all" style='padding-right: 0;'>
+      <a href="/tag/колумнистика/">Все статьи</a>
+    </div>
+
+    <div class="block-title">
+      <a class="stom_medcentr" href="http://www.stom-medcentr.ru/" target="_blank" onclick="yaCounter30460649.reachGoal('order'); return true;">
+        <img class="stom_medcentr" src="http://gazetauzao.ru/wa-data/public/photos/47/84/8447/8447.970.png">
+        <br>
+        <br>
+        <a href="http://www.stroki.info/index.php?categoryID=16293&tarif=yes&izdID=107" class="block-link" target="_blank">
+          {*
+          <img class="block-img" src="{$wa_theme_url}banners/reklama.png" title="Прием объявлений" alt="Прием объявлений">*}
+          <img class="block-img zaklzs_baner" src="/wa-data/public/banner/Биг1.gif" title="Прием объявлений" alt="Прием объявлений">
+        </a>
+    </div>
+
+    <!-- Новый год -->
+    <div class="block-title">
+      <!-- Конкурс животные -->
+      <a href="http://gazetauzao.ru/troyka-pobediteley-na-chetvertoy-nedeli-golosovaniya-v-konkurse-pokhozhi-li-my/ " class="block-link"
+        target="_blank">
+        <img class="block-img" src="http://gazetauzao.ru/wa-data/public/photos/75/83/8375/8375.970.jpg">
+      </a>
+      <!-- /Конкурс животные -->
+      <br>
+      <!-- Исторический конкурс -->
+      <a href="http://gazetauzao.ru/moskva-za-kaluzhskoy-zastavoy-obyavlyaet-istoricheskiy-konkurs/" class="block-link" target="_blank">
+        <img class="block-img" src="http://gazetauzao.ru/wa-data/public/photos/49/54/5449/5449.970.jpg">
+      </a>
+      <!-- /Исторический конкурс -->
+    </div>
+    <!-- /Новый год -->
+
+    <!--<div class="block-title add-button clear-both">
+            <a href="/category/kapremont/">Капремонт</a>
+        </div>
+        <div class="block-title add-button">
+            <a href="/category/pobeda/">Победа</a>
+        </div>-->
+
+
+    <div class="block-title">
+      <h2 class="title bold">Званый гость
+        <a href="/category/zvanyy-gost/" class="title-add">архив</a>
+      </h2>
+      {$guest = blogViewEasyHelper::getGuests()} {$img_path = blogViewEasyHelper::getSliderImgPath()} {foreach $guest as $item}
+      <a href="/{$item.url}" target="_blank" class="block-link">
+        <img class="block-img" src="{$img_path}{$item.id}/{$item.slider_img}" title="Званый гость" alt="Званый гость">
+      </a>
+      {/foreach}
+
+    </div>
+    <div class="block-title">
+
+      <a href="/wa-data/public/blog/archive/{blogViewEasyHelper::getLastFromArchiveLink()}/index.html" class="block-link" target="_blank">
+        <img class="block-img" src="{$wa_theme_url}banners/vypusk.png" title="Свежий выпуск" alt="Свежий выпуск">
+      </a>
+    </div>
+  </div>
+</div>
+
+{$added_slider = blogViewEasyHelper::getNews()} {if !empty($added_slider)}
+<div class="row announce hidden-sm hidden-xs">
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+
+      {foreach $added_slider as $item}
+
+      <div class="col-md-3 announce__item swiper-slide">
+        <p class="announce__date">{$item.datetime|wa_datetime:"humandate"}</p>
+        <p class="announce__title">
+          <a target="_blank" href="/{$item.url}">{$item.title}</a>
+        </p>
+        <!-- <p class="announce__link"><a target="_blank" href="/{$item.url}">Подробнее</a></p> -->
+      </div>
+
+      {/foreach}
+    </div>
+  </div>
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-pagination"></div>
+</div>
+{/if}
+
+<div class="row hidden-md hidden-lg">
+  <ul class="thumbs">
+    {$added_slider = blogViewEasyHelper::getNews()} {foreach $added_slider as $item}
+    <li class="thumbs__item">
+      <p>
+        <span class="thumbs__date">{$item.datetime|wa_datetime:"humandate"}</span>
+      </p>
+      <a class="thumbs__link" target="_blank" href="/{$item.url}">{$item.title}</a>
+      <p>
+        {$item.text|strip_tags|truncate:150}
+      </p>
+    </li>
+    {/foreach}
+  </ul>
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+    {$added_video = blogViewEasyHelper::getVideo()} {foreach $added_video as $item name=video} {if $smarty.foreach.video.index
+    == 0}
+    <div class="video">
+      {$item.text}
+    </div>
+    <div class="thumbs thumbs-video">
+      {$added_slider = blogViewEasyHelper::getGreySliderNews(6)}
+      <div class="thumbs__item">
+        <p>
+          <span class="thumbs__date">{$item.datetime|wa_datetime:"humandate"}</span>
+          <a class="thumbs__link" target="_blank" href="{$item.announcement}">{$item.title}</a>
+          <p>
+      </div>
+      {/if} {/foreach}
+      <a href="/category/video/">Все видео</a>
+    </div>
+
+  </div>
+  <!-- общие новости  -->
+  <div class="col-md-6 common-news">
+    <h2 class="h2 bold">Новости ЮЗАО</h2>
+    <ul class="thumbs">
+      {$added_slider = blogViewEasyHelper::getGreySliderNews(6)} {foreach $added_slider as $item}
+
+      <li class="thumbs__item">
+        <p>
+          <span class="thumbs__date">{$item.datetime|wa_datetime:"humandate"}</span>
+        </p>
+        <a class="thumbs__link" target="_blank" href="/{$item.url}">{$item.title}</a>
+        <p>
+          {$item.text|strip_tags|truncate:150}
+        </p>
+      </li>
+
+      {/foreach}
+
+    </ul>
+    <div class='thumbs__all'>
+      <a href="/category/uzao-news/">Все новости</a>
+    </div>
+  </div>
+</div>
+
+{*$timeline = blogViewEasyHelper::kalendar()*} {*$timeline|var_dump*} {if !empty($timeline)}
+<li id="timeline" class="collapsible">
+  <a href="#" onClick="return false">[`Calendar`]</a>
+  {if !empty($timeline)}
+  <ul class="menu-v">
+    {$year=null} {foreach $timeline as $year_month => $item} {if $year neq $item.year} {if !$item@first}
+  </ul>
+</li>
+{/if}
+<li class="collapsible {if $item.year_selected}bold{/if}">
+  {$year=$item.year}
+  <a href="{$item.year_link}">{$item.year|default:'NULL'}</a>
+  <ul class="menu-v">
+    {/if}
+    <li {if $item.selected}class="bold" {/if}>
+      <a href="{$item.link}" title="{_w(" %d post ","%d posts ",$item.count)}">{_ws(date("F",gmmktime(0,0,0,$item.month,1)))}</a>
+    </li>
+    {if $item@last}
+  </ul>
+</li>
+{/if} {/foreach}
+</ul>
+{/if}
+</li>
+{/if}
+<div class="row info-row">
+  <div class="col-md-3">
+    <div class="block-title">
+      <h2 class="title bold">Опрос</h2>
+      <a href="/arkhiv-golosovaniy/" style="float: right; margin-top: -27px; margin-right: 10px; color: rgb(121, 121, 121);">Все опросы</a>
+    </div>
+    {$wa->ecalc->getStyles()}
+    <div class="swiper-survey" style="width: 251px; margin-left: 13px; overflow: hidden">
+      <div class="swiper-wrapper">
+
+        {$wa->ecalc->getEnabledCalcs()} {*ecalcViewHelper::getCalcHtml('opros')*} {*ecalcViewHelper::getEnabledCalcs()*}
+
+      </div>
+      <div class="swiper-pagination"></div>
+      <!-- <div class="swiper-button-prev" style="margin-left: -20px"></div>
+                    <div class="swiper-button-next" style="margin-right: -20px"></div> -->
+    </div>
+    {$wa->ecalc->getJS()} {literal}
+    <script>
+      var surveySwiper = new Swiper('.swiper-survey', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: false,
+        // simulateTouch: false,
+        preventClicks: false,
+        preventClicksPropagation: false,
+
+        // If we need pagination
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        autoplay: 7000,
+
+        // Navigation arrows
+        // nextButton: '.swiper-button-next',
+        // prevButton: '.swiper-button-prev',
+
+        // And if we need scrollbar
+        // scrollbar: '.swiper-scrollbar',
+      })
+    </script> {/literal}
+  </div>
+  <div class="col-md-5 calendar">
+    <div class="block-title">
+      <h2 class="title bold">Афиша</h2>
+      <div class="calendar-container">
+        <table id="calendar2" class="calendar-table">
+          <thead>
+            <tr>
+              <td class="calendar__prev">‹
+                <td colspan="5" class='calendar-head'>
+                  <td class="calendar__next">›
+                    <tr>
+                      <td>Пн
+                        <td>Вт
+                          <td>Ср
+                            <td>Чт
+                              <td>Пт
+                                <td>Сб
+                                  <td>Вс
+                                    <tbody>
+        </table>
+      </div>
+      <!--                 <div class="col-md-6 calendar-description">
+                    <ul>
+
+                    </ul>
+                </div> -->
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="block-title foto-news">
+      {$lastPhotoId = photosViewHelper::lastPhotoId()} {$lastPhoto = photosViewHelper::lastPhoto('id/{$lastPhotoId}')}
+
+      <h2 class="title bold">Фотоновости</h2>
+      <a href="/photo/" style="float: right; margin-top: -27px; margin-right: 10px; color: rgb(121, 121, 121);">Все фото</a>
+      <a href="/photo">
+        <img class="photo" src="{$lastPhoto.thumb_970x0.url}">
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- информациионные страницы. -->
+
+
+{$lastPages = blogViewEasyHelper::getPapperNews()}
+
+
+<div class="row">
+
+  {foreach $lastPages as $item name=news_iterator}
+
+  <div class="col-md-4 lenta">
+    <div class="news">
+
+      <a class="link-item bold" href="/{$item.url}">{$item.title}</a>
+      <p>
+        {$item.text|strip_tags|truncate:58}
+      </p>
+    </div>
+  </div>
+  {if $smarty.foreach.news_iterator.iteration == 3}
+</div>
+<div class="row">
+  {/if} {/foreach}
+
+</div>
+<div class="row">
+  <div class="col-md-12 text-right">
+    <a href="/category/stati-iz-gazety/">Все статьи</a>
+  </div>
+</div>
+
+
+
+<!-- облако тегов -->
+<div class="row">
+  <div class="col-md-12">
+    <h2 class="h2 common-news-title bold">Облако тегов</h2>
+    <div class="all-tags">
+      {$customAllTagView = blogTagPlugin::customAllTagView(100)} {$customAllTagView.sidebar}
+    </div>
+  </div>
+</div>
+
+{/if} {$is_lazyloading = false} {if !$is_lazyloading && $wa->currentUrl() != $wa_app_url}
+<div id="post-stream" role="main" class="lazyloading" {if $wa->param('blog_url')}itemscope itemtype="http://schema.org/Blog"{/if}> {/if} {if !$is_lazyloading and !empty($stream_title)}
+  <h1>{$stream_title|escape}</h1>{/if} {if $wa->currentUrl() == '/category/primaries/'}
+  <a href="http://pg.er.ru/">
+    <img src="/wa-data/public/site/data/img/banners/primeris_banner.jpg" alt="Баннер праймериз">
+  </a>
+  {/if}
+
+  <a name="page_{$page}"></a>
+
+  {if $is_search} {include file="stream_search.html" inline} {else} {include file="stream_posts.html" inline} {/if} {if $is_lazyloading
+  or ($page eq 1)}
+  <div class="pageless-wrapper {if $wa->currentUrl() == $wa_app_url}hidden{/if}" {if !$is_lazyloading } style="display:none;"
+    {/if}>
+
+    {if $page lt $pages} {$loade<!-- Главная стрница  -->
+
+      {* post stream (list) wrapper *} {* главная страница или нет *} {if $wa->currentUrl() == $wa_app_url}
+      
+      <div class="row">
+        <div class="col-md-6">
+          <h2 class="h2 bold main-title">ГЛАВНЫЕ НОВОСТИ</h2>
+          <div class="main-slider slider-common">
+            {$mainSliderNews = blogViewEasyHelper::getMainSliderNews()} {$img_path = blogViewEasyHelper::getSliderImgPath()}
+            <ul class="main-bxlider">
+              {foreach $mainSliderNews as $item}
+              <li>
+                <div class="news">
+                  <img src="{$img_path}{$item.id}/{$item.slider_img}" alt="{$item.alt_img}" title="{$item.alt_img}">
+                  <p>
+                    <span class="date">{$item.datetime|wa_datetime:"humandate"}</span>
+                    <br>
+                    <a class="link-item" href="/{$item.url}">{$item.title}</a>
+                  </p>
+                  <div class="announcement">{$item.announcement}</div>
+                </div>
+              </li>
+              {/foreach}
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <!-- 1,2 - id рубрик новостей -->
+          {$lenta = blogViewEasyHelper::getLentaNews(7)}
+          <!-- для ленты колумнистики  -->
+          {$lenta1 = blogViewEasyHelper::getLentaNews(3)}
+          <!-- /для ленты колумнистики  -->
+          <ul class="thumbs">
+            <h2 class="h2 bold yel">НОВОСТИ</h2>
+            {foreach $lenta as $item}
+            <li class="thumbs__item">
+              <!--                     <h4>{$item.datetime|wa_datetime:"humandate"}</h4> -->
+      
+              <p>
+                <span class="thumbs__date">{$item.datetime|wa_datetime:"humandate"}</span>
+              </p>
+              <p>
+                <a class="thumbs__link" href="/{$item.url}">{$item.title}</a>
+              </p>
+            </li>
+            {/foreach}
+      
+          </ul>
+          <div class='thumbs__all'>
+            <a href="/category/novosti-goroda/">Все новости</a>
+          </div>
+        </div>
+        <div class="col-md-3">
+          {$columnistika = blogViewEasyHelper::getColumnistikaNews()}
+          <ul class="thumbs" style='padding-right: 0;'>
+            <h2 class="h2 bold yel">Колумнистика</h2>
+            {foreach $columnistika as $item}
+            <li class="thumbs__item">
+              <p>
+                <span class="thumbs__date">{$item.datetime|wa_datetime:"humandate"}</span>
+              </p>
+              <p>
+                <a class="thumbs__link" href="/{$item.url}">{$item.title}</a>
+              </p>
+            </li>
+            {/foreach}
+          </ul>
+          <div class="thumbs__all" style='padding-right: 0;'>
+            <a href="/tag/колумнистика/">Все статьи</a>
+          </div>
+      
+          <div class="block-title">
+            <a class="stom_medcentr" href="http://www.stom-medcentr.ru/" target="_blank" onclick="yaCounter30460649.reachGoal('order'); return true;">
+              <img class="stom_medcentr" src="http://gazetauzao.ru/wa-data/public/photos/47/84/8447/8447.970.png">
+              <br>
+              <br>
+              <a href="http://www.stroki.info/index.php?categoryID=16293&tarif=yes&izdID=107" class="block-link" target="_blank">
+                {*
+                <img class="block-img" src="{$wa_theme_url}banners/reklama.png" title="Прием объявлений" alt="Прием объявлений">*}
+                <img class="block-img zaklzs_baner" src="/wa-data/public/banner/Биг1.gif" title="Прием объявлений" alt="Прием объявлений">
+              </a>
+          </div>
+      
+          <!-- Новый год -->
+          <div class="block-title">
+            <!-- Конкурс животные -->
+            <a href="http://gazetauzao.ru/troyka-pobediteley-na-chetvertoy-nedeli-golosovaniya-v-konkurse-pokhozhi-li-my/ " class="block-link"
+              target="_blank">
+              <img class="block-img" src="http://gazetauzao.ru/wa-data/public/photos/75/83/8375/8375.970.jpg">
+            </a>
+            <!-- /Конкурс животные -->
+            <br>
+            <!-- Исторический конкурс -->
+            <a href="http://gazetauzao.ru/moskva-za-kaluzhskoy-zastavoy-obyavlyaet-istoricheskiy-konkurs/" class="block-link" target="_blank">
+              <img class="block-img" src="http://gazetauzao.ru/wa-data/public/photos/49/54/5449/5449.970.jpg">
+            </a>
+            <!-- /Исторический конкурс -->
+          </div>
+          <!-- /Новый год -->
+      
+          <!--<div class="block-title add-button clear-both">
+                  <a href="/category/kapremont/">Капремонт</a>
+              </div>
+              <div class="block-title add-button">
+                  <a href="/category/pobeda/">Победа</a>
+              </div>-->
+      
+      
+          <div class="block-title">
+            <h2 class="title bold">Званый гость
+              <a href="/category/zvanyy-gost/" class="title-add">архив</a>
+            </h2>
+            {$guest = blogViewEasyHelper::getGuests()} {$img_path = blogViewEasyHelper::getSliderImgPath()} {foreach $guest as $item}
+            <a href="/{$item.url}" target="_blank" class="block-link">
+              <img class="block-img" src="{$img_path}{$item.id}/{$item.slider_img}" title="Званый гость" alt="Званый гость">
+            </a>
+            {/foreach}
+      
+          </div>
+          <div class="block-title">
+      
+            <a href="/wa-data/public/blog/archive/{blogViewEasyHelper::getLastFromArchiveLink()}/index.html" class="block-link" target="_blank">
+              <img class="block-img" src="{$wa_theme_url}banners/vypusk.png" title="Свежий выпуск" alt="Свежий выпуск">
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      {$added_slider = blogViewEasyHelper::getNews()} {if !empty($added_slider)}
+      <div class="row announce hidden-sm hidden-xs">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+      
+            {foreach $added_slider as $item}
+      
+            <div class="col-md-3 announce__item swiper-slide">
+              <p class="announce__date">{$item.datetime|wa_datetime:"humandate"}</p>
+              <p class="announce__title">
+                <a target="_blank" href="/{$item.url}">{$item.title}</a>
+              </p>
+              <!-- <p class="announce__link"><a target="_blank" href="/{$item.url}">Подробнее</a></p> -->
+            </div>
+      
+            {/foreach}
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+      {/if}
+      
+      <div class="row hidden-md hidden-lg">
+        <ul class="thumbs">
+          {$added_slider = blogViewEasyHelper::getNews()} {foreach $added_slider as $item}
+          <li class="thumbs__item">
+            <p>
+              <span class="thumbs__date">{$item.datetime|wa_datetime:"humandate"}</span>
+            </p>
+            <a class="thumbs__link" target="_blank" href="/{$item.url}">{$item.title}</a>
+            <p>
+              {$item.text|strip_tags|truncate:150}
+            </p>
+          </li>
+          {/foreach}
+        </ul>
+      </div>
+      
+      <div class="row">
+        <div class="col-md-6">
+          {$added_video = blogViewEasyHelper::getVideo()} {foreach $added_video as $item name=video} {if $smarty.foreach.video.index
+          == 0}
+          <div class="video">
+            {$item.text}
+          </div>
+          <div class="thumbs thumbs-video">
+            {$added_slider = blogViewEasyHelper::getGreySliderNews(6)}
+            <div class="thumbs__item">
+              <p>
+                <span class="thumbs__date">{$item.datetime|wa_datetime:"humandate"}</span>
+                <a class="thumbs__link" target="_blank" href="{$item.announcement}">{$item.title}</a>
+                <p>
+            </div>
+            {/if} {/foreach}
+            <a href="/category/video/">Все видео</a>
+          </div>
+      
+        </div>
+        <!-- общие новости  -->
+        <div class="col-md-6 common-news">
+          <h2 class="h2 bold">Новости ЮЗАО</h2>
+          <ul class="thumbs">
+            {$added_slider = blogViewEasyHelper::getGreySliderNews(6)} {foreach $added_slider as $item}
+      
+            <li class="thumbs__item">
+              <p>
+                <span class="thumbs__date">{$item.datetime|wa_datetime:"humandate"}</span>
+              </p>
+              <a class="thumbs__link" target="_blank" href="/{$item.url}">{$item.title}</a>
+              <p>
+                {$item.text|strip_tags|truncate:150}
+              </p>
+            </li>
+      
+            {/foreach}
+      
+          </ul>
+          <div class='thumbs__all'>
+            <a href="/category/uzao-news/">Все новости</a>
+          </div>
+        </div>
+      </div>
+      
+      {*$timeline = blogViewEasyHelper::kalendar()*} {*$timeline|var_dump*} {if !empty($timeline)}
+      <li id="timeline" class="collapsible">
+        <a href="#" onClick="return false">[`Calendar`]</a>
+        {if !empty($timeline)}
+        <ul class="menu-v">
+          {$year=null} {foreach $timeline as $year_month => $item} {if $year neq $item.year} {if !$item@first}
+        </ul>
+      </li>
+      {/if}
+      <li class="collapsible {if $item.year_selected}bold{/if}">
+        {$year=$item.year}
+        <a href="{$item.year_link}">{$item.year|default:'NULL'}</a>
+        <ul class="menu-v">
+          {/if}
+          <li {if $item.selected}class="bold" {/if}>
+            <a href="{$item.link}" title="{_w(" %d post ","%d posts ",$item.count)}">{_ws(date("F",gmmktime(0,0,0,$item.month,1)))}</a>
+          </li>
+          {if $item@last}
+        </ul>
+      </li>
+      {/if} 
+      {/foreach}
+      </ul>
+      {/if}
+      </li>
+      {/if}
+      <div class="row info-row">
+        <div class="col-md-3">
+          <div class="block-title">
+            <h2 class="title bold">Опрос</h2>
+            <a href="/arkhiv-golosovaniy/" style="float: right; margin-top: -27px; margin-right: 10px; color: rgb(121, 121, 121);">Все опросы</a>
+          </div>
+          {$wa->ecalc->getStyles()}
+          <div class="swiper-survey" style="width: 251px; margin-left: 13px; overflow: hidden">
+            <div class="swiper-wrapper">
+      
+              {$wa->ecalc->getEnabledCalcs()} {*ecalcViewHelper::getCalcHtml('opros')*} {*ecalcViewHelper::getEnabledCalcs()*}
+      
+            </div>
+            <div class="swiper-pagination"></div>
+            <!-- <div class="swiper-button-prev" style="margin-left: -20px"></div>
+                          <div class="swiper-button-next" style="margin-right: -20px"></div> -->
+          </div>
+          {$wa->ecalc->getJS()} 
+          {literal}
+          <script>
+            var surveySwiper = new Swiper('.swiper-survey', {
+              // Optional parameters
+              direction: 'horizontal',
+              loop: false,
+              // simulateTouch: false,
+              preventClicks: false,
+              preventClicksPropagation: false,
+      
+              // If we need pagination
+              pagination: '.swiper-pagination',
+              paginationClickable: true,
+              autoplay: 7000,
+      
+              // Navigation arrows
+              // nextButton: '.swiper-button-next',
+              // prevButton: '.swiper-button-prev',
+      
+              // And if we need scrollbar
+              // scrollbar: '.swiper-scrollbar',
+            })
+          </script> {/literal}
+        </div>
+        <div class="col-md-5 calendar">
+          <div class="block-title">
+            <h2 class="title bold">Афиша</h2>
+            <div class="calendar-container">
+              <table id="calendar2" class="calendar-table">
+                <thead>
+                  <tr>
+                    <td class="calendar__prev">‹
+                      <td colspan="5" class='calendar-head'>
+                        <td class="calendar__next">›
+                          <tr>
+                            <td>Пн
+                              <td>Вт
+                                <td>Ср
+                                  <td>Чт
+                                    <td>Пт
+                                      <td>Сб
+                                        <td>Вс
+                                          <tbody>
+              </table>
+            </div>
+            <!--                 <div class="col-md-6 calendar-description">
+                          <ul>
+                          </ul>
+                      </div> -->
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="block-title foto-news">
+            {$lastPhotoId = photosViewHelper::lastPhotoId()} {$lastPhoto = photosViewHelper::lastPhoto('id/{$lastPhotoId}')}
+      
+            <h2 class="title bold">Фотоновости</h2>
+            <a href="/photo/" style="float: right; margin-top: -27px; margin-right: 10px; color: rgb(121, 121, 121);">Все фото</a>
+            <a href="/photo">
+              <img class="photo" src="{$lastPhoto.thumb_970x0.url}">
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- информациионные страницы. -->
+      
+      
+      {$lastPages = blogViewEasyHelper::getPapperNews()}
+      
+      
+      <div class="row">
+      
+        {foreach $lastPages as $item name=news_iterator}
+      
+        <div class="col-md-4 lenta">
+          <div class="news">
+      
+            <a class="link-item bold" href="/{$item.url}">{$item.title}</a>
+            <p>
+              {$item.text|strip_tags|truncate:58}
+            </p>
+          </div>
+        </div>
+        {if $smarty.foreach.news_iterator.iteration == 3}
+      </div>
+      <div class="row">
+        {/if} 
+        {/foreach}
+      
+      </div>
+      <div class="row">
+        <div class="col-md-12 text-right">
+          <a href="/category/stati-iz-gazety/">Все статьи</a>
+        </div>
+      </div>
+      
+      
+      
+      <!-- облако тегов -->
+      <div class="row">
+        <div class="col-md-12">
+          <h2 class="h2 common-news-title bold">Облако тегов</h2>
+          <div class="all-tags">
+            {$customAllTagView = blogTagPlugin::customAllTagView(100)} {$customAllTagView.sidebar}
+          </div>
+        </div>
+      </div>
+      
+      {/if} {$is_lazyloading = false} {if !$is_lazyloading && $wa->currentUrl() != $wa_app_url}
+      <div id="post-stream" role="main" class="lazyloading" {if $wa->param('blog_url')}itemscope itemtype="http://schema.org/Blog"{/if}> 
+      {/if} 
+      
+      {if !$is_lazyloading and !empty($stream_title)}
+      
+        <h1>{$stream_title|escape}</h1>
+        
+        {/if}
+        
+        {*{if $wa->currentUrl() == '/category/primaries/'}
+        <a href="http://pg.er.ru/">
+          <img src="/wa-data/public/site/data/img/banners/primeris_banner.jpg" alt="Баннер праймериз">
+        </a>
+        {/if}*}
+      
+        <a name="page_{$page}"></a>
+      
+        {if $is_search} {include file="stream_search.html" inline} {else} {include file="stream_posts.html" inline} 
+        {/if} 
+        {if $is_lazyloading or ($page eq 1)}
+        <div class="pageless-wrapper {if $wa->currentUrl() == $wa_app_url}hidden{/if}" {if !$is_lazyloading } style="display:none;"
+          {/if}>
+      
+          {if $page lt $pages} {$loaded_post_count=(count($posts)+$posts_per_page * ($page-1) )} {_w('%d post','%d posts',$loaded_post_count)}&nbsp;{_w('of
+          %d post','of %d posts',$post_count)}
+          <br>
+          <a href="?page={$page+1}" class="pageless-link">[`Show older posts`]</a>
+          <div class="pageless-progress" style="display:none;">
+            <i class="icon16 loading"></i>[`Loading...`]</div>
+          {elseif isset($page) && $pages} {_w('%d post','%d posts',$post_count)} {/if}
+      
+        </div>
+        {/if}
+      
+      
+      </div>
+      
+      
+      {if !$is_lazyloading && $wa->currentUrl() != $wa_app_url}
+      <!--<ul class="menu-h test" id="stream-paging">
+          {for $p=1 to $pages}
+           <li{if $p eq $page} class="selected"{/if}><a href="{if $p eq $page}#page_{$page}{else}?page={$p}{/if}">{$p}</a></li>
+          {/for}
+      </ul>-->
+      <div id="stream-paging" data-text="{$smarty.get.query}"></div>
+      <script type="text/javascript">
+        $(function () {
+          $('#stream-paging').pagination({
+            items: { $pages },
+            hrefTextPrefix: '{if $p eq $page}#page_{else}?{if isset($smarty.get.query)}query={$stream_title|escape}&{/if}page={/if}',
+            currentPage: { for $p = 1 to $pages }{ if $p eq $page }{ $p }{/if}{/for}
+              });
+          });
+      </script> {/if}
+      
+      <!-- Это фиаско, братан -->
+      
+      <style>
+        #calendar2 {
+          width: 100%;
+          font: monospace;
+          line-height: 1.2em;
+          font-size: 15px;
+          text-align: center;
+        }
+        #calendar2 thead tr:last-child {
+          font-size: small;
+          color: rgb(85, 85, 85);
+        }
+        #calendar2 thead tr:nth-child(1) td:nth-child(2) {
+          color: rgb(50, 50, 50);
+        }
+        #calendar2 thead tr:nth-child(1) td:nth-child(1):hover,
+        #calendar2 thead tr:nth-child(1) td:nth-child(3):hover {
+          cursor: pointer;
+        }
+        #calendar2 tbody td {
+          color: rgb(44, 86, 122);
+        }
+        .cal_day:hover {
+          cursor: pointer;
+          background-color: #e3e3e3
+        }
+        #calendar2 tbody td:nth-child(n+6),
+        #calendar2 .holiday {
+          color: rgb(231, 140, 92);
+        }
+        #calendar2 tbody td.today {
+          background: rgb(220, 0, 0);
+          color: #fff;
+        }
+      </style>d_post_count=(count($posts)+$posts_per_page * ($page-1) )} {_w('%d post','%d posts',$loaded_post_count)}&nbsp;{_w('of
+    %d post','of %d posts',$post_count)}
+    <br>
+    <a href="?page={$page+1}" class="pageless-link">[`Show older posts`]</a>
+    <div class="pageless-progress" style="display:none;">
+      <i class="icon16 loading"></i>[`Loading...`]</div>
+    {elseif isset($page) && $pages} {_w('%d post','%d posts',$post_count)} {/if}
+
+  </div>
+  {/if}
+
+
+</div>
+
+
+{if !$is_lazyloading && $wa->currentUrl() != $wa_app_url}
+<!--<ul class="menu-h test" id="stream-paging">
+    {for $p=1 to $pages}
+     <li{if $p eq $page} class="selected"{/if}><a href="{if $p eq $page}#page_{$page}{else}?page={$p}{/if}">{$p}</a></li>
+    {/for}
+</ul>-->
+<div id="stream-paging" data-text="{$smarty.get.query}"></div>
+<script type="text/javascript">
+
+  $(function () {
+    $('#stream-paging').pagination({
+      items: { $pages },
+
+      hrefTextPrefix: '{if $p eq $page}#page_{else}?{if isset($smarty.get.query)}query={$stream_title|escape}&{/if}page={/if}',
+      currentPage: { for $p = 1 to $pages }{ if $p eq $page }{ $p }{/if}{/for}
+    		});
+		});
+
+</script> {/if}
+
+<!-- Это фиаско, братан -->
+
+<style>
+  #calendar2 {
+    width: 100%;
+    font: monospace;
+    line-height: 1.2em;
+    font-size: 15px;
+    text-align: center;
+  }
+
+  #calendar2 thead tr:last-child {
+    font-size: small;
+    color: rgb(85, 85, 85);
+  }
+
+  #calendar2 thead tr:nth-child(1) td:nth-child(2) {
+    color: rgb(50, 50, 50);
+  }
+
+  #calendar2 thead tr:nth-child(1) td:nth-child(1):hover,
+  #calendar2 thead tr:nth-child(1) td:nth-child(3):hover {
+    cursor: pointer;
+  }
+
+  #calendar2 tbody td {
+    color: rgb(44, 86, 122);
+  }
+
+  .cal_day:hover {
+    cursor: pointer;
+    background-color: #e3e3e3
+  }
+
+  #calendar2 tbody td:nth-child(n+6),
+  #calendar2 .holiday {
+    color: rgb(231, 140, 92);
+  }
+
+  #calendar2 tbody td.today {
+    background: rgb(220, 0, 0);
+    color: #fff;
+  }
+</style>
