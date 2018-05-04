@@ -138,7 +138,7 @@
       <!-- облако тегов -->
       <div class="row">
         <div class="col-lg-12 col-md-12 hidden-sm hidden-xs content--tagsCloud">
-          <h2 class="content--tagsCloud_title">Популярные теги</h2>
+          <span class="content--tagsCloud_title">Популярные теги</span>
           <div class="all-tags">
             {$customAllTagView = blogTagPlugin::customAllTagView(50)} {$customAllTagView.sidebar}
           </div>
@@ -159,105 +159,7 @@
     </div>
     </div>
   <div class="col__right">
-      <div class="row">
-        <!--Афиша-->
-        <div class="col-lg-12 col-md-12 col-sm-6 hidden-xs sidebar--calendar calendar">
-          <h3>
-            <a href="/category/afisha/">Афиша</a>
-          </h3>
-          <div class="calendar-container">
-            <table id="calendar2" class="calendar-table">
-              <thead>
-                <tr>
-                  <td class="calendar__prev">‹
-                    <td colspan="5" class='calendar-head'>
-                      <td class="calendar__next">›
-                        <tr>
-                          <td>Пн
-                            <td>Вт
-                              <td>Ср
-                                <td>Чт
-                                  <td>Пт
-                                    <td>Сб
-                                      <td>Вс
-                                        <tbody>
-            </table>
-          </div>
-          <div class="banners">
-            <a href="http://gazetauzao.ru/po-vsem-voprosam-svyazannym-s-renovatsiey-mozhno-obratitsya-v-gorodskoy-shtab/" class="block-1"
-              target="_blank">
-              <img class="block-1" src="http://gazetauzao.ru/wa-data/public/photos/13/31/23113/23113.970.jpg">
-            </a>
-          </div>
-        </div>
-        <!--Галерея-->
-        {$lastPhotoId = photosViewHelper::lastPhotoId()} {$lastPhoto = photosViewHelper::lastPhoto('id/{$lastPhotoId}')}
-        <div class="col-lg-12 col-md-12 col-sm-6 sidebar--gallery" style="background: url({$lastPhoto.thumb_970x0.url}) no-repeat top center; background-size: cover;">
-          <a href="/gallery/">Галерея</a>
-        </div>
-      </div>
-      <div class="row">
-        <!--Колумнистика-->
-        <section class="blog row">
-            {$columnistika = blogViewEasyHelper::getColumnistikaNews()} 
-            {$img_path = blogViewEasyHelper::getSliderImgPath()}
-            <a class="section__heading text__center" href="/category/kolumnistika/">Колумнистика</a>
-            <ul class="blog__list">
-                {foreach $columnistika as $item} 
-              <li class="blog__item row">
-                  {$previewImg = blogViewEasyHelper::getPreviewImg($item.id)}
-                <img class="user__img" src="{$img_path}{$item.id}/{$previewImg.slider_img}" alt="{$item.title}">
-                <p class="user__name section__row">{$item.title|strip_tags|truncate:20}</p>
-                <a class="section__title section__row" href="/{$item.url}">{substr($item.title, 31,60)}</a>
-              </li>
-              {/foreach}
-            </ul>
-          </section>
-        <!--Баннеры-->
-        <div class="col-lg-12 col-md-12 col-sm-6 col-xs-12 sidebar--banners">
-          {$wa->block("Bannerinobosti")}
-        </div>
-      </div>
-      <!--Гость-->
-      <div class="row">
-        <div class="col-lg-12 col-md-12 col-sm-6 sidebar--guest">
-          <h3>
-            <a href="/category/zvanyy-gost/">Званый гость</a>
-          </h3>
-          {$guest = blogViewEasyHelper::getGuests()} {$img_path = blogViewEasyHelper::getSliderImgPath()} {foreach $guest as $item}
-          <div class="sidebar--guest_content" style="background: url({$img_path}{$item.id}/{$item.slider_img}) no-repeat top center; background-size: cover;">
-            <a href="/{$item.url}">
-              <p>{$item.title|strip_tags|truncate:20}
-                </br>
-                {$item.text|strip_tags|truncate:60}</p>
-            </a>
-          </div>
-          {/foreach}
-        </div>
-        <!--Опрос-->
-        <div class="col-lg-12 col-md-12 col-sm-6 hidden-xs sidebar--quiz">
-          <h3>
-            <a href="/arkhiv-golosovaniy/">Опрос</a>
-          </h3>
-          {$wa->ecalc->getStyles()}
-          <div class="swiper-survey" style="width: 251px; height: 190px; margin-left: 13px; overflow: hidden">
-            <div class="swiper-wrapper">
-              {$wa->ecalc->getEnabledCalcs()}
-            </div>
-            <div class="swiper-pagination">
-            </div>
-          </div>
-          {$wa->ecalc->getJS()}
-          <script type="text/javascript" src="{$wa_active_theme_url}swiperStreamInit.js?v{$wa_theme_version}"></script>
-        </div>
-        <div class="block-title print">
-          <a href="/wa-data/public/blog/archive/{blogViewEasyHelper::getLastFromArchiveLink()}/index.html" class="block-link" target="_self">
-            <img class="block-img" src="{$wa_theme_url}banners/vypusk.png" title="Свежий выпуск" alt="Свежий выпуск">
-          </a>
-        </div>
-  </div>
-
-
+{include file="`$wa_active_theme_path`/right-col.html" inline}
       {else}
       <div class="col-sm-12">
         <!--Блок фото-->
@@ -265,9 +167,7 @@
           <h2 class="content--gallery_title">
             Фото
           </h2>
-
           <!-- 1,2 - id рубрик новостей -->
-
           {$photos = $wa->photos->albums(false)}
           <div class="row gallery-bxlider">
             {$iter = 1} {foreach $photos as $item} {if ({$iter} == 1) || ({$iter} mod 2 == 1)}
@@ -294,18 +194,13 @@
             {/foreach}
           </div>
         </div>
-        <!--/Блок фото-->
-
-
         <!--Блок видео-->
         <div class="content--gallery">
           <h2 class="content--gallery_title">
             Видео
           </h2>
-
           <!-- 1,2 - id рубрик новостей -->
           {$lenta = blogViewEasyHelper::getVideo()}
-
           <div class="row gallery-bxlider">
             {$iter = 1} {foreach $lenta as $item} {if ({$iter} == 1) || ({$iter} mod 2 == 1)}
             <div class="content--gallery_collumn">{/if}
@@ -335,10 +230,17 @@
         </div>
         <!--/Блок видео-->
       </div>
+  
       {/if}
 
-    {/if} {$is_lazyloading = false} {if !$is_lazyloading && $wa->currentUrl() != $wa_app_url}
-    <div id="post-stream" role="main" class="lazyloading" {if $wa->param('blog_url')}itemscope itemtype="http://schema.org/Blog"{/if}> {/if} {if !$is_lazyloading and !empty($stream_title)}
+    {/if} 
+    
+    {$is_lazyloading = false} {if !$is_lazyloading && $wa->currentUrl() != $wa_app_url}
+      <div id="post-stream" role="main" class="lazyloading" 
+      {if $wa->param('blog_url')}itemscope itemtype="http://schema.org/Blog"{/if}> 
+    {/if} 
+
+    {if !$is_lazyloading and !empty($stream_title)}
       <h1>{$stream_title|escape}</h1>{/if} {if $wa->currentUrl() == '/category/primaries/'}
       <a href="http://pg.er.ru/">
         <img src="/wa-data/public/site/data/img/banners/primeris_banner.jpg" alt="Баннер праймериз">
@@ -361,28 +263,26 @@
         {elseif isset($page) && $pages} {_w('%d post','%d posts',$post_count)} {/if}
 
       </div>
+          
       {/if}
 
 
-    </div>
-
-
     {if !$is_lazyloading && $wa->currentUrl() != $wa_app_url}
-    <!--<ul class="menu-h test" id="stream-paging">
-{for $p=1 to $pages}
-<li{if $p eq $page} class="selected"{/if}><a href="{if $p eq $page}#page_{$page}{else}?page={$p}{/if}">{$p}</a></li>
-{/for}
-</ul>-->
+    </div>
+    {*<!--<ul class="menu-h test" id="stream-paging">*}
+    {*{for $p=1 to $pages}*}
+    {*<li{if $p eq $page} class="selected"{/if}><a href="{if $p eq $page}#page_{$page}{else}?page={$p}{/if}">{$p}</a></li>*}
+    {*{/for}*}
+    {*</ul>-->*}
     <div id="stream-paging" data-text="{$smarty.get.query}">
     </div>
     <script type="text/javascript">
-      $(function () {
+      $(function() {
         $('#stream-paging').pagination({
-          items: { $pages },
-
+          items: {$pages},
           hrefTextPrefix: '{if $p eq $page}#page_{else}?{if isset($smarty.get.query)}query={$stream_title|escape}&{/if}page={/if}',
           currentPage: {for $p=1 to $pages}{if $p eq $page}{$p}{/if}{/for}
-    });
-  });
-    </script> 
+        });
+      });
+    </script>
     {/if}
