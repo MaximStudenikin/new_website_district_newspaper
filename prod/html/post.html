@@ -1,98 +1,96 @@
 <!-- Страница постов -->
-	<article class="article row readRemainingGauge post" role="main" id="post-{$post.id}">
-			{if !empty($post.plugins.post_title)} 
-			{foreach $post.plugins.post_title as $plugin => $output}
-			{$output} {/foreach} {/if}
-		<div class="article__top">
-			<div class="article__publication_date hide__block-phones hide__block-tablets show__block-desktop">
-				<time class="publication__date" itemprop="datePublished" datetime="{$post.datetime|wa_datetime}">
-					{$post.datetime|wa_datetime:"humandate"}
-				</time>
-			</div>
-			<div class="article__social_btn">
-				<div class="addthis_inline_share_toolbox"></div>
-			</div>
+<article class="article row readRemainingGauge post" role="main" id="post-{$post.id}">
+	{if !empty($post.plugins.post_title)} 
+	{foreach $post.plugins.post_title as $plugin => $output}
+	{$output} {/foreach} {/if}
+<div class="article__top">
+	<div class="article__publication_date hide__block-phones hide__block-tablets show__block-desktop">
+		<time class="publication__date" itemprop="datePublished" datetime="{$post.datetime|wa_datetime}">
+			{$post.datetime|wa_datetime:"humandate"}
+		</time>
+	</div>
+	<div class="article__social_btn">
+		<div class="addthis_inline_share_toolbox"></div>
+	</div>
+</div>
+<div class="section__row">
+	<h1 itemprop="name">{$post.title}</h1>
+	{if !empty($post.plugins.before)}
+	<div class="text_before print">
+		{foreach $post.plugins.before as $plugin => $output}
+		{$output} {/foreach}
+	</div>
+	{/if}
+	<div class="text" itemprop="articleBody">
+		{$post.text}
+	</div>
+	{if $post.album_id && $post.album.id && $post.album.photos} {/if} 
+	{if !empty($post.plugins.after)} {/if}
+	<div class="text_after print">
+		<div class="tegi-text">{foreach $post.plugins.after as $plugin => $output}
+			{$output} {/foreach}
 		</div>
-		<div class="section__row">
-			<h1 itemprop="name">{$post.title}</h1>
-			{if !empty($post.plugins.before)}
-			<div class="text_before print">
-				{foreach $post.plugins.before as $plugin => $output}
-				{$output} {/foreach}
-			</div>
-			{/if}
-			<div class="text" itemprop="articleBody">
-				{$post.text}
-			</div>
-			{if $post.album_id && $post.album.id && $post.album.photos} {/if} 
-			{if !empty($post.plugins.after)} {/if}
-			<div class="text_after print">
-				<div class="tegi-text">{foreach $post.plugins.after as $plugin => $output}
-					{$output} {/foreach}
-				</div>
-			</div>
-	</article>
+	</div>
+</article>
 
-	{$img_path = blogViewEasyHelper::getSliderImgPath()}
+{$img_path = blogViewEasyHelper::getSliderImgPath()}
 
-	<!--Блок новостей | 1,2 - id рубрик новостей-->
-	<section class="news-section row">
-		<a class="section__heading" href="/category/novosti-goroda/">Новости</a>
-		<div class="news row" data-class="slider__teg">
-				{$lenta = blogViewEasyHelper::getLentaNews(3)}			
-			<ul class="news__list" data-class="slider__list">
-					{foreach $lenta as $item}
-				<li class="news__item active__slide" data-class="slider__item">
-					<div class="section__img">
-							{$previewImg = blogViewEasyHelper::getPreviewImg($item.id)} 
-							{if !$previewImg.slider_img == ''}
-						<img class="img__teg" src="{$img_path}{$item.id}/{$previewImg.slider_img}" alt="alt"> 
-						{else}
-						<img class="img__teg" src="{$img_path}/95.jpg">
-						{/if}
-					</div>
-					<time class="publication__date section__row" datetime="{$item.datetime|wa_datetime:" humandate "}">
-						{$item.datetime|wa_datetime:"humandate"}
-					</time>
-					<a class="section__title section__row" href="/{$item.url}">{$item.title}</a>
-					<p class="section__description section__row">...</p>
-					{/foreach}
-				</li>
-			</ul>
-			<div class="pagination row show__blok-phones">
-				<ul class="pagination__list" data-class="pagination__list">
-					<!-- Генерация через JS -->
-				</ul>
+<!--Блок новостей | 1,2 - id рубрик новостей-->
+<section class="news-section row">
+<a class="section__heading" href="/category/novosti-goroda/">Новости</a>
+<div class="news row" data-class="slider__teg">
+		{$lenta = blogViewEasyHelper::getLentaNews(3)}			
+	<ul class="news__list" data-class="slider__list">
+			{foreach $lenta as $item}
+		<li class="news__item active__slide" data-class="slider__item">
+			<div class="section__img">
+					{$previewImg = blogViewEasyHelper::getPreviewImg($item.id)} 
+					{if !$previewImg.slider_img == ''}
+				<img class="img__teg" src="{$img_path}{$item.id}/{$previewImg.slider_img}" alt="alt"> 
+				{else}
+				<img class="img__teg" src="{$img_path}/95.jpg">
+				{/if}
 			</div>
-	</section>
+			<time class="publication__date section__row" datetime="{$item.datetime|wa_datetime:" humandate "}">
+				{$item.datetime|wa_datetime:"humandate"}
+			</time>
+			<a class="section__title section__row" href="/{$item.url}">{$item.title}</a>
+			{/foreach}
+		</li>
+	</ul>
+	<div class="pagination row show__blok-phones">
+		<ul class="pagination__list" data-class="pagination__list">
+			<!-- Генерация через JS -->
+		</ul>
+	</div>
+</section>
 
-	<!-- Блок статей -->
-	<section class="news-section row">
-		<a class="section__heading" href="/category/stati-iz-gazety/">Статьи</a>
-		<div class="news row" data-class="slider__teg">
-				{$lastPages = blogViewEasyHelper::getPapperNews(3)}
-			<ul class="news__list" data-class="slider__list">
-					{foreach $lastPages as $item name=news_iterator} 
-				<li class="news__item active__slide" data-class="slider__item">
-					<div class="section__img">
-							{$previewImg = blogViewEasyHelper::getPreviewImg($item.id)} 
-							{if !$previewImg.slider_img == ''}
-						<img class="img__teg" src="{$img_path}{$item.id}/{$previewImg.slider_img}" alt="{$item.title}"> 
-						{else}
-						<img class="img__teg" src="{$img_path}/95.jpg">
-						{/if}
-					</div>
-					<time class="publication__date section__row" datetime='{$item.datetime|wa_datetime:"humandate"}'>
-						{$item.datetime|wa_datetime:"humandate"}
-					</time>
-					<a class="section__title section__row" href='/{$item.url}'>{$item.title}</a>
-					<p class="section__description section__row">...</p>
-					{/foreach}
-				</li>
-			</ul>
-			<div class="pagination row show__blok-phones">
-				<ul class="pagination__list" data-class="pagination__list">
-					<!-- Генерация через JS -->
-				</ul>
+<!-- Блок статей -->
+<section class="news-section row">
+<a class="section__heading" href="/category/stati-iz-gazety/">Статьи</a>
+<div class="news row" data-class="slider__teg">
+		{$lastPages = blogViewEasyHelper::getPapperNews(3)}
+	<ul class="news__list" data-class="slider__list">
+			{foreach $lastPages as $item name=news_iterator} 
+		<li class="news__item active__slide" data-class="slider__item">
+			<div class="section__img">
+					{$previewImg = blogViewEasyHelper::getPreviewImg($item.id)} 
+					{if !$previewImg.slider_img == ''}
+				<img class="img__teg" src="{$img_path}{$item.id}/{$previewImg.slider_img}" alt="{$item.title}"> 
+				{else}
+				<img class="img__teg" src="{$img_path}/95.jpg">
+				{/if}
 			</div>
-	</section>
+			<time class="publication__date section__row" datetime='{$item.datetime|wa_datetime:"humandate"}'>
+				{$item.datetime|wa_datetime:"humandate"}
+			</time>
+			<a class="section__title section__row" href='/{$item.url}'>{$item.title}</a>
+			{/foreach}
+		</li>
+	</ul>
+	<div class="pagination row show__blok-phones">
+		<ul class="pagination__list" data-class="pagination__list">
+			<!-- Генерация через JS -->
+		</ul>
+	</div>
+</section>
