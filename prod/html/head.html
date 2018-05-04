@@ -1,25 +1,53 @@
-<!-- //Что было в хеад -->
-
-<!--<meta property="og:image" content="{$post_image_url}" />-->
-<meta property="og:description" content="{$post_description}" />
-<meta property="og:title" content="{$post_title}" />
-
+<meta content="{$post_description}" />
+<meta content="{$post_title}" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta property="og:image" content="{$post_image_url|escape}" />
+<meta name="Keywords" content="{$wa->meta('keywords')|escape}" />
+<meta name="Description" content="{$wa->meta('description')|escape}" /> {if !empty($canonical)}
+<meta property="og:title" content="{$wa->title()|escape}" />
+<meta name="theme-color" content="#ffc20f">
+<!-- favicon -->
+<link rel="shortcut icon" href="/favicon.ico" /> {if $wa->blog}
+<!-- canonical -->
+<link rel="canonical" href="{$canonical}" /> {/if}
+<!-- rss -->
+{$rss=$wa->blog->rssUrl()} {if $rss}
+<link rel="alternate" type="application/rss+xml" title="{$wa->accountName()}" href="{$rss}"> {/if}{/if}
+<!-- normalize -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.min.css">
 
 <!-- blog css -->
 <link href="{$wa_active_theme_url}default.blog.css?v{$wa_theme_version}" rel="stylesheet" type="text/css">
 
 <!-- blog js -->
 <script type="text/javascript" src="{$wa_active_theme_url}default.blog.js?v{$wa_theme_version}"></script>
-
-<!-- next & prev links -->
-
-{* {foreach $links as $role => $link} *
-<link rel="{$role}" href="{$link}"> *{/foreach} *} {* @event (frontend_action_default|frontend_action_post|frontend_action_page|frontend_action_error).%plugin_id%.head
-*} {foreach $frontend_action as $plugin => $output} {if !empty($output.head)}{$output.head}{/if} {/foreach}
-
+<!--bootstrap -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+  crossorigin="anonymous">
+<!--bxslider -->
+<link href="{$wa_theme_url}bxslider/jquery.bxslider.css" rel="stylesheet" />
+<!-- fixedsticky -->
+<link href="{$wa_theme_url}fixedsticky.css" rel="stylesheet" />
+<!-- swiper -->
+<link href="{$wa_theme_url}swiper.min.css" rel="stylesheet" />
+<!--fancybox -->
+<link href="{$wa_theme_url}jquery.fancybox.css" rel="stylesheet" />
+<!--tooltipster -->
+<link href="{$wa_theme_url}tooltipster.css" rel="stylesheet" />
+<!-- css -->
+<link href="{$wa_theme_url}default.css?v{$wa_theme_version}" rel="stylesheet" />
+<link href="{$wa_theme_url}waslidemenu/waslidemenu.css?v{$wa_theme_version}" rel="stylesheet" />
+<link href="{$wa_theme_url}addonStyles.css?v{$wa_theme_version}" rel="stylesheet">
+<link href="{$wa_active_theme_url}media.css?v{$wa_theme_version}" rel="stylesheet">
+<link href="{$wa_theme_url}style.css?v{$wa_theme_version}" rel="stylesheet" />
+<link href="{$wa_active_theme_url}style2018.css?v{$wa_theme_version}" rel="stylesheet">
+<!-- swiper -->
+<script type="text/javascript" src="{$wa_theme_url}swiper.min.js"></script>
+<script src="https://vk.com/js/api/openapi.js?143" type="text/javascript"></script> {foreach $frontend_action as $plugin => $output} {if !empty($output.head)}{$output.head}{/if} {/foreach}
 <!-- VK Widget -->
 <script type="text/javascript" src="//vk.com/js/api/openapi.js?116"></script>
-
 <!-- Pagintaion -->
 <script src="{$wa_active_theme_url}plugins/simple_pagination/jquery.simplePagination.js"></script>
 <link rel="stylesheet" type="text/css" href="{$wa_active_theme_url}plugins/simple_pagination/simplePagination.css">
+<title>{$wa->title()|escape}</title>
