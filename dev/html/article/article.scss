@@ -17,7 +17,7 @@
         flex-basis: 80%;
     } //text
     h1 {
-        font-size: $noto__sans-bold;
+        @include noto-sans__bold;
     }
     p {
         margin: rem(15px) 0 0 0;
@@ -26,7 +26,7 @@
 //links
     &__link {
         color: $yellow;
-        font-family: $roboto__bold;
+       @include roboto-bold;
         padding: 0 rem(10px);
         white-space: nowrap;
         &:before {
