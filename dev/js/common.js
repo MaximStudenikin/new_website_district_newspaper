@@ -3,6 +3,8 @@ $(document).ready(function () {
     //app global var zon
 
     var doc = document;
+    var mobailDetect = new MobileDetect(window.navigator.userAgent);
+    var isMobail = mobailDetect.mobile();
 
     //Открыть элементы
     var popUpComponents = (buttonToShow, needComponents, buttonToHide) => {
@@ -16,8 +18,6 @@ $(document).ready(function () {
             $(needComponents).toggleClass('visuallyhidden');
 
         })
-
-
 
         $(buttonToHide).click(function (buttonToHide) {
 
@@ -34,7 +34,7 @@ $(document).ready(function () {
 
     //click ruls btn
 
-    $('[data-class="slider__controls"]').on('click', function (event) {
+    $('[data-class="slider__controls"]').on('click touchstart', function (event) {
         event.preventDefault();
 
         var $this = $(event.target),
@@ -54,12 +54,13 @@ $(document).ready(function () {
             existedItem = activeItem.prev();
             edgeItem = items.last();
         }
-
+        
         reqItem = existedItem.length ? existedItem.index() : edgeItem.index();
 
-        moveSlide(cont, reqItem);
+        moveSlide(cont, reqItem);  
 
     });
+
 
     //searh number slid and activ slide
 
@@ -80,7 +81,7 @@ $(document).ready(function () {
                 reqItem.addClass('active__slide');
                 colorAtiveItem(cont, slideNum);
             });
-        }
+    };
 
     };
 
@@ -122,7 +123,7 @@ $(document).ready(function () {
 
     //click on pugination slider
 
-    $('body').on('click', '.pagination__item', function () {
+    $('body').on('click touchstart', '.pagination__item', function () {
 
         var $this = $(this),
             container = $this.closest('[data-class="slider__teg"]'),
@@ -130,13 +131,22 @@ $(document).ready(function () {
 
         moveSlide(container, index);
         colorAtiveItem(container, index);
+
+
     });
+
+    $(window).swipe({
+        swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
+            moveSlide(container, index);
+        colorAtiveItem(container, index);
+        }
+    })
 
     //slidershow
 
     //slidershow controls
 
-    $('.slidershow__controls').on('click', function (event) {
+    $('.slidershow__controls').on('click touchstart', function (event) {
         event.preventDefault();
 
         var $this = $(event.target),
@@ -199,7 +209,7 @@ $(document).ready(function () {
 
     //click on pagination
 
-    $('.slidershow__link').on('click', function (event) {
+    $('.slidershow__link').on('click touchstart', function (event) {
         event.preventDefault();
 
         var $this = $(event.currentTarget),
