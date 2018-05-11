@@ -1,3 +1,4 @@
+include ../config/mixin
 include ../base
 	block head
 		title Москва За Калужской заставой
@@ -11,53 +12,32 @@ include ../base
 					section.news-section.row
 						include ../components/section-news/section-news
 					section.news-section.row
-						a.section__heading(href='list.html') Анонсы
+						a.section-heading(href='list.html') Анонсы
 						div.news(data-class='slider__teg').row
 							ul.news__list(data-class='slider__list')
-								li.news__item(data-class='slider__item')
-									.section__img
-										img.img__teg(src='https://source.unsplash.com/user/laicho/1200x900',	alt='alt')
-									time.publication__date.section__img(datetime="17.02.2018") 17 Февраля 2018
-									a.section__title.section__img(href='article.html') Культ личности означает аутотренинг
-								li.news__item(data-class='slider__item')
-									.section__img
-										img.img__teg(src='https://source.unsplash.com/user/yanu/1200x900',	alt='alt')
-									time.publication__date.section__row(datetime="17.02.2018") 17 Февраля 2018
-									a.section__title.section__row(href='article.html') Культ личности означает аутотренинг
-								li.news__item(data-class='slider__item').disabled__item-all
-									.section__img
-										img.img__teg(src='https://source.unsplash.com/user/lucabravo/1200x900',	alt='alt')
-									time.publication__date.section__row(datetime="17.02.2018") 17 Февраля 2018
-									a.section__title.section__row(href='article.html') Культ личности означает аутотренинг
+								+listItem('news__item', 'https://source.unsplash.com/user/yanu/1200x900', '17.02.2018', 'Культ личности означает аутотренинг')
+								+listItem('news__item', 'https://source.unsplash.com/user/laicho/1200x900', '17.02.2018', 'Культ личности означает аутотренинг')
+								+listItem('news__item', 'https://source.unsplash.com/user/lucabravo/1200x900', '17.02.2018', 'Культ личности означает аутотренинг')
 							.pagination.row.show__blok-phones
 								ul.pagination__list(data-class='pagination__list')
 									//- generation on js
 					section.news-section.row
-						a.section__heading(href='list.html') Статьи
+						a.section-heading(href='list.html') Статьи
 						div.news(data-class='slider__teg').row
 							ul.news__list(data-class='slider__list')
-								li.news__item(data-class='slider__item')
-									.section__img
-										img.img__teg(src='https://source.unsplash.com/user/von_co/1200x900',	alt='alt')
-									a.section__title.section__row(href='article.html') Культ личности означает 	аутотренинг
-								li.news__item(data-class='slider__item')
-									.section__img
-										img.img__teg(src='https://source.unsplash.com/user/alexb/1200x900',	alt='alt')
-									a.section__title.section__row(href='article.html') Культ личности означает 	аутотренинг
-								li.news__item(data-class='slider__item').disabled__item-all
-									.section__img
-										img.img__teg(src='https://source.unsplash.com/user/marcojodoin/1200x900', alt='alt')
-									a.section__title.section__row(href='article.html') Культ личности означает 	аутотренинг
+								+listItem('news__item', 'https://source.unsplash.com/user/von_co/1200x900', 'NaN', 'Культ личности означает аутотренинг', 'NaN')
+								+listItem('news__item', 'https://source.unsplash.com/user/alexb/1200x900', 'NaN', 'Культ личности означает аутотренинг', 'NaN')
+								+listItem('news__item', 'https://source.unsplash.com/user/marcojodoin/1200x900', 'NaN', 'Культ личности означает аутотренинг', 'NaN')
 							.pagination.row.show__blok-phones
 								ul.pagination__list(data-class='pagination__list')
 						section.cloud.row.disabled__item-tablets
-							span.section__heading Облако тегов
+							span.section-heading Облако тегов
 								.cloud__tegs.row
 									include ../components/teg-cloud/teg-cloud
 						section.banners.row
 							include ../components/banners-slider/banners-slider
 				.col__right
-					include ../components/right__side/right__side
+					include ../components/right-side/right-side
 			include ../components/footer/footer
-include ../components/hamburger__menu/hamburger__menu
-include ../components/feedback__form/feedback__form
+include ../components/hamburger-menu/hamburger-menu
+include ../components/feedback-form/feedback-form
