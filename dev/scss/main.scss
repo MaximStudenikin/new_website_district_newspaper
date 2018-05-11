@@ -17,17 +17,16 @@ $white : #fff;
 //components
 @import "../html/components/header/header.scss";
 @import "../html/components/footer/footer.scss";
-@import "../html/components/right__side/right__side.scss";
-@import "../html/components/slider/slider.scss";
-@import "../html/components/banners-slider/banners-slider.scss";
+@import "../html/components/right-side/right-side.scss";
 @import "../html/components/section-news/section-news.scss";
+@import "../html/components/slider/slider.scss";
 @import "../html/components/teg-cloud/teg-cloud.scss";
 @import "../html/components/controls/controls.scss";
-@import "../html/components/banners/banners.scss";
 @import "../html/components/pagination/pagination.scss";
-@import "../html/components/hamburger__menu/hamburger__menu.scss";
-@import "../html/components/feedback__form/feedback__form.scss";
+@import "../html/components/hamburger-menu/hamburger-menu.scss";
+@import "../html/components/feedback-form/feedback-form.scss";
 @import "../html/components/slidershow/slidershow.scss";
+@import "../html/components/banners-slider/banners-slider.scss";
 
 //layout
 @import "../html/index/index.scss";
