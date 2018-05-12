@@ -10,31 +10,31 @@
 
 {foreach $posts as $post}
 
-<section class="preview__news search-match post" id="post-{$post.id}" {if $wa->param('blog_url')}itemprop="blogPosts"{/if} itemscope itemtype="http://schema.org/BlogPosting">
+<section class="preview-news search-match post" id="post-{$post.id}" {if $wa->param('blog_url')}itemprop="blogPosts"{/if} itemscope itemtype="http://schema.org/BlogPosting">
   <ul class="preview__list">
       {$previewImg = blogViewEasyHelper::getPreviewImg($post.id)}
     <li class="preview__item row">
         {if !empty($previewImg.slider_img)}
       <div class="preview__img">
-        <img class="img__teg" src="{$img_path}{$post.id}/{$previewImg.slider_img}" alt="{$previewImg.alt_img}" title="{$previewImg.alt_img}">
+        <img class="img-teg" src="{$img_path}{$post.id}/{$previewImg.slider_img}" alt="{$previewImg.alt_img}" title="{$previewImg.alt_img}">
       </div>
       {else} 
       {if $wa->currentUrl() == '/category/video/'}
         <div class='preview__img'>
-          <img class="img__teg" src="{$img_path}/ZKZKZK_500x404[1].jpg" alt="default-mini-pic">
+          <img class="img-teg" src="{$img_path}/ZKZKZK_500x404[1].jpg" alt="default-mini-pic">
         </div>
       {else}
         <div class='preview__img'>
-          <img class="img__teg" src="{$img_path}/95.jpg" alt="default-mini-pic">
+          <img class="img-teg" src="{$img_path}/95.jpg" alt="default-mini-pic">
         </div>
       {/if} 
       {/if}
       <div class="preview__text">
         <div class="preview__info">
-          <time class="publication__date" datetime="{$post.datetime|wa_datetime:"humandate"}">{$post.datetime|wa_datetime:"humandate"}</time>
+          <time class="publication-date" datetime="{$post.datetime|wa_datetime:"humandate"}">{$post.datetime|wa_datetime:"humandate"}</time>
         </div>
           <a class="preview__link" href="{$post.link}">
-          <span class="section__title" itemprop="url">{$post.title}</span>
+          <span class="section-title" itemprop="url">{$post.title}</span>
         </a>
         <a class="preview__link" href="{$post.link}">
           <p class="section__text">{$post.text|strip_tags|truncate:200}</p>
