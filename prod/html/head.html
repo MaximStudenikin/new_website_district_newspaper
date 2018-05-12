@@ -16,10 +16,8 @@
 <link rel="alternate" type="application/rss+xml" title="{$wa->accountName()}" href="{$rss}"> {/if}{/if}
 <!-- normalize -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.min.css">
-
 <!-- blog css -->
 <link href="{$wa_active_theme_url}default.blog.css?v{$wa_theme_version}" rel="stylesheet" type="text/css">
-
 <!-- blog js -->
 <script type="text/javascript" src="{$wa_active_theme_url}default.blog.js?v{$wa_theme_version}"></script>
 <!--bootstrap -->
@@ -42,6 +40,7 @@
 <link href="{$wa_active_theme_url}media.css?v{$wa_theme_version}" rel="stylesheet">
 <link href="{$wa_theme_url}style.css?v{$wa_theme_version}" rel="stylesheet" />
 <link href="{$wa_active_theme_url}style2018.css?v{$wa_theme_version}" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans:700|Roboto:400,400i,500,700&amp;amp;subset=cyrillic" rel="stylesheet">
 <!-- swiper -->
 <script type="text/javascript" src="{$wa_theme_url}swiper.min.js"></script>
 <script src="https://vk.com/js/api/openapi.js?143" type="text/javascript"></script> {foreach $frontend_action as $plugin => $output} {if !empty($output.head)}{$output.head}{/if} {/foreach}
@@ -51,3 +50,4 @@
 <script src="{$wa_active_theme_url}plugins/simple_pagination/jquery.simplePagination.js"></script>
 <link rel="stylesheet" type="text/css" href="{$wa_active_theme_url}plugins/simple_pagination/simplePagination.css">
 <title>{$wa->title()|escape}</title>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a6ef65ed360d25c"></script>
