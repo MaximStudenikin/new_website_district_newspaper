@@ -39,13 +39,13 @@
   <section class="blog row">
       {$columnistika = blogViewEasyHelper::getColumnistikaNews()} 
       {$img_path = blogViewEasyHelper::getSliderImgPath()}
-      <a class="section__heading text__center" href="/category/kolumnistika/">Колумнистика</a>
+      <a class="section-heading text__center" href="/category/kolumnistika/">Колумнистика</a>
       <ul class="blog__list">
           {foreach $columnistika as $item} 
         <li class="blog__item row">
             {$previewImg = blogViewEasyHelper::getPreviewImg($item.id)}
           <img class="user__img" src="{$img_path}{$item.id}/{$previewImg.slider_img}" alt="{$item.title}">
-          <a class="section__title section__row" href="/{$item.url}">{$item.title}</a>
+          <a class="section-title section__row" href="/{$item.url}">{$item.title}</a>
         </li>
         {/foreach}
       </ul>
@@ -56,7 +56,7 @@
   </div>
 <!--Гость-->
 <section class="interview row">
-  <a class="section__heading text__center" href="/category/zvanyy-gost/">Званый гость</a>
+  <a class="section-heading text__center" href="/category/zvanyy-gost/">Званый гость</a>
   {$guest = blogViewEasyHelper::getGuests()}  
   {foreach $guest as $item}
     {$img_path = blogViewEasyHelper::getSliderImgPath()}
@@ -64,7 +64,7 @@
     <div class="interview__preview">
         <span class="interview__name">{$item.title|strip_tags|truncate:20}</span>
         <div class="interview__img">
-          <img class="img__teg" src="{$img_path}{$item.id}/{$item.slider_img}" alt="{$item.title|strip_tags|truncate:20}">
+          <img class="img-teg" src="{$img_path}{$item.id}/{$item.slider_img}" alt="{$item.title|strip_tags|truncate:20}">
         </div>
       </div>
     </a>
