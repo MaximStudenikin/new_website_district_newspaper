@@ -50,10 +50,8 @@ body {
   margin: 0;
   padding: 0;
   color: $black;
-  font: {
-    family: $roboto__regular;
-    size: rem(16px);
-  }
+  @include roboto-regular;
+  font-size: rem(16px);
   line-height: 1.42;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
