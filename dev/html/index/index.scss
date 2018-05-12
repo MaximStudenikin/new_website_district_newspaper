@@ -25,11 +25,9 @@
     }
 }
 
-.section__title {
-    font: {
-        family: $noto__sans-bold;
-        size: rem(16px);
-    }
+.section-title {
+        @include noto-sans__bold;
+        font-size: rem(16px);
     color: $black;
     @include phones {
         font-size: rem(20px);
