@@ -38,9 +38,9 @@ $grid: (
 
 .col {
   &__left {
-    @include grid-col(12 8 8 8);
+    @include grid-col(12 9 9 9);
   }
   &__right {
-    @include grid-col(12 4 4 4);
+    @include grid-col(12 3 3 3);
   }
 }

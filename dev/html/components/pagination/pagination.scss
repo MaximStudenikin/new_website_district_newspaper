@@ -7,10 +7,8 @@
       margin: auto;
       color: $black;
       width: 65%;
-      font: {
-          family: $roboto__regular;
-          size: rem(26px);
-      }
+      @include roboto-regular;
+      font-size: rem(26px);
       justify-content: center;
   }
   &__link {

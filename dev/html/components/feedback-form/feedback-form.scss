@@ -71,10 +71,8 @@
   }
 
   &__title {
-    font: {
-      family: $noto__sans-bold;
-      size: rem(36px);
-    }
+      @include noto-sans__bold;
+      font-size: rem(36px);
     color: $white;
   }
 
@@ -255,7 +253,7 @@
     border: 0;
     color: $black;
     cursor: pointer;
-    font-family: $roboto__bold;
+   @include roboto-bold;
   }
   
 
