@@ -12,13 +12,13 @@
             <div class="slider__img">
 				{$img_new_path = "{$img_path}{$item.id}/{$item.slider_img}"}
 				{if !empty($item.slider_img)} 
-              <img class="img__teg" src="{$img_new_path}" alt="{$item.title}"> 
+              <img class="img-teg" src="{$img_new_path}" alt="{$item.title}"> 
 				{else}
-              <img class="img__teg" src="{$img_path}/95.jpg"> 
+              <img class="img-teg" src="{$img_path}/95.jpg"> 
               {/if}
             </div>
             <div class="slider__text">
-              <time class="publication__date" datetime="{$item.datetime|wa_datetime:" humandate "}">
+              <time class="publication-date" datetime="{$item.datetime|wa_datetime:" humandate "}">
                 {$item.datetime|wa_datetime:"humandate"}
               </time>
               <a class="slider__link" href="/{$item.url}">
@@ -49,7 +49,7 @@
     <!-- 1,2 - id рубрик новостей -->
     {$lenta = blogViewEasyHelper::getLentaNews(3)}
     <section class="news-section row">
-      <a class="section__heading" href="/category/novosti-goroda/">Новости</a>
+      <a class="section-heading" href="/category/novosti-goroda/">Новости</a>
       <div class="news row" data-class="slider__teg">
         {$lenta = blogViewEasyHelper::getLentaNews(3)}
         <ul class="news__list" data-class="slider__list">
@@ -58,15 +58,15 @@
             <div class="section__img">
               {$previewImg = blogViewEasyHelper::getPreviewImg($item.id)} 
               {if !$previewImg.slider_img == ''}
-              <img class="img__teg" src="{$img_path}{$item.id}/{$previewImg.slider_img}" alt="alt"> 
+              <img class="img-teg" src="{$img_path}{$item.id}/{$previewImg.slider_img}" alt="alt"> 
               {else}
-              <img class="img__teg" src="{$img_path}/95.jpg"> 
+              <img class="img-teg" src="{$img_path}/95.jpg"> 
               {/if}
             </div>
-            <time class="publication__date section__row" datetime="{$item.datetime|wa_datetime:" humandate "}">
+            <time class="publication-date section__row" datetime="{$item.datetime|wa_datetime:" humandate "}">
               {$item.datetime|wa_datetime:"humandate"}
             </time>
-            <a class="section__title section__row" href="/{$item.url}">{$item.title}</a>
+            <a class="section-title section__row" href="/{$item.url}">{$item.title}</a>
             <p class="section__description section__row">{$item.text|strip_tags|truncate:50}</p>
             {/foreach}
           </li>
@@ -79,7 +79,7 @@
     </section>
     <!--Блок аннонсов-->
     <section class="news-section row">
-      <a class="section__heading" href="/category/anonsy/">Анонсы</a>
+      <a class="section-heading" href="/category/anonsy/">Анонсы</a>
       <div class="news row" data-class="slider__teg">
         {$added_slider = blogViewEasyHelper::getNews()}
         <ul class="news__list" data-class="slider__list">
@@ -88,15 +88,15 @@
             <div class="section__img">
               {$previewImg = blogViewEasyHelper::getPreviewImg($item.id)} 
               {if !$previewImg.slider_img == ''}
-              <img class="img__teg" src="{$img_path}{$item.id}/{$previewImg.slider_img}" alt="{$item.title}"> 
+              <img class="img-teg" src="{$img_path}{$item.id}/{$previewImg.slider_img}" alt="{$item.title}"> 
               {else}
-              <img class="img__teg" src="{$img_path}/95.jpg"> 
+              <img class="img-teg" src="{$img_path}/95.jpg"> 
               {/if}
             </div>
-            <time class="publication__date section__row" datetime='{$item.datetime|wa_datetime:"humandate"}'>
+            <time class="publication-date section__row" datetime='{$item.datetime|wa_datetime:"humandate"}'>
               {$item.datetime|wa_datetime:"humandate"}
             </time>
-            <a class="section__title section__row" href='/{$item.url}'>{$item.title}</a>
+            <a class="section-title section__row" href='/{$item.url}'>{$item.title}</a>
             {/foreach}
           </li>
         </ul>
@@ -109,7 +109,7 @@
     {$wa->block("mos.tizer")}
     <!-- Блок статей -->
     <section class="news-section row">
-      <a class="section__heading" href="/category/stati-iz-gazety/">Статьи</a>
+      <a class="section-heading" href="/category/stati-iz-gazety/">Статьи</a>
       <div class="news row" data-class="slider__teg">
         {$lastPages = blogViewEasyHelper::getPapperNews(3)}
         <ul class="news__list" data-class="slider__list">
@@ -117,14 +117,14 @@
           <li class="news__item" data-class="slider__item">
             <div class="section__img">
               {$previewImg = blogViewEasyHelper::getPreviewImg($item.id)} {if !$previewImg.slider_img == ''}
-              <img class="img__teg" src="{$img_path}{$item.id}/{$previewImg.slider_img}" alt="{$item.title}"> 
+              <img class="img-teg" src="{$img_path}{$item.id}/{$previewImg.slider_img}" alt="{$item.title}"> 
               {else}
-              <img class="img__teg" src="{$img_path}/95.jpg"> {/if}
+              <img class="img-teg" src="{$img_path}/95.jpg"> {/if}
             </div>
-            <time class="publication__date section__row" datetime='{$item.datetime|wa_datetime:"humandate"}'>
+            <time class="publication-date section__row" datetime='{$item.datetime|wa_datetime:"humandate"}'>
               {$item.datetime|wa_datetime:"humandate"}
             </time>
-            <a class="section__title section__row" href='/{$item.url}'>{$item.title}</a>
+            <a class="section-title section__row" href='/{$item.url}'>{$item.title}</a>
             {/foreach}
           </li>
         </ul>
@@ -149,7 +149,7 @@
         <ul class="banners-bxslider">
           {foreach $banners as $item name=banner_cycle}
           <li>
-            <a class="banner-link" target="_blank" href="{$item.url}">
+            <a class="banner-link" target="_blank" href="{$item.url}" rel="nofollow">
               <img src="{$item.img}">
             </a>
           </li>
