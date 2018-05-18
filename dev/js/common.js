@@ -9,8 +9,6 @@ $(document).ready(function () {
     //Открыть элементы
     var popUpComponents = (buttonToShow, needComponents, buttonToHide) => {
 
-
-
         $(buttonToShow).click(function (buttonToShow) {
 
             buttonToShow.preventDefault();
@@ -27,8 +25,46 @@ $(document).ready(function () {
 
         })
     }
+    
     popUpComponents('.open__form', '.form__feedback', '.close__batton-feedback')
     popUpComponents('.h__menu-link', '.h__menu', '.h__menu-close__batton')
+    popUpComponents('.categories--open', '.categories', '.categories--close')
+
+    //vertical accordion
+
+    $('.categories__trigger').on('click touchstart', event => {
+        event.preventDefault();
+
+        const $this = $(event.currentTarget);
+        const container = $this.closest('.categories-accordeon');
+        const item = $this.closest('.categories__item');
+        const items = $('.categories__item', container);
+        const content = $('.categories__content', item);
+        const otherContent = $('.categories__content', container);
+        const block = $('.categories__content_inner', item);
+        const reqHeight = block.outerHeight();
+
+        if (!item.hasClass('categories__item--activ')) {
+            items.removeClass('categories__item--activ')
+            item.addClass('categories__item--activ')
+
+            otherContent.css({
+                'height': 0
+            })
+
+            content.css({
+                'height': reqHeight
+            })
+
+        } else {
+
+            item.removeClass('categories__item--activ');
+            content.css({
+                'height': 0
+            })
+        }
+
+})
 
     //slider
 
