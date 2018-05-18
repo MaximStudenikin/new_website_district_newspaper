@@ -1,13 +1,13 @@
 @mixin noto-sans__bold{
  font-family: 'Noto Sans', Helvetica, Arial, sans-serif;
  font-weight: 700;
- font-style: bold;
+ font-style: normal;
 } 
 
 @mixin roboto-bold{
   font-family:'Roboto', Helvetica, Arial, sans-serif;
   font-weight: 700;
-  font-style: bold;
+  font-style: normal;
 } 
 
 @mixin roboto-italic{
