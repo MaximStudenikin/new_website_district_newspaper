@@ -54,6 +54,7 @@
 		&__controls {
 				top: 45%;
 				height: 6%;
+				z-index: 10;
 				@include desktop {
 						position: absolute;
 						top: 720px;
