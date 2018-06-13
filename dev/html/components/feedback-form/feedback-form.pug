@@ -1,31 +1,31 @@
-.form__feedback.visuallyhidden
+.form-feedback.visuallyhidden
 	.form__content
 		.form__header
 			.form__title Письмо в редакцию
 			.close__batton.close__batton-feedback
 				span.close-icon.close-icon-feedback
 		.form__fields
-			form#callBackForm.form__tag(method='post', action='mail.php')
+			form#callBackForm.form-tag(method='post', action='mail.php')
 				.form__inputs
 					.form__row
 						.form__elem
-							label.form__elem-title(for='user_name') Тема сообщения
-							input.section__row#user_name.form__input(placeholder='Обязательное для заполнения', required='', type='text')
+							label.form__elem-title(for='message-subject') Тема сообщения
+							input.section__row#message-subject.form__input(placeholder='Обязательное для заполнения', required='', type='text')
 						.form__elem
-							label.form__elem-title(for='user_name') Ваше имя
-							input.section__row#user_name.form__input(placeholder='Обязательное для заполнения', required='', type='text')
+							label.form__elem-title(for='user-name') Ваше имя
+							input.section__row#user-name.form__input(placeholder='Обязательное для заполнения', required='', type='text')
 					.form__row
 						.form__elem
-							label.form__elem-title(for='user_email') E-Mail для ответа
-							input.section__row#user_email.form__input(pattern='[^@]+@[^@]+\.[a-zA-Z]{2,6}', placeholder='email@email.ru', required='', type='email')
+							label.form__elem-title(for='user-email') E-Mail для ответа
+							input.section__row#user-email.form__input(pattern='[^@]+@[^@]+\.[a-zA-Z]{2,6}', placeholder='Пример:email@email.ru', required='', type='email')
 						.form__elem
-							label.form__elem-title(for='#') Файлы для отправки
-							input.section__row#user_file.form__file-input(name='form__input-file-img', accept='image/jpeg,image/png', type='file')
-							label.form__input-file__batton(for='user_file')
+							label.form__elem-title Файлы для отправки
+							input.section__row#user-file.form__file-input(name='form__input-file-img', accept='image/jpeg,image/png', type='file')
+							label.form__input-file__batton(for='user-file')
 					.form__row
 						.form__elem
-							label.form__elem-title(for='user_message') Ваше сообщение
-							textarea.section__row#user_message.form__big-text-input(placeholder='Обязательное для заполнения', required='')
+							label.form__elem-title(for='user-message') Ваше сообщение
+							textarea.section__row#user-message.form__big-text-input(placeholder='Обязательное для заполнения', required='')
 				.form__buttons.form__row
 						.form__radio
 							input.form__radio-checkbox#form__radio-checkbox__deal(name='form__radio-checkbox__deal', type='checkbox')
