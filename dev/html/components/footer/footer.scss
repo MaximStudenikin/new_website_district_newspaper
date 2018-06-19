@@ -17,22 +17,7 @@
   }
 
   &__col{
-    width: 33%;
-    padding: 0 3% 0 0;
-    &:last-child{
-      padding: 0;
-    }
-    @include phones{
-      margin: rem(45px) 0 0 0;
-      width: 100%;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      &:first-child{
-        margin: 0;
-      }
-    }
+    @include grid-col(12 8 8 8);
   }
 
   &__nav{

@@ -112,7 +112,7 @@
   }
 }
 
-.delimiter__section {
+.delimiter-section {
   @include tablets {
     display: flex;
     justify-content: space-around;
@@ -122,6 +122,6 @@
   }
 }
 
-.section__left, .section__right {
+.delimiter-section__left, .delimiter-section__right {
   @include grid-col(12 12 12 12);
 }

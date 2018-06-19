@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 $name = $_POST['user_name'];
 $phone = $_POST['user_phone'];
 $street = $_POST['user_street'];
@@ -44,4 +44,4 @@ if ($mail) {
     $data['status'] = "NO";
     $data['mes'] = "На сервере произошла ошибка";
 }
-echo json_encode($data);
+echo json_encode($data); -->

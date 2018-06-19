@@ -1,6 +1,5 @@
 .labels {
     display: flex;
-    display: flex;
 }
 
 .label {
@@ -20,9 +19,9 @@
 .section__img {
     width: 100%;
     overflow: hidden;
-    height: 18vh;
     @include phones {
         width: 89.9vw;
+        height: auto;
     }
 }
 
