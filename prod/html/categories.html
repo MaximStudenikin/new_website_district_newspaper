@@ -1,0 +1,26 @@
+<aside class="categories visuallyhidden">
+  {$catsWithSubCats = blogViewEasyHelper::getCategoriesWithSubcategories()}
+<ul class="categories-accordeon">
+  {foreach $catsWithSubCats as $parentItemUrl => $parentItem}
+  <li {if count($parentItem.child_urls)> 0} class="categories__item" {/if}> 
+    {if count($parentItem.child_urls) > 0}
+    <a class="categories__trigger" href="/category/{$parentItemUrl}/">{$parentItem.name}</a>
+    <div class="categories__content">
+      <div class="categories__content_inner">
+        <ul class="nav__list categories__list">
+          {foreach $parentItem.child_urls as $childItemUrl => $childItemName}
+          <li class="nav__item categories__item">
+            <a class="nav__link" href="/category/{$childItemUrl}/">{$childItemName}</a>
+          </li>
+          {/foreach}
+        </ul>
+      </div>
+    </div>
+    {/if}
+  </li>
+  {/foreach}
+</ul>
+<div class="close__batton categories--close">
+  <span class="close-icon"></span>
+</div>
+</aside>
