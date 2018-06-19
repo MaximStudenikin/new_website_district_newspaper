@@ -16,16 +16,16 @@
             <div class="col-lg-4 col-md-4">
             {if !empty($previewImg.slider_img)}
             <div class='post_img-preview'>
-                <img class="img__teg" src="{$img_path}{$post.id}/{$previewImg.slider_img}" alt="{$previewImg.alt_img}" title="{$previewImg.alt_img}">
+                <img class="img-teg" src="{$img_path}{$post.id}/{$previewImg.slider_img}" alt="{$previewImg.alt_img}" title="{$previewImg.alt_img}">
                 </div>
             {else}
                 {if $wa->currentUrl() == '/category/video/'}
                 <div class='post_img-preview'>
-                <img class="img__teg" src="{$img_path}/ZKZKZK_500x404[1].jpg" alt="default-mini-pic">
+                <img class="img-teg" src="{$img_path}/ZKZKZK_500x404[1].jpg" alt="default-mini-pic">
                 </div>
                 {else}
                 <div class='post_img-preview'>
-                <img class="img__teg" src="{$img_path}/95.jpg" alt="default-mini-pic">
+                <img class="img-teg" src="{$img_path}/95.jpg" alt="default-mini-pic">
                 </div>
                 {/if}
             {/if}
