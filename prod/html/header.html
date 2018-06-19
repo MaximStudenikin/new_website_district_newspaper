@@ -7,75 +7,42 @@
       </a>
     </div>
     <div class="header__right">
-      {$catsWithSubCats = blogViewEasyHelper::getCategoriesWithSubcategories()}
-      <ul class="nav__list">
-        <li class='nav__item'>
-          <a class="nav__link" href="/ob-izdanii/">Об издании</a>
-        </li>
-        <li class='nav__item'>
-          <a class="nav__link" href="/arkhiv-nomerov">Архив номеров</a>
-        </li>
-        <li class="nav__item dropdown">
-          <a class="nav__item dropdown-toggle" href="#">Разделы</a>
-          <ul class="dropdown-menu dropdown_sub-menu" role="menu">
-            {foreach $catsWithSubCats as $parentItemUrl => $parentItem}
-            <li {if count($parentItem.child_urls)> 0} class="dropdown" {/if}> {if count($parentItem.child_urls) > 0}
-              <a href="/category/{$parentItemUrl}/" class="dropdown-toggle" data-toggle="dropdown">{$parentItem.name}</a>
-              <ul class="dropdown-menu" role="menu">
-                {foreach $parentItem.child_urls as $childItemUrl => $childItemName}
-                <li>
-                  <a href="/category/{$childItemUrl}/">{$childItemName}</a>
-                </li>
-                {/foreach}
-              </ul>
-              {else}
-              <a href="/category/{$parentItemUrl}/">{$parentItem.name}</a>
-              {/if}
-            </li>
-            {/foreach}
-            <li>
-              <a href="/gallery/">Фото</a>
-            </li>
-            <li>
-              <a href="/category/mck">МЦК</a>
-            </li>
-          </ul>
-        </li>
-        <li class='nav__item'>
-          <a class="nav__link" href="/category/long">Московское долголетие</a>
-        </li>
-        <li class='nav__item'>
-          <a class="nav__link" href="/poleznaya-informatsiya">Полезная информация</a>
-        </li>
-        <li class='nav__item'>
-          <a class="nav__link" href="http://uzao.mos.ru" target='_blank'>Префектура</a>
-        </li>
-        <li class='nav__item'>
-          <a class="nav__link" href="/rayony-yuzao">Районы ЮЗАО</a>
-        </li>
-        <li class='nav__item'>
-          <a class="nav__link feedback_url" href="#">Обратная связь</a>
-        </li>
-      </ul>
       <div class="header__right-row disabled__item-tablets">
-        <div class="rss-and-search">
-          <div class="sb-search" id="sb-search">
-            <form method="get" action="{$wa_app_url}" {if !empty($blog_query)}value="{$blog_query}" {/if}>
-              <input class="sb-search-input" placeholder="Поиск по сайту" type="search" value="" name="query" id="search">
-              <input class="sb-search-submit" type="submit" value="">
-              <span class="sb-icon-search icon-search"></span>
-            </form>
-          </div>
+        {$catsWithSubCats = blogViewEasyHelper::getCategoriesWithSubcategories()}
+        <ul class="nav__list">
+          <li class='nav__item'>
+            <a class="nav__link" href="/ob-izdanii/">Об издании</a>
+          </li>
+          <li class='nav__item'>
+            <a class="nav__link" href="/arkhiv-nomerov">Архив номеров</a>
+          </li>
+          <li class="nav__item categories--open">
+            <a class="nav__link" href="#">Разделы</a>
+          </li>
+          <li class='nav__item'>
+            <a class="nav__link" href="/category/long">Московское долголетие</a>
+          </li>
+          <li class='nav__item'>
+            <a class="nav__link" href="/poleznaya-informatsiya">Полезная информация</a>
+          </li>
+          <li class='nav__item'>
+            <a class="nav__link" href="http://uzao.mos.ru" target='_blank'>Префектура</a>
+          </li>
+          <li class='nav__item'>
+            <a class="nav__link" href="/rayony-yuzao">Районы ЮЗАО</a>
+          </li>
+          <li class='nav__item'>
+            <a class="nav__link open__form" href="#">Обратная связь</a>
+          </li>
+        </ul>
+      </div>
+      <div class="header__right-row">
+        <div class="header__serch">
+          <form class="serch-form" method="get" action="{$wa_app_url}" {if !empty($blog_query)}value="{$blog_query}" {/if}>
+            <input class="serch__input" placeholder="Поиск по сайту" type="search" value="" name="query">
+            <button class="search__btn" type="reset" value=""></button>
+          </form>
         </div>
-        <nav class="globalheader__navbar" role="navigation">
-          <div class="navbar-header">
-            <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-          </div>
-        </nav>
         <ul class="social__list">
           <li class="social__item">
             <a class="socila__link" href="http://vk.com/gazetauzao">
@@ -105,21 +72,24 @@
               </svg>
             </a>
           </li>
+          <li class="social__item">
+            {$wa->block("Mp3play")}
+          </li>
         </ul>
-      </div>	
+        <a class="h__menu-link" href="#">
+          <div class="h__menu-link__bars"></div>
+        </a>
+      </div>
     </div>
-  </div>
 </header>
 
-{*
-{$pages = $wa->blog->pages()}
-{if count($pages)}
+{* {$pages = $wa->blog->pages()} {if count($pages)}
 <ul class="pages">
-  <!-- pages -->            
+  <!-- pages -->
   {foreach $pages as $page}
-      <li{if strlen($page.url)>1 && $wa->currentUrl()|strstr:$page.url} class="selected"{/if}><a href="{$page.url}">{$page.name}</a></li>
-  {/foreach}
+  <li{if strlen($page.url)>1 && $wa->currentUrl()|strstr:$page.url} class="selected"{/if}>
+    <a href="{$page.url}">{$page.name}</a>
+    </li>
+    {/foreach}
 </ul>
-{/if}
-*}
-
+{/if} *}

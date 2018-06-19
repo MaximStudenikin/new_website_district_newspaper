@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html{if $wa->globals('isMyAccount')} class="my"{/if}>
 	<head>
-		<script type="text/javascript" src="http://yastatic.net/jquery/2.1.3/jquery.min.js"></script>
-		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
-		{$wa->js()} 
+		<!--{$wa->js()} -->
 		{* links active plugins JS *} 
 		{include file="`$wa_active_theme_path`/head.html" inline} 
 		{$wa->headJs()}
@@ -18,7 +16,7 @@
 			});
 		</script>
 		{/literal}
-		<!--VK pixl -->
+		{* VK pixl *}
 			{literal}
 		<script type="text/javascript">
 			(window.Image ?
@@ -43,21 +41,25 @@
 	</head>
 	<body>
 		<div class="wrap">
-		<!--header -->
+		{* header *}
 			{include file="`$wa_active_theme_path`/header.html" inline}
-			<!-- CONTENT -->
+			{* CONTENT *}
 			<main class="maincontent {if $theme_settings.custom_background} custom-background{if $theme_settings.custom_background_stretch} stretched{/if}{/if}"
 			  role="main">
+			  <!--main -->
 				<div class="container">
 					{include file="`$wa_active_theme_path`/main.html" inline}
-				</div>
+				{* тут был /div  после удаления не знаю где он*}
+				<!--/main -->
 			</main>
-			<!-- FOOTER -->
+			{* FOOTER *}
 			{include file="`$wa_active_theme_path`/footer.html" inline}
 		</div>
-		<!-- Форма для писем(надо переписывать) -->
+		{* Форма для писем(надо переписывать) *}
 		{include file="`$wa_active_theme_path`/feedback-form.html" inline}
-		<!-- scripts -->
-    {include file="`$wa_active_theme_path`/scripts.html" inline}
+		{* вывод разделов сайта *}
+		{include file="`$wa_active_theme_path`/categories.html" inline}
+		{* scripts *}
+    	{include file="`$wa_active_theme_path`/scripts.html" inline}
 	</body>
 	</html>
