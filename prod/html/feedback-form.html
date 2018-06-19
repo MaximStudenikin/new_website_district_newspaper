@@ -1,0 +1,65 @@
+{literal}
+<div class="form-feedback visuallyhidden">
+  <div class="form__content">
+    <div class="form__header">
+      <div class="form__title">Письмо в редакцию</div>
+      <div class="close__batton close__batton-feedback">
+        <span class="close-icon close-icon-feedback"></span>
+      </div>
+    </div>
+    <div class="form__fields">
+      <form class="form-tag" id="callBackForm" method="post" enctype="multipart/form-data">
+        <div class="form__inputs">
+          <div class="form__row">
+            <div class="form__elem">
+              <label class="form__elem-title" for="message-subject">Тема сообщения</label>
+              <input class="section__row form__input" id="message-subject" name="feedback_theme" placeholder="Обязательное для заполнения" required="" type="text">
+            </div>
+            <div class="form__elem">
+              <label class="form__elem-title" for="user-name">Ваше имя</label>
+              <input class="section__row form__input" id="user-name" name="feedback_name" placeholder="Обязательное для заполнения" required="" type="text">
+            </div>
+          </div>
+          <div class="form__row">
+            <div class="form__elem">
+              <label class="form__elem-title" for="user-email">E-Mail для ответа</label>
+              <input class="section__row form__input" id="user-email" name="feedback_email" pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}" placeholder="Пример:email@email.ru"
+                required="" type="email">
+            </div>
+            <div class="form__elem">
+              <label class="form__elem-title">Файлы для отправки</label>
+              <input class="section__row form__file-input" onchange="getName(this.value);" id="upload" name="feedback_upload" accept="image/jpeg,image/png" type="file">
+              <label class="form__input-file__batton" for="user-file"></label>
+            </div>
+          </div>
+          <div class="form__row">
+            <div class="form__elem">
+              <label class="form__elem-title" for="user-message">Ваше сообщение</label>
+              <textarea class="section__row form__big-text-input" name="feedback_message" id="user-message" placeholder="Обязательное для заполнения" required=""></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="form__buttons form__row">
+          <div class="form__radio">
+            <input class="form__radio-checkbox" id="form__radio-checkbox__deal" name="form__radio-checkbox__deal" type="checkbox">
+            <label class="form__radios-checkbox__title" for="form__radio-checkbox__deal">Нажимая кнопку «Отправить», я подтверждаю, что ознакомился и принимаю
+              <a class="form__radios-link form__radios-link--hover"
+                href="#">правила регистрации и конфиденциальности</a>
+            </label>
+          </div>
+          <div class="form__control form__row">
+            <button class="form__submit" type="submit">Отправить</button>
+          </div>
+        </div>
+        <div class="form__footer form__row">
+          <p class="form__alert">Все поля обезательны для запонения</p>
+          <div class="form__info">
+            <p class="form__text">Наш телефон</p>
+            <a class="form__tel form__tel--hover" href="tel:+7 (499) 800-88-88">8 (499) 800-88-88</a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+  {/literal}
