@@ -72,6 +72,9 @@
   &__list {
     display: flex;
     margin: rem(25px) 0 0 0;
+    @include desktop{
+      flex-direction: column;
+    }
   }
   &__item{
     padding: 0 rem(25px) 0 0;
