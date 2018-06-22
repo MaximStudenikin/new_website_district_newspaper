@@ -89,6 +89,7 @@
 	&__list {
 		display: flex;
 		white-space: nowrap;
+		justify-content: flex-end;
 		@include grid-col(12 12 12 12);
 	}
 
