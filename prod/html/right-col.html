@@ -1,93 +1,96 @@
-<div class="row">
-  <!--Афиша-->
-  <div class="col-lg-12 col-md-12 col-sm-6 hidden-xs sidebar--calendar calendar">
+<div class="delimiter-section">
+  <div class="delimiter-section__left">
+    <!--Афиша-->
+    <div class="sidebar--calendar calendar">
       <a class="section-heading text__center" href="/category/afisha/">Афиша</a>
-    <div class="calendar-container">
-      <table id="calendar2" class="calendar-table">
-        <thead>
-          <tr>
-            <td class="calendar__prev">‹
-              <td colspan="5" class='calendar-head'>
-                <td class="calendar__next">›
-                  <tr>
-                    <td>Пн
-                      <td>Вт
-                        <td>Ср
-                          <td>Чт
-                            <td>Пт
-                              <td>Сб
-                                <td>Вс
-                                  <tbody>
-      </table>
+      <div class="calendar-container">
+        <table id="calendar2" class="calendar-table">
+          <thead>
+            <tr>
+              <td class="calendar__prev">‹
+                <td colspan="5" class='calendar-head'>
+                  <td class="calendar__next">›
+                    <tr>
+                      <td>Пн
+                        <td>Вт
+                          <td>Ср
+                            <td>Чт
+                              <td>Пт
+                                <td>Сб
+                                  <td>Вс
+                                    <tbody>
+        </table>
+      </div>
+      <div class="banners row">
+        <a class="section__img" href="http://gazetauzao.ru/po-vsem-voprosam-svyazannym-s-renovatsiey-mozhno-obratitsya-v-gorodskoy-shtab/"
+          class="block-1" target="_blank">
+          <img class="img-teg" src="http://gazetauzao.ru/wa-data/public/photos/13/31/23113/23113.970.jpg">
+        </a>
+        <!-- чм -->
+        <a class="section__img" href="http://gazetauzao.ru/category/fan-fest/" class="block-1" target="_blank">
+          <img class="img-teg" src="https://media.giphy.com/media/1Qi5oPal6aGXADoJXz/giphy.gif">
+        </a>
+        <a class="section__img" href="/wa-data/public/blog/archive/{blogViewEasyHelper::getLastFromArchiveLink()}/index.html" class="block-link"
+          target="_self">
+          <img class="img-teg" src="{$wa_theme_url}banners/vypusk.png" title="Свежий выпуск" alt="Свежий выпуск">
+        </a>
+      </div>
     </div>
-    <div class="banners">
-      <a href="http://gazetauzao.ru/po-vsem-voprosam-svyazannym-s-renovatsiey-mozhno-obratitsya-v-gorodskoy-shtab/" class="block-1" target="_blank">
-        <img class="block-1" src="http://gazetauzao.ru/wa-data/public/photos/13/31/23113/23113.970.jpg">
-      </a>
-        <!-- Рыбная -->
-<a href="https://moscowseasons.com/ru/festival/rybnaia-nedelia-2018" class="block-1" target="_blank">
-<img class="block-img" src="http://gazetauzao.ru/wa-data/public/photos/49/43/24349/24349.970.jpg">
-</a>
+    <!--Галерея-->
+    {$lastPhotoId = photosViewHelper::lastPhotoId()} {$lastPhoto = photosViewHelper::lastPhoto('id/{$lastPhotoId}')}
+    <div class="sidebar--gallery" style="background: url({$lastPhoto.thumb_970x0.url}) no-repeat top center; background-size: cover;">
+      <a href="/gallery/">Галерея</a>
     </div>
-  </div>
-  <!--Галерея-->
-  {$lastPhotoId = photosViewHelper::lastPhotoId()} {$lastPhoto = photosViewHelper::lastPhoto('id/{$lastPhotoId}')}
-  <div class="col-lg-12 col-md-12 col-sm-6 sidebar--gallery" style="background: url({$lastPhoto.thumb_970x0.url}) no-repeat top center; background-size: cover;">
-    <a href="/gallery/">Галерея</a>
-  </div>
-</div>
-  <!--Колумнистика-->
-  <section class="blog row">
-      {$columnistika = blogViewEasyHelper::getColumnistikaNews()} 
-      {$img_path = blogViewEasyHelper::getSliderImgPath()}
+    <!--Колумнистика-->
+    <section class="blog row">
+      {$columnistika = blogViewEasyHelper::getColumnistikaNews()} {$img_path = blogViewEasyHelper::getSliderImgPath()}
       <a class="section-heading text__center" href="/category/kolumnistika/">Колумнистика</a>
       <ul class="blog__list">
-          {foreach $columnistika as $item} 
+        {foreach $columnistika as $item}
         <li class="blog__item row">
-            {$previewImg = blogViewEasyHelper::getPreviewImg($item.id)}
+          {$previewImg = blogViewEasyHelper::getPreviewImg($item.id)}
           <img class="user__img" src="{$img_path}{$item.id}/{$previewImg.slider_img}" alt="{$item.title}">
           <a class="section-title section__row" href="/{$item.url}">{$item.title}</a>
         </li>
         {/foreach}
       </ul>
     </section>
-  <!--Баннеры-->
-  <div class="col-lg-12 col-md-12 col-sm-6 col-xs-12 sidebar--banners">
-    {$wa->block("Bannerinobosti")}
   </div>
-<!--Гость-->
-<section class="interview row">
-  <a class="section-heading text__center" href="/category/zvanyy-gost/">Званый гость</a>
-  {$guest = blogViewEasyHelper::getGuests()}  
-  {foreach $guest as $item}
-    {$img_path = blogViewEasyHelper::getSliderImgPath()}
-  <a class="interview__link section__row" href="/{$item.url}">
-    <div class="interview__preview">
-        <span class="interview__name">{$item.title|strip_tags|truncate:20}</span>
-        <div class="interview__img">
-          <img class="img-teg" src="{$img_path}{$item.id}/{$item.slider_img}" alt="{$item.title|strip_tags|truncate:20}">
+  <div class="delimiter-section__right">
+    <!--Баннеры-->
+    <section class="banners row">
+      {$wa->block("Bannerinobosti")}
+    </section>
+    <!--Гость-->
+    <section class="interview row">
+      <a class="section-heading text__center" href="/category/zvanyy-gost/">Званый гость</a>
+      {$guest = blogViewEasyHelper::getGuests()} {foreach $guest as $item} {$img_path = blogViewEasyHelper::getSliderImgPath()}
+      <a class="interview__link section__row" href="/{$item.url}">
+        <div class="interview__preview">
+          <span class="interview__name">{$item.title|strip_tags|truncate:20}</span>
+          <div class="interview__img">
+            <img class="img-teg" src="{$img_path}{$item.id}/{$item.slider_img}" alt="{$item.title|strip_tags|truncate:20}">
+          </div>
+        </div>
+      </a>
+      {/foreach}
+    </section>
+    <!--Опрос-->
+    <section class="sidebar--quiz">
+      <a class="section-heading text__center" href="/arkhiv-golosovaniy/">Опрос</a>
+      {$wa->ecalc->getStyles()}
+      <div class="swiper-survey" style="width: 251px; height: 190px; margin-left: 13px; overflow: hidden">
+        <div class="swiper-wrapper">
+          {$wa->ecalc->getEnabledCalcs()}
+        </div>
+        <div class="swiper-pagination">
         </div>
       </div>
-    </a>
-    {/foreach}
-</section>
-  <!--Опрос-->
-  <div class="col-lg-12 col-md-12 col-sm-6 hidden-xs sidebar--quiz">
-      <a class="section-heading text__center" href="/arkhiv-golosovaniy/">Опрос</a>
-    {$wa->ecalc->getStyles()}
-    <div class="swiper-survey" style="width: 251px; height: 190px; margin-left: 13px; overflow: hidden">
-      <div class="swiper-wrapper">
-        {$wa->ecalc->getEnabledCalcs()}
-      </div>
-      <div class="swiper-pagination">
-      </div>
-    </div>
-    {$wa->ecalc->getJS()}
-    <script type="text/javascript" src="{$wa_active_theme_url}swiperStreamInit.js?v{$wa_theme_version}"></script>
+      {$wa->ecalc->getJS()}
+      <script type="text/javascript" src="{$wa_active_theme_url}swiperStreamInit.js?v{$wa_theme_version}"></script>
   </div>
   <div class="block-title print">
-    <a href="/wa-data/public/blog/archive/{blogViewEasyHelper::getLastFromArchiveLink()}/index.html" class="block-link" target="_self">
-      <img class="block-img" src="{$wa_theme_url}banners/vypusk.png" title="Свежий выпуск" alt="Свежий выпуск">
-    </a>
+
   </div>
+</div>
 </div>
