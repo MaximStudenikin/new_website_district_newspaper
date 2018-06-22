@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html{if $wa->globals('isMyAccount')} class="my"{/if}>
 	<head>
+	<meta content="{$post_description}">
+    <meta content="{$post_title}">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta property="og:image" content="{$post_image_url|escape}">
+    <meta name="Keywords" content="{$wa->meta('keywords')|escape}">
+    <meta name="Description" content="{$wa->meta('description')|escape}"> {if !empty($canonical)}
+    <meta property="og:title" content="{$wa->title()|escape}">
+    <!-- rss -->
+    {$rss=$wa->blog->rssUrl()} {if $rss}
+    <link rel="alternate" type="application/rss+xml" title="{$wa->accountName()}" href="{$rss}"> {/if}{/if}
+    <title>{$wa->title()|escape}</title>
 		<!--{$wa->js()} -->
 		{* links active plugins JS *} 
 		{include file="`$wa_active_theme_path`/head.html" inline} 
