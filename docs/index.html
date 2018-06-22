@@ -3,11 +3,17 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
-    <script src="https://www.google.com/recaptcha/api.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.1/mobile-detect.min.js">       </script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans:700|Roboto:400,400i,500,700&amp;amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     <link rel="stylesheet" href="./css/main.min.css">
     <script src="./js/common.js"></script>
   </head>
@@ -16,14 +22,13 @@
     <div class="wrap">
       <header class="header">
         <div class="header__container">
-          <div class="header__left"><a class="logo" href="index.html">
-              <div class="logo__img"><img class="img__teg" src="./img/logo/logo_min.png"></div></a></div>
+          <div class="header__left"><a class="logo" href="index.html"><img class="img-teg" src="./img/logo/logo_min.png"></a></div>
           <div class="header__right">
             <div class="header__right-row disabled__item-tablets">
               <ul class="nav__list">
                 <li class="nav__item"><a class="nav__link" href="list.html">Закон</a></li>
                 <li class="nav__item"><a class="nav__link" href="list.html">Экономика</a></li>
-                <li class="nav__item"><a class="nav__link" href="list.html">ЖКХ</a></li>
+                <li class="nav__item"><a class="nav__link categories--open" href="#">Разделы</a></li>
                 <li class="nav__item"><a class="nav__link" href="list.html">Безопасность</a></li>
                 <li class="nav__item"><a class="nav__link" href="list.html">Служу Отечеству</a></li>
                 <li class="nav__item"><a class="nav__link" href="list.html">Общество</a></li>
@@ -34,9 +39,10 @@
             </div>
             <div class="header__right-row">
               <div class="header__serch">
-                <svg class="header__serch-icon">
-                  <use xlink:href="./img/svg/svg/symbols.svg#search"></use>
-                </svg>
+                <form class="serch-form">
+                  <input class="serch__input" placeholder="Поиск по сайту" type="search" value="" name="search-form">
+                  <button class="search__btn" type="reset" value=""></button>
+                </form>
               </div>
               <ul class="social__list">
                 <li class="social__item"><a class="socila__link" href="#">
@@ -62,38 +68,38 @@
         </div>
       </header>
       <div class="container">
-        <div class="col__left">
+        <div class="col-left">
           <section class="slider">
             <div class="slider__teg" data-class="slider__teg">
               <ul class="slider__list" data-class="slider__list">
                 <li class="slider__item active__slide" data-class="slider__item">
-                  <div class="slider__img"><img class="img__teg" src="https://source.unsplash.com/user/hellocolor/1200x900" alt="alt"></div>
+                  <div class="slider__img"><img class="img-teg" src="https://source.unsplash.com/user/hellocolor/1200x900" alt="alt"></div>
                   <div class="slider__text">
                     <div class="labels"><span class="label">Фото</span><span class="label">Видео</span></div>
                     <div class="slider__row">
-                      <time class="publication__date" datetime="17.02.2018">17 Февраля 2018</time>
+                      <time class="publication-date" datetime="17.02.2018">17 Февраля 2018</time>
                     </div><a class="slider__link" href="article.html">
                       <h1>Экспериментальный феномен толпы</h1>
                       <p>Воспитание вызывает экзистенциальный доиндустриальный тип политической культуры. Психоз практически начинает классический феномен толпы. Политическая культура неоднозначна. Воспитание вызывает экзистенциальный доиндустриальный тип политической культуры.</p></a>
                   </div>
                 </li>
                 <li class="slider__item" data-class="slider__item">
-                  <div class="slider__img"><img class="img__teg" src="https://source.unsplash.com/user/nikolayv/1200x900" alt="alt"></div>
+                  <div class="slider__img"><img class="img-teg" src="https://source.unsplash.com/user/nikolayv/1200x900" alt="alt"></div>
                   <div class="slider__text">
                     <div class="labels"><span class="label">Фото</span><span class="label">Видео</span></div>
                     <div class="slider__row">
-                      <time class="publication__date" datetime="17.02.2018">17 Февраля 2018</time>
+                      <time class="publication-date" datetime="17.02.2018">17 Февраля 2018</time>
                     </div><a class="slider__link" href="article.html">
                       <h1>Феномен толпы</h1>
                       <p>Воспитание вызывает экзистенциальный доиндустриальный тип политической культуры. Психоз практически начинает классический феномен толпы. Политическая культура неоднозначна.</p></a>
                   </div>
                 </li>
                 <li class="slider__item" data-class="slider__item">
-                  <div class="slider__img"><img class="img__teg" src="https://source.unsplash.com/user/jaycalabresephotography/1200x900" alt="alt"></div>
+                  <div class="slider__img"><img class="img-teg" src="https://source.unsplash.com/user/jaycalabresephotography/1200x900" alt="alt"></div>
                   <div class="slider__text">
                     <div class="labels"><span class="label">Фото</span><span class="label">Видео</span></div>
                     <div class="slider__row">
-                      <time class="publication__date" datetime="17.02.2018">17 Февраля 2018</time>
+                      <time class="publication-date" datetime="17.02.2018">17 Февраля 2018</time>
                     </div><a class="slider__link" href="article.html">
                       <h1>Экспериментальные толпы</h1>
                       <p>Воспитание вызывает экзистенциальный доиндустриальный тип политической культуры. Психоз практически начинает классический феномен толпы.</p></a>
@@ -103,22 +109,22 @@
               <div class="controls disabled__item-tablets" data-class="slider__controls"><a class="controls__btn controls__btn_next" href="#"><i class="controls__arrow_right"></i></a><a class="controls__btn controls__btn_prev" href="#"><i class="controls__arrow_left"></i></a></div>
             </div>
           </section>
-          <section class="news__section row"><a class="section__heading" href="list.html">Новости</a>
+          <section class="news-section row"><a class="section-heading" href="list.html">Новости</a>
             <div class="news row" data-class="slider__teg">
               <ul class="news__list" data-class="slider__list">
-                <li class="news__item active__slide" data-class="slider__item">
-                  <div class="section__img"><img class="img__teg" src="https://source.unsplash.com/user/nikolayv/1200x900" alt="alt"></div>
-                  <time class="publication__date section__row" datetime="17.02.2018">17 Февраля 2018</time><a class="section__title section__row" href="article.html">Культ личности 	означает аутотренинг</a>
+                <li class="news__item" data-class="slider__item">
+                  <div class="section__img"><img class="img-teg" src="https://source.unsplash.com/user/nikolayv/1200x900" alt="alt"/></div>
+                  <time class="publication-date section__img" datetime="17.02.2018">17.02.2018</time><a class="section-title section__img" href="article.html">Культ личности означает аутотренинг</a>
                   <p class="section__description section__row">Воспитание вызывает экзистенциальный 	доиндустриальный тип политической культуры.</p>
                 </li>
                 <li class="news__item" data-class="slider__item">
-                  <div class="section__img"><img class="img__teg" src="https://source.unsplash.com/user/jaycalabresephotography/1200x900" alt="alt"></div>
-                  <time class="publication__date section__row" datetime="17.02.2018">17 Февраля 2018</time><a class="section__title section__row" href="article.html">Культ личности 	означает аутотренинг</a>
+                  <div class="section__img"><img class="img-teg" src="https://source.unsplash.com/user/jaycalabresephotography/1200x900" alt="alt"/></div>
+                  <time class="publication-date section__img" datetime="17.02.2018">17.02.2018</time><a class="section-title section__img" href="article.html">Культ личности означает аутотренинг</a>
                   <p class="section__description section__row">Воспитание вызывает экзистенциальный 	доиндустриальный тип политической культуры.</p>
                 </li>
-                <li class="news__item disabled__item-all" data-class="slider__item">
-                  <div class="section__img"><img class="img__teg" src="https://source.unsplash.com/user/samuelzeller/1200x900" alt="alt"></div>
-                  <time class="publication__date section__row" datetime="17.02.2018">17 Февраля 2018</time><a class="section__title section__row" href="article.html">Культ личности 	означает аутотренинг</a>
+                <li class="news__item" data-class="slider__item">
+                  <div class="section__img"><img class="img-teg" src="https://source.unsplash.com/user/samuelzeller/1200x900" alt="alt"/></div>
+                  <time class="publication-date section__img" datetime="17.02.2018">17.02.2018</time><a class="section-title section__img" href="article.html">Культ личности означает аутотренинг</a>
                   <p class="section__description section__row">Воспитание вызывает экзистенциальный 	доиндустриальный тип политической культуры.</p>
                 </li>
               </ul>
@@ -127,20 +133,23 @@
               </div>
             </div>
           </section>
-          <section class="news__section row"><a class="section__heading" href="list.html">Анонсы</a>
+          <section class="news-section row"><a class="section-heading" href="list.html">Анонсы</a>
             <div class="news row" data-class="slider__teg">
               <ul class="news__list" data-class="slider__list">
                 <li class="news__item" data-class="slider__item">
-                  <div class="section__img"><img class="img__teg" src="https://source.unsplash.com/user/laicho/1200x900" alt="alt"></div>
-                  <time class="publication__date section__img" datetime="17.02.2018">17 Февраля 2018</time><a class="section__title section__img" href="article.html">Культ личности означает 	аутотренинг</a>
+                  <div class="section__img"><img class="img-teg" src="https://source.unsplash.com/user/yanu/1200x900" alt="alt"/></div>
+                  <time class="publication-date section__img" datetime="17.02.2018">17.02.2018</time><a class="section-title section__img" href="article.html">Культ личности означает аутотренинг</a>
+                  <p class="section__description section__row"></p>
                 </li>
                 <li class="news__item" data-class="slider__item">
-                  <div class="section__img"><img class="img__teg" src="https://source.unsplash.com/user/yanu/1200x900" alt="alt"></div>
-                  <time class="publication__date section__row" datetime="17.02.2018">17 Февраля 2018</time><a class="section__title section__row" href="article.html">Культ личности означает 	аутотренинг</a>
+                  <div class="section__img"><img class="img-teg" src="https://source.unsplash.com/user/laicho/1200x900" alt="alt"/></div>
+                  <time class="publication-date section__img" datetime="17.02.2018">17.02.2018</time><a class="section-title section__img" href="article.html">Культ личности означает аутотренинг</a>
+                  <p class="section__description section__row"></p>
                 </li>
-                <li class="news__item disabled__item-all" data-class="slider__item">
-                  <div class="section__img"><img class="img__teg" src="https://source.unsplash.com/user/lucabravo/1200x900" alt="alt"></div>
-                  <time class="publication__date section__row" datetime="17.02.2018">17 Февраля 2018</time><a class="section__title section__row" href="article.html">Культ личности означает 	аутотренинг</a>
+                <li class="news__item" data-class="slider__item">
+                  <div class="section__img"><img class="img-teg" src="https://source.unsplash.com/user/lucabravo/1200x900" alt="alt"/></div>
+                  <time class="publication-date section__img" datetime="17.02.2018">17.02.2018</time><a class="section-title section__img" href="article.html">Культ личности означает аутотренинг</a>
+                  <p class="section__description section__row"></p>
                 </li>
               </ul>
               <div class="pagination row show__blok-phones">
@@ -148,70 +157,71 @@
               </div>
             </div>
           </section>
-          <section class="news__section row"><a class="section__heading" href="list.html">Статьи</a>
+          <section class="news-section row"><a class="section-heading" href="list.html">Статьи</a>
             <div class="news row" data-class="slider__teg">
               <ul class="news__list" data-class="slider__list">
                 <li class="news__item" data-class="slider__item">
-                  <div class="section__img"><img class="img__teg" src="https://source.unsplash.com/user/von_co/1200x900" alt="alt"></div><a class="section__title section__row" href="article.html">Культ личности означает 	аутотренинг</a>
+                  <div class="section__img"><img class="img-teg" src="https://source.unsplash.com/user/von_co/1200x900" alt="alt"/></div><a class="section-title section__img" href="article.html">Культ личности означает аутотренинг</a>
                 </li>
                 <li class="news__item" data-class="slider__item">
-                  <div class="section__img"><img class="img__teg" src="https://source.unsplash.com/user/alexb/1200x900" alt="alt"></div><a class="section__title section__row" href="article.html">Культ личности означает 	аутотренинг</a>
+                  <div class="section__img"><img class="img-teg" src="https://source.unsplash.com/user/alexb/1200x900" alt="alt"/></div><a class="section-title section__img" href="article.html">Культ личности означает аутотренинг</a>
                 </li>
-                <li class="news__item disabled__item-all" data-class="slider__item">
-                  <div class="section__img"><img class="img__teg" src="https://source.unsplash.com/user/marcojodoin/1200x900" alt="alt"></div><a class="section__title section__row" href="article.html">Культ личности означает 	аутотренинг</a>
+                <li class="news__item" data-class="slider__item">
+                  <div class="section__img"><img class="img-teg" src="https://source.unsplash.com/user/marcojodoin/1200x900" alt="alt"/></div><a class="section-title section__img" href="article.html">Культ личности означает аутотренинг</a>
                 </li>
               </ul>
               <div class="pagination row show__blok-phones">
                 <ul class="pagination__list" data-class="pagination__list"></ul>
               </div>
             </div>
-            <section class="cloud row disabled__item-tablets"><span class="section__heading">Облако тегов
+            <section class="cloud row disabled__item-tablets"><span class="section-heading">Облако тегов
                 <div class="cloud__tegs row"><a class="cloud__teg cloud__pop__teg" href="list.html">Москва</a><a class="cloud__teg" href="list.html">ЮЗАО</a><a class="cloud__teg" href="list.html">Lorem</a><a class="cloud__teg" href="list.html">Lorem</a><a class="cloud__teg" href="list.html">Lorem</a><a class="cloud__teg" href="list.html">Собянин</a><a class="cloud__teg cloud__pop__teg" href="list.html">Lorem</a><a class="cloud__teg" href="list.html">Котловка</a><a class="cloud__teg" href="list.html">Lorem</a><a class="cloud__teg" href="list.html">ЮЗАО</a><a class="cloud__teg" href="list.html">Lorem</a><a class="cloud__teg" href="list.html">Lorem</a><a class="cloud__teg" href="list.html">Lorem</a><a class="cloud__teg" href="list.html">Собянин</a><a class="cloud__teg" href="list.html">Lorem</a><a class="cloud__teg cloud__pop__teg" href="list.html">Котловка</a><a class="cloud__teg" href="list.html">Lorem</a><a class="cloud__teg" href="list.html">ЮЗАО</a><a class="cloud__teg" href="list.html">Lorem</a><a class="cloud__teg" href="list.html">Lorem</a><a class="cloud__teg cloud__pop__teg" href="list.html">Lorem</a><a class="cloud__teg" href="list.html">Собянин</a><a class="cloud__teg" href="list.html">Lorem</a><a class="cloud__teg" href="list.html">Котловка</a><a class="cloud__teg" href="list.html">Lorem</a><a class="cloud__teg" href="list.html">ЮЗАО</a><a class="cloud__teg" href="list.html">Lorem</a><a class="cloud__teg" href="list.html">Lorem</a><a class="cloud__teg cloud__pop__teg" href="list.html">Lorem</a><a class="cloud__teg" href="list.html">Собянин</a><a class="cloud__teg" href="list.html">Lorem</a><a class="cloud__teg" href="list.html">Котловка</a><a class="cloud__teg" href="list.html">Lorem</a><a class="cloud__teg cloud__pop__teg" href="list.html">Котловка</a><a class="cloud__teg" href="list.html">Lorem</a><a class="cloud__teg" href="list.html">ЮЗАО</a><a class="cloud__teg" href="list.html">Lorem</a><a class="cloud__teg" href="list.html">Lorem</a><a class="cloud__teg cloud__pop__teg" href="list.html">Lorem</a><a class="cloud__teg" href="list.html">Собянин</a><a class="cloud__teg" href="list.html">Lorem</a><a class="cloud__teg" href="list.html">Котловка</a><a class="cloud__teg" href="list.html">Lorem</a><a class="cloud__teg" href="list.html">ЮЗАО</a><a class="cloud__teg" href="list.html">Lorem</a><a class="cloud__teg" href="list.html">Lorem</a><a class="cloud__teg cloud__pop__teg" href="list.html">Lorem</a><a class="cloud__teg" href="list.html">Собянин</a><a class="cloud__teg" href="list.html">Lorem</a><a class="cloud__teg" href="list.html">Котловка</a><a class="cloud__teg" href="list.html">Lorem</a></div></span></section>
             <section class="banners row">
-              <ul class="banners__list">
-                <li class="banners__item"><a class="banners__link" href="http://yandex.ru">
-                    <div class="banners__img"><img class="img__teg" src="https://source.unsplash.com/user/stickermule/1200x900" alt="alt"></div></a><a class="banners__link" href="http://yandex.ru">
-                    <div class="banners__img"><img class="img__teg" src="https://source.unsplash.com/user/goian/1200x900" alt="alt"></div></a><a class="banners__link" href="http://yandex.ru">
-                    <div class="banners__img"><img class="img__teg" src="https://source.unsplash.com/user/elijahsad/1200x900" alt="alt"></div></a></li>
-                <div class="pagination row show__blok-phones">
-                  <ul class="pagination__list"></ul>
-                </div>
-                <div class="controls disabled__item-phones"><a class="controls__btn controls__btn_next" href="#"><i class="controls__arrow_right"></i></a><a class="controls__btn controls__btn_prev" href="#"><i class="controls__arrow_left"></i></a></div>
+              <ul class="banners-list owl-carousel owl-theme">
+                <li class="banners-list__item"><a class="banners-list__link" href="#"><img class="banners-list__img" src="https://source.unsplash.com/user/stickermule/399x545" alt="alt"></a></li>
+                <li class="banners-list__item"><a class="banners-list__link" href="#"><img class="banners-list__img" src="https://source.unsplash.com/user/goian/1024x758" alt="alt"></a></li>
+                <li class="banners-list__item"><a class="banners-list__link" href="#"><img class="banners-list__img" src="https://source.unsplash.com/user/elijahsad/300x300" alt="alt"></a></li>
+                <li class="banners-list__item"><a class="banners-list__link" href="#"><img class="banners-list__img" src="https://source.unsplash.com/user/elijahsad/500x500" alt="alt"></a></li>
+                <li class="banners-list__item"><a class="banners-list__link" href="#"><img class="banners-list__img" src="https://source.unsplash.com/user/elijahsad/850x600" alt="alt"></a></li>
+                <li class="banners-list__item"><a class="banners-list__link" href="#"><img class="banners-list__img" src="https://source.unsplash.com/user/elijahsad/200x200" alt="alt"></a></li>
+                <li class="banners-list__item"><a class="banners-list__link" href="#"><img class="banners-list__img" src="https://source.unsplash.com/user/elijahsad/900x900" alt="alt"></a></li>
+                <li class="banners-list__item"><a class="banners-list__link" href="#"><img class="banners-list__img" src="https://source.unsplash.com/user/elijahsad/1200x900" alt="alt"></a></li>
               </ul>
+              <div class="controls banners-list__controls disabled__item-phones"><a class="controls__btn controls__btn_next owl-btn-next" href="#"><i class="controls__arrow_right"></i></a><a class="controls__btn controls__btn_prev owl-btn-prev" href="#"><i class="controls__arrow_left"></i></a></div>
             </section>
           </section>
         </div>
-        <div class="col__right">
-          <div class="delimiter__section">
-            <div class="section__left">
+        <div class="col-right">
+          <div class="delimiter-section">
+            <div class="delimiter-section__left">
               <section class="affiche">
                 <section class="gallery row"><a class="gallery__title" href="gallery.html">Галерея</a>
-                  <div class="gallery__img"><img class="img__teg" src="https://source.unsplash.com/user/oria_hector/720x500"></div>
+                  <div class="gallery__img"><img class="img-teg" src="https://source.unsplash.com/user/oria_hector/720x500"></div>
                 </section>
-                <section class="blog row"><a class="section__heading text__center" href="list.html">Колумнистика</a>
+                <section class="blog row"><a class="section-heading text__center" href="list.html">Колумнистика</a>
                   <ul class="blog__list">
                     <li class="blog__item row"><img class="user__img" src="https://source.unsplash.com/user/michaeldam/200x200">
-                      <p class="user__name section__row">Кристина Иванова</p><a class="section__title section__row" href="article.html">Феномен толпы</a>
+                      <p class="user__name section__row">Кристина Иванова</p><a class="section-title section__row" href="article.html">Феномен толпы</a>
                     </li>
                     <li class="blog__item row"><img class="user__img" src="https://source.unsplash.com/user/chrisjoelcampbell/200x200">
-                      <p class="user__name section__row">Кристина Иванова</p><a class="section__title section__row" href="article.html">Феномен толпы</a>
+                      <p class="user__name section__row">Кристина Иванова</p><a class="section-title section__row" href="article.html">Феномен толпы</a>
                     </li>
                     <li class="blog__item row"><img class="user__img" src="https://source.unsplash.com/user/alexandruz/200x200">
-                      <p class="user__name section__row">Кристина Иванова</p><a class="section__title section__row" href="article.html">Феномен толпы</a>
+                      <p class="user__name section__row">Кристина Иванова</p><a class="section-title section__row" href="article.html">Феномен толпы</a>
                     </li>
                   </ul>
                 </section>
               </section>
             </div>
-            <div class="section__right">
+            <div class="delimiter-section__right">
               <section class="banners row">
-                <div class="banners__img"><img class="img__teg" src="https://source.unsplash.com/1600x900/?type"></div>
-                <div class="banners__img"><img class="img__teg" src="https://source.unsplash.com/1600x900/?technology"></div>
-                <div class="banners__img"><img class="img__teg" src="https://source.unsplash.com/1600x900/?screen"></div>
+                <div class="section__img"><img class="img-teg" src="https://source.unsplash.com/1600x900/?type"></div>
+                <div class="section__img"><img class="img-teg" src="https://source.unsplash.com/1600x900/?technology"></div>
+                <div class="section__img"><img class="img-teg" src="https://source.unsplash.com/1600x900/?screen"></div>
               </section>
-              <section class="interview row"><a class="section__heading text__center" href="list.html">Интервью<a class="interview__link section__row" href="article.html">
+              <section class="interview row"><a class="section-heading text__center" href="list.html">Интервью<a class="interview__link section__row" href="article.html">
                     <div class="interview__preview"><span class="interview__name">Алексей Быстрый</span>
-                      <div class="interview__img"><img class="img__teg" src="https://source.unsplash.com/240x600/?person"></div>
+                      <div class="interview__img"><img class="img-teg" src="https://source.unsplash.com/240x600/?person"></div>
                     </div></a></a></section>
             </div>
           </div>
@@ -220,7 +230,7 @@
       <footer class="footer">
         <div class="footer__container">
           <div class="footer__col"><a class="logo" href="index.html">
-              <div class="logo__img"><img class="img__teg" src="./img/logo/logo_min.png"></div></a>
+              <div class="logo__img"><img class="img-teg" src="./img/logo/logo_min.png"></div></a>
             <div class="footer__text">
               <p>Сетевое издание "Москва Зa Кaлужcкoй зacтaвoй" зарегистрировано в Федеральной службе по надзору в сфере связи и массовых коммуникаций.</p>
               <p class="footer__text-white">Свидетельство о регистрации СМИ :</p>
@@ -298,46 +308,46 @@
   <ul class="h__menu-list">
     <li class="h__menu-item"><a class="h__menu-link" href="list.html">Новости</a></li>
     <li class="h__menu-item"><a class="h__menu-link" href="list.html">Новости ЮЗАО</a></li>
-    <li class="h__menu-item"><a class="h__menu-link" href="list.html">Статьи</a></li>
+    <li class="h__menu-item"><a class="nav__link categories--open" href="#">Разделы</a></li>
     <li class="h__menu-item"><a class="h__menu-link" href="list.html">Персональный блог</a></li>
     <li class="h__menu-item"><a class="h__menu-link" href="gallery.html">Фото</a></li>
     <li class="h__menu-item"><a class="h__menu-link open__form" href="#">Письмо в редакцию</a></li>
   </ul>
 </aside>
-<div class="form__feedback visuallyhidden">
+<div class="form-feedback visuallyhidden">
   <div class="form__content">
     <div class="form__header">
       <div class="form__title">Письмо в редакцию</div>
       <div class="close__batton close__batton-feedback"><span class="close-icon close-icon-feedback"></span></div>
     </div>
     <div class="form__fields">
-      <form class="form__tag" id="callBackForm" method="post" action="mail.php">
+      <form class="form-tag" id="callBackForm" method="post" action="mail.php">
         <div class="form__inputs">
           <div class="form__row">
             <div class="form__elem">
-              <label class="form__elem-title" for="user_name">Тема сообщения</label>
-              <input class="section__row form__input" id="user_name" placeholder="Обязательное для заполнения" required="" type="text">
+              <label class="form__elem-title" for="message-subject">Тема сообщения</label>
+              <input class="section__row form__input" id="message-subject" placeholder="Обязательное для заполнения" required="" type="text">
             </div>
             <div class="form__elem">
-              <label class="form__elem-title" for="user_name">Ваше имя</label>
-              <input class="section__row form__input" id="user_name" placeholder="Обязательное для заполнения" required="" type="text">
-            </div>
-          </div>
-          <div class="form__row">
-            <div class="form__elem">
-              <label class="form__elem-title" for="user_email">E-Mail для ответа</label>
-              <input class="section__row form__input" id="user_email" pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}" placeholder="email@email.ru" required="" type="email">
-            </div>
-            <div class="form__elem">
-              <label class="form__elem-title" for="#">Файлы для отправки</label>
-              <input class="section__row form__file-input" id="user_file" name="form__input-file-img" accept="image/jpeg,image/png" type="file">
-              <label class="form__input-file__batton" for="user_file"></label>
+              <label class="form__elem-title" for="user-name">Ваше имя</label>
+              <input class="section__row form__input" id="user-name" placeholder="Обязательное для заполнения" required="" type="text">
             </div>
           </div>
           <div class="form__row">
             <div class="form__elem">
-              <label class="form__elem-title" for="user_message">Ваше сообщение</label>
-              <textarea class="section__row form__big-text-input" id="user_message" placeholder="Обязательное для заполнения" required=""></textarea>
+              <label class="form__elem-title" for="user-email">E-Mail для ответа</label>
+              <input class="section__row form__input" id="user-email" pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}" placeholder="Пример:email@email.ru" required="" type="email">
+            </div>
+            <div class="form__elem">
+              <label class="form__elem-title">Файлы для отправки</label>
+              <input class="section__row form__file-input" id="user-file" name="form__input-file-img" accept="image/jpeg,image/png" type="file">
+              <label class="form__input-file__batton" for="user-file"></label>
+            </div>
+          </div>
+          <div class="form__row">
+            <div class="form__elem">
+              <label class="form__elem-title" for="user-message">Ваше сообщение</label>
+              <textarea class="section__row form__big-text-input" id="user-message" placeholder="Обязательное для заполнения" required=""></textarea>
             </div>
           </div>
         </div>
@@ -360,3 +370,94 @@
     </div>
   </div>
 </div>
+<aside class="categories visuallyhidden">
+  <div class="close__batton categories--close"><span class="close-icon"></span></div>
+  <ul class="categories-accordeon">
+    <li class="categories__item"><a class="categories__trigger" href="#">Общество</a>
+      <div class="categories__content">
+        <div class="categories__content_inner">
+          <ul class="nav__list categories__list">
+            <li class="nav__item categories__item"><a class="nav__link" href="list.html">Закон</a></li>
+            <li class="nav__item categories__item"><a class="nav__link categories__link" href="list.html">Экономика</a></li>
+            <li class="nav__item categories__item"><a class="nav__link categories__link" href="list.html">ЖКХ</a></li>
+            <li class="nav__item categories__item"><a class="nav__link categories__link" href="list.html">Безопасность</a></li>
+            <li class="nav__item categories__item"><a class="nav__link categories__link" href="list.html">Служу Отечеству</a></li>
+            <li class="nav__item categories__item"><a class="nav__link categories__link" href="list.html">Общество</a></li>
+            <li class="nav__item categories__item"><a class="nav__link categories__link" href="list.html">Активный гражданин</a></li>
+            <li class="nav__item categories__item"><a class="nav__link categories__link" href="gallery.html">Фото</a></li>
+          </ul>
+        </div>
+      </div>
+    </li>
+    <li class="categories__item"><a class="categories__trigger" href="#">Общество</a>
+      <div class="categories__content">
+        <div class="categories__content_inner">
+          <ul class="nav__list categories__list">
+            <li class="nav__item categories__item"><a class="nav__link" href="list.html">Закон</a></li>
+            <li class="nav__item categories__item"><a class="nav__link categories__link" href="list.html">Экономика</a></li>
+            <li class="nav__item categories__item"><a class="nav__link categories__link" href="list.html">ЖКХ</a></li>
+            <li class="nav__item categories__item"><a class="nav__link categories__link" href="list.html">Безопасность</a></li>
+            <li class="nav__item categories__item"><a class="nav__link categories__link" href="list.html">Служу Отечеству</a></li>
+            <li class="nav__item categories__item"><a class="nav__link categories__link" href="list.html">Общество</a></li>
+            <li class="nav__item categories__item"><a class="nav__link categories__link" href="list.html">Активный гражданин</a></li>
+            <li class="nav__item categories__item"><a class="nav__link categories__link" href="gallery.html">Фото</a></li>
+          </ul>
+        </div>
+      </div>
+    </li>
+    <li class="categories__item"><a class="categories__trigger" href="#">Общество</a>
+      <div class="categories__content">
+        <div class="categories__content_inner">
+          <ul class="nav__list categories__list">
+            <li class="nav__item categories__item"><a class="nav__link" href="list.html">Закон</a></li>
+            <li class="nav__item categories__item"><a class="nav__link categories__link" href="list.html">Экономика</a></li>
+            <li class="nav__item categories__item"><a class="nav__link categories__link" href="list.html">ЖКХ</a></li>
+            <li class="nav__item categories__item"><a class="nav__link categories__link" href="list.html">Безопасность</a></li>
+            <li class="nav__item categories__item"><a class="nav__link categories__link" href="list.html">Служу Отечеству</a></li>
+            <li class="nav__item categories__item"><a class="nav__link categories__link" href="list.html">Общество</a></li>
+            <li class="nav__item categories__item"><a class="nav__link categories__link" href="list.html">Активный гражданин</a></li>
+            <li class="nav__item categories__item"><a class="nav__link categories__link" href="gallery.html">Фото</a></li>
+            <li class="nav__item categories__item"><a class="nav__link categories__link" href="gallery.html">Фото</a></li>
+            <li class="nav__item categories__item"><a class="nav__link categories__link" href="gallery.html">Фото</a></li>
+            <li class="nav__item categories__item"><a class="nav__link categories__link" href="gallery.html">Фото</a></li>
+            <li class="nav__item categories__item"><a class="nav__link categories__link" href="gallery.html">Фото</a></li>
+            <li class="nav__item categories__item"><a class="nav__link categories__link" href="gallery.html">Фото</a></li>
+            <li class="nav__item categories__item"><a class="nav__link categories__link" href="gallery.html">Фото</a></li>
+            <li class="nav__item categories__item"><a class="nav__link categories__link" href="gallery.html">Фото</a></li>
+            <li class="nav__item categories__item"><a class="nav__link categories__link" href="gallery.html">Фото</a></li>
+            <li class="nav__item categories__item"><a class="nav__link categories__link" href="gallery.html">Фото</a></li>
+            <li class="nav__item categories__item"><a class="nav__link categories__link" href="gallery.html">Фото</a></li>
+            <li class="nav__item categories__item"><a class="nav__link categories__link" href="gallery.html">Фото</a></li>
+            <li class="nav__item categories__item"><a class="nav__link categories__link" href="gallery.html">Фото</a></li>
+            <li class="nav__item categories__item"><a class="nav__link categories__link" href="gallery.html">Фото</a></li>
+            <li class="nav__item categories__item"><a class="nav__link categories__link" href="gallery.html">Фото</a></li>
+            <li class="nav__item categories__item"><a class="nav__link categories__link" href="gallery.html">Фото</a></li>
+            <li class="nav__item categories__item"><a class="nav__link categories__link" href="gallery.html">Фото</a></li>
+            <li class="nav__item categories__item"><a class="nav__link categories__link" href="gallery.html">Фото</a></li>
+            <li class="nav__item categories__item"><a class="nav__link categories__link" href="gallery.html">Фото</a></li>
+            <li class="nav__item categories__item"><a class="nav__link categories__link" href="gallery.html">Фото</a></li>
+            <li class="nav__item categories__item"><a class="nav__link categories__link" href="gallery.html">Фото</a></li>
+            <li class="nav__item categories__item"><a class="nav__link categories__link" href="gallery.html">Фото</a></li>
+            <li class="nav__item categories__item"><a class="nav__link categories__link" href="gallery.html">Фото</a></li>
+          </ul>
+        </div>
+      </div>
+    </li>
+    <li class="categories__item"><a class="categories__trigger" href="#">Общество</a>
+      <div class="categories__content">
+        <div class="categories__content_inner">
+          <ul class="nav__list categories__list">
+            <li class="nav__item categories__item"><a class="nav__link" href="list.html">Закон</a></li>
+            <li class="nav__item categories__item"><a class="nav__link categories__link" href="list.html">Экономика</a></li>
+            <li class="nav__item categories__item"><a class="nav__link categories__link" href="list.html">ЖКХ</a></li>
+            <li class="nav__item categories__item"><a class="nav__link categories__link" href="list.html">Безопасность</a></li>
+            <li class="nav__item categories__item"><a class="nav__link categories__link" href="list.html">Служу Отечеству</a></li>
+            <li class="nav__item categories__item"><a class="nav__link categories__link" href="list.html">Общество</a></li>
+            <li class="nav__item categories__item"><a class="nav__link categories__link" href="list.html">Активный гражданин</a></li>
+            <li class="nav__item categories__item"><a class="nav__link categories__link" href="gallery.html">Фото</a></li>
+          </ul>
+        </div>
+      </div>
+    </li>
+  </ul>
+</aside>

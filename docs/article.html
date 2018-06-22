@@ -3,29 +3,32 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
-    <script src="https://www.google.com/recaptcha/api.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.1/mobile-detect.min.js">       </script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans:700|Roboto:400,400i,500,700&amp;amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     <link rel="stylesheet" href="./css/main.min.css">
     <script src="./js/common.js"></script>
   </head>
   <body>
-    <!-- Go to www.addthis.com/dashboard to customize your tools-->
-    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a6ef65ed360d25c"></script>
     <title>Москва За Калужской заставой</title>
     <div class="wrap">
       <header class="header">
         <div class="header__container">
-          <div class="header__left"><a class="logo" href="index.html">
-              <div class="logo__img"><img class="img__teg" src="./img/logo/logo_min.png"></div></a></div>
+          <div class="header__left"><a class="logo" href="index.html"><img class="img-teg" src="./img/logo/logo_min.png"></a></div>
           <div class="header__right">
             <div class="header__right-row disabled__item-tablets">
               <ul class="nav__list">
                 <li class="nav__item"><a class="nav__link" href="list.html">Закон</a></li>
                 <li class="nav__item"><a class="nav__link" href="list.html">Экономика</a></li>
-                <li class="nav__item"><a class="nav__link" href="list.html">ЖКХ</a></li>
+                <li class="nav__item"><a class="nav__link categories--open" href="#">Разделы</a></li>
                 <li class="nav__item"><a class="nav__link" href="list.html">Безопасность</a></li>
                 <li class="nav__item"><a class="nav__link" href="list.html">Служу Отечеству</a></li>
                 <li class="nav__item"><a class="nav__link" href="list.html">Общество</a></li>
@@ -36,9 +39,10 @@
             </div>
             <div class="header__right-row">
               <div class="header__serch">
-                <svg class="header__serch-icon">
-                  <use xlink:href="./img/svg/svg/symbols.svg#search"></use>
-                </svg>
+                <form class="serch-form">
+                  <input class="serch__input" placeholder="Поиск по сайту" type="search" value="" name="search-form">
+                  <button class="search__btn" type="reset" value=""></button>
+                </form>
               </div>
               <ul class="social__list">
                 <li class="social__item"><a class="socila__link" href="#">
@@ -64,41 +68,38 @@
         </div>
       </header>
       <div class="container">
-        <div class="col__left">
+        <div class="col-left">
           <div class="item__center-tablets row"><a class="label" href="list.html">Все материалы</a>
             <div class="article__publication-date hide__block-desktop show__blok-phones show__block-tablets">
-              <time class="publication__date" datetime="17.02.2018">17 Февраля 2018</time>
+              <time class="publication-date" datetime="17.02.2018">17 Февраля 2018</time>
             </div>
           </div>
           <article class="article row">
             <div class="article__top">
               <div class="article__publication_date hide__block-phones hide__block-tablets show__block-desktop">
-                <time class="publication__date" datetime="17.02.2018">17 Февраля 2018</time>
+                <time class="publication-date" datetime="17.02.2018">17 Февраля 2018</time>
               </div>
               <div class="article__social_btn">
-                <div class="addthis_inline_share_toolbox"></div>
+                <div class="uptolike-buttons" data-mobile-view="true" data-share-size="40" data-like-text-enable="false" data-background-alpha="0.0" data-pid="1769524" data-mode="share" data-background-color="#ffffff" data-hover-effect="scale" data-share-shape="rectangle" data-share-counter-size="12" data-icon-color="#ffffff" data-mobile-sn-ids="fb.vk.tw.ok.wh.vb.tm." data-text-color="#000000" data-buttons-color="#FFFFFF" data-counter-background-color="#ffffff" data-share-counter-type="disable" data-orientation="horizontal" data-following-enable="false" data-sn-ids="fb.vk.tw.gp.tm.ok.gt.em." data-preview-mobile="false" data-selection-enable="false" data-exclude-show-more="false" data-share-style="1" data-counter-background-alpha="1.0" data-top-button="false"></div>
               </div>
             </div>
             <div class="section__row">
-              <h1>Астероидный апогей: актуальная национальная задача</h1>
-              <strong>Ионный хвост слабопроницаем. Не-текст аннигилирует речевой акт. Комета Хейла-Боппа вызывает космический возмущающий фактор. Расстояния планет от Солнца возрастают приблизительно в геометрической прогрессии (правило Тициуса — Боде): г = 0,4 + 0,3 · 2n (а.е.), где метафора иллюстрирует эпизодический подтекст.</strong>
+              <h1>Астероидный апогей: актуальная национальная задача</h1><strong>Ионный хвост слабопроницаем. Не-текст аннигилирует речевой акт. Комета Хейла-Боппа вызывает космический возмущающий фактор. Расстояния планет от Солнца возрастают приблизительно в геометрической прогрессии (правило Тициуса — Боде): г = 0,4 + 0,3 · 2n (а.е.), где метафора иллюстрирует эпизодический подтекст.</strong>
             </div>
-            <div class="section__row">
-              <div class="slidershow">
-                <div class="slidershow__browsing">
-                  <div class="slidershow__preloader"></div><a class="browsing__link" href="https://source.unsplash.com/user/von_co/1200x900" data-fancybox="images"><img class="slidershow__review" src="https://source.unsplash.com/user/von_co/1200x900" alt="alt"></a>
-                </div>
-                <div class="slidershow__prev disabled__item-tablets">
-                  <ul class="slidershow__list">
-                    <li class="slidershow__item slidershow__item--activ"><a class="slidershow__link" href="https://source.unsplash.com/user/von_co/1200x900" data-fancybox="images"><img class="slidershow__prev" src="https://source.unsplash.com/user/von_co/1200x900" alt="alt"></a></li>
-                    <li class="slidershow__item"><a class="slidershow__link" href="https://source.unsplash.com/user/a2eorigins/1200x900" data-fancybox="images"><img class="slidershow__prev" src="https://source.unsplash.com/user/a2eorigins/1200x900" alt="alt"></a></li>
-                    <li class="slidershow__item"><a class="slidershow__link" href="https://source.unsplash.com/user/samuelzeller/1200x900" data-fancybox="images"><img class="slidershow__prev" src="https://source.unsplash.com/user/samuelzeller/1200x900" alt="alt"></a></li>
-                    <li class="slidershow__item"><a class="slidershow__link" href="https://source.unsplash.com/user/andersjilden/1200x900" data-fancybox="images"><img class="slidershow__prev" src="https://source.unsplash.com/user/andersjilden/1200x900" alt="alt"></a></li>
-                    <li class="slidershow__item"><a class="slidershow__link" href="https://source.unsplash.com/user/withluke/1200x900" data-fancybox="images"><img class="slidershow__prev" src="https://source.unsplash.com/user/withluke/1200x900" alt="alt"></a></li>
-                    <li class="slidershow__item"><a class="slidershow__link" href="https://source.unsplash.com/user/nate_dumlao/1200x900" data-fancybox="images"><img class="slidershow__prev" src="https://source.unsplash.com/user/nate_dumlao/1200x900" alt="alt"></a></li>
-                    <li class="slidershow__item"><a class="slidershow__link" href="https://source.unsplash.com/user/calebdlucas/1200x900" data-fancybox="images"><img class="slidershow__prev" src="https://source.unsplash.com/user/calebdlucas/1200x900" alt="alt"></a></li>
-                  </ul>
-                </div>
+            <div class="slidershow section__row">
+              <div class="slidershow__browsing">
+                <div class="slidershow__preloader"></div><a class="browsing__link" href="https://source.unsplash.com/user/von_co/1200x900" data-fancybox="images"><img class="slidershow__review" src="https://source.unsplash.com/user/von_co/1200x900" alt="alt"></a>
+              </div>
+              <div class="slidershow__prev disabled__item-tablets">
+                <ul class="slidershow__list">
+                  <li class="slidershow__item slidershow__item--activ"><a class="slidershow__link" href="https://source.unsplash.com/user/von_co/1200x900" data-fancybox="images"><img class="slidershow__prev" src="https://source.unsplash.com/user/von_co/1200x900" alt="alt"></a></li>
+                  <li class="slidershow__item"><a class="slidershow__link" href="https://source.unsplash.com/user/a2eorigins/1200x900" data-fancybox="images"><img class="slidershow__prev" src="https://source.unsplash.com/user/a2eorigins/1200x900" alt="alt"></a></li>
+                  <li class="slidershow__item"><a class="slidershow__link" href="https://source.unsplash.com/user/samuelzeller/1200x900" data-fancybox="images"><img class="slidershow__prev" src="https://source.unsplash.com/user/samuelzeller/1200x900" alt="alt"></a></li>
+                  <li class="slidershow__item"><a class="slidershow__link" href="https://source.unsplash.com/user/andersjilden/1200x900" data-fancybox="images"><img class="slidershow__prev" src="https://source.unsplash.com/user/andersjilden/1200x900" alt="alt"></a></li>
+                  <li class="slidershow__item"><a class="slidershow__link" href="https://source.unsplash.com/user/withluke/1200x900" data-fancybox="images"><img class="slidershow__prev" src="https://source.unsplash.com/user/withluke/1200x900" alt="alt"></a></li>
+                  <li class="slidershow__item"><a class="slidershow__link" href="https://source.unsplash.com/user/nate_dumlao/1200x900" data-fancybox="images"><img class="slidershow__prev" src="https://source.unsplash.com/user/nate_dumlao/1200x900" alt="alt"></a></li>
+                  <li class="slidershow__item"><a class="slidershow__link" href="https://source.unsplash.com/user/calebdlucas/1200x900" data-fancybox="images"><img class="slidershow__prev" src="https://source.unsplash.com/user/calebdlucas/1200x900" alt="alt"></a></li>
+                </ul>
                 <div class="controls slidershow__controls slidershow__controls--hover disabled__item-tablets"><a class="controls__btn controls__btn_next" href="#"><i class="controls__arrow_right"></i></a><a class="controls__btn controls__btn_prev" href="#"><i class="controls__arrow_left"></i></a></div>
               </div>
             </div>
@@ -109,12 +110,22 @@
               <p>Комбинаторное приращение дает словесный поперечник. Прустрация на следующий год, когда было лунное затмение и сгорел древний храм Афины в Афинах (при эфоре Питии и афинском архонте Каллии), ищет диалектический характер. Газопылевое облако существенно диссонирует литературный радиант. Апогей осознаёт близкий зачин, об этом свидетельствуют краткость и завершенность формы, бессюжетность, своеобразие тематического развертывания. Амфибрахий отталкивает дактиль. Дольник гасит реликтовый ледник.</p>
             </div>
           </article>
-          <section class="news__section row"><a class="section__heading" href="list.html">Новости</a>
+          <section class="news-section row"><a class="section-heading" href="list.html">Новости</a>
             <div class="news row" data-class="slider__teg">
               <ul class="news__list" data-class="slider__list">
-                <li class="news__item active__slide" data-class="slider__item">
-                  <div class="section__img"><img class="img__teg" src="https://source.unsplash.com/user/nikolayv/1200x900" alt="alt"></div>
-                  <time class="publication__date section__row" datetime="17.02.2018">17 Февраля 2018</time><a class="section__title section__row" href="article.html">Культ личности 	означает аутотренинг</a>
+                <li class="news__item" data-class="slider__item">
+                  <div class="section__img"><img class="img-teg" src="https://source.unsplash.com/user/nikolayv/1200x900" alt="alt"/></div>
+                  <time class="publication-date section__img" datetime="17.02.2018">17.02.2018</time><a class="section-title section__img" href="article.html">Культ личности означает аутотренинг</a>
+                  <p class="section__description section__row">Воспитание вызывает экзистенциальный 	доиндустриальный тип политической культуры.</p>
+                </li>
+                <li class="news__item" data-class="slider__item">
+                  <div class="section__img"><img class="img-teg" src="https://source.unsplash.com/user/jaycalabresephotography/1200x900" alt="alt"/></div>
+                  <time class="publication-date section__img" datetime="17.02.2018">17.02.2018</time><a class="section-title section__img" href="article.html">Культ личности означает аутотренинг</a>
+                  <p class="section__description section__row">Воспитание вызывает экзистенциальный 	доиндустриальный тип политической культуры.</p>
+                </li>
+                <li class="news__item" data-class="slider__item">
+                  <div class="section__img"><img class="img-teg" src="https://source.unsplash.com/user/samuelzeller/1200x900" alt="alt"/></div>
+                  <time class="publication-date section__img" datetime="17.02.2018">17.02.2018</time><a class="section-title section__img" href="article.html">Культ личности означает аутотренинг</a>
                   <p class="section__description section__row">Воспитание вызывает экзистенциальный 	доиндустриальный тип политической культуры.</p>
                 </li>
               </ul>
@@ -123,12 +134,20 @@
               </div>
             </div>
           </section>
-          <section class="news__section row"><a class="section__heading" href="list.html">Анонсы</a>
+          <section class="news-section row"><a class="section-heading" href="list.html">Анонсы</a>
             <div class="news row" data-class="slider__teg">
               <ul class="news__list" data-class="slider__list">
                 <li class="news__item" data-class="slider__item">
-                  <div class="section__img"><img class="img__teg" src="https://source.unsplash.com/user/laicho/1200x900" alt="alt"></div>
-                  <time class="publication__date section__img" datetime="17.02.2018">17 Февраля 2018</time><a class="section__title section__img" href="article.html">Культ личности означает 	аутотренинг</a>
+                  <div class="section__img"><img class="img-teg" src="https://source.unsplash.com/user/laicho/1200x900" alt="alt"></div>
+                  <time class="publication-date section__img" datetime="17.02.2018">17 Февраля 2018</time><a class="section-title section__img" href="article.html">Культ личности означает 	аутотренинг</a>
+                </li>
+                <li class="news__item" data-class="slider__item">
+                  <div class="section__img"><img class="img-teg" src="https://source.unsplash.com/user/yanu/1200x900" alt="alt"></div>
+                  <time class="publication-date section__row" datetime="17.02.2018">17 Февраля 2018</time><a class="section-title section__row" href="article.html">Культ личности означает 	аутотренинг</a>
+                </li>
+                <li class="news__item disabled__item-all" data-class="slider__item">
+                  <div class="section__img"><img class="img-teg" src="https://source.unsplash.com/user/lucabravo/1200x900" alt="alt"></div>
+                  <time class="publication-date section__row" datetime="17.02.2018">17 Февраля 2018</time><a class="section-title section__row" href="article.html">Культ личности означает 	аутотренинг</a>
                 </li>
               </ul>
               <div class="pagination row show__blok-phones">
@@ -137,37 +156,37 @@
             </div>
           </section>
         </div>
-        <div class="col__right">
-          <div class="delimiter__section">
-            <div class="section__left">
+        <div class="col-right">
+          <div class="delimiter-section">
+            <div class="delimiter-section__left">
               <section class="affiche">
                 <section class="gallery row"><a class="gallery__title" href="gallery.html">Галерея</a>
-                  <div class="gallery__img"><img class="img__teg" src="https://source.unsplash.com/user/oria_hector/720x500"></div>
+                  <div class="gallery__img"><img class="img-teg" src="https://source.unsplash.com/user/oria_hector/720x500"></div>
                 </section>
-                <section class="blog row"><a class="section__heading text__center" href="list.html">Колумнистика</a>
+                <section class="blog row"><a class="section-heading text__center" href="list.html">Колумнистика</a>
                   <ul class="blog__list">
                     <li class="blog__item row"><img class="user__img" src="https://source.unsplash.com/user/michaeldam/200x200">
-                      <p class="user__name section__row">Кристина Иванова</p><a class="section__title section__row" href="article.html">Феномен толпы</a>
+                      <p class="user__name section__row">Кристина Иванова</p><a class="section-title section__row" href="article.html">Феномен толпы</a>
                     </li>
                     <li class="blog__item row"><img class="user__img" src="https://source.unsplash.com/user/chrisjoelcampbell/200x200">
-                      <p class="user__name section__row">Кристина Иванова</p><a class="section__title section__row" href="article.html">Феномен толпы</a>
+                      <p class="user__name section__row">Кристина Иванова</p><a class="section-title section__row" href="article.html">Феномен толпы</a>
                     </li>
                     <li class="blog__item row"><img class="user__img" src="https://source.unsplash.com/user/alexandruz/200x200">
-                      <p class="user__name section__row">Кристина Иванова</p><a class="section__title section__row" href="article.html">Феномен толпы</a>
+                      <p class="user__name section__row">Кристина Иванова</p><a class="section-title section__row" href="article.html">Феномен толпы</a>
                     </li>
                   </ul>
                 </section>
               </section>
             </div>
-            <div class="section__right">
+            <div class="delimiter-section__right">
               <section class="banners row">
-                <div class="banners__img"><img class="img__teg" src="https://source.unsplash.com/1600x900/?type"></div>
-                <div class="banners__img"><img class="img__teg" src="https://source.unsplash.com/1600x900/?technology"></div>
-                <div class="banners__img"><img class="img__teg" src="https://source.unsplash.com/1600x900/?screen"></div>
+                <div class="section__img"><img class="img-teg" src="https://source.unsplash.com/1600x900/?type"></div>
+                <div class="section__img"><img class="img-teg" src="https://source.unsplash.com/1600x900/?technology"></div>
+                <div class="section__img"><img class="img-teg" src="https://source.unsplash.com/1600x900/?screen"></div>
               </section>
-              <section class="interview row"><a class="section__heading text__center" href="list.html">Интервью<a class="interview__link section__row" href="article.html">
+              <section class="interview row"><a class="section-heading text__center" href="list.html">Интервью<a class="interview__link section__row" href="article.html">
                     <div class="interview__preview"><span class="interview__name">Алексей Быстрый</span>
-                      <div class="interview__img"><img class="img__teg" src="https://source.unsplash.com/240x600/?person"></div>
+                      <div class="interview__img"><img class="img-teg" src="https://source.unsplash.com/240x600/?person"></div>
                     </div></a></a></section>
             </div>
           </div>
@@ -176,7 +195,7 @@
       <footer class="footer">
         <div class="footer__container">
           <div class="footer__col"><a class="logo" href="index.html">
-              <div class="logo__img"><img class="img__teg" src="./img/logo/logo_min.png"></div></a>
+              <div class="logo__img"><img class="img-teg" src="./img/logo/logo_min.png"></div></a>
             <div class="footer__text">
               <p>Сетевое издание "Москва Зa Кaлужcкoй зacтaвoй" зарегистрировано в Федеральной службе по надзору в сфере связи и массовых коммуникаций.</p>
               <p class="footer__text-white">Свидетельство о регистрации СМИ :</p>
@@ -254,46 +273,46 @@
   <ul class="h__menu-list">
     <li class="h__menu-item"><a class="h__menu-link" href="list.html">Новости</a></li>
     <li class="h__menu-item"><a class="h__menu-link" href="list.html">Новости ЮЗАО</a></li>
-    <li class="h__menu-item"><a class="h__menu-link" href="list.html">Статьи</a></li>
+    <li class="h__menu-item"><a class="nav__link categories--open" href="#">Разделы</a></li>
     <li class="h__menu-item"><a class="h__menu-link" href="list.html">Персональный блог</a></li>
     <li class="h__menu-item"><a class="h__menu-link" href="gallery.html">Фото</a></li>
     <li class="h__menu-item"><a class="h__menu-link open__form" href="#">Письмо в редакцию</a></li>
   </ul>
 </aside>
-<div class="form__feedback visuallyhidden">
+<div class="form-feedback visuallyhidden">
   <div class="form__content">
     <div class="form__header">
       <div class="form__title">Письмо в редакцию</div>
       <div class="close__batton close__batton-feedback"><span class="close-icon close-icon-feedback"></span></div>
     </div>
     <div class="form__fields">
-      <form class="form__tag" id="callBackForm" method="post" action="mail.php">
+      <form class="form-tag" id="callBackForm" method="post" action="mail.php">
         <div class="form__inputs">
           <div class="form__row">
             <div class="form__elem">
-              <label class="form__elem-title" for="user_name">Тема сообщения</label>
-              <input class="section__row form__input" id="user_name" placeholder="Обязательное для заполнения" required="" type="text">
+              <label class="form__elem-title" for="message-subject">Тема сообщения</label>
+              <input class="section__row form__input" id="message-subject" placeholder="Обязательное для заполнения" required="" type="text">
             </div>
             <div class="form__elem">
-              <label class="form__elem-title" for="user_name">Ваше имя</label>
-              <input class="section__row form__input" id="user_name" placeholder="Обязательное для заполнения" required="" type="text">
-            </div>
-          </div>
-          <div class="form__row">
-            <div class="form__elem">
-              <label class="form__elem-title" for="user_email">E-Mail для ответа</label>
-              <input class="section__row form__input" id="user_email" pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}" placeholder="email@email.ru" required="" type="email">
-            </div>
-            <div class="form__elem">
-              <label class="form__elem-title" for="#">Файлы для отправки</label>
-              <input class="section__row form__file-input" id="user_file" name="form__input-file-img" accept="image/jpeg,image/png" type="file">
-              <label class="form__input-file__batton" for="user_file"></label>
+              <label class="form__elem-title" for="user-name">Ваше имя</label>
+              <input class="section__row form__input" id="user-name" placeholder="Обязательное для заполнения" required="" type="text">
             </div>
           </div>
           <div class="form__row">
             <div class="form__elem">
-              <label class="form__elem-title" for="user_message">Ваше сообщение</label>
-              <textarea class="section__row form__big-text-input" id="user_message" placeholder="Обязательное для заполнения" required=""></textarea>
+              <label class="form__elem-title" for="user-email">E-Mail для ответа</label>
+              <input class="section__row form__input" id="user-email" pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}" placeholder="Пример:email@email.ru" required="" type="email">
+            </div>
+            <div class="form__elem">
+              <label class="form__elem-title">Файлы для отправки</label>
+              <input class="section__row form__file-input" id="user-file" name="form__input-file-img" accept="image/jpeg,image/png" type="file">
+              <label class="form__input-file__batton" for="user-file"></label>
+            </div>
+          </div>
+          <div class="form__row">
+            <div class="form__elem">
+              <label class="form__elem-title" for="user-message">Ваше сообщение</label>
+              <textarea class="section__row form__big-text-input" id="user-message" placeholder="Обязательное для заполнения" required=""></textarea>
             </div>
           </div>
         </div>
