@@ -1,49 +1,26 @@
-<script type="text/javascript" src="http://yastatic.net/jquery/2.1.3/jquery.min.js"></script>
-<meta content="{$post_description}" />
-<meta content="{$post_title}" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta property="og:image" content="{$post_image_url|escape}" />
-<meta name="Keywords" content="{$wa->meta('keywords')|escape}" />
-<meta name="Description" content="{$wa->meta('description')|escape}" /> {if !empty($canonical)}
-<meta property="og:title" content="{$wa->title()|escape}" />
-<meta name="theme-color" content="#ffc20f">
-<title>{$wa->title()|escape}</title>
+<!-- normalize -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.min.css">
 <!-- favicon -->
 <link rel="shortcut icon" href="/favicon.ico" /> {if $wa->blog}
 <!-- canonical -->
 <link rel="canonical" href="{$canonical}" /> {/if}
-<!-- rss -->
-{$rss=$wa->blog->rssUrl()} {if $rss}
-<link rel="alternate" type="application/rss+xml" title="{$wa->accountName()}" href="{$rss}"> {/if}{/if}
-<!-- normalize -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.min.css">
-<!-- blog css -->
-<link href="{$wa_active_theme_url}default.blog.css?v{$wa_theme_version}" rel="stylesheet" type="text/css">
-<!--bxslider -->
-<!-- <link href="{$wa_theme_url}bxslider/jquery.bxslider.css" rel="stylesheet" /> -->
-<!-- fixedsticky -->
-<!-- <link href="{$wa_theme_url}fixedsticky.css" rel="stylesheet" /> -->
-<!-- swiper -->
-<!--<link href="{$wa_theme_url}swiper.min.css" rel="stylesheet" />-->
+<!-- OwlCarousel -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 <!--fancybox -->
 <link href="{$wa_theme_url}jquery.fancybox.css" rel="stylesheet" />
 <!--tooltipster -->
 <link href="{$wa_theme_url}tooltipster.css" rel="stylesheet" />
-<!-- css -->
-<link rel="stylesheet" type="text/css" href="{$wa_active_theme_url}plugins/simple_pagination/simplePagination.css">
-<link href="{$wa_theme_url}default.css?v{$wa_theme_version}" rel="stylesheet" />
-<link href="{$wa_theme_url}waslidemenu/waslidemenu.css?v{$wa_theme_version}" rel="stylesheet" />
-<!-- <link href="{$wa_theme_url}addonStyles.css?v{$wa_theme_version}" rel="stylesheet"> -->
-<link href="{$wa_active_theme_url}media.css?v{$wa_theme_version}" rel="stylesheet">
-<!-- <link href="{$wa_theme_url}style.css?v{$wa_theme_version}" rel="stylesheet" /> -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-<link href="{$wa_active_theme_url}style2018.css?v{$wa_theme_version}" rel="stylesheet">
+<!-- fonts.google -->
 <link href="https://fonts.googleapis.com/css?family=Noto+Sans:700|Roboto:400,400i,500,700&amp;amp;subset=cyrillic" rel="stylesheet">
-<!-- swiper -->
-<!-- <script type="text/javascript" src="{$wa_theme_url}swiper.min.js"></script> -->
+<!-- simple_pagination -->
+<link rel="stylesheet" type="text/css" href="{$wa_active_theme_url}plugins/simple_pagination/simplePagination.css">
+<!-- vk openapi-->
 <script src="https://vk.com/js/api/openapi.js?143" type="text/javascript"></script> 
 {foreach $frontend_action as $plugin => $output} {if !empty($output.head)}{$output.head}{/if} {/foreach}
 <!-- VK Widget -->
 <script type="text/javascript" src="//vk.com/js/api/openapi.js?116"></script>
+<!-- jquery googlea-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- css -->
+<link href="{$wa_active_theme_url}style2018.css?v{$wa_theme_version}" rel="stylesheet">
