@@ -1,6 +1,8 @@
 .categories {
-  display: flex;
   position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   left: 0;
   right: 0;
   top: 0;
@@ -11,89 +13,66 @@
   overflow: hidden;
 }
 
-.categories__list {
+/*!
+ * jQuery Accordion 0.0.1
+ * (c) 2014 Victor Fernandez <victor@vctrfrnndz.com>
+ * MIT Licensed.
+ */
+
+/* Requirements */
+
+[data-accordion] [data-content] {
+  overflow: hidden;
+  max-height: 0;
+}
+
+/* Basic Theme */
+
+[data-accordion] {
+  line-height: 1;
+}
+
+[data-control],
+[data-content] > * {
   display: flex;
   flex-direction: column;
-  flex-wrap: nowrap;
-  height: 240px;
-  width: 100%;
-  overflow-x: hidden;
-  @include desktop {
-    flex-wrap: nowrap;
-  }
-  @include tablets__h {
-    flex-wrap: nowrap;
-  }
+  padding: 10px;
 }
 
-.categories__item {
-  margin: 10% auto;
-  &::after {
-    content: none;
-  }
-}
-
-.close__batton {
-  position: absolute;
-  right: -5px;
-  top: 13px;
-  overflow: hidden;
-  cursor: pointer;
-  &:hover {
-    color: $yellow;
-  }
-}
-
-.categories-accordeon {
-  margin: auto;
-}
-
-.accordeon__inner {
-  width: 100%;
-  margin: 0 0 0 rem(17px);
-}
-
-.categories__trigger {
+[data-content] [data-accordion] {
+  border: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
   @include noto-sans__bold;
+}
+
+[data-accordion] [data-control] {
+  position: relative;
+  padding-right: 40px;
+}
+
+[data-control] {
+  color: $yellow;
   font-size: rem(20px);
   display: flex;
-  align-items: center;
-  color: $white;
   text-transform: uppercase;
-  @include phones {
-    font-size: rem(23px);
-  }
-  &:before {
-    content: "";
-    height: 0;
-    width: 0;
-    border: 5px solid transparent;
-    border-bottom-width: 0;
-    border-top-color: $yellow;
-    margin: 0 rem(9px) 0 0;
-    @include tablets {
-      margin: 0 rem(14px) 0 rem(-17px);
-    }
-  }
+  @include noto-sans__bold;
 }
 
-.categories__item--activ {
-  .categories__trigger {
-    color: $yellow;
-    &:before {
-      transform: rotate(-180deg);
-    }
-  }
-}
-
-.categories__content {
+[data-accordion] > [data-control]:after {
+  content: "";
   height: 0;
-  overflow: hidden;
-  transition: 800ms;
+  width: 0;
+  border: 5px solid transparent;
+  border-bottom-width: 0;
+  border-top-color: $yellow;
+  margin: 0 rem(9px) 0 0;
 }
 
-.categories__content_inner {
-  display: flex;
-  overflow: hidden;
-  margin: rem(17px) 0 0 0;
+[data-accordion].open > [data-control]:after {
+  color: $yellow;
+  -webkit-transform: rotate(-180deg); 
+  -ms-transform: rotate(-180deg); 
+  transform: rotate(-180deg); 
 }
