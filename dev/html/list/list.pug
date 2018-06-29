@@ -6,9 +6,11 @@ include ../base
 			include ../components/header/header
 			.container
 				.col-left
-					.labels.row
-						a.label(href='list.html') Новости ЮЗАО
-						a.label(href='list.html') Статьи
+					.labels
+						ul.labels__list.row
+							each labelsValue in ['Новости ЮЗАО', 'Статьи', 'Статьи', 'Статьи', 'Статьи', 'Статьи', 'Статьи', 'Статьи', 'Статьи', 'Статьи', 'Статьи', 'Статьи', 'Статьи']
+								li.labels__item
+									a(href='list.html').labels__link= labelsValue
 					section.preview-news.row
 						span.row.section-heading Новости
 						ul.preview__list

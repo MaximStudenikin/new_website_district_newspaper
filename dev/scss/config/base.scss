@@ -53,6 +53,7 @@ body {
   @include roboto-regular;
   font-size: rem(16px);
   line-height: 1.42;
+  font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   @include phones{

@@ -1,28 +1,45 @@
-.labels {
+.labels{
+
+&__list
+{
     display: flex;
+    flex-wrap: wrap;
 }
 
-.label {
-    color: $black;
-    padding: rem(10px);
-    margin: 0 rem(10px) 0 0;
-    background: $yellow;
-    &:last-child {
-        margin: 0;
+&__item
+{
+    margin: rem(10px) 0;
+    padding: 0 rem(10px) 0 0;
+    &:last-child{
+        padding: 0;
     }
 }
 
-.section__row {
+&__link
+{
+    display: block;
+    color: $black;
+    background: $yellow;
+    padding: rem(10px);
+}
+}
+
+.section__row
+{
     margin: rem(15px) 0 0 0;
 }
 
-.section__img {
+.section__img
+{
     width: 100%;
     overflow: hidden;
-    @include phones {
+
+    @include phones
+    {
         width: 89.9vw;
         height: auto;
     }
+
 }
 
 .section-title {
