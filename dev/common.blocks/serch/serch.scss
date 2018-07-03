@@ -1,0 +1,96 @@
+.serch-form {
+  position: absolute;
+  top: 30%;
+  animation-name: in-out;
+  animation-duration: 0.7s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+
+.serch-form--active {
+  top: 45%;
+}
+
+.serch__input {
+  box-sizing: border-box;
+  width: 20px;
+  height: 20px;
+  border: 2px solid $white;
+  border-radius: 50%;
+  background: none;
+  color: $white;
+  transition: width 0.4s ease-in-out, border-radius 0.8s ease-in-out, padding 0.2s;
+  transition-delay: 0.4s;
+  transform: translate(-100%, -50%);
+  &::placeholder{
+    opacity: 0;
+  }
+}
+
+.serch__input--active {
+  padding: 0 40px 0 10px;
+  width: 300px;
+  height: 50px;
+  border: 2px solid $yellow;
+  border-radius: 0;
+  background: none;
+  color: $white;
+  outline: 2px solid $yellow;
+  transition: width 0.4s ease-in-out, border-radius 0.4s ease-in-out, padding 0.2s;
+  transition-delay: 0.4s, 0s, 0.4s;
+  transform: translate(-100%, -50%);
+  &::placeholder{
+    opacity: 1;
+  }
+}
+
+.search__btn {
+  background: none;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  height: 50px;
+  width: 50px;
+  padding: 0;
+  border-radius: 100%;
+  outline: 0;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  transform: translate(-100%, -50%);
+  &:before {
+    content: "";
+    position: absolute;
+    width: 11px;
+    height: 2px;
+    background-color: #fff;
+    transform: rotate(45deg);
+    margin-top: 13px;
+    margin-left: 20px;
+    transition: .2s ease-in-out;
+  }
+}
+
+.serch-form--close {
+  transition: 0.4s ease-in-out;
+  transition-delay: 0.4s;
+  &:before,  &:after {
+    content: "";
+    position: absolute;
+    width: 27px;
+    height: 2px;
+    margin-top: -1px;
+    margin-left: -13px;
+    background-color: $white;
+    transform: rotate(45deg);
+    
+  }
+  &:before{
+    transition: 0.2s ease-in-out;
+  }
+  &:after {
+    cursor: pointer;
+    transform: rotate(-45deg);
+  }
+}
