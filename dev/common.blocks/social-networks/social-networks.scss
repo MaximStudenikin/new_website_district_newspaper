@@ -1,0 +1,26 @@
+.social-networks
+{
+	
+	&__list
+	{
+		display: flex;
+	}
+	
+	&__item
+	{
+		padding: 0 rem(15px) 0 0;
+		&:last-child
+		{
+			padding: 0;
+		}
+	}
+	
+	&__icon
+	{
+		width: 25px;
+		height: 25px;
+		fill: $black;
+		background: $white;
+		padding: rem(5px);
+	}
+}
