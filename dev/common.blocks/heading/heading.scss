@@ -1,0 +1,12 @@
+.heading
+{
+	@include noto-sans__bold;
+	font-size: rem(26px);
+	color: $black;
+	text-transform: uppercase;
+	&:hover
+	{
+		background: $yellow;
+		color: $black;
+	}
+}
