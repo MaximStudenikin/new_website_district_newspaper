@@ -1,0 +1,127 @@
+.gallery {
+  position: relative;
+  &__title {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-transform: uppercase;
+    color: $white;
+    background: rgba(255, 198, 0, 0);
+    z-index: 2;
+      @include noto-sans__bold;
+      font-size: rem(26px);
+    &:hover {
+      color: $black;
+      background: rgba(255, 198, 0, .8);
+    }
+  }
+  &__img {
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: $black;
+      opacity: .2;
+      z-index: 1;
+    }
+  }
+}
+
+.blog {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  overflow: hidden;
+
+  &__list {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    @include phones {
+      flex-direction: column;
+    }
+  }
+  
+  &__item {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    @include phones{
+      margin: rem(15px) 0;
+      padding: 0;
+      }
+    }
+    &:after {
+      content: '';
+      margin: rem(15px) 0 0 0;
+      width: 100%;
+      height: 2px;
+      background: $black;
+      opacity: .2;
+      @include phones{
+        content: none;
+      }
+    }
+  }
+
+.user__img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.interview {
+  &__preview {
+    position: relative;
+    max-width: 600px;
+    max-height: 500px;
+    overflow: hidden;
+    width: 100%;
+  }
+  &__link {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  &__name {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+      @include noto-sans__bold;
+      font-size: rem(20px);
+    color: $white;
+    text-transform: uppercase;
+    z-index: 2;
+  }
+  &__img {
+    width: 100%;
+    &:hover {
+      filter: brightness(120%);
+    }
+  }
+}
+
+.delimiter-section {
+  @include tablets {
+    display: flex;
+    justify-content: space-around;
+  }
+  @include phones {
+    flex-direction: column;
+  }
+}
+
+.delimiter-section__left, .delimiter-section__right {
+  @include grid-col(12 12 12 12);
+}
