@@ -1,0 +1,39 @@
+//colors
+$dark__violet: #6c3751;
+$red: #d80000;
+$yellow: #ffc600;
+$black: #000;
+$white : #fff;
+
+//config
+@import "../../node_modules/fast-grid/fast-grid";
+@import "config/resolutions.scss";
+@import "config/mixin.scss";
+@import "config/fonst.scss";
+@import "config/base.scss";
+@import "config/adjustment.scss";
+@import "config/grid.scss";
+
+//components
+@import "../html/components/header/header.scss";
+@import "../html/components/footer/footer.scss";
+@import "../html/components/right-side/right-side.scss";
+@import "../html/components/section-news/section-news.scss";
+@import "../html/components/slider/slider.scss";
+@import "../html/components/teg-cloud/teg-cloud.scss";
+@import "../html/components/controls/controls.scss";
+@import "../html/components/pagination/pagination.scss";
+@import "../html/components/hamburger-menu/hamburger-menu.scss";
+@import "../html/components/slidershow/slidershow.scss";
+@import "../html/components/banners-slider/banners-slider.scss";
+@import "../html/components/categories/categories.scss";
+@import "../html/components/serch/serch.scss";
+@import "../html/components/feedback-form/feedback-form.scss";
+@import "../html/components/previous-build/calendar.scss";
+@import "../html/components/previous-build/sidebar--gallery.scss";
+
+//layout
+@import "../html/index/index.scss";
+@import "../html/article/article.scss";
+@import "../html/list/list.scss";
+@import "../html/gallery/gallery.scss";
