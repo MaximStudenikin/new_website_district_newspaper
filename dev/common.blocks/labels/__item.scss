@@ -1,0 +1,8 @@
+.labels__item
+{
+    margin: rem(10px) 0;
+    padding: 0 rem(10px) 0 0;
+    &:last-child{
+        padding: 0;
+    }
+}
