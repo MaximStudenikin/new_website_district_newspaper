@@ -1,0 +1,20 @@
+.cloud {
+  &__tegs {
+      display: flex;
+      flex-wrap: wrap;
+  }
+  &__teg {
+      font-size: rem(13px);
+      color: $black;
+      opacity: .5;
+      padding: 0 rem(5px);
+      &:hover {
+          opacity: .9;
+      }
+  }
+  &__pop__teg {
+      color: $red;
+      text-transform: uppercase;
+      opacity: .6;
+  }
+}
