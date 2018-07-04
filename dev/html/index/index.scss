@@ -1,77 +1,29 @@
-.labels{
-
-&__list
-{
-    display: flex;
-    flex-wrap: wrap;
-}
-
-&__item
-{
-    margin: rem(10px) 0;
-    padding: 0 rem(10px) 0 0;
-    &:last-child{
-        padding: 0;
-    }
-}
-
-&__link
-{
-    display: block;
-    color: $black;
-    background: $yellow;
-    padding: rem(10px);
-}
-}
-
 .section__row
 {
-    margin: rem(15px) 0 0 0;
+  margin: rem(15px) 0 0 0;
 }
 
 .section__img
 {
-    width: 100%;
-    overflow: hidden;
+  width: 100%;
+  overflow: hidden;
 
-    @include phones
-    {
-        width: 89.9vw;
-        height: auto;
-    }
-
+  @include phones
+  {
+      width: 89.9vw;
+      height: auto;
+  }
 }
 
 .section-title {
-        @include noto-sans__bold;
-        font-size: rem(16px);
+    @include noto-sans__bold;
+    font-size: rem(16px);
     color: $black;
     @include phones {
-        font-size: rem(20px);
-        width: 100%;
+      font-size: rem(20px);
+      width: 100%;
     }
     &:hover {
         color: $red;
-    }
-}
-
-.cloud {
-    &__tegs {
-        display: flex;
-        flex-wrap: wrap;
-    }
-    &__teg {
-        font-size: rem(13px);
-        color: $black;
-        opacity: .5;
-        padding: 0 rem(5px);
-        &:hover {
-            opacity: .9;
-        }
-    }
-    &__pop__teg {
-        color: $red;
-        text-transform: uppercase;
-        opacity: .6;
     }
 }
