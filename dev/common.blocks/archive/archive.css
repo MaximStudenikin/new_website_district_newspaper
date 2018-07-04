@@ -1,0 +1,15 @@
+.archive
+{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.archive a 
+{
+  padding: 2%;
+}
+
+.archive a:last-child
+{
+  padding: 0;
+}
