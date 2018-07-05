@@ -55,6 +55,34 @@
         {/foreach}
       </ul>
     </section>
+    <section class="news-section row">
+      <a class="section-heading" href="http://gazetauzao.ru/category/fashion/">Мода и cтиль</a>
+      <div class="news row" data-class="slider__teg">
+        {$added_slider = blogViewEasyHelper::getNews()}
+        <ul class="news__list news__right-side" data-class="slider__list">
+          {foreach $added_slider as $item}
+          <li class="news__item" data-class="slider__item">
+            <div class="section__img">
+              {$previewImg = blogViewEasyHelper::getPreviewImg($item.id)} 
+              {if !$previewImg.slider_img == ''}
+              <img class="img-teg" src="{$img_path}{$item.id}/{$previewImg.slider_img}" alt="{$item.title}"> 
+              {else}
+              <img class="img-teg" src="{$img_path}/95.jpg"> 
+              {/if}
+            </div>
+            <time class="publication-date section__row" datetime='{$item.datetime|wa_datetime:"humandate"}'>
+              {$item.datetime|wa_datetime:"humandate"}
+            </time>
+            <a class="section-title section__row" href='/{$item.url}'>{$item.title}</a>
+            {/foreach}
+          </li>
+        </ul>
+        <div class="pagination row show__blok-phones">
+          <ul class="pagination__list" data-class="pagination__list">
+            <!-- Генерация через JS -->
+          </ul>
+        </div>
+    </section>
   </div>
   <div class="delimiter-section__right">
     <!--Баннеры-->
