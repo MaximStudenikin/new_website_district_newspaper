@@ -1,0 +1,12 @@
+.text
+{
+  @include roboto-regular;
+  font-size: rem(16px);
+  line-height: 1.42;
+  font-weight: 400;
+  color: $black;
+  @include phones
+  {
+    font-size: rem(14px);
+  }
+}
