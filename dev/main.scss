@@ -1,0 +1,39 @@
+//colors
+$dark__violet: #6c3751;
+$red: #d80000;
+$yellow: #ffc600;
+$black: #000;
+$white : #fff;
+
+//config
+@import "../node_modules/fast-grid/fast-grid";
+@import "./library.blocks/resolutions.scss";
+@import "./library.blocks/mixin.scss";
+@import "./library.blocks/fonst.scss";
+@import "./library.blocks/base.scss";
+@import "./library.blocks/adjustment.scss";
+@import "./library.blocks/grid.scss";
+
+//components
+@import "./common.blocks/header/header.scss";
+@import "./common.blocks/footer/footer.scss";
+@import "./common.blocks/right-side/right-side.scss";
+@import "./common.blocks/news/news.scss";
+@import "./common.blocks/slider/slider.scss";
+@import "./common.blocks/teg-cloud/teg-cloud.scss";
+@import "./common.blocks/controls/controls.scss";
+@import "./common.blocks/pagination/pagination.scss";
+@import "./common.blocks/hamburger-menu/hamburger-menu.scss";
+@import "./common.blocks/slidershow/slidershow.scss";
+@import "./common.blocks/banners-slider/banners-slider.scss";
+@import "./common.blocks/categories/categories.scss";
+@import "./common.blocks/serch-form/serch.scss";
+@import "./common.blocks/feedback-form/feedback-form.scss";
+@import "./common.blocks/previous-build/calendar.scss";
+@import "./common.blocks/previous-build/sidebar--gallery.scss";
+
+//layout
+@import "./common.pages/index/index.scss";
+@import "./common.pages/article/article.scss";
+@import "./common.pages/list/list.scss";
+@import "./common.pages/gallery/gallery.scss";
