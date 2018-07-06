@@ -1,0 +1,22 @@
+.header
+{
+	display: flex;
+	background: $dark__violet;
+	padding: 2% 5%;
+	display: flex;
+	justify-content: space-between;
+	margin: auto;
+	width: 100%;
+	max-width: 1200px;
+	min-width: 320px;
+	@include tablets
+	{
+	  align-items: center;
+	}
+	@include phones
+	{
+		justify-content: space-around;
+		height: 160px;
+		flex-direction: column;
+	}
+}
