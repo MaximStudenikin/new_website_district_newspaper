@@ -134,8 +134,8 @@ function remov() {
 
 //watch
 function watch() {
-	gulp.watch(paths.dev + './**/*.pug', html);
-	gulp.watch(paths.dev + './**/*.scss', style);
+	gulp.watch(paths.dev + '**/*.pug', html);
+	gulp.watch(paths.dev + '**/*.scss', style);
 	gulp.watch(paths.dev + 'common.js/*.js', script);
 }
 
