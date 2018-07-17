@@ -27,6 +27,7 @@ $white : #fff;
 @import "./library.blocks/link/**/*.scss";
 @import "./library.blocks/page/**/*.scss";
 @import "./library.blocks/text/**/*.scss";
+@import "./library.blocks/serch/**/*.scss";
 
 //common.blocks
 @import "./common.blocks/archive/**/*.scss";
@@ -48,7 +49,6 @@ $white : #fff;
 @import "./common.blocks/previous-build/**/*.scss";
 @import "./common.blocks/promo/**/*.scss";
 @import "./common.blocks/right-side/**/*.scss";
-@import "./common.blocks/serch-form/**/*.scss";
 @import "./common.blocks/slider/**/*.scss";
 @import "./common.blocks/slidershow/**/*.scss";
 @import "./common.blocks/social-networks/**/*.scss";
