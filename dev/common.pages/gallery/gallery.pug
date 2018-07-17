@@ -2,9 +2,10 @@ include ../base
 	block head
 		title Москва За Калужской заставой
 	block content
-		.wrap
-			include ../components/header/header
-			.container.gallery__container
+		.page
+			include ../../library.blocks/header/header
+			.content
+				.column-big
 				section.gallery__slider.hr__end.row
 					span.section-heading Фото
 					ul.gallery__list.owl-carousel.owl-theme
@@ -144,6 +145,6 @@ include ../base
 										img.img-teg(src='//img.youtube.com/vi/dVkK36KOcqs/mqdefault.jpg', alt='')
 									span.section__row.section__description Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
 					.pagination.row
-			include ../components/footer/footer
-include ../components/hamburger-menu/hamburger-menu
-include ../components/feedback-form/feedback-form
+			include ../../library.blocks/footer/footer
+include ../../common.blocks/hamburger-menu/hamburger-menu
+include ../../common.blocks/feedback-form/feedback-form
