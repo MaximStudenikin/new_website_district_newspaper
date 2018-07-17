@@ -1,0 +1,29 @@
+.search__btn
+{
+  background: none;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  height: 50px;
+  width: 50px;
+  padding: 0;
+  border-radius: 100%;
+  outline: 0;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  transform: translate(-100%, -50%);
+  &:before
+  {
+    content: "";
+    position: absolute;
+    width: 11px;
+    height: 2px;
+    background-color: #fff;
+    transform: rotate(45deg);
+    margin-top: 13px;
+    margin-left: 20px;
+    transition: .2s ease-in-out;
+  }
+}
