@@ -7,33 +7,52 @@ $white : #fff;
 
 //config
 @import "../node_modules/fast-grid/fast-grid";
-@import "./library.blocks/resolutions.scss";
-@import "./library.blocks/mixin.scss";
-@import "./library.blocks/fonst.scss";
-@import "./library.blocks/base.scss";
-@import "./library.blocks/adjustment.scss";
-@import "./library.blocks/grid.scss";
+@import "./common.config/grid.scss";
+@import "./common.config/mixin.scss";
+@import "./common.config/resolutions.scss";
+@import "./common.config/fonst.scss";
+@import "./common.config/adjustment.scss";
+@import "./common.config/base.scss";
 
-//components
-@import "./common.blocks/header/header.scss";
-@import "./common.blocks/footer/footer.scss";
-@import "./common.blocks/right-side/right-side.scss";
-@import "./common.blocks/news/news.scss";
-@import "./common.blocks/slider/slider.scss";
-@import "./common.blocks/teg-cloud/teg-cloud.scss";
-@import "./common.blocks/controls/controls.scss";
-@import "./common.blocks/pagination/pagination.scss";
-@import "./common.blocks/hamburger-menu/hamburger-menu.scss";
-@import "./common.blocks/slidershow/slidershow.scss";
-@import "./common.blocks/banners-slider/banners-slider.scss";
-@import "./common.blocks/categories/categories.scss";
-@import "./common.blocks/serch-form/serch.scss";
-@import "./common.blocks/feedback-form/feedback-form.scss";
-@import "./common.blocks/previous-build/calendar.scss";
-@import "./common.blocks/previous-build/sidebar--gallery.scss";
+// library
+@import "./library.blocks/_cut/**/*.scss";
+@import "./library.blocks/_hr-end/**/*.scss";
+@import "./library.blocks/_visually_hidden/**/*.scss";
+@import "./library.blocks/close-icon/**/*.scss";
+@import "./library.blocks/column/**/*.scss";
+@import "./library.blocks/content/**/*.scss";
+@import "./library.blocks/footer/**/*.scss";
+@import "./library.blocks/header/**/*.scss";
+@import "./library.blocks/img/**/*.scss";
+@import "./library.blocks/link/**/*.scss";
+@import "./library.blocks/page/**/*.scss";
+@import "./library.blocks/text/**/*.scss";
+
+//common.blocks
+@import "./common.blocks/archive/**/*.scss";
+@import "./common.blocks/banners-promo/**/*.scss";
+@import "./common.blocks/banners-slider/**/*.scss";
+@import "./common.blocks/blog/**/*.scss";
+@import "./common.blocks/categories/**/*.scss";
+@import "./common.blocks/close-button/**/*.scss";
+@import "./common.blocks/controls/**/*.scss";
+@import "./common.blocks/cover/**/*.scss";
+@import "./common.blocks/feedback-form/**/*.scss";
+@import "./common.blocks/hamburger-menu/**/*.scss";
+@import "./common.blocks/interview/**/*.scss";
+@import "./common.blocks/labels/**/*.scss";
+@import "./common.blocks/logo/**/*.scss";
+@import "./common.blocks/navigation/**/*.scss";
+@import "./common.blocks/news-right-side/**/*.scss";
+@import "./common.blocks/pagination/**/*.scss";
+@import "./common.blocks/previous-build/**/*.scss";
+@import "./common.blocks/promo/**/*.scss";
+@import "./common.blocks/right-side/**/*.scss";
+@import "./common.blocks/serch-form/**/*.scss";
+@import "./common.blocks/slider/**/*.scss";
+@import "./common.blocks/slidershow/**/*.scss";
+@import "./common.blocks/social-networks/**/*.scss";
+@import "./common.blocks/teg-cloud/**/*.scss";
 
 //layout
-@import "./common.pages/index/index.scss";
-@import "./common.pages/article/article.scss";
-@import "./common.pages/list/list.scss";
-@import "./common.pages/gallery/gallery.scss";
+@import "./common.pages/**/**/*.scss";
