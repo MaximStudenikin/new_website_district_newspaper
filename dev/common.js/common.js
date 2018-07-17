@@ -13,7 +13,7 @@ var popUpComponents = (buttonToShow, needComponents, buttonToHide) => {
 
         buttonToShow.preventDefault();
 
-        $(needComponents).toggleClass('visuallyhidden');
+        $(needComponents).toggleClass('_visuall_yhidden');
 
     })
 
@@ -21,7 +21,7 @@ var popUpComponents = (buttonToShow, needComponents, buttonToHide) => {
 
         buttonToHide.preventDefault();
 
-        $(needComponents).toggleClass('visuallyhidden');
+        $(needComponents).toggleClass('_visually_hidden');
 
     })
 }
