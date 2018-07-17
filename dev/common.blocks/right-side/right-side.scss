@@ -7,7 +7,6 @@
     flex-direction: column;
   }
 }
-
 .delimiter-section__left, .delimiter-section__right {
   @include grid-col(12 12 12 12);
 }
