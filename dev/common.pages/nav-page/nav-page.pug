@@ -1,0 +1,121 @@
+include ../base
+	block head
+		title Москва За Калужской заставой
+	block content
+		.wrap
+			.container
+				.col-left
+					.labels
+						ul.labels__list.row
+							each labelsValue in ['Новости ЮЗАО', 'Статьи', 'Статьи', 'Статьи', 'Статьи', 'Статьи', 'Статьи', 'Статьи', 'Статьи', 'Статьи', 'Статьи', 'Статьи', 'Статьи']
+								li.labels__item
+									a(href='list.html').labels__link= labelsValue
+					section.nav-page
+						span.section-heading Новости
+						ul.nav-page__list
+							li.nav-page__item
+								.nav-page__img
+									img.img-teg(src='https://source.unsplash.com/user/joelfilip/1200x900',alt='alt')
+								.nav-page__text
+									.nav-page__info
+										time.publication-date(datetime="17.02.2018") 17 Февраля 2018
+									a.link(href='article.html')
+										h1.section-title Lorem ipsum dolor sit amet
+									a.link(href='article.html')
+										p.text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab assumenda cupiditate debitis distinctio error esse facere fuga fugiat id illo in libero nostrum obcaecati officia placeat, qui rem totam vel.
+								li.nav-page__item
+									.nav-page__img
+										img.img-teg(src='https://source.unsplash.com/user/seanpollock/1200x900',alt='alt')
+									.nav-page__text
+										.nav-page__info
+											time.publication-date(datetime="17.02.2018") 17 Февраля 2018
+										a.link(href='article.html')
+											h1.section-title Lorem ipsum dolor sit amet
+										a.link(href='article.html')
+											p.text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab assumenda cupiditate debitis distinctio error esse facere fuga fugiat id illo in libero nostrum obcaecati officia placeat, qui rem totam vel.
+								li.nav-page__item
+									.nav-page__img
+										img.img-teg(src='https://source.unsplash.com/user/redvers/1200x900',alt='alt')
+									.nav-page__text
+										.nav-page__info
+											time.publication-date(datetime="17.02.2018") 17 Февраля 2018
+										a.link(href='article.html')
+											h1.section-title Lorem ipsum dolor sit amet
+										a.link(href='article.html')
+											p.text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab assumenda cupiditate debitis distinctio error esse facere fuga fugiat id illo in libero nostrum obcaecati officia placeat, qui rem totam vel.
+								li.nav-page__item
+									.nav-page__img
+										img.img-teg(src='https://source.unsplash.com/user/isaacdavis/1200x900',alt='alt')
+									.nav-page__text
+										.preview__info
+											time.publication-date(datetime="17.02.2018") 17 Февраля 2018
+										a.link(href='article.html')
+											h1.section-title Lorem ipsum dolor sit amet
+										a.link(href='article.html')
+											p.text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab assumenda cupiditate debitis distinctio error esse facere fuga fugiat id illo in libero nostrum obcaecati officia placeat, qui rem totam vel.
+								li.nav-page__item
+									.nav-page__img
+										img.img-teg(src='https://source.unsplash.com/user/johnygoerend/1200x900',alt='alt')
+									.nav-page__text
+										.preview__info
+											time.publication-date(datetime="17.02.2018") 17 Февраля 2018
+										a.link(href='article.html')
+											h1.section-title Lorem ipsum dolor sit amet
+										a.link(href='article.html')
+											p.text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab assumenda cupiditate debitis distinctio error esse facere fuga fugiat id illo in libero nostrum obcaecati officia placeat, qui rem totam vel.
+								li.nav-page__item
+									.nav-page__img
+										img.img-teg(src='https://source.unsplash.com/user/thoughtcatalog/1200x900',alt='alt')
+									.nav-nav-page__text
+										.preview__info
+											time.publication-date(datetime="17.02.2018") 17 Февраля 2018
+										a.link(href='article.html')
+											h1.section-title Lorem ipsum dolor sit amet
+										a.link(href='article.html')
+											p.text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab assumenda cupiditate debitis distinctio error esse facere fuga fugiat id illo in libero nostrum obcaecati officia placeat, qui rem totam vel.
+								li.nav-page__item
+									.nav-page__img
+										img.img-teg(src='https://source.unsplash.com/user/capturebylucy/1200x900',alt='alt')
+									.nav-page__text
+										.preview__info
+											time.publication-date(datetime="17.02.2018") 17 Февраля 2018
+										a.link(href='article.html')
+											h1.section-title Lorem ipsum dolor sit amet
+										a.link(href='article.html')
+											p.text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab assumenda cupiditate debitis distinctio error esse facere fuga fugiat id illo in libero nostrum obcaecati officia placeat, qui rem totam vel.
+								li.nav-page__item
+									.nav-page__img
+										img.img-teg(src='https://source.unsplash.com/user/dean_du/1200x900',alt='alt')
+									.nav-page__text
+										.preview__info
+											time.publication-date(datetime="17.02.2018") 17 Февраля 2018
+										a.link(href='article.html')
+											h1.section-title Lorem ipsum dolor sit amet
+										a.link(href='article.html')
+											p.text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab assumenda cupiditate debitis distinctio error esse facere fuga fugiat id illo in libero nostrum obcaecati officia placeat, qui rem totam vel.
+					.pagination.row
+						ul.pagination__list
+							li.pagination__item
+								a.pagination__link.pagination__link--activ(href='#') 1
+							li.pagination__item
+								a.pagination__link(href='#') 2
+							li.pagination__item
+								a.pagination__link(href='#') 3
+							li.pagination__item
+								a.pagination__link(href='#') 4
+							li.pagination__item
+								a.pagination__link(href='#') 5
+							li.pagination__item
+								a.pagination__link(href='#') 6
+							li.pagination__item
+								a.pagination__link(href='#') 7
+						.pagination__controls.hide__block-phones
+							a.controls__btn.controls__btn__next(href='#')
+								i.controls__btn-arrow__right
+							a.controls__btn.controls__btn__prev(href='#')
+								i.controls__btn-arrow__left
+				.col-right
+					include ../../common.blocks/right-side/right-side
+			include ../../library.blocks/footer/footer
+include ../../common.blocks/hamburger-menu/hamburger-menu
+include ../../common.blocks/feedback-form/feedback-form	
