@@ -54,7 +54,7 @@
           opacity: .5;
       }
   }
-  &__text {
+  &__block {
       position: absolute;
       display: flex;
       top: 90px;
@@ -69,7 +69,7 @@
   &__heading{
       color: $white;
   }
-  &__description{
+  &__text{
     color: $white;
 }
   &__row {
