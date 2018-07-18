@@ -1,0 +1,22 @@
+.cover-promo__title
+{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-transform: uppercase;
+  color: $white;
+  background: rgba(255, 198, 0, 0);
+  z-index: 2;
+  @include noto-sans__bold;
+  font-size: rem(26px);
+  &:hover
+  {
+    color: $black;
+    background: rgba(255, 198, 0, .8);
+  }
+}
