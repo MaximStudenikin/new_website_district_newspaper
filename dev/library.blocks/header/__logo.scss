@@ -1,9 +1,7 @@
 .header__logo
 {
 	position: relative;
-	width: 20%;
 	display: flex;
-	right: 16px;
 	@include phones
 	{
 		position: relative;
