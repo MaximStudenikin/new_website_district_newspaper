@@ -1,25 +1,17 @@
-mixin promo__item(itemName, imgSrc, data, title, text)
+mixin promo__item(itemName, imgSrc, data, title)
 	- var dataTime = data
-	- var listText = text
-	if dataTime == 'NaN' && listText == 'NaN'
-		li(class=itemName, data-class='slider__item')
-			.promo__img
-				img.img-teg(src= imgSrc, alt='alt')
-			a(href='article.html').promo__link= title
-	else if dataTime == data && listText == text
 		li(class=itemName, data-class='slider__item')
 			.promo__img
 				img.img-teg(src= imgSrc, alt='alt')
 			time(datetime= dataTime).publication-date= dataTime
 			a(href='article.html').promo__link= title
-			p.text.promo__text.section__row= listText
 			
-a.link(href='list.html') Новости
+a.link.link_big(href='list.html') Новости
 .promo(data-class='slider__teg').row
 	ul.promo__list(data-class='slider__list')
-		+promo__item('news__item', 'https://source.unsplash.com/user/nikolayv/1200x900', '17.02.2018', 'Культ личности означает аутотренинг', 'Воспитание вызывает экзистенциальный 	доиндустриальный тип политической культуры.')
-		+promo__item('news__item', 'https://source.unsplash.com/user/jaycalabresephotography/1200x900', '17.02.2018', 'Культ личности означает аутотренинг', 'Воспитание вызывает экзистенциальный 	доиндустриальный тип политической культуры.')
-		+promo__item('news__item', 'https://source.unsplash.com/user/samuelzeller/1200x900', '17.02.2018', 'Культ личности означает аутотренинг', 'Воспитание вызывает экзистенциальный 	доиндустриальный тип политической культуры.')
+		+promo__item('promo__item', 'https://source.unsplash.com/user/nikolayv/1200x900', '17.02.2018', 'Культ личности означает аутотренинг')
+		+promo__item('promo__item', 'https://source.unsplash.com/user/jaycalabresephotography/1200x900', '17.02.2018', 'Культ личности означает аутотренинг')
+		+promo__item('promo__item', 'https://source.unsplash.com/user/samuelzeller/1200x900', '17.02.2018', 'Культ личности означает аутотренинг')
 	.pagination.row.show__blok-phones
 		ul.pagination__list(data-class='pagination__list')
 			//- generation on js
