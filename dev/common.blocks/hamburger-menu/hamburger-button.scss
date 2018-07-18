@@ -1,16 +1,11 @@
 .hamburger-button
 {
+  display: flex;
   vertical-align: middle;
   position: relative;
-  height: rem(22px);
+  height: rem(25px);
   align-items: center;
-  margin-left: rem(30px);
-  display: none;
-
-  @include tablets
-  {
-    display: flex;
-  }
+  margin-right: rem(30px);
 }
 
 .hamburger-button__line
