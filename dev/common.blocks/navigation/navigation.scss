@@ -1,38 +1,4 @@
-.nav 
+.nav
 {
-
-	&__list {
-		display: flex;
-		white-space: nowrap;
-		justify-content: flex-end;
-		@include grid-col(12 12 12 12);
-	}
-
-	&__item {
-		display: flex;
-		@include desktop {
-			padding: 0 rem(5px);
-			&:last-child {
-				padding: 0;
-			}
-		}
-		&:after {
-			content: '|';
-			color: $white;
-			padding: 0 rem(5px);
-			@include desktop {
-				content: none;
-			}
-		}
-	}
-	&__link {
-		color: $white;
-		&:hover {
-			color: $yellow;
-		}
-	}
-}
-.nav__item:last-child:after {
-	content: none;
-	display: none;
+	display: block;
 }
