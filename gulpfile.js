@@ -78,7 +78,7 @@ function script() {
 		// 	presets: ['env']
 		// }))
 		// .pipe(uglify())
-		.pipe(gulp.dest(paths.build + 'js/'))
+		.pipe(gulp.dest(paths.build + 'common.js/'))
 }
 
 //img
