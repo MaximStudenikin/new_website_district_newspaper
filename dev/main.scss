@@ -1,11 +1,11 @@
 //colors
-$dark__violet: #6c3751;
+$dark-violet: #6c3751;
 $red: #d80000;
 $yellow: #ffc600;
 $black: #000;
 $white : #fff;
 
-//config
+// config
 @import "../node_modules/fast-grid/fast-grid";
 @import "./common.config/grid.scss";
 @import "./common.config/mixin.scss";
@@ -15,20 +15,23 @@ $white : #fff;
 @import "./common.config/base.scss";
 
 // library
+@import "./library.blocks/heading/**/*.scss";
+@import "./library.blocks/link/**/*.scss";
 @import "./library.blocks/_cut/**/*.scss";
 @import "./library.blocks/_hr-end/**/*.scss";
 @import "./library.blocks/_visually_hidden/**/*.scss";
 @import "./library.blocks/close-icon/**/*.scss";
-@import "./library.blocks/footer/**/*.scss";
+@import "./library.blocks/footer/__link.scss";
+@import "./library.blocks/footer/footer.scss";
 @import "./library.blocks/header/**/*.scss";
+@import "./library.blocks/text/text.scss";
+@import "./library.blocks/text/_color_white.scss";
+@import "./library.blocks/text/_color_yellow.scss";
 @import "./library.blocks/img/**/*.scss";
-@import "./library.blocks/link/**/*.scss";
 @import "./library.blocks/page/**/*.scss";
-@import "./library.blocks/text/**/*.scss";
 @import "./library.blocks/serch/**/*.scss";
-@import "./library.blocks/heading/**/*.scss";
 
-//common.blocks
+// common.blocks
 @import "./common.blocks/archive/**/*.scss";
 @import "./common.blocks/banners-promo/**/*.scss";
 @import "./common.blocks/banners-slider/**/*.scss";
@@ -53,5 +56,5 @@ $white : #fff;
 @import "./common.blocks/social-networks/**/*.scss";
 @import "./common.blocks/teg-cloud/**/*.scss";
 
-//layout
+// layout
 @import "./common.pages/**/**/*.scss";
