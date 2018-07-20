@@ -1,8 +1,9 @@
 .link
 {
+	display: inline-block;
 	@include roboto-bold;
 	color: $black;
 	padding: 0 rem(10px);
-	white-space: nowrap;
 	text-transform: uppercase;
+	cursor: pointer;
 }
