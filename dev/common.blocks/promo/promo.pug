@@ -6,7 +6,7 @@ mixin promo__item(itemName, imgSrc, data, title)
 			time(datetime= dataTime).publication-date= dataTime
 			a(href='article.html').promo__link= title
 			
-a.link.link_big(href='list.html') Новости
+a.link.link_big(href='nav-page.html') Новости
 .promo(data-class='slider__teg').row
 	ul.promo__list(data-class='slider__list')
 		+promo__item('promo__item', 'https://source.unsplash.com/user/nikolayv/1200x900', '17.02.2018', 'Культ личности означает аутотренинг')
