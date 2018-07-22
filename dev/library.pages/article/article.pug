@@ -1,0 +1,42 @@
+include ../base
+	block head
+		title Москва За Калужской заставой
+	block content
+		.page
+			include ../../library.blocks/header/header
+			.content
+				.column-big
+					.item__center-tablets.row
+						a.label(href='list.html') Все материалы
+						.article__publication-date.hide__block-desktop.show__blok-phones.show__block-tablets
+							time.publication-date(datetime="17.02.2018") 17 Февраля 2018
+					article.article.row
+						.article__top
+							.article__publication_date.hide__block-phones.hide__block-tablets.show__block-desktop
+								time.publication-date(datetime="17.02.2018") 17 Февраля 2018
+							.article__social_btn
+								//-- Скрипт не работает пока не знаю почему
+								.uptolike-buttons(data-mobile-view='true', data-share-size='40', data-like-text-enable='false', data-background-alpha='0.0', data-pid='1769524', data-mode='share', data-background-color='#ffffff', data-hover-effect='scale', data-share-shape='rectangle', data-share-counter-size='12', data-icon-color='#ffffff', data-mobile-sn-ids='fb.vk.tw.ok.wh.vb.tm.', data-text-color='#000000', data-buttons-color='#FFFFFF', data-counter-background-color='#ffffff', data-share-counter-type='disable', data-orientation='horizontal', data-following-enable='false', data-sn-ids='fb.vk.tw.gp.tm.ok.gt.em.', data-preview-mobile='false', data-selection-enable='false', data-exclude-show-more='false', data-share-style='1', data-counter-background-alpha='1.0', data-top-button='false')
+						.section__row
+							h1 Астероидный апогей: актуальная национальная задача
+							strong Ионный хвост слабопроницаем. Не-текст аннигилирует речевой акт. Комета Хейла-Боппа вызывает космический возмущающий фактор. Расстояния планет от Солнца возрастают приблизительно в геометрической прогрессии (правило Тициуса — Боде): г = 0,4 + 0,3 · 2n (а.е.), где метафора иллюстрирует эпизодический подтекст.
+						.slidershow.section__row
+							include ../../common.blocks/slidershow/slidershow
+						.section__row
+							p Ионный хвост слабопроницаем. Не-текст аннигилирует речевой акт. Комета
+								| Хейла-Боппа вызывает
+								a.article__link.article__link--out.article__link--hover(href='#') космический
+								| возмущающий фактор. Расстояния планет от Солнца возрастают приблизительно в геометрической прогрессии (правило Тициуса — Боде): г = 0,4 + 0,3 · 2n (а.е.), где метафора иллюстрирует эпизодический подтекст.
+							p
+								| Ионный хвост слабопроницаем. Не-текст
+								a.article__link.article__link--hover(href='#') аннигилирует
+								| речевой акт. Комета Хейла-Боппа вызывает космический возмущающий фактор. Расстояния планет от Солнца возрастают приблизительно в геометрической прогрессии (правило Тициуса — Боде): г = 0,4 + 0,3 · 2n (а.е.), где метафора иллюстрирует эпизодический подтекст
+							p Комбинаторное приращение дает словесный поперечник. Прустрация на следующий год, когда было лунное затмение и сгорел древний храм Афины в Афинах (при эфоре Питии и афинском архонте Каллии), ищет диалектический характер. Газопылевое облако существенно диссонирует литературный радиант. Апогей осознаёт близкий зачин, об этом свидетельствуют краткость и завершенность формы, бессюжетность, своеобразие тематического развертывания. Амфибрахий отталкивает дактиль. Дольник гасит реликтовый ледник.
+					//- У новостных секций есть баг. Когда одна из картинок не горизонтальная это рушит все.
+					section.row
+						include ../../common.blocks/promo/promo
+					sectio.row
+						include ../../common.blocks/promo/promo
+				.column-small
+					include ../../common.blocks/right-side/right-side			
+			include ../../library.blocks/footer/footer
