@@ -1,9 +1,6 @@
 .blog
 {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  overflow: hidden;
+  display: block;
   @extend %_cut_val-12;
 
   &__list
