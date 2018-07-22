@@ -4,7 +4,7 @@ mixin promo__item(itemName, imgSrc, data, title)
 			.promo__img
 				img.img-teg(src= imgSrc, alt='alt')
 			time(datetime= dataTime).publication-date= dataTime
-			a(href='article.html').promo__link= title
+			a(href='article.html').link.promo__link= title
 			
 .promo(data-class='slider__teg')
 	a.link.link_big(href='nav-page.html') Новости
