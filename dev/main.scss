@@ -32,6 +32,7 @@ $white : #fff;
 @import "./library.blocks/img/**/*.scss";
 @import "./library.blocks/page/**/*.scss";
 @import "./library.blocks/serch/**/*.scss";
+@import "./library.blocks/publication-date/*.scss";
 
 // common.blocks
 @import "./common.blocks/archive/**/*.scss";
@@ -59,4 +60,4 @@ $white : #fff;
 @import "./common.blocks/teg-cloud/**/*.scss";
 
 // layout
-@import "./library.pages/**/**/*.scss";
+@import "./library.pages/**/*.scss";
