@@ -7,7 +7,7 @@
   @include tablets {
       overflow: inherit;
   }
-  &__teg {
+  &__content {
       @include tablets {
         position: absolute;
         width: 100vw;
