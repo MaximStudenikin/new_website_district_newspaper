@@ -5,11 +5,13 @@
 	width: 100%;
 	overflow: hidden;
 	flex-direction: column;
+	@extend %_cut_val-48;
 	
 	&__list
 	{
 		display: flex;
 		justify-content: flex-start;
+		@extend %_cut_val-6;
 		@include phones
 		{
 			position: relative;
