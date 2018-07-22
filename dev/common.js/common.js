@@ -70,56 +70,55 @@ $(document).ready(function () {
 
 //click ruls btn
 
-// $('[data-class="slider__controls"]').on('click touchstart', function (event) {
-//     event.preventDefault();
+$('.slider__controls').on('click touchstart', function (event) {
+    event.preventDefault();
 
-//     var $this = $(event.target),
-//         cont = $this.closest('[data-class="slider__teg"]'),
-//         items = $('[data-class="slider__item"]', cont),
-//         activeItem = items.filter('.active__slide');
-//     var existedItem,
-//         edgeItem,
-//         reqItem;
+    var $this = $(event.target),
+        cont = $this.closest('.slider__content'),
+        items = $('.slider__item', cont),
+        activeItem = items.filter('.slider__item_js_active');
+    var existedItem,
+        edgeItem,
+        reqItem;
 
-//     if ($this.hasClass('controls__btn_next')) {
-//         existedItem = activeItem.next();
-//         edgeItem = items.first();
-//     }
+    if ($this.hasClass('controls__button_next')) {
+        existedItem = activeItem.next();
+        edgeItem = items.first();
+    }
 
-//     if ($this.hasClass('controls__btn_prev')) {
-//         existedItem = activeItem.prev();
-//         edgeItem = items.last();
-//     }
+    if ($this.hasClass('controls__button_prev')) {
+        existedItem = activeItem.prev();
+        edgeItem = items.last();
+    }
 
-//     reqItem = existedItem.length ? existedItem.index() : edgeItem.index();
+    reqItem = existedItem.length ? existedItem.index() : edgeItem.index();
 
-//     moveSlide(cont, reqItem);
+    moveSlide(cont, reqItem);
 
-// });
+});
 
 
 //searh number slid and activ slide
 
-// var moveSlide = function (cont, slideNum) {
+var moveSlide = function (cont, slideNum) {
 
-//     var items = cont.find('[data-class="slider__item"]'),
-//         activeSlide = items.filter('.active__slide'),
-//         reqItem = items.eq(slideNum),
-//         reqIndex = reqItem.index(),
-//         list = cont.find('[data-class="slider__list"]'),
-//         dur = 500;
+    var items = cont.find('.slider__item'),
+        activeSlide = items.filter('.slider__item_js_active'),
+        reqItem = items.eq(slideNum),
+        reqIndex = reqItem.index(),
+        list = cont.find('.slider__list'),
+        dur = 500;
 
-//     if (reqItem.length) {
-//         list.animate({
-//             'left': -reqIndex * 100 + '%'
-//         }, dur, function () {
-//             activeSlide.removeClass('active__slide');
-//             reqItem.addClass('active__slide');
-//             colorAtiveItem(cont, slideNum);
-//         });
-//     };
+    if (reqItem.length) {
+        list.animate({
+            'left': -reqIndex * 100 + '%'
+        }, dur, function () {
+            activeSlide.removeClass('slider__item_js_active');
+            reqItem.addClass('slider__item_js_active');
+        });
+    };
 
-// };
+};
 
 //generation number of slide
 
