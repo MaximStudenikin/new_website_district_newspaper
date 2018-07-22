@@ -44,7 +44,7 @@ const paths = {
 };
 
 function html() {
-	return gulp.src(paths.dev + 'common.pages/**/*.pug')
+	return gulp.src(paths.dev + 'library.pages/**/*.pug')
 		.pipe(plumber())
 		.pipe(pug({ pretty: true }))                  //pretty: true убирает что бы index был читаймым
 		// .pipe(rename({ basename: "index" }))
