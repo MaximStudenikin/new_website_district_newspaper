@@ -41,15 +41,13 @@
 	{
     @include noto-sans__bold;
     font-size: rem(16px);
-    color: $black;
+		color: $black;
+		padding: 0;
+		@extend %_cut_val-12;
 		@include phones
 		{
       font-size: rem(20px);
       width: 100%;
-    }
-		&:hover
-		{
-        color: $red;
     }
 }
 }
