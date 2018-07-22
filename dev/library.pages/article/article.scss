@@ -1,6 +1,7 @@
 .article
 {
 	line-height: 1.2;
+	@extend %_cut_val-24;
 	&__top
 	{
 		display: flex;
