@@ -14,12 +14,14 @@ $white : #fff;
 @import "./common.config/adjustment.scss";
 @import "./common.config/base.scss";
 
+// mod
+@import "./common.mod/_cut/**/*.scss";
+@import "./common.mod/_hr-end/**/*.scss";
+@import "./common.mod/_visually_hidden/**/*.scss";
+
 // library
 @import "./library.blocks/heading/**/*.scss";
 @import "./library.blocks/link/**/*.scss";
-@import "./library.blocks/_cut/**/*.scss";
-@import "./library.blocks/_hr-end/**/*.scss";
-@import "./library.blocks/_visually_hidden/**/*.scss";
 @import "./library.blocks/close-icon/**/*.scss";
 @import "./library.blocks/footer/__link.scss";
 @import "./library.blocks/footer/footer.scss";
@@ -57,4 +59,4 @@ $white : #fff;
 @import "./common.blocks/teg-cloud/**/*.scss";
 
 // layout
-@import "./common.pages/**/**/*.scss";
+@import "./library.pages/**/**/*.scss";
