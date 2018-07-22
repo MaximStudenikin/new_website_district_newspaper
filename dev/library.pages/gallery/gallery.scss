@@ -10,6 +10,7 @@
 				width: 100%;
 				position: relative;
 				overflow: hidden;
+				@extend %_cut_val-48;
 		}
 		&__list {
 				display: flex;
