@@ -1,12 +1,5 @@
 .logo
 {
-	width: 185px;
-	height: 50px;
-	@include tablets{
-	  width: 80%;
-	}
-	@include phones {
-		width: 60%;
-		height: auto;
-	}
+	width: auto;
+	height: auto;
 }
