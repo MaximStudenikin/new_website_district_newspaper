@@ -1,17 +1,17 @@
-.header
-{
-	display: flex;
-	background: $dark-violet;
-	padding: 1% 2%;
-	display: flex;
-	justify-content: space-between;
-	margin: auto;
-	width: 100%;
-	align-items: center;
-	@include phones
-	{
-		justify-content: space-around;
-		height: 160px;
-		flex-direction: column;
-	}
+@import './__block';
+@import './__logo';
+@import './__serch';
+@import './__nav';
+@import './_bottom_border';
+@import './_padding_15';
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 998;
+  background: $white;
 }

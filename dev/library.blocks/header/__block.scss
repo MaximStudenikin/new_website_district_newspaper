@@ -1,23 +1,9 @@
-.header__block
-{
-	position: relative;
-	width: 80%;
-	display: flex;
-	justify-content: flex-end;
-	align-items: center;
-
-	@include phones
-	{
-		display: flex;
-		justify-content: center;
-		width: 100%;
-	}
-	@include tablets
-	{
-		margin: 0;
-	}
-	@include tablets__h
-	{
-		margin: 0;
-	}
+.header__block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: 100%;
+	max-width: 1400px; 
+	padding: 1% 0;
 }
