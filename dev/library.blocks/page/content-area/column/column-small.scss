@@ -1,0 +1,4 @@
+.column-small
+{
+  @include grid-col(12 12 4 4);
+}
