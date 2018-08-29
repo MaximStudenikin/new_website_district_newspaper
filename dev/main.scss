@@ -31,7 +31,12 @@ $white : #fff;
 @import "./library.blocks/text/_color_yellow.scss";
 @import "./library.blocks/img/**/*.scss";
 @import "./library.blocks/page/**/*.scss";
-@import "./library.blocks/serch/**/*.scss";
+@import "./library.blocks/serch-form/__button/__button";
+@import "./library.blocks/serch-form/__button/__button_close";
+@import "./library.blocks/serch-form/__input/__input";
+@import "./library.blocks/serch-form/__input/__input_open";
+@import "./library.blocks/serch-form/_active.scss";
+@import "./library.blocks/serch-form/serch-form.scss";
 @import "./library.blocks/publication-date/*.scss";
 
 // common.blocks
@@ -55,7 +60,7 @@ $white : #fff;
 @import "./common.blocks/promo/**/*.scss";
 @import "./common.blocks/right-side/**/*.scss";
 @import "./common.blocks/slider/**/*.scss";
-@import "./common.blocks/slidershow/**/*.scss";
+@import "./common.blocks/imgSlider/**/*.scss";
 @import "./common.blocks/social-networks/**/*.scss";
 @import "./common.blocks/teg-cloud/**/*.scss";
 

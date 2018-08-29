@@ -1,4 +1,4 @@
-.slidershow {
+.imgSlider {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -31,7 +31,7 @@
       filter: grayscale(70%);
       display: flex;
   }
-  &__item--activ {
+  &__item_active {
       border: 5px solid $yellow;
       filter: grayscale(0);
   }
@@ -46,7 +46,7 @@
       width: 100%;
       opacity: .4;
   }
-  &__controls--hover:hover {
+  &__controls_hover:hover {
       opacity: 1;
   }
 }

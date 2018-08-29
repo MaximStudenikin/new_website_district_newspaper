@@ -1,4 +1,4 @@
-.form-feedback
+.feedback-form
 {
   position: fixed;
   left: 0;
@@ -12,7 +12,7 @@
   color: $white;
 }
 
-.form{
+.feedback-form{
 
   &__header{
     display: flex;
