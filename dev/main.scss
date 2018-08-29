@@ -15,6 +15,7 @@ $white : #fff;
 @import "./common.config/base.scss";
 
 // mod
+@import "./common.mod/_no_margin.scss";
 @import "./common.mod/_cut/**/*.scss";
 @import "./common.mod/_hr-end/**/*.scss";
 @import "./common.mod/_visually_hidden/**/*.scss";
@@ -30,7 +31,7 @@ $white : #fff;
 @import "./library.blocks/text/_color_white.scss";
 @import "./library.blocks/text/_color_yellow.scss";
 @import "./library.blocks/img/**/*.scss";
-@import "./library.blocks/page/**/*.scss";
+@import "./library.blocks/page/page.scss";
 @import "./library.blocks/serch-form/__button/__button";
 @import "./library.blocks/serch-form/__button/__button_close";
 @import "./library.blocks/serch-form/__input/__input";
@@ -59,7 +60,7 @@ $white : #fff;
 @import "./common.blocks/previous-build/**/*.scss";
 @import "./common.blocks/promo/**/*.scss";
 @import "./common.blocks/right-side/**/*.scss";
-@import "./common.blocks/slider/**/*.scss";
+@import "./common.blocks/main-news/main-news.scss";
 @import "./common.blocks/imgSlider/**/*.scss";
 @import "./common.blocks/social-networks/**/*.scss";
 @import "./common.blocks/teg-cloud/**/*.scss";
