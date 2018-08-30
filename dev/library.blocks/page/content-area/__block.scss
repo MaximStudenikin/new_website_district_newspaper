@@ -1,4 +1,6 @@
-.content-area__block
-{
-  width: 100%;
+.content-area__block {
+  width: 90%;
+  display: flex;
+  margin: 0 auto;
+  @extend %_cut_val-48;
 }

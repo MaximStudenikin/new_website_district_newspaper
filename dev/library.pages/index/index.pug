@@ -5,18 +5,19 @@ include ../base
 		.page
 			include ../../library.blocks/header/header
 			.content-area
-				.content-area__block
-					include ../../common.blocks/main-news/main-news
-					include ../../common.blocks/promo/promo
-					include ../../common.blocks/promo/promo
-					include ../../common.blocks/promo/promo
-						section.cloud.disabled__item-tablets
-							i.link.link_big Облако тегов
-							include ../../common.blocks/teg-cloud/teg-cloud
-						section.banners
-							include ../../common.blocks/banners-slider/banners-slider
-				.column-small
-						include ../../common.blocks/right-side/right-side
-				include ../../library.blocks/footer/footer
-				include ../../common.blocks/categories/categories
-				include ../../common.blocks/feedback-form/feedback-form
+				include ../../common.blocks/main-news/main-news
+			.content-area__block
+				include ../../common.blocks/news-latest/news-latest
+				.promo
+					a.link.promo__link(href='gallery.html')
+						img.img-teg(src='https://source.unsplash.com/user/oria_hector/720x500')
+				//- section.cloud.disabled__item-tablets
+				//- 	i.link.link_big Облако тегов
+				//- 	include ../../common.blocks/teg-cloud/teg-cloud
+				//- section.banners
+				//- 	include ../../common.blocks/banners-slider/banners-slider
+			.column-small
+				//- include ../../common.blocks/right-side/right-side
+			include ../../library.blocks/footer/footer
+			include ../../common.blocks/categories/categories
+			include ../../common.blocks/feedback-form/feedback-form
