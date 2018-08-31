@@ -4,6 +4,7 @@ $red: #d80000;
 $yellow: #ffc600;
 $black: #000;
 $white : #fff;
+$invisible: transparent;
 
 // config
 @import "../node_modules/fast-grid/fast-grid";
@@ -48,7 +49,7 @@ $white : #fff;
 @import "./common.blocks/categories/**/*.scss";
 @import "./common.blocks/close-button/**/*.scss";
 @import "./common.blocks/controls/**/*.scss";
-@import "./common.blocks/cover-promo/**/*.scss";
+@import "./common.blocks/img-widget/img-widget.scss";
 @import "./common.blocks/feedback-form/**/*.scss";
 @import "./common.blocks/hamburger-menu/**/*.scss";
 @import "./common.blocks/interview/**/*.scss";

@@ -1,10 +1,7 @@
-@import './__block';
-
-.content-area
-{
+.content-area {
+  @include grid-row($grid);
   position: relative;
   margin: 7% 0 0 0;
-  @include grid-row($grid);
   justify-content: space-between;
   width: 100%;
 }
