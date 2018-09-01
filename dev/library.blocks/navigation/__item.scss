@@ -1,0 +1,22 @@
+.nav__item
+{
+
+	&:last-child
+	{
+		padding: 0;
+  }
+  
+	&:after
+	{
+		content: '|';
+		color: $white;
+		padding: 0 rem(15px);
+  }
+
+  &:last-child:after
+  {
+	content: none;
+	display: none;
+  }
+
+}
