@@ -1,0 +1,17 @@
+mixin promo__item(itemName, imgSrc, data, title)
+	- var dataTime = data
+		li(class=itemName, data-class='slider__item')
+			.promo__img
+				img.img-teg(src= imgSrc, alt='alt')
+			time(datetime= dataTime).publication-date= dataTime
+			a(href='article.html').link.promo__link= title
+			
+.promo(data-class='slider__teg')
+	a.link.link_big(href='nav-page.html') Новости
+	ul.promo__list(data-class='slider__list')
+		+promo__item('promo__item', 'https://source.unsplash.com/user/nikolayv/1200x900', '17.02.2018', 'Культ личности означает аутотренинг')
+		+promo__item('promo__item', 'https://source.unsplash.com/user/jaycalabresephotography/1200x900', '17.02.2018', 'Культ личности означает аутотренинг')
+		+promo__item('promo__item', 'https://source.unsplash.com/user/samuelzeller/1200x900', '17.02.2018', 'Культ личности означает аутотренинг')
+	.pagination.row.show__blok-phones
+		ul.pagination__list(data-class='pagination__list')
+			//- generation on js
