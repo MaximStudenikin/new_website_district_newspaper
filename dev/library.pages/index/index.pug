@@ -3,11 +3,11 @@ include ../base
 		title Москва За Калужской заставой
 	block content
 		.page
-			include ../../library.blocks/header/header
+			include ../../common.blocks/header/header
 			.content-area
-				include ../../common.blocks/main-news/main-news
+				include ../../library.blocks/main-news/main-news
 			.content-area__block-center
-				include ../../common.blocks/news-latest/news-latest
+				include ../../library.blocks/news-latest/news-latest
 				.img-widget
 					a.link.img-widget__link(href='gallery.html')
 						img.img-teg(src='https://source.unsplash.com/user/oria_hector/720x500')
@@ -23,6 +23,6 @@ include ../base
 				//- 	include ../../common.blocks/banners-slider/banners-slider
 			.column-small
 				//- include ../../common.blocks/right-side/right-side
-			include ../../library.blocks/footer/footer
-			include ../../common.blocks/categories/categories
-			include ../../common.blocks/feedback-form/feedback-form
+			include ../../common.blocks/footer/footer
+			include ../../library.blocks/categories/categories
+			include ../../library.blocks/feedback-form/feedback-form
