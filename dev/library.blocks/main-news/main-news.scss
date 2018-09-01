@@ -1,0 +1,16 @@
+@import './__block/__block.scss';
+@import './__block/__block_direction_column.scss';
+
+@import './__item/__item.scss';
+@import './__item/__item_size_big.scss';
+@import './__item/__item-content.scss';
+
+@import './__link.scss';
+@import './__heading.scss';
+@import './__publication-date.scss';
+
+.main-news {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
