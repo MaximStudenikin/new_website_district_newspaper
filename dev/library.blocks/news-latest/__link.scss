@@ -1,0 +1,7 @@
+.news-latest__link {
+  @include noto-sans__bold;
+  font-size: rem(16px);
+  color: $black;
+  padding: 0;
+  @extend %_cut_val-12;
+}
