@@ -1,0 +1,7 @@
+@import './__link';
+
+.img-widget{
+  position: relative;
+  width: 40%;
+  @extend %_cut_val-48;
+}
