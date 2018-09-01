@@ -16,6 +16,7 @@ $invisible: transparent;
 @import "./common.config/base.scss";
 
 // mod
+@import "./common.mod/_no_padding.scss";
 @import "./common.mod/_no_margin.scss";
 @import "./common.mod/_cut/**/*.scss";
 @import "./common.mod/_hr-end/**/*.scss";
@@ -50,6 +51,7 @@ $invisible: transparent;
 @import "./library.blocks/pagination/**/*.scss";
 @import "./library.blocks/news-latest/**/*.scss";
 @import "./library.blocks/main-news/main-news.scss";
+@import "./library.blocks/video-blog/video-blog.scss";
 
 @import "./library.blocks/teg-cloud/**/*.scss";
 
