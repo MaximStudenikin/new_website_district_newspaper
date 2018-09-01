@@ -53,7 +53,7 @@ function html() {
 }
 
 function style() {
-	return gulp.src(paths.dev + './main.scss')
+	return gulp.src(paths.dev + './index.scss')
 		.pipe(plumber())
 		.pipe(sourcemaps.init())
 		.pipe(sassGlob())
