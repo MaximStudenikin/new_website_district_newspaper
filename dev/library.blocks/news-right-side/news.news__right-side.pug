@@ -1,0 +1,25 @@
+mixin mixin-news__list(itemName, imgSrc, data, title, text)
+	- var dataTime = data
+	- var listText = text
+	if dataTime == 'NaN' && listText == 'NaN'
+		li(class=itemName, data-class='slider__item')
+			.section__img
+				img.img-teg(src= imgSrc, alt='alt')
+			a(href='article.html').section-title.section__img= title
+	else if dataTime == data && listText == text
+		li(class=itemName, data-class='slider__item')
+			.section__img
+				img.img-teg(src= imgSrc, alt='alt')
+			time(datetime= dataTime).publication-date.section__img= dataTime
+			a(href='article.html').section-title.section__img= title
+			p.section__description.section__row= listText
+
+a.section-heading(href='list.html') Новости
+div.news.news__right-side(data-class='slider__teg').row
+	ul.news__list.news__right-side(data-class='slider__list')
+		+mixin-news__list('news__item', 'https://source.unsplash.com/user/nikolayv/1200x900', '17.02.2018', 'Культ личности означает аутотренинг', 'Воспитание вызывает экзистенциальный 	доиндустриальный тип политической культуры.')
+		+mixin-news__list('news__item', 'https://source.unsplash.com/user/jaycalabresephotography/1200x900', '17.02.2018', 'Культ личности означает аутотренинг', 'Воспитание вызывает экзистенциальный 	доиндустриальный тип политической культуры.')
+		+mixin-news__list('news__item', 'https://source.unsplash.com/user/samuelzeller/1200x900', '17.02.2018', 'Культ личности означает аутотренинг', 'Воспитание вызывает экзистенциальный 	доиндустриальный тип политической культуры.')
+	.pagination.row.show__blok-phones
+		ul.pagination__list(data-class='pagination__list')
+			//- generation on js
