@@ -16,7 +16,6 @@ $invisible: transparent;
 @import "./common.config/base.scss";
 
 // mod
-@import "./common.mod/_no_padding.scss";
 @import "./common.mod/_no_margin.scss";
 @import "./common.mod/_cut/**/*.scss";
 @import "./common.mod/_hr-end/**/*.scss";
@@ -41,17 +40,16 @@ $invisible: transparent;
 // library
 @import "./library.blocks/serch-form/serch-form.scss";
 @import "./library.blocks/banners-slider/**/*.scss";
-@import "./library.blocks/blog/**/*.scss";
+@import "./library.blocks/blog/blog.scss";
 @import "./library.blocks/categories/**/*.scss";
 @import "./library.blocks/img-widget/img-widget.scss";
 @import "./library.blocks/feedback-form/**/*.scss";
 @import "./library.blocks/hamburger-menu/**/*.scss";
 @import "./library.blocks/navigation/**/*.scss";
-@import "./library.blocks/news-right-side/**/*.scss";
 @import "./library.blocks/pagination/**/*.scss";
 @import "./library.blocks/news-latest/**/*.scss";
 @import "./library.blocks/main-news/main-news.scss";
-@import "./library.blocks/video-blog/video-blog.scss";
+@import "./library.blocks/blog-video/blog-video.scss";
 
 @import "./library.blocks/teg-cloud/**/*.scss";
 
