@@ -1,8 +1,10 @@
-@import "./content-area/content-area";
+@import "./page__content";
 @import "./content-area/__block-center";
 
 .page {
   position: relative;
+  display: flex;
+  flex-wrap: wrap;
   width: 100%;
   height: 100%;
   transition: transform 500ms ease;
