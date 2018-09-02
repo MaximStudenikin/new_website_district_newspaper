@@ -1,5 +1,8 @@
 .news-latest__item {
   display: flex;
   flex-direction: column;
-  @extend %_cut_val-12;
+  margin: rem(24px) 0 0 0;
+  &:first-child{
+    margin: 0;
+  }
 }

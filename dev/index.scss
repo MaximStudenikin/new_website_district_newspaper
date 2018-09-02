@@ -20,10 +20,11 @@ $invisible: transparent;
 @import "./common.mod/_cut/**/*.scss";
 @import "./common.mod/_hr-end/**/*.scss";
 @import "./common.mod/_visually_hidden/**/*.scss";
+@import "./common.mod/limiter.scss";
 
 // common.blocks
 @import "./common.blocks/heading/**/*.scss";
-@import "./common.blocks/link/**/*.scss";
+@import "./common.blocks/link/link.scss";
 @import "./common.blocks/footer/__link.scss";
 @import "./common.blocks/footer/footer.scss";
 @import "./common.blocks/header/header.scss";
@@ -32,7 +33,7 @@ $invisible: transparent;
 @import "./common.blocks/text/_color_yellow.scss";
 @import "./common.blocks/img/**/*.scss";
 @import "./common.blocks/page/page.scss";
-@import "./common.blocks/publication-date/*.scss";
+@import "./common.blocks/post-date/*.scss";
 @import "./common.blocks/logo/**/*.scss";
 @import "./common.blocks/close-button/**/*.scss";
 @import "./common.blocks/social-networks/**/*.scss";

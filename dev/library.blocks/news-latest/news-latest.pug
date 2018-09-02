@@ -4,25 +4,28 @@ mixin news-latest__item(itemName, imgSrc, data, title, imgSize)
 		li(class=itemName)
 			case bigImg
 				when 0
-					.news-latest__img
+					.img-mini
 						img.img-teg(src= imgSrc, alt='alt')
+					.news-latest__row
+						a(href='article.html').link= title			
+						time(datetime= dataTime).publication-date= dataTime
 				when 1
-					.news-latest__img.news-latest__img_size_big
+					.img-default
 						img.img-teg(src= imgSrc, alt='alt')
-			.news-latest__row
-				a(href='article.html').link.news-latest__link= title			
-				time(datetime= dataTime).publication-date= dataTime
-			
+					a(href='article.html').link.news-latest__link= title			
+					time(datetime= dataTime).publication-date= dataTime
+
 section.news-latest
-	a.link.link_big(href='nav-page.html') Новости
-	.news-latest__block
-		ul.news-latest__list
-			+news-latest__item('news-latest__item', 'https://source.unsplash.com/user/nikolayv/1200x900', '17.02.2018', 'Культ личности означает аутотренинг', 1)
-			+news-latest__item('news-latest__item news-latest__item_direction_row', 'https://source.unsplash.com/user/nikolayv/1200x900', '17.02.2018', 'Культ личности означает аутотренинг', 0)
-			+news-latest__item('news-latest__item news-latest__item_direction_row', 'https://source.unsplash.com/user/nikolayv/1200x900', '17.02.2018', 'Культ личности означает аутотренинг', 0)
-			+news-latest__item('news-latest__item news-latest__item_direction_row', 'https://source.unsplash.com/user/samuelzeller/1200x900', '17.02.2018', 'Культ личности означает аутотренинг', 0)
-		ul.news-latest__list
-			+news-latest__item('news-latest__item', 'https://source.unsplash.com/user/samuelzeller/1200x900', '17.02.2018', 'Культ личности означает аутотренинг', 1)
-			+news-latest__item('news-latest__item news-latest__item_direction_row', 'https://source.unsplash.com/user/samuelzeller/1200x900', '17.02.2018', 'Культ личности означает аутотренинг', 0)
-			+news-latest__item('news-latest__item news-latest__item_direction_row', 'https://source.unsplash.com/user/samuelzeller/1200x900', '17.02.2018', 'Культ личности означает аутотренинг', 0)
-			+news-latest__item('news-latest__item news-latest__item_direction_row', 'https://source.unsplash.com/user/samuelzeller/1200x900', '17.02.2018', 'Культ личности означает аутотренинг', 0)
+		a.link.link_font_24(href='nav-page.html') Новости
+		.news-latest__block
+			ul.news-latest__list
+				+news-latest__item('news-latest__item', 'https://source.unsplash.com/user/nikolayv/1200x900', '17.02.2018', 'Культ личности означает аутотренинг', 1)
+				+news-latest__item('news-latest__item news-latest__item_direction_row', 'https://source.unsplash.com/user/nikolayv/1200x900', '17.02.2018', 'Культ личности означает аутотренинг', 0)
+				+news-latest__item('news-latest__item news-latest__item_direction_row', 'https://source.unsplash.com/user/nikolayv/1200x900', '17.02.2018', 'Культ личности означает аутотренинг', 0)
+				+news-latest__item('news-latest__item news-latest__item_direction_row', 'https://source.unsplash.com/user/samuelzeller/1200x900', '17.02.2018', 'Культ личности означает аутотренинг', 0)
+			ul.news-latest__list
+				+news-latest__item('news-latest__item', 'https://source.unsplash.com/user/samuelzeller/1200x900', '17.02.2018', 'Культ личности означает аутотренинг', 1)
+				+news-latest__item('news-latest__item news-latest__item_direction_row', 'https://source.unsplash.com/user/samuelzeller/1200x900', '17.02.2018', 'Культ личности означает аутотренинг', 0)
+				+news-latest__item('news-latest__item news-latest__item_direction_row', 'https://source.unsplash.com/user/samuelzeller/1200x900', '17.02.2018', 'Культ личности означает аутотренинг', 0)
+				+news-latest__item('news-latest__item news-latest__item_direction_row', 'https://source.unsplash.com/user/samuelzeller/1200x900', '17.02.2018', 'Культ личности означает аутотренинг', 0)
+			include ../img-widget/img-widget

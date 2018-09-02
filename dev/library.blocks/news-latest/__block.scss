@@ -1,3 +1,4 @@
 .news-latest__block {
   display: flex;
+  @extend %_cut_val-24;
 }

@@ -1,8 +1,8 @@
-.link
-{
-	display: inline-block;
-	@include roboto-bold;
-	color: $black;
-	text-transform: uppercase;
-	cursor: pointer;
+@import "./_font_24";
+.link {
+  display: inline-block;
+  @include roboto-bold;
+  color: $black;
+  text-transform: uppercase;
+  cursor: pointer;
 }

@@ -1,6 +1,4 @@
 @import './__block';
-@import './__img';
-@import './__img_size_big';
 @import './__item';
 @import './__item_direction_row';
 @import './__link';
@@ -11,7 +9,8 @@
 	position: relative;
 	display: flex;
 	width: 100%;
-	overflow: hidden;
 	flex-direction: column;
-	@extend %_cut_val-24;
+	overflow: hidden;
+	margin: 0 auto;
+	@extend %limiter;
 }

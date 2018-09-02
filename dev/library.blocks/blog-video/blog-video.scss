@@ -1,8 +1,11 @@
 .blog-video {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background: $black;
   width: 100%;
+  padding: 0 0 25px 0;
   overflow: hidden;
-  padding: 0 0 rem(25px) 0;
   @extend %_cut_val-48;
   &__promo {
     position: relative;
@@ -45,6 +48,8 @@
   &__list {
     display: flex;
     justify-content: center;
+    width: 100%;
+    @extend %limiter;
     @extend %_cut_val-48;
   }
   &__item {

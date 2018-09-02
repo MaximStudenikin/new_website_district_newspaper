@@ -3,14 +3,12 @@
 @import './__serch';
 @import './__nav';
 @import './_bottom_border';
-@import './_padding_15';
 
 .header {
   position: fixed;
-  top: 0;
-  width: 100%;
   display: flex;
   justify-content: center;
+  width: 100%;
   z-index: 998;
   background: $white;
 }

@@ -1,0 +1,7 @@
+.post-date {
+  font-size: rem(12px);
+  letter-spacing: rem(2px);
+  text-transform: uppercase;
+  z-index: 2;
+  @extend %_cut_val-12;
+}
