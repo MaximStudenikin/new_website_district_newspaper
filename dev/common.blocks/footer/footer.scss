@@ -1,6 +1,7 @@
 .footer
 {
   display: flex;
+  align-self: flex-end;
   background: $dark-violet;
 
   &__container
