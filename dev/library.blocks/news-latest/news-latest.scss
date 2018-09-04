@@ -8,8 +8,9 @@
 .news-latest {
 	position: relative;
 	display: flex;
-	width: 100%;
 	flex-direction: column;
+	align-items: center;
+	width: 100%;
 	overflow: hidden;
 	margin: 0 auto;
 	@extend %limiter;

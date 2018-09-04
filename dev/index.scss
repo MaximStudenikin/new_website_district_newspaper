@@ -23,7 +23,7 @@ $invisible: transparent;
 @import "./common.mod/limiter.scss";
 
 // common.blocks
-@import "./common.blocks/heading/**/*.scss";
+@import "./common.blocks/heading/heading.scss";
 @import "./common.blocks/link/link.scss";
 @import "./common.blocks/footer/__link.scss";
 @import "./common.blocks/footer/footer.scss";
@@ -34,7 +34,7 @@ $invisible: transparent;
 @import "./common.blocks/img/**/*.scss";
 @import "./common.blocks/page/page.scss";
 @import "./common.blocks/post-date/*.scss";
-@import "./common.blocks/logo/**/*.scss";
+@import "./common.blocks/logo/logo.scss";
 @import "./common.blocks/close-button/**/*.scss";
 @import "./common.blocks/social-networks/**/*.scss";
 
@@ -51,6 +51,7 @@ $invisible: transparent;
 @import "./library.blocks/news-latest/**/*.scss";
 @import "./library.blocks/main-news/main-news.scss";
 @import "./library.blocks/blog-video/blog-video.scss";
+@import "./library.blocks/blog-photo/blog-photo.scss";
 
 @import "./library.blocks/teg-cloud/**/*.scss";
 

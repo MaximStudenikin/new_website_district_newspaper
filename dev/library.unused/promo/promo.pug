@@ -3,7 +3,7 @@ mixin promo__item(itemName, imgSrc, data, title)
 		li(class=itemName, data-class='slider__item')
 			.promo__img
 				img.img-teg(src= imgSrc, alt='alt')
-			time(datetime= dataTime).publication-date= dataTime
+			time(datetime= dataTime).post-data= dataTime
 			a(href='article.html').link.promo__link= title
 			
 .promo(data-class='slider__teg')

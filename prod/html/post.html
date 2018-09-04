@@ -5,7 +5,7 @@
 	{$output} {/foreach} {/if}
 <div class="article__top">
 	<div class="article__publication_date hide__block-phones hide__block-tablets show__block-desktop">
-		<time class="publication-date" itemprop="datePublished" datetime="{$post.datetime|wa_datetime}">
+		<time class="post-data" itemprop="datePublished" datetime="{$post.datetime|wa_datetime}">
 			{$post.datetime|wa_datetime:"humandate"}
 		</time>
 	</div>
@@ -64,7 +64,7 @@
 				<img class="img-teg" src="{$img_path}/95.jpg">
 				{/if}
 			</div>
-			<time class="publication-date section__row" datetime="{$item.datetime|wa_datetime:" humandate "}">
+			<time class="post-data section__row" datetime="{$item.datetime|wa_datetime:" humandate "}">
 				{$item.datetime|wa_datetime:"humandate"}
 			</time>
 			<a class="section-title section__row" href="/{$item.url}">{$item.title}</a>
@@ -94,7 +94,7 @@
 				<img class="img-teg" src="{$img_path}/95.jpg">
 				{/if}
 			</div>
-			<time class="publication-date section__row" datetime='{$item.datetime|wa_datetime:"humandate"}'>
+			<time class="post-data section__row" datetime='{$item.datetime|wa_datetime:"humandate"}'>
 				{$item.datetime|wa_datetime:"humandate"}
 			</time>
 			<a class="section-title section__row" href='/{$item.url}'>{$item.title}</a>

@@ -10,7 +10,7 @@ mixin mixin-news__list(itemName, imgSrc, data, title, text)
 		li(class=itemName, data-class='slider__item')
 			.section__img
 				img.img-teg(src= imgSrc, alt='alt')
-			time(datetime= dataTime).publication-date.section__img= dataTime
+			time(datetime= dataTime).post-data.section__img= dataTime
 			a(href='article.html').section-title.section__img= title
 			p.section__description.section__row= listText
 

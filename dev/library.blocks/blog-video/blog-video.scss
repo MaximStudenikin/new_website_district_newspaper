@@ -31,7 +31,7 @@
     display: flex;
     flex-direction: column;
     z-index: 2;
-    @extend %_cut_val-24;
+    @extend %_cut_val-12;
   }
   &__text-field_promo {
     position: absolute;
@@ -42,7 +42,7 @@
     color: $white;
     padding: 0;
   }
-  &__publication-date {
+  &__post-data {
     color: $white;
   }
   &__list {
@@ -54,8 +54,8 @@
   }
   &__item {
     position: relative;
-    width: 27%;
-    margin: 0 rem(15px) 0 0;
+    width: 26%;
+    margin: 0 rem(24px) 0 0;
     &:last-child {
       margin: 0;
     }

@@ -1,9 +1,9 @@
-.heading
-{
+.heading {
   @include noto-sans__bold;
   font-weight: 700;
   font-style: normal;
-  font-size: 1.625rem;
+  font-size: rem(24px);
   color: #000;
-  text-transform: uppercase;
+
+  @import './_color_white.scss';
 }

@@ -8,12 +8,12 @@ mixin news-latest__item(itemName, imgSrc, data, title, imgSize)
 						img.img-teg(src= imgSrc, alt='alt')
 					.news-latest__row
 						a(href='article.html').link= title			
-						time(datetime= dataTime).publication-date= dataTime
+						time(datetime= dataTime).post-data= dataTime
 				when 1
 					.img-default
 						img.img-teg(src= imgSrc, alt='alt')
 					a(href='article.html').link.news-latest__link= title			
-					time(datetime= dataTime).publication-date= dataTime
+					time(datetime= dataTime).post-data= dataTime
 
 section.news-latest
 		a.link.link_font_24(href='nav-page.html') Новости

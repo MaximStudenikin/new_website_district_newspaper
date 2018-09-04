@@ -1,4 +1,6 @@
 .news-latest__block {
   display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
   @extend %_cut_val-24;
 }
