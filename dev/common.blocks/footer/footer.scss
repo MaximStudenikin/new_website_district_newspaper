@@ -1,67 +1,16 @@
-.footer
-{
+.footer {
   display: flex;
-  align-self: flex-end;
-  background: $dark-violet;
-
-  &__container
-  {
-    display: flex;
-    padding: rem(15px) 0;
-    justify-content: space-around;
-    margin: auto;
-    width: 95%;
-    max-width: 1200px;
-    min-width: 320px;
-    @include tablets
-    {
-      flex-direction: column;
-      align-items: center;
-    }
-  }
-
-  &__col
-  {
-    @include grid-col(12 8 8 8);
-  }
-
-  &__nav{
-    display: flex;
-    @include phones{
-      flex-direction: column;
-    }
-  }
-
-  &__text
-  {
-    margin: rem(15px) 0 0 0;
-  }
-
-  &__app{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-  }
-}
-
-.app {
-  &__list {
-    display: flex;
-    margin: rem(25px) 0 0 0;
-    @include desktop{
-      flex-direction: column;
-    }
-  }
-  &__item{
-    padding: 0 rem(25px) 0 0;
-    &:last-child{
-      padding: 0;
-    }
-  }
-  &__icon {
-    width: 80px;
-    height: 80px;
-    fill: $white;
-  }
+  flex-direction: column;
+  background: $black;
+  @import '__logo.scss';
+  @import '__heading.scss';
+  @import '__row.scss';
+  @import '__block.scss';
+  @import '__block-colum.scss';
+  @import '__app.scss';
+  @import '__col.scss';
+  @import '__container.scss';
+  @import '__link.scss';
+  @import '__nav.scss';
+  @import '__nav.scss';
 }
