@@ -1,0 +1,16 @@
+.apps {
+  &__list {
+    display: flex;
+    margin: rem(25px) 0 0 0;
+  }
+
+  &__item {
+    padding: 0 rem(25px) 0 0;
+  }
+
+  &__icon {
+    width: 80px;
+    height: 80px;
+    fill: $white;
+  }
+}
