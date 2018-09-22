@@ -1,0 +1,4 @@
+&_direction_colum {
+  flex-direction: column;
+  @extend %limiter;
+}

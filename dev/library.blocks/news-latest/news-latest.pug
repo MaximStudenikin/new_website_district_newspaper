@@ -6,7 +6,7 @@ mixin news-latest__item(itemName, imgSrc, data, title, imgSize)
 				when 0
 					.img-mini
 						img.img-teg(src= imgSrc, alt='alt')
-					.news-latest__row
+					.text-field
 						a(href='article.html').link= title			
 						time(datetime= dataTime).post-data= dataTime
 				when 1
