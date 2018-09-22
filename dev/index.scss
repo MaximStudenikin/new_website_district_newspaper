@@ -1,8 +1,16 @@
 //colors
-$dark-violet: #6c3751;
-$red: #d80000;
-$yellow: #ffc600;
-$black: #000;
+$red-origin: #F33;
+$red-shade: #c33;
+$red-tint: #f66;
+$red-pastel: #fcc;
+$red-light-gradient: linear-gradient(to bottom, #ff3333, #ff6666);
+$red-dark-gradient: linear-gradient(to bottom, #ff3333, #cc3333);
+$black-origin: #333;
+$black-shade: #000;
+$black-tint: #666;
+$black-pastel: #ccc;
+$black-light-gradient: linear-gradient(to bottom, #333333, #666666);
+$black-dark-gradient: linear-gradient(to bottom, #333333, #000000);
 $white : #fff;
 $invisible: transparent;
 
