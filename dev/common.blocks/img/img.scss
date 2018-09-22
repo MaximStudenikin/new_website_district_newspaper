@@ -1,0 +1,10 @@
+.img {
+  display: block;
+  overflow: hidden;
+
+  @import './_default.scss';
+  @import './_full.scss';
+  @import './_mini.scss';
+  @import './_post.scss';
+  @import './_small.scss';
+}
