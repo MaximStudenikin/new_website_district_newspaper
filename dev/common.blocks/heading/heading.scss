@@ -1,9 +1,13 @@
 .heading {
-  @include noto-sans__bold;
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
   font-weight: 700;
-  font-style: normal;
-  font-size: rem(24px);
-  color: #000;
+  font-style: bold;
 
   @import './_color_white.scss';
+  @import './_size_h1.scss';
+  @import './_size_h2.scss';
+  @import './_size_h3.scss';
+  @import './_size_h4.scss';
+  @import './_size_h5.scss';
+  @import './_size_h6.scss';
 }
