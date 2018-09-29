@@ -41,7 +41,7 @@
 	{
     @include noto-sans__bold;
     font-size: rem(16px);
-		color: $black;
+		color: $black-origin;
 		padding: 0;
 		@extend %_cut_val-12;
 		@include phones
