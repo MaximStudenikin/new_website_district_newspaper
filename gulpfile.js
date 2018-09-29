@@ -145,7 +145,7 @@ function serve() {
 	browserSync.init({
 		server: {
 			baseDir: paths.build,
-			index: "list.html"
+			index: "index.html"
 		},
 		ghostMode: {
 			clicks: true,
