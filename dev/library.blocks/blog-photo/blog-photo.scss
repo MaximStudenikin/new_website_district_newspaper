@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: $black;
+  background: $black-origin;
   width: 100%;
   overflow: hidden;
   @extend %_cut_val-48;
@@ -62,7 +62,7 @@
       bottom: 0;
       right: 0;
       opacity: 0;
-      background-color: transparentize($red, .25);
+      background-color: transparentize($red-origin, .25);
     }
   }
 }

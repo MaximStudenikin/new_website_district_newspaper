@@ -1,12 +1,12 @@
-.serch-form__input
+&__input
 {
   box-sizing: border-box;
   width: 20px;
   height: 20px;
-  border: 2px solid $black;
+  border: 2px solid $black-origin;
   border-radius: 50%;
   background: none;
-  color: $black;
+  color: $black-origin;
   transition: width 0.4s ease-in-out, border-radius 0.8s ease-in-out, padding 0.2s;
   transition-delay: 0.4s;
   transform: translate(-100%, -50%);

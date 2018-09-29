@@ -1,18 +1,27 @@
 section.main-news
-	.main-news__block
-		.main-news__item.main-news__item_size_big(style='background-image: url(https://source.unsplash.com/user/hellocolor/1200x900)')
-			.main-news__item-content
-				time.post-date.post-date_color_whote(datetime="17.02.2018") 17 Февраля 2018
-				a.link.main-news__link(href='article.html')
-					span.heading.main-news__heading Экспериментальный феномен толпы
-	.main-news__block.main-news__block_direction_column
-		.main-news__item.main-news__item_size_midline._no_margin(style='background-image: url(https://source.unsplash.com/user/nikolayv/1200x900)')
-			.main-news__item-content
-				time.post-date.post-date_color_whote(datetime="17.02.2018") 17 Февраля 2018
-				a.link.main-news__link(href='article.html')
-					span.heading.main-news__heading Феномен толпы
-		.main-news__item.main-news__item_size_midline(style='background-image: url(https://source.unsplash.com/user/jaycalabresephotography/1200x900)')
-			.main-news__item-content
-				time.post-date.post-date_color_whote(datetime="17.02.2018") 17 Февраля 2018
-				a.link.main-news__link(href='article.html')
-					span.heading.main-news__heading Экспериментальные толпы
+	.main-news__full-block
+		.main-news__full-img(style='background-image: url(https://source.unsplash.com/user/nikolayv/1200x900)')
+		img._visually_hidden(src="https://source.unsplash.com/user/nikolayv/1200x900", alt="alt")
+		.main-news__text-block.main-news__text-block_full
+			.label
+			time(datetime="17.02.2018").post-data.main-news__post-data 17 Февраля 2018
+			a(href='article.html').heading.heading_size_h4.heading_color_white Тема: «Экзистенциальный художественный ритуал: снижение или англо-американский тип политической культуры?» 
+	.main-news__list
+		.main-news__item
+			.img.img_default
+				img.img-teg(src="https://source.unsplash.com/user/nikolayv/1200x900", alt="alt")
+			.main-news__text-block
+				a(href='article.html').heading.heading_size_h5.heading_color_white Культ личности означает аутотренинг
+				time(datetime="17.02.2018").post-data.main-news__post-data 17 Февраля 2018
+		.main-news__item
+			.img.img_default
+				img.img-teg(src="https://source.unsplash.com/user/nikolayv/1200x900", alt="alt")
+			.main-news__text-block
+				a(href='article.html').heading.heading_size_h5.heading_color_white Тема: «Экзистенциальный художественный ритуал: снижение или англо-американский тип политической культуры?» 
+				time(datetime="17.02.2018").post-data.main-news__post-data 17 Февраля 2018
+		.main-news__item
+			.img.img_default
+				img.img-teg(src="https://source.unsplash.com/user/nikolayv/1200x900", alt="alt")
+			.main-news__text-block
+				a(href='article.html').heading.heading_size_h5.heading_color_white Художественный ритуал: снижение или англо-американский тип политической культуры
+				time(datetime="17.02.2018").post-data.main-news__post-data 17 Февраля 2018

@@ -1,4 +1,4 @@
-.serch-form__button_close
+&__button_close
 {
   transition: 0.4s ease-in-out;
   transition-delay: 0.4s;
@@ -10,7 +10,7 @@
     height: 2px;
     margin-top: -1px;
     margin-left: -13px;
-    background: $black;
+    background: $black-origin;
     transform: rotate(45deg);
   }
   &:before

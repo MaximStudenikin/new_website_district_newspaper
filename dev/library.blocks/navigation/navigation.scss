@@ -1,4 +1,6 @@
-.nav
-{
-	display: block;
+.navigation {
+	@import "__list";
+	@import "__item";
+	@import "__link";
+	@import "__link_hover";
 }

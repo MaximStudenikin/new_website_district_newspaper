@@ -1,17 +1,61 @@
-@import './__block/__block.scss';
-@import './__block/__block_direction_column.scss';
-
-@import './__item/__item.scss';
-@import './__item/__item_size_big.scss';
-@import './__item/__item-content.scss';
-
-@import './__link.scss';
-@import './__heading.scss';
-@import './__post-data.scss';
-
 .main-news {
   display: flex;
-  position: relative;
+  flex-direction: column;
+  align-items: center;
+  background: $black-shade;
   width: 100%;
+  padding: 0 0 25px 0;
   overflow: hidden;
+  &__full-block{
+    position: relative;
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+  }
+  &__full-img {
+    width: 100%;
+    height: 600px;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    &::after {
+      z-index: 1;
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: linear-gradient(transparent 0%, transparent 50%, rgba(0, 0, 0, 0.1) 56%, rgba(0, 0, 0, 0.6) 93%, rgba(0, 0, 0, 0.59) 100%);
+    }
+  }
+  &__text-block {
+    bottom: rem(20px);
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    @extend %_cut_val-12;
+    &_full {
+      position: absolute;
+      padding: 0 1%;
+      width: 50%;
+    }
+  }
+  &__post-data {
+    color: $white;
+  }
+  &__list {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    @extend %_cut_val-30;
+  }
+  &__item {
+    position: relative;
+    width: 26%;
+    margin: 0 rem(24px) 0 0;
+    &:last-child {
+      margin: 0;
+    }
+  }
 }

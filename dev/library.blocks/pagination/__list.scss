@@ -1,7 +1,7 @@
 .pagination__list {
   display: flex;
   margin: auto;
-  color: $black;
+  color: $black-origin;
   @include roboto-regular;
   font-size: rem(26px);
   justify-content: center;

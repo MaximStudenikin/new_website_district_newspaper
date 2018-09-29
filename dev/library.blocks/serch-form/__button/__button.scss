@@ -1,4 +1,4 @@
-.serch-form__button
+&__button
 {
   background: none;
   position: absolute;
@@ -20,7 +20,7 @@
     position: absolute;
     width: 11px;
     height: 2px;
-    background: $black;
+    background: $black-origin;
     transform: rotate(45deg);
     margin-top: 13px;
     margin-left: 20px;

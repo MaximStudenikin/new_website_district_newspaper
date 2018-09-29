@@ -1,7 +1,5 @@
-.nav__link_hover
-{
-  &:hover
-  {
-    color: $yellow;
+&__link_hover {
+  &:hover {
+    color: $red-origin;
   }
 }
