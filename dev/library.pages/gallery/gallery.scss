@@ -10,7 +10,6 @@
 				width: 100%;
 				position: relative;
 				overflow: hidden;
-				@extend %_cut_val-48;
 		}
 		&__list {
 				display: flex;
@@ -18,49 +17,20 @@
 				justify-content: flex-start;
 				width: 100%;
 				left: 0;
-				@include desktop {
-						width: 98%;
-						height: 100%;
-						padding: 0 5%;
-				}
-				@include phones {
-						width: 99%;
-				}
 		}
 		&__item {
 				display: flex;
 				flex-direction: column;
 				padding: 0 8%;
-				@include desktop {
-						padding: 0 35%;
-						&:first-child {
-								padding: 0 30%;
-						}
-				}
-				@include phones{
-					padding: 0;
-					&:first-child {
-						padding: 0 2%;
-				}
-				}
 		}
 		&__row {
 				display: flex;
 				width: 100%;
-				@include desktop {
-						margin: 0;
-						flex-direction: column;
-				}
 		}
 		&__controls {
 				top: 45%;
 				height: 6%;
 				z-index: 10;
-				@include desktop {
-						position: absolute;
-						top: 720px;
-						width: 75%;
-				}
 		}
 		&__link {
 				position: relative;
@@ -70,15 +40,6 @@
 				cursor: pointer;
 				filter: grayscale(70%);
 				padding: 0 10px 0 0;
-				&:last-child {
-						padding: 0;
-				}
-				@include tablets {
-						padding: 0 2% 0 0;
-				}
-				@include phones {
-						padding: 0 1%;
-				}
 		}
 		&__link--hover:hover {
 				filter: grayscale(0);
@@ -108,17 +69,10 @@
 		&__item {
 				display: flex;
 				margin: rem(25px) 0 0 0;
-				@include tablets {
-						flex-direction: column;
-				}
 		}
 		&__description {
 				width: 60%;
 				padding: 0 rem(25px);
-				@include phones {
-						margin: rem(25px) 0 0 0;
-						width: 100%;
-				}
 		}
 }
 
@@ -143,7 +97,6 @@
 				position: absolute;
 				width: 50px;
 				height: 50px;
-				background: $yellow;
 		}
 		&:after {
 				position: absolute;
