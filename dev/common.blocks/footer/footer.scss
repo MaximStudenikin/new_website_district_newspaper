@@ -1,7 +1,8 @@
 .footer {
   display: flex;
   flex-direction: column;
-  background: $black;
+  background: $black-shade;
+  align-self: flex-end;
   @import '__logo.scss';
   @import '__heading.scss';
   @import '__row.scss';
