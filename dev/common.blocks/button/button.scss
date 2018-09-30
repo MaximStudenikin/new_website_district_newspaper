@@ -1,0 +1,26 @@
+.button {
+  position: relative;
+  font-size: rem(16px);
+  font-weight: bold;
+  background: $red-origin;
+  color: $white;
+  text-transform: uppercase;
+  padding: rem(10px) rem(20px);
+
+  &_line {
+      border: solid $white;
+      border-width: 10px 20px;
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 45%;
+      left: -36vw;
+      background: #000;
+      width: 77.6vw;
+      height: 2px;
+      z-index: -1;
+    }
+  }
+
+}
