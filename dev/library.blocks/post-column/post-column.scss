@@ -1,0 +1,13 @@
+.post-column {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 0 rem(24px) 0 0;
+  overflow: hidden;
+  &:last-child{
+    margin: 0;
+  }
+  @import './__item';
+  @import './__link';
+  @import './__list';
+}
