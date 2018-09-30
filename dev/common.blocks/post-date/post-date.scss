@@ -1,7 +1,9 @@
-.post-date {
-  font-size: rem(12px);
+.post-data {
+  font-size: rem(16px);
   letter-spacing: rem(2px);
   text-transform: uppercase;
   z-index: 2;
+
   @extend %_cut_val-12;
+  @import './_color_white.scss';
 }
