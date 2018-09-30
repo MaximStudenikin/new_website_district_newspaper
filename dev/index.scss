@@ -24,23 +24,32 @@ $invisible: transparent;
 @import "./common.mod/limiter";
 @import "./common.mod/_visually_hidden";
 @import "./common.mod/_cut/_cut_val-30";
+@import "./common.mod/_cut/_cut_val-24";
 @import "./common.mod/_cut/_cut_val-12";
-
 
 // common.blocks
 @import "./common.blocks/page/page.scss";
+@import "./common.blocks/button/button.scss";
 @import "./common.blocks/heading/heading.scss";
 @import "./common.blocks/text/text.scss";
+@import "./common.blocks/post-date/post-date.scss";
 @import "./common.blocks/logo/logo.scss";
 @import "./common.blocks/link/link.scss";
 @import "./common.blocks/img/img.scss";
+@import "./common.blocks/card/card-default/card-default.scss";
+@import "./common.blocks/card/card-default_white/card-default_white.scss";
+@import "./common.blocks/card/card-mini/card-mini.scss";
+@import "./common.blocks/card/card-gallery-photo/card-gallery-photo.scss";
 @import "./common.blocks/header/header.scss";
 @import "./common.blocks/footer/footer.scss";
 
 // library.blocks
 @import "./library.blocks/navigation/navigation.scss";
 @import "./library.blocks/serch-form/serch-form";
+@import "./library.blocks/section-header/section-header";
 @import "./library.blocks/main-news/main-news";
+@import "./library.blocks/post-column/post-column";
+@import "./library.blocks/post-gallery/post-gallery";
 
 
 // layout

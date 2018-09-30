@@ -41,9 +41,6 @@
       width: 50%;
     }
   }
-  &__post-data {
-    color: $white;
-  }
   &__list {
     display: flex;
     justify-content: center;
@@ -52,8 +49,9 @@
   }
   &__item {
     position: relative;
-    width: 26%;
+    width: 25%;
     margin: 0 rem(24px) 0 0;
+    overflow: hidden;
     &:last-child {
       margin: 0;
     }
