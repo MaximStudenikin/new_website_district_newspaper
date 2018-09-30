@@ -1,0 +1,5 @@
+&__limiter-column {
+  display: flex;
+  @extend %limiter;
+  @extend %_cut_val-24;
+}

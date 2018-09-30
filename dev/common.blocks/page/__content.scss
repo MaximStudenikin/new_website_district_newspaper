@@ -1,7 +1,9 @@
 &__content {
   position: relative;
-  top: 12%;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
+  top: 12%;
   @import "./_direction_colum";
 }

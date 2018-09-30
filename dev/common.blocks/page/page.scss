@@ -5,6 +5,5 @@
   width: 100%;
   transition: transform 500ms ease;
   @import "./__content";
-  @import "./__block-center";
-  @import "./__block";
+  @import "./__limiter-column";
 }
