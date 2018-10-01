@@ -11,7 +11,9 @@
     background: $black-shade;
   }
   &_post-add {
-    height: auto;
+    .post-gallery__list{
+    padding: 0 0 4% 0;
+    }
   }
   &__list {
     display: flex;

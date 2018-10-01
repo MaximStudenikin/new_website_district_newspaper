@@ -1,8 +1,10 @@
 .footer {
+  position: relative;
   display: flex;
   flex-direction: column;
-  background: $black-shade;
+  background: #000;
   align-self: flex-end;
+  bottom: -15%;
   @import '__logo.scss';
   @import '__heading.scss';
   @import '__row.scss';

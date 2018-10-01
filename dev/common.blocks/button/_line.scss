@@ -1,0 +1,15 @@
+&_line {
+  border: solid $white;
+  border-width: 10px 20px;
+&::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 45%;
+  left: -36vw;
+  background: #000;
+  width: 77.6vw;
+  height: 2px;
+  z-index: -1;
+}
+}

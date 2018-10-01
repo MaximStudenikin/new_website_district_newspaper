@@ -3,6 +3,5 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-	@extend %limiter;
-	padding: 1% 0;
+  @extend %limiter;
 }

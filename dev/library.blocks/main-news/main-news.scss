@@ -6,6 +6,7 @@
   width: 100%;
   padding: 0 0 25px 0;
   overflow: hidden;
+  @extend %_cut_val-30;
   &__full-block{
     position: relative;
     display: flex;
@@ -37,8 +38,8 @@
     @extend %_cut_val-12;
     &_full {
       position: absolute;
-      padding: 0 1%;
-      width: 50%;
+      width: 121vh;
+      margin: 0 0 0 2vw;
     }
   }
   &__list {

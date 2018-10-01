@@ -5,12 +5,17 @@ include ../base
 		.page
 			include ../../common.blocks/header/header
 			.page__content
+				section.section-header.section-header_item-center
+					.section-header__first-column
+						a(href="#").button.button_hover Написать в редакцию
+					.section-header__end-column
+						include ../../common.blocks/social-networks/social-networks
 				include ../../library.blocks/main-news/main-news
 				section.section-header
 					.section-header__first-column
-						a(href="list.html").heading.heading_size_h2 Новости
+						a(href="list.html").button.button_hover Все новости
 					.section-header__end-column
-						a(href="list.html").heading.heading_size_h2 Афиша
+						a(href="list.html").button.button_hover Все афиши
 				.page__limiter-column
 					include ../../library.blocks/post-column/post-column
 					include ../../library.blocks/post-column/post-column
@@ -20,24 +25,26 @@ include ../base
 				include ../../library.blocks/post-gallery/post-gallery_photo-gallery
 				section.section-header
 					.section-header__first-column
-						a(href="list.html").heading.heading_size_h2 Название секции
+						a(href="list.html").button.button_hover Название секции
 					.section-header__center-column
-						a(href="list.html").heading.heading_size_h2 Название секции
+						a(href="list.html").button.button_hover Название секции
 					.section-header__end-column
-						a(href="list.html").heading.heading_size_h2 Название секции
+						a(href="list.html").button.button_hover Название секции
 				.page__limiter-column
 					include ../../library.blocks/post-column/post-column
 					include ../../library.blocks/post-column/post-column
 					include ../../library.blocks/post-column/post-column
 				section.section-header
 					.section-header__first-column
-						a(href="list.html").heading.heading_size_h2 Название секции
+						a(href="list.html").button.button_hover Название секции
 					.section-header__center-column
-						a(href="list.html").heading.heading_size_h2 Название секции
+						a(href="list.html").button.button_hover Название секции
 					.section-header__end-column
-						a(href="list.html").heading.heading_size_h2 Название секции
+						a(href="list.html").button.button_hover Название секции
 				.page__limiter-column
 					include ../../library.blocks/post-column/post-column
 					include ../../library.blocks/post-column/post-column
 					include ../../library.blocks/post-column/post-column
+				include ../../library.blocks/post-gallery/post-gallery_photo-gallery
+				include ../../library.blocks/post-gallery/post-gallery_banners-add
 			include ../../common.blocks/footer/footer

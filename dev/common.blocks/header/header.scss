@@ -8,7 +8,9 @@
   position: fixed;
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 100%;
   z-index: 998;
+  padding: 1% 0;
   background: $white;
 }

@@ -82,41 +82,41 @@ function script() {
 }
 
 //img
-function img() {
-	return gulp.src(paths.src + 'img/**/*.{jpg,png}')
-		.pipe(image({
-			pngquant: true,
-			optipng: false,
-			zopflipng: true,
-			jpegRecompress: false,
-			mozjpeg: true,
-			guetzli: false,
-			gifsicle: true,
-			svgo: true,
-			concurrent: 10
-		}))
-		.pipe(rename({ suffix: "_min" }))
-		.pipe(gulp.dest(paths.build + 'img/'))
-}
+// function img() {
+// 	return gulp.src(paths.src + 'img/**/*.{jpg,png}')
+// 		.pipe(image({
+// 			pngquant: true,
+// 			optipng: false,
+// 			zopflipng: true,
+// 			jpegRecompress: false,
+// 			mozjpeg: true,
+// 			guetzli: false,
+// 			gifsicle: true,
+// 			svgo: true,
+// 			concurrent: 10
+// 		}))
+// 		.pipe(rename({ suffix: "_min" }))
+// 		.pipe(gulp.dest(paths.build + 'img/'))
+// }
 
-//fonts
-function minifyFont(text, cb) {
-	gulp.src(paths.src + 'fonts/*')
-		.pipe(fontmin({ text: text }))
-		.pipe(gulp.dest(paths.build + 'fonts'))
-		.on('end', cb);
-}
-gulp.task('fonts', function (cb) {
-	var buffers = [];
-	gulp.src('./build/index.html')
-		.on('data', function (file) {
-			buffers.push(file.contents);
-		})
-		.on('end', function () {
-			var text = Buffer.concat(buffers).toString('utf-8');
-			minifyFont(text, cb);
-		});
-});
+// //fonts
+// function minifyFont(text, cb) {
+// 	gulp.src(paths.src + 'fonts/*')
+// 		.pipe(fontmin({ text: text }))
+// 		.pipe(gulp.dest(paths.build + 'fonts'))
+// 		.on('end', cb);
+// }
+// gulp.task('fonts', function (cb) {
+// 	var buffers = [];
+// 	gulp.src('./build/index.html')
+// 		.on('data', function (file) {
+// 			buffers.push(file.contents);
+// 		})
+// 		.on('end', function () {
+// 			var text = Buffer.concat(buffers).toString('utf-8');
+// 			minifyFont(text, cb);
+// 		});
+// });
 
 //svg
 function svg() {
@@ -125,7 +125,7 @@ function svg() {
 			baseSize: 16,
 			mode: "symbols"
 		}))
-		.pipe(gulp.dest(paths.build + "img/svg"))
+		.pipe(gulp.dest(paths.build + "img/"))
 }
 
 function remov() {
@@ -162,7 +162,6 @@ function serve() {
 exports.html = html;
 exports.style = style;
 exports.script = script;
-exports.img = img;
 exports.svg = svg;
 exports.remov = remov;
 exports.watch = watch;
@@ -176,7 +175,6 @@ gulp.task('build', gulp.series(
 
 gulp.task('default', gulp.series(
 	remov,
-	gulp.parallel(style, script, html, svg, img),
-	gulp.series(['fonts']),
+	gulp.parallel(style, script, html, svg),
 	gulp.parallel(watch, serve)
 ));

@@ -1,8 +1,6 @@
-.link_hover_bg
-{
-	&:hover
-	{
+.link_hover_bg {
+	&:hover {
 		background: $yellow;
 		color: $black-origin;
-  }
+	}
 }
