@@ -1,0 +1,20 @@
+.icon-default {
+  width: 45px;
+  height: 45px;
+  &:hover{
+    opacity: 0.8;
+  }
+}
+
+.icon-list {
+  display: flex;
+  &__item {
+    padding: 0 rem(15px) 0 0;
+    &:last-child {
+      padding: 0;
+    }
+    &_end-cut {
+        padding: 0 rem(95px) 0 0;
+    }
+  }
+}

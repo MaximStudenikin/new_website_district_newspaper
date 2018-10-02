@@ -15,7 +15,11 @@
     position: absolute;
     left: 68%;
   }
-  &_item-center{
+  &__end-column-items-end {
+    position: absolute;
+    right: 0;
+  }
+  &_items-center{
     align-items: center;
   }
   @extend %limiter;

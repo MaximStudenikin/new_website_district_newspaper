@@ -1,18 +1,16 @@
-.cloud {
-  &__tegs {
+.teg-cloud {
       display: flex;
       flex-wrap: wrap;
-  }
-  &__teg {
-      font-size: rem(13px);
-      color: $black-origin;
-      opacity: .5;
-      padding: 0 rem(5px);
+      @extend %_cut_val-24;
+  &__item {
+      font-size: rem(18px);
+      color: $white;
+      padding: 0 rem(15px) 0 0;
       &:hover {
-          opacity: .9;
+          opacity: .8;
       }
   }
-  &__pop__teg {
+  &__pop__item {
       color: $red-origin;
       text-transform: uppercase;
       opacity: .6;

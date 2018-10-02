@@ -2,18 +2,12 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  align-items: center;
   background: #000;
   align-self: flex-end;
   bottom: -15%;
-  @import '__logo.scss';
-  @import '__heading.scss';
+  
   @import '__row.scss';
-  @import '__block.scss';
-  @import '__block-colum.scss';
-  @import '__app.scss';
-  @import '__col.scss';
-  @import '__container.scss';
-  @import '__link.scss';
-  @import '__nav.scss';
-  @import '__nav.scss';
+  @import '__group.scss';
+  @import '__group-collun-2.scss';
 }

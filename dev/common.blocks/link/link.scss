@@ -1,4 +1,6 @@
 .link {
   display: block;
   cursor: pointer;
+  @import './_color_white.scss';
+  @import './_important.scss';
 }
