@@ -3,11 +3,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #000;
+  background: $black-shade;
   align-self: flex-end;
   bottom: -15%;
+  width: 100%;
+  padding: rem(25px) 0;
   
   @import '__row.scss';
   @import '__group.scss';
+  @import '__group-row.scss';
   @import '__group-collun-2.scss';
 }

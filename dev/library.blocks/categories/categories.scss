@@ -1,78 +1,17 @@
 .categories {
-  position: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  left: 0;
-  right: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(108, 55, 81, .98);
-  z-index: 999;
-  overflow: hidden;
-}
-
-/*!
- * jQuery Accordion 0.0.1
- * (c) 2014 Victor Fernandez <victor@vctrfrnndz.com>
- * MIT Licensed.
- */
-
-/* Requirements */
-
-[data-accordion] [data-content] {
-  overflow: hidden;
-  max-height: 0;
-}
-
-/* Basic Theme */
-
-[data-accordion] {
-  line-height: 1;
-}
-
-[data-control],
-[data-content] > * {
   display: flex;
   flex-direction: column;
-  padding: 10px;
-}
+  width: 11vw;
 
-[data-content] [data-accordion] {
-  border: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  @include noto-sans__bold;
-}
+  &__list{
+    display: flex;
+    flex-direction: column;
+    @extend %_cut_val-12;
+  }
 
-[data-accordion] [data-control] {
-  position: relative;
-  padding-right: 40px;
-}
+  &__item{
+    margin: rem(15px) 0 0 0;
+    word-break: break-all;
+  }
 
-[data-control] {
-  color: $yellow;
-  font-size: rem(20px);
-  display: flex;
-  text-transform: uppercase;
-  @include noto-sans__bold;
-}
-
-[data-accordion] > [data-control]:after {
-  content: "";
-  height: 0;
-  width: 0;
-  border: 5px solid transparent;
-  border-bottom-width: 0;
-  border-top-color: $yellow;
-  margin: 0 rem(9px) 0 0;
-}
-
-[data-accordion].open > [data-control]:after {
-  color: $yellow;
-  -webkit-transform: rotate(-180deg); 
-  -ms-transform: rotate(-180deg); 
-  transform: rotate(-180deg); 
 }

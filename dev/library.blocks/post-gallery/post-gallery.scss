@@ -20,6 +20,12 @@
     flex-flow: wrap;
     justify-content: center;
     width: 100%;
+    &_banners{
+      justify-content: space-between;
+      .post-gallery__item{
+        width: 32%;
+      }
+    }
   }
   &__item {
     position: relative;
@@ -30,6 +36,7 @@
       margin: rem(15px) 0 0 0;
     }
   }
+  
   &__post-add {
     position: absolute;
     bottom: 0;

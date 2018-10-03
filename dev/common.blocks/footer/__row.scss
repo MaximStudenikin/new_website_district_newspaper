@@ -1,7 +1,7 @@
 &__row{
   display: flex;
   justify-content: space-between;
-  padding: rem(15px) 0;
   width: 100%;
   @extend %limiter;
+  @extend %_cut_val-24;
 }

@@ -1,6 +1,7 @@
 .section-header {
   display: flex;
   position: relative;
+  align-items: center;
   width: 78%;
   height: 3.5vh;
   &__first-column {
@@ -18,9 +19,6 @@
   &__end-column-items-end {
     position: absolute;
     right: 0;
-  }
-  &_items-center{
-    align-items: center;
   }
   @extend %limiter;
   @extend %_cut_val-24;
