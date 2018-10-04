@@ -3,22 +3,40 @@
   position: relative;
   align-items: center;
   width: 78%;
-  height: 3.5vh;
+  height: 5vh;
   &__first-column {
     position: absolute;
+    display: flex;
+    align-items: center;
     left: 0;
+    height: 6vh;
   }
   &__center-column {
     position: absolute;
+    display: flex;
+    align-items: center;
     left: 34%;
+    height: 6vh;
   }
   &__end-column {
     position: absolute;
+    display: flex;
+    align-items: center;
     left: 68%;
+    height: 6vh;
   }
   &__end-column-items-end {
     position: absolute;
+    display: flex;
+    align-items: center;
     right: 0;
+    height: 6vh;
+  }
+  &__header-page{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   @extend %limiter;
   @extend %_cut_val-24;
@@ -28,4 +46,5 @@
     background: $black-pastel;
     width: 100%;
     max-width: 100%;
+    height: 15vh;
 }

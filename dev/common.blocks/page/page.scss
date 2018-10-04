@@ -7,5 +7,6 @@
   transition: transform 500ms ease;
   @import "./__content";
   @import "./__limiter-column";
-  @import "./__block-сolumn";
+  @import "./__block-сolumn.scss";
+  @import "./__content_list-page";
 }
