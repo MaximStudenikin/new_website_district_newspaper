@@ -23,3 +23,9 @@
   @extend %limiter;
   @extend %_cut_val-24;
 }
+
+.section-header_page-header{
+    background: $black-pastel;
+    width: 100%;
+    max-width: 100%;
+}

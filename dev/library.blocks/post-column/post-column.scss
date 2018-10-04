@@ -7,7 +7,9 @@
   &:last-child{
     margin: 0;
   }
+  
   @import './__item';
   @import './__link';
   @import './__list';
+  @import './_promo-list';
 }

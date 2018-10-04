@@ -1,0 +1,16 @@
+mixin post-column__item(itemName,imgSize)
+	- var dataTime = data
+	- var bigImg = imgSize
+		li(class=itemName)
+			case bigImg
+				when 0
+					include ../../common.blocks/card/card-mini/card-mini
+				when 1
+					include ../../common.blocks/card/card-default/card-default
+
+section.post-column
+	ul.post-column__list
+		+post-column__item('post-column__item', 0)
+		+post-column__item('post-column__item', 0)
+		+post-column__item('post-column__item', 0)
+		+post-column__item('post-column__item', 0)

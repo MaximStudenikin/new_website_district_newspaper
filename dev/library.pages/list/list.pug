@@ -1,57 +1,22 @@
 include ../base
 	block head
-		title Москва За Калужской заставой | Все новости
+		title Москва За Калужской заставой
 	block content
 		.page
 			include ../../common.blocks/header/header
 			.page__content
-				span.heading Новости
-				.page__block
-					ul.list
-						li.list__item
-							.img-small
-								img.img-teg(src='https://source.unsplash.com/user/joelfilip/1200x900', alt='alt')
-							.text-field
-								a.link(href='article.html') Lorem ipsum dolor sit amet
-								a.link(href='article.html')
-									p.text.list__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab assumenda cupiditate debitis distinctio error esse facere fuga fugiat id illo in libero nostrum obcaecati officia placeat, qui rem totam vel.
-								time.post-data(datetime="17.02.2018") 17 Февраля 2018
-						li.list__item
-							.img-small
-								img.img-teg(src='https://source.unsplash.com/user/joelfilip/1200x900', alt='alt')
-							.text-field
-								a.link(href='article.html') Lorem ipsum dolor sit amet
-								a.link(href='article.html')
-									p.text.list__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab assumenda cupiditate debitis distinctio error esse facere fuga fugiat id illo in libero nostrum obcaecati officia placeat, qui rem totam vel.
-								time.post-data(datetime="17.02.2018") 17 Февраля 2018
-						li.list__item
-							.img-small
-								img.img-teg(src='https://source.unsplash.com/user/joelfilip/1200x900', alt='alt')
-							.text-field
-								a.link(href='article.html') Lorem ipsum dolor sit amet
-								a.link(href='article.html')
-									p.text.list__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab assumenda cupiditate debitis distinctio error esse facere fuga fugiat id illo in libero nostrum obcaecati officia placeat, qui rem totam vel.
-								time.post-data(datetime="17.02.2018") 17 Февраля 2018
-						li.list__item
-							.img-small
-								img.img-teg(src='https://source.unsplash.com/user/joelfilip/1200x900', alt='alt')
-							.text-field
-								a.link(href='article.html') Lorem ipsum dolor sit amet
-								a.link(href='article.html')
-									p.text.list__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab assumenda cupiditate debitis distinctio error esse facere fuga fugiat id illo in libero nostrum obcaecati officia placeat, qui rem totam vel.
-								time.post-data(datetime="17.02.2018") 17 Февраля 2018
-						li.list__item
-							.img-small
-								img.img-teg(src='https://source.unsplash.com/user/joelfilip/1200x900', alt='alt')
-							.text-field
-								a.link(href='article.html') Lorem ipsum dolor sit amet
-								a.link(href='article.html')
-									p.text.list__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab assumenda cupiditate debitis distinctio error esse facere fuga fugiat id illo in libero nostrum obcaecati officia placeat, qui rem totam vel.
-								time.post-data(datetime="17.02.2018") 17 Февраля 2018
-					.pagination.list__pagination
-						ul.pagination__list
-							li.pagination__item
-								a.pagination__link.pagination__link--activ(href='#') 1
-				.page__block
-					include ../../library.blocks/img-widget/img-widget
+				section.section-header.section-header_page-header
+					.section-header__first-column
+						a(href="#").button.button_hover Название секции
+				.page__limiter-column
+					include ../../library.blocks/post-column/post-column_promo-list
+					.page__block-column
+						section.section-header
+							.section-header__first-column
+								a(href="#").button.button_hover Название секции
+						include ../../library.blocks/post-column/post-column
+						section.section-header
+							.section-header__first-column
+								a(href="#").button.button_hover Название секции
+						include ../../library.blocks/post-column/post-column-small
 			include ../../common.blocks/footer/footer
