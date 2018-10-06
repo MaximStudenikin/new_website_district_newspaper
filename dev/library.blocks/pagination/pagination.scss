@@ -1,6 +1,9 @@
-.pagination
-{
+.pagination {
   position: relative;
   display: flex;
-  width: 100%;
+
+  @import '__list';
+  @import '__item';
+  @import '__link';
+  @import '__item_activ';
 }

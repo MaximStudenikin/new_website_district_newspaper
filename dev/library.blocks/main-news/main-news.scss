@@ -6,42 +6,6 @@
   width: 100%;
   padding: 0 0 25px 0;
   overflow: hidden;
-  @extend %_cut_val-30;
-  &__full-block{
-    position: relative;
-    display: flex;
-    width: 100%;
-    overflow: hidden;
-  }
-  &__full-img {
-    width: 100%;
-    height: 600px;
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
-    &::after {
-      z-index: 1;
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      background: linear-gradient(transparent 0%, transparent 50%, rgba(0, 0, 0, 0.1) 56%, rgba(0, 0, 0, 0.6) 93%, rgba(0, 0, 0, 0.59) 100%);
-    }
-  }
-  &__text-block {
-    bottom: rem(20px);
-    display: flex;
-    flex-direction: column;
-    z-index: 2;
-    @extend %_cut_val-12;
-    &_full {
-      position: absolute;
-      width: 121vh;
-      margin: 0 0 0 2vw;
-    }
-  }
   &__list {
     display: flex;
     justify-content: center;

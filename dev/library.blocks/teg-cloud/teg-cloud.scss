@@ -1,7 +1,6 @@
 .teg-cloud {
       display: flex;
       flex-wrap: wrap;
-      @extend %_cut_val-24;
   &__item {
       font-size: rem(18px);
       color: $white;

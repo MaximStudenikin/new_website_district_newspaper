@@ -1,0 +1,9 @@
+&__item_active {
+    pointer-events: none;
+    cursor: default;
+    
+    .pagination__link{
+        color: $white;
+        background: $black-pastel;
+    }
+}

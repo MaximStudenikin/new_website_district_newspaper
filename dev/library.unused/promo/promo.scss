@@ -1,53 +1,50 @@
-.promo
-{
+.promo {
 	position: relative;
 	display: flex;
 	width: 100%;
 	overflow: hidden;
 	flex-direction: column;
 	@extend %_cut_val-48;
-	
-	&__list
-	{
+
+	&__list {
 		display: flex;
 		justify-content: flex-start;
 		@extend %_cut_val-6;
-		@include phones
-		{
+
+		@include phones {
 			position: relative;
 			width: 100%;
 		}
 	}
 
-	&__item
-	{
+	&__item {
 		padding: 0 rem(15px) 0 0;
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-start;
 		flex-basis: 50%;
-		&:last-child
-		{
-				padding: 0;
+
+		&:last-child {
+			padding: 0;
 		}
-		@include phones
-		{
+
+		@include phones {
 			display: flex;
 			position: relative;
 			padding: 0;
 		}
 	}
-	&__link
-	{
-    @include noto-sans__bold;
-    font-size: rem(16px);
+
+	&__link {
+		@include noto-sans__bold;
+		font-size: rem(16px);
 		color: $black-origin;
 		padding: 0;
 		@extend %_cut_val-12;
-		@include phones
-		{
-      font-size: rem(20px);
-      width: 100%;
-    }
-}
+
+		@include phones {
+			font-size: rem(20px);
+			width: 100%;
+		}
+	}
 }
