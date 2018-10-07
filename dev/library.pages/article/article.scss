@@ -12,13 +12,22 @@
     width: 60%;
   }
   &__heading{
-    @extend %_cut_val-24;
+    @extend %_cut_val-30;
   }
   p, {
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
+    font-size: rem(18px);
+    font-weight: 400;
+    font-style: normal;
     padding: 0 15%;
     @extend %_cut_val-24;
   }
   strong {
+    font-size: rem(20px);
+    width: 100%;
+    border-left: 10px solid $red-origin;
+    background: $white;
+    padding: 4%;
     @extend %_cut_val-24;
   }
 }

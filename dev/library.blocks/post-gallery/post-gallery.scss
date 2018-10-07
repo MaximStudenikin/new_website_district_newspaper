@@ -10,18 +10,18 @@
     background: $black-shade;
   }
   &_post-add {
-    .post-gallery__list{
-    padding: 0 0 4% 0;
+    .post-gallery__list {
+      padding: 0 0 4% 0;
     }
   }
   &__list {
     display: flex;
     flex-flow: wrap;
     justify-content: center;
-    width: 100%;
-    &_banners{
+    width: 97vw;
+    &_banners {
       justify-content: space-between;
-      .post-gallery__item{
+      .post-gallery__item {
         width: 32%;
       }
     }
@@ -35,7 +35,6 @@
       margin: rem(15px) 0 0 0;
     }
   }
-  
   &__post-add {
     position: absolute;
     bottom: 0;

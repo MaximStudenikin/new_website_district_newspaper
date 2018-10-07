@@ -27,9 +27,6 @@ $invisible: transparent;
 @import "./common.mod/_cut/_cut_val-24";
 @import "./common.mod/_cut/_cut_val-12";
 
-// layout
-@import "./library.pages/article/article";
-
 // common.blocks
 @import "./common.blocks/page/page.scss";
 @import "./common.blocks/button/button.scss";
@@ -60,3 +57,6 @@ $invisible: transparent;
 @import "./library.blocks/breadcrumb/breadcrumb";
 @import "./library.blocks/pagination/pagination";
 @import "./library.blocks/quoet/quoet";
+
+// layout
+@import "./library.pages/article/article";

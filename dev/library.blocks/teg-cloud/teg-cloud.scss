@@ -1,13 +1,15 @@
 .teg-cloud {
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
   &__item {
     font-size: rem(16px);
     padding: 0 rem(15px);
-    margin: rem(5px) rem(15px) 0 0;
+    margin: rem(5px) 0;
     background: $red-origin;
     color: $white;
     text-transform: capitalize;
+    border-radius: 100px;
     &::before{
       content: '#'
     }
