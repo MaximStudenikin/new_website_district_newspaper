@@ -1,4 +1,7 @@
 &_quoet{
   font-style: italic;
   font-size: rem(22px);
+  width: 100%;
+  border-left: 10px solid $red-origin;
+  background: $white;
 }

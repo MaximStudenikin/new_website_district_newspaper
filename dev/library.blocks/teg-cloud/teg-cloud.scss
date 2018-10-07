@@ -1,17 +1,21 @@
 .teg-cloud {
-      display: flex;
-      flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
   &__item {
-      font-size: rem(18px);
-      color: $white;
-      padding: 0 rem(15px) 0 0;
-      &:hover {
-          opacity: .8;
-      }
+    font-size: rem(16px);
+    padding: 0 rem(15px);
+    margin: rem(5px) rem(15px) 0 0;
+    background: $red-origin;
+    color: $white;
+    text-transform: capitalize;
+    &::before{
+      content: '#'
+    }
+    &:hover {
+      background: $red-tint;
+    }
   }
-  &__pop__item {
-      color: $red-origin;
-      text-transform: uppercase;
-      opacity: .6;
+  .teg-cloud__pop__item {
+    text-transform: uppercase;
   }
 }

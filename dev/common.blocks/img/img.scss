@@ -1,7 +1,21 @@
 .img {
   display: block;
   overflow: hidden;
-
+  &:hover{
+    .img__copyright{
+    opacity: 1;
+    }
+  }
+  &__copyright{
+    position: absolute;
+    margin: 0;
+    bottom: 1%;
+    left: 1%;
+    color: $black-pastel;
+    padding: rem(5px);
+    opacity: 0;
+    background: $black-origin;
+  }
   @import './_default.scss';
   @import './_full.scss';
   @import './_mini.scss';

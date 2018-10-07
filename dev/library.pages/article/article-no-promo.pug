@@ -1,17 +1,19 @@
 include ../base
 	block head
-		title Тема: «Экзистенциальный художественный ритуал: снижение или англо-американский тип политической культуры?» 
+		title Москва За Калужской заставой
 	block content
 		.page
 			include ../../common.blocks/header/header
 			.page__content
-				include ../../common.blocks/card/card-full/card-full-article
-				header._visually_hidden
-						h1(itemprop="name") Тема: «Экзистенциальный художественный ритуал: снижение или англо-американский тип политической культуры?» 
 				article.article
-					include ./test/article-big-text
-				include ../../library.blocks/teg-cloud/teg-cloud
-				include ../../library.blocks/post-gallery/post-gallery_bg_black-shade
+					.page__limiter-column
+						.article__text
+							header.article__header
+								time(datetime="17.02.2018").post-data 17 Февраля 2018
+								h1.heading.heading_size_h1 Тема: «Экзистенциальный художественный ритуал: снижение или англо-американский тип политической культуры?» 
+								include ../../library.blocks/teg-cloud/teg-cloud_color_black
+							include ./test/article-small-text
+					include ../../library.blocks/post-gallery/post-gallery_bg_black-shade
 				section.section-header
 					.section-header__first-column
 						a(href="list.html").button.button_hover Название секции

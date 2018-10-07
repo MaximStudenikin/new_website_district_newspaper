@@ -11,7 +11,7 @@ $black-tint: #666;
 $black-pastel: #ccc;
 $black-light-gradient: linear-gradient(to bottom, #333333, #666666);
 $black-dark-gradient: linear-gradient(to bottom, #333333, #000000);
-$white : #fff;
+$white: #fff;
 $invisible: transparent;
 
 // config
@@ -26,6 +26,9 @@ $invisible: transparent;
 @import "./common.mod/_cut/_cut_val-30";
 @import "./common.mod/_cut/_cut_val-24";
 @import "./common.mod/_cut/_cut_val-12";
+
+// layout
+@import "./library.pages/article/article";
 
 // common.blocks
 @import "./common.blocks/page/page.scss";
@@ -56,7 +59,4 @@ $invisible: transparent;
 @import "./library.blocks/categories/categories";
 @import "./library.blocks/breadcrumb/breadcrumb";
 @import "./library.blocks/pagination/pagination";
-
-
-// layout
-// @import "./library.pages/**/*.scss";
+@import "./library.blocks/quoet/quoet";
