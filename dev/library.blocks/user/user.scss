@@ -1,0 +1,19 @@
+.user {
+  display: flex;
+  justify-content: space-between;
+  width: 9vw;
+
+  &__icon {
+    width: 30px;
+    border-radius: 100px;
+    overflow: hidden;
+  }
+
+  &__link {
+    align-self: center;
+    color: $white;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

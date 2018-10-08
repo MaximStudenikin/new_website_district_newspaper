@@ -1,4 +1,4 @@
-.teg-cloud {
+.tegs {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -16,8 +16,5 @@
     &:hover {
       background: $red-tint;
     }
-  }
-  .teg-cloud__pop__item {
-    text-transform: uppercase;
   }
 }

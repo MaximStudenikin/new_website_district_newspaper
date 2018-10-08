@@ -3,6 +3,7 @@
   flex-direction: column;
   margin: rem(24px) 0 0 0;
   width: 25vw;
+  overflow: hidden;
   &:first-child{
     margin: 0;
   }

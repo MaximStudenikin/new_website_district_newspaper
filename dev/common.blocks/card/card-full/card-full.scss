@@ -18,7 +18,8 @@
       right: 0;
       bottom: 0;
       left: 0;
-      background: linear-gradient(transparent 0%, transparent 50%, rgba(0, 0, 0, 0.1) 56%, rgba(0, 0, 0, 0.6) 93%, rgba(0, 0, 0, 0.59) 100%);
+      opacity: .3;
+      background: $black-dark-gradient;
     }
   }
   &__text-block {
@@ -27,7 +28,20 @@
     flex-direction: column;
     z-index: 2;
     position: absolute;
-    width: 121vh;
+    width: 70vw;
     margin: 0 0 0 2vw;
+  }
+  &__info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 17vw;
+    height: 6vh;
+  }
+  &__post-data{
+    &:before{
+      content: '/';
+      padding: 0 rem(8px) 0 0;
+    }
   }
 }

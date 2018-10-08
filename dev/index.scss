@@ -52,11 +52,13 @@ $invisible: transparent;
 @import "./library.blocks/main-news/main-news";
 @import "./library.blocks/post-column/post-column";
 @import "./library.blocks/post-gallery/post-gallery";
-@import "./library.blocks/teg-cloud/teg-cloud";
+@import "./library.blocks/tegs/tegs";
 @import "./library.blocks/categories/categories";
 @import "./library.blocks/breadcrumb/breadcrumb";
 @import "./library.blocks/pagination/pagination";
+@import "./library.blocks/share-link/share-link";
 @import "./library.blocks/quoet/quoet";
+@import "./library.blocks/user/user";
 
 // layout
 @import "./library.pages/article/article";
