@@ -1,10 +1,9 @@
 .user {
   display: flex;
-  justify-content: space-between;
-  width: 9vw;
 
   &__icon {
-    width: 30px;
+    width: 60px;
+    margin: 0 rem(15px) 0 0;
     border-radius: 100px;
     overflow: hidden;
   }
@@ -12,8 +11,17 @@
   &__link {
     align-self: center;
     color: $white;
+    width: 60%;
+    font-size: rem(18px);
+    font-weight: 700;
+
+    &_color_black{
+      color: $black-shade;
+    }
+
     &:hover {
       text-decoration: underline;
     }
+    
   }
 }

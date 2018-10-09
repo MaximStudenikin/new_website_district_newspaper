@@ -1,0 +1,12 @@
+.share-button
+	.share-button__counter
+.share-button__list
+	.share-button__item
+		.fb-share-button(data-layout='button', data-size='large', data-mobile-iframe='true')
+			a.fb-xfbml-parse-ignore(target='_blank', href='https://www.facebook.com/sharer/sharer.php?u&src=sdkpreparse') Поделиться
+
+			a#btnFB.share-button__sbutton(rel='nofollow', href='https://www.facebook.com/sharer/sharer.php?u&amp;src=sdkpreparse', data-name='Partager sur Facebook', onclick="window.open(this.href,'targetWindow','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=700,height=450');return false;") fb
+	.share-button__item
+		span.share-button__vk(data-count='...', data-share-button='vk')
+	.share-button__item
+		a.twitter-share-button(href='https://twitter.com/share?ref_src=twsrc%5Etfw', data-show-count='false') Tweet

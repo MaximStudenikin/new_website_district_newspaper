@@ -34,14 +34,11 @@
   &__info{
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 17vw;
-    height: 6vh;
   }
   &__post-data{
     &:before{
       content: '/';
-      padding: 0 rem(8px) 0 0;
+      padding: 0 rem(15px);
     }
   }
 }

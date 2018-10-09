@@ -13,12 +13,13 @@ var shareLink = {
         sel = window.getSelection();
         sel.removeAllRanges();
         sel.addRange(rng);
+        document.execCommand('copy');
       } else {
         var rng = document.body.createTextRange();
         rng.moveToElementText(target);
         rng.select();
+        document.execCommand('copy');
       }
-      document.execCommand('copy');
       window.getSelection().removeAllRanges();
       document.selection.empty();
     });

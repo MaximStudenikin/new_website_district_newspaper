@@ -1,15 +1,16 @@
 .tegs {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
+  border-left: 5px solid $red-origin;
+
   &__item {
     font-size: rem(16px);
-    padding: 0 rem(15px);
-    margin: rem(5px) 0;
+    padding: rem(5px) rem(15px);
+    margin: rem(5px) rem(10px);
     background: $red-origin;
     color: $white;
     text-transform: capitalize;
-    border-radius: 100px;
+    border-radius: 5px;
     &::before{
       content: '#'
     }
