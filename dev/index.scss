@@ -29,6 +29,7 @@ $invisible: transparent;
 
 // common.blocks
 @import "./common.blocks/page/page.scss";
+@import "./common.blocks/list/list.scss";
 @import "./common.blocks/button/button.scss";
 @import "./common.blocks/heading/heading.scss";
 @import "./common.blocks/text/text.scss";
@@ -37,6 +38,7 @@ $invisible: transparent;
 @import "./common.blocks/link/link.scss";
 @import "./common.blocks/icon/icon.scss";
 @import "./common.blocks/img/img.scss";
+@import "./common.blocks/card/card-file/card-file.scss";
 @import "./common.blocks/card/card-default/card-default.scss";
 @import "./common.blocks/card/card-full/card-full.scss";
 @import "./common.blocks/card/card-mini/card-mini.scss";
@@ -59,6 +61,4 @@ $invisible: transparent;
 @import "./library.blocks/share-link/share-link";
 @import "./library.blocks/quoet/quoet";
 @import "./library.blocks/user/user";
-
-// layout
-@import "./library.pages/article/article";
+@import "./library.blocks/article/article";
