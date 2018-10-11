@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: $black-shade;
   width: 100%;
   padding: 0 0 25px 0;
   overflow: hidden;
@@ -20,5 +19,8 @@
     &:last-child {
       margin: 0;
     }
+  }
+  &_bg_black-shade {
+    background: $black-shade;
   }
 }

@@ -11,12 +11,16 @@
     flex-direction: column;
     width: 60%;
   }
-  &__panel {
+  &__panel,&__panel-file {
     display: flex;
     justify-content: space-between;
     align-content: center;
     width: 100%;
     @extend %_cut_val-30;
+  }
+  &__panel-file{
+    flex-wrap: wrap;
+    justify-content: flex-start;
   }
   &__heading {
     @extend %_cut_val-30;

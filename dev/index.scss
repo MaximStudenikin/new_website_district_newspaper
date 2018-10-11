@@ -44,6 +44,7 @@ $invisible: transparent;
 
 // common.blocks
 @import "./common.blocks/page/page.scss";
+@import "./common.blocks/list/list.scss";
 @import "./common.blocks/button/button.scss";
 @import "./common.blocks/heading/heading.scss";
 @import "./common.blocks/text/text.scss";
@@ -52,6 +53,7 @@ $invisible: transparent;
 @import "./common.blocks/link/link.scss";
 @import "./common.blocks/icon/icon.scss";
 @import "./common.blocks/img/img.scss";
+<<<<<<< HEAD
 @import "./common.blocks/card/card-default/card-default.scss";
 @import "./common.blocks/card/card-full/card-full.scss";
 @import "./common.blocks/card/card-mini/card-mini.scss";
@@ -62,3 +64,29 @@ $invisible: transparent;
 
 // layout
 @import "./library.pages/article/article";
+=======
+@import "./common.blocks/header/header.scss";
+@import "./common.blocks/footer/footer.scss";
+
+// library.blocks
+@import "./library.blocks/tegs/tegs";
+@import "./library.blocks/card/card-file/card-file.scss";
+@import "./library.blocks/card/card-default/card-default.scss";
+@import "./library.blocks/card/card-full/card-full.scss";
+@import "./library.blocks/card/card-mini/card-mini.scss";
+@import "./library.blocks/card/card-gallery-photo/card-gallery-photo.scss";
+@import "./library.blocks/card/card-promo/card-promo.scss";
+@import "./library.blocks/navigation/navigation.scss";
+@import "./library.blocks/serch-form/serch-form";
+@import "./library.blocks/section-header/section-header";
+@import "./library.blocks/main-news/main-news";
+@import "./library.blocks/post-column/post-column";
+@import "./library.blocks/post-gallery/post-gallery";
+@import "./library.blocks/categories/categories";
+@import "./library.blocks/breadcrumb/breadcrumb";
+@import "./library.blocks/pagination/pagination";
+@import "./library.blocks/share-link/share-link";
+@import "./library.blocks/quoet/quoet";
+@import "./library.blocks/user/user";
+@import "./library.blocks/article/article";
+>>>>>>> b06eff820b1308f156e5075064d0bfc160dc4b74
