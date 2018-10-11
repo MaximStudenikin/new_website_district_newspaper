@@ -27,6 +27,21 @@ $invisible: transparent;
 @import "./common.mod/_cut/_cut_val-24";
 @import "./common.mod/_cut/_cut_val-12";
 
+// library.blocks
+@import "./library.blocks/tegs/tegs";
+@import "./library.blocks/navigation/navigation.scss";
+@import "./library.blocks/serch-form/serch-form";
+@import "./library.blocks/section-header/section-header";
+@import "./library.blocks/main-news/main-news";
+@import "./library.blocks/post-column/post-column";
+@import "./library.blocks/post-gallery/post-gallery";
+@import "./library.blocks/categories/categories";
+@import "./library.blocks/breadcrumb/breadcrumb";
+@import "./library.blocks/pagination/pagination";
+@import "./library.blocks/share-link/share-link";
+@import "./library.blocks/quoet/quoet";
+@import "./library.blocks/user/user";
+
 // common.blocks
 @import "./common.blocks/page/page.scss";
 @import "./common.blocks/button/button.scss";
@@ -40,25 +55,10 @@ $invisible: transparent;
 @import "./common.blocks/card/card-default/card-default.scss";
 @import "./common.blocks/card/card-full/card-full.scss";
 @import "./common.blocks/card/card-mini/card-mini.scss";
-@import "./common.blocks/card/card-gallery-photo/card-gallery-photo.scss";
 @import "./common.blocks/card/card-promo/card-promo.scss";
+@import "./common.blocks/card/card-galliry/card-galliry.scss";
 @import "./common.blocks/header/header.scss";
 @import "./common.blocks/footer/footer.scss";
-
-// library.blocks
-@import "./library.blocks/navigation/navigation.scss";
-@import "./library.blocks/serch-form/serch-form";
-@import "./library.blocks/section-header/section-header";
-@import "./library.blocks/main-news/main-news";
-@import "./library.blocks/post-column/post-column";
-@import "./library.blocks/post-gallery/post-gallery";
-@import "./library.blocks/tegs/tegs";
-@import "./library.blocks/categories/categories";
-@import "./library.blocks/breadcrumb/breadcrumb";
-@import "./library.blocks/pagination/pagination";
-@import "./library.blocks/share-link/share-link";
-@import "./library.blocks/quoet/quoet";
-@import "./library.blocks/user/user";
 
 // layout
 @import "./library.pages/article/article";
