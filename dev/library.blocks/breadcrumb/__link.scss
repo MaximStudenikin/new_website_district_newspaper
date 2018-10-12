@@ -1,0 +1,10 @@
+&__link {
+  display: block;
+  color: $black-origin;
+  padding: rem(5px);
+
+  &:hover {
+    color: $white;
+    background: $red-origin;
+  }
+}

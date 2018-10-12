@@ -1,39 +1,6 @@
 .breadcrumb {
-  &__list {
-    display: flex;
-  }
 
-  &__link {
-    display: block;
-    color: $black-origin;
-    padding: rem(5px);
-
-    &:hover {
-      color: $white;
-      background: $red-origin;
-    }
-  }
-
-  &__item {
-    display: flex;
-    align-items: center;
-    color: $black-origin;
-
-    &:after {
-      content: '>';
-      padding: 0 rem(15px);
-    }
-
-    &:last-child {
-      pointer-events: none;
-
-      .breadcrumb__link {
-        color: $white;
-      }
-    }
-
-    &:last-child::after {
-      content: none;
-    }
-  }
+  @import './__list';
+  @import './__item';
+  @import './__link';
 }
