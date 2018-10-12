@@ -6,50 +6,10 @@
   width: 100%;
   padding: 0 0 25px 0;
   overflow: hidden;
-  &_bg_black-shade {
-    background: $black-shade;
-    .heading{
-      color: $white;
-    }
-    .post-data{
-      color: $white;
-    }
-  }
-  &_post-add {
-    .post-gallery__list {
-      padding: 0 0 4% 0;
-    }
-  }
-  &__list {
-    display: flex;
-    flex-flow: wrap;
-    justify-content: center;
-    width: 100%;
-    &_banners {
-      justify-content: space-between;
-      .post-gallery__item {
-        width: 32%;
-      }
-    }
-  }
-  &__item {
-    position: relative;
-    width: 25%;
-    margin: rem(15px) rem(24px) 0 0;
-    overflow: hidden;
-    &:nth-child(3n) {
-      margin: rem(15px) 0 0 0;
-    }
-  }
-  &__post-add {
-    position: absolute;
-    bottom: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: $white;
-    width: 100%;
-    height: 4%;
-    z-index: 2;
-  }
+
+  @import './__list';
+  @import './__item';
+  @import './__post-add';
+  @import './_add';
+  @import './_bg_black-shade';
 }

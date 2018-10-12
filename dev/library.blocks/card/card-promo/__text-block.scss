@@ -1,0 +1,8 @@
+&__text-block{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 0 0 rem(15px);
+  text-overflow: clip;
+  width: 40vw;
+}

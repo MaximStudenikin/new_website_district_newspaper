@@ -1,0 +1,8 @@
+&__heading {
+  color: $white;
+  position: relative;
+  z-index: 50;
+  &:hover{
+    text-decoration: underline;
+  }
+}

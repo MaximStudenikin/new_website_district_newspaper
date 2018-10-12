@@ -1,0 +1,15 @@
+&__img {
+  opacity: 1;
+  width: 100%;
+  &:after {
+    z-index: 1;
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: .3;
+    background: $black-dark-gradient;
+  }
+}

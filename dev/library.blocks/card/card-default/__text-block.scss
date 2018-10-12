@@ -1,0 +1,6 @@
+&__text-block{
+  display: flex;
+  flex-direction: column;
+  width: 25vw;
+  @extend %_cut_val-12;
+}

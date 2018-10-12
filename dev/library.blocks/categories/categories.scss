@@ -3,15 +3,7 @@
   flex-direction: column;
   width: 11vw;
 
-  &__list{
-    display: flex;
-    flex-direction: column;
-    @extend %_cut_val-12;
-  }
 
-  &__item{
-    margin: rem(15px) 0 0 0;
-    word-break: break-all;
-  }
-
+@import './__list';
+@import './__item';
 }

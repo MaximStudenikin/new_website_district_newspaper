@@ -1,0 +1,41 @@
+.card-gallery {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  margin: 10px 1%;
+  transition: all 0.3s ease-out;
+  color: $white;
+  background: $black-shade;
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    bottom: 20px;
+    left: 20px;
+    opacity: 0;
+    transition: opacity 0.6s, transform 0.6s;
+  }
+
+  &:before {
+    border-top: 1px double $white;
+    border-bottom: 1px double $white;
+    transform: scale(0, 1);
+  }
+
+  &:after {
+    border-right: 1px double $white;
+    border-left: 1px double $white;
+    transform: scale(1, 0);
+  }
+
+  @import './__img';
+  @import './__text-block';
+  @import './__data';
+  @import './__heading';
+  @import './__tegs';
+  @import './_hover';
+}

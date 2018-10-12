@@ -1,0 +1,6 @@
+&__post-data {
+  &:before {
+    content: '/';
+    padding: 0 rem(15px);
+  }
+}

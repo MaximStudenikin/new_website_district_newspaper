@@ -5,22 +5,8 @@
   width: 100%;
   padding: 0 0 25px 0;
   overflow: hidden;
-  &__list {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    @extend %_cut_val-30;
-  }
-  &__item {
-    position: relative;
-    width: 25%;
-    margin: 0 rem(24px) 0 0;
-    overflow: hidden;
-    &:last-child {
-      margin: 0;
-    }
-  }
-  &_bg_black-shade {
-    background: $black-shade;
-  }
+
+  @import './__list';
+  @import './__item';
+  @import './_bg_black-shade';
 }
