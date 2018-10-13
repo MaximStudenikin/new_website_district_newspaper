@@ -11,12 +11,11 @@
 
   &__link {
     align-self: center;
-    color: $white;
     font-size: rem(18px);
     font-weight: 700;
 
-    &_color_black {
-      color: $black-shade;
+    &:hover{
+      text-decoration: underline;
     }
 
   }

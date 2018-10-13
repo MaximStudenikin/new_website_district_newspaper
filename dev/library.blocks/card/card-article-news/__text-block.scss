@@ -1,6 +1,5 @@
 &__text-block{
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  height: 220px;
+  @extend %_cut_val-12;
 }

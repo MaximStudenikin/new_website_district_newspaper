@@ -1,21 +1,29 @@
-.tegs {
+.tegs-list {
   display: flex;
   flex-wrap: wrap;
   border-left: 5px solid $red-origin;
-
+  &_card-tegs-mod {
+    .tegs-list__item {
+      &:nth-child(n+4) {
+        display: none;
+      }
+    }
+  }
   &__item {
     font-size: rem(16px);
     padding: rem(5px) rem(15px);
     margin: rem(5px) rem(10px);
     background: $red-origin;
-    color: $white;
     text-transform: capitalize;
     border-radius: 5px;
-    &::before{
-      content: '#'
-    }
     &:hover {
       background: $red-tint;
+    }
+  }
+  &__link {
+    color: $white;
+    &::before {
+      content: '#'
     }
   }
 }

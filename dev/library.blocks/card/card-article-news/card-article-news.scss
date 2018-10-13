@@ -1,9 +1,8 @@
-.card-default{
+.card-article-news{
   position: relative;
   width: 100%;
   overflow: hidden;
  
   @import './__text-block';
-  @import './__heading';
   @import './__data';
 }

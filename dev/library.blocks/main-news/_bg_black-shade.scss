@@ -1,3 +1,9 @@
 &_bg_black-shade {
   background: $black-shade;
+  
+  .heading,
+  .user__link,
+  .post-data {
+    color: $white;
+  }
 }

@@ -2,5 +2,8 @@
 	.img.img_default
 		img.img-teg(src="https://source.unsplash.com/user/nikolayv/1200x900", alt="alt")
 	.card-default__text-block
-		a(href='article.html').heading.heading_size_h5 Тема: «Экзистенциальный художественный ритуал: снижение или англо-американский тип политической культуры?»
-		time(datetime="17.02.2018").post-data 17 Февраля 2018 
+		.card-default__data
+				include ../../user/user
+				time(datetime="17.02.2018").post-data.card-gallery__post-data 17.10.2018
+		a(href='article.html').heading.heading_size_h5.card-default__heading Тема: «Экзистенциальный художественный ритуал: снижение или англо-американский тип политической культуры?»
+		include ../../tegs/tegs-card-mod
