@@ -2,4 +2,7 @@
   display: flex;
   width: 78%;
   @extend %limiter;
+  &_cut{
+    @extend %_cut_val-30;
+  }
 }

@@ -1,5 +1,6 @@
-&__heading{
-  height: 70px;
+&__text {
+  height: 100px;
+  column-width: 150px;
   overflow: hidden;
   color: $black-shade;
   &:hover{

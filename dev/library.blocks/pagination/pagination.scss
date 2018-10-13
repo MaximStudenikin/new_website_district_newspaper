@@ -1,6 +1,9 @@
 .pagination {
   position: relative;
   display: flex;
+  &_cut{
+    @extend %_cut_val-30;
+  }
 
   @import '__list';
   @import '__item';

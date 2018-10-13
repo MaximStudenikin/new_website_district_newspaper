@@ -1,0 +1,29 @@
+/* ----------- Non-Retina Screens ----------- */
+@mixin large{ 
+  @media only screen 
+    and (min-device-width: 1600px) 
+    and (max-device-width: 1920px)
+    and (-webkit-min-device-pixel-ratio: 1)  { 
+      @content;
+  }
+  }
+
+/* ----------- Non-Retina Screens ----------- */
+  @mixin medium{ 
+    @media only screen 
+      and (min-device-width: 1280px) 
+      and (max-device-width: 1366px)
+      and (-webkit-min-device-pixel-ratio: 1)  { 
+        @content;
+    }
+    }
+    
+/* ----------- Non-Retina Screens ----------- */
+    @mixin small{ 
+      @media only screen 
+        and (min-device-width: 1200px) 
+        and (max-device-width: 1024px)
+        and (-webkit-min-device-pixel-ratio: 1)  { 
+          @content;
+      }
+      }

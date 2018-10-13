@@ -15,7 +15,7 @@ $white: #fff;
 $invisible: transparent;
 
 // config
-@import "./common.config/grid.scss";
+@import "./common.config/breakpoint/*.scss";
 @import "./common.config/mixin.scss";
 @import "./common.config/base.scss";
 
@@ -42,6 +42,7 @@ $invisible: transparent;
 
 // library.blocks
 @import "./library.blocks/tegs/tegs";
+@import "./library.blocks/card/card-data/card-data.scss";
 @import "./library.blocks/card/card-file/card-file.scss";
 @import "./library.blocks/card/card-default/card-default.scss";
 @import "./library.blocks/card/card-article-news/card-article-news.scss";
