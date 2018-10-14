@@ -2,6 +2,7 @@
   display: flex;
   position: relative;
   align-items: center;
+  justify-content: center;
   width: 75vw;
   height: 5vh;
   &__first-column {
@@ -15,14 +16,14 @@
     position: absolute;
     display: flex;
     align-items: center;
-    left: 34%;
+    left: 35%;
     height: 6vh;
   }
   &__end-column {
     position: absolute;
     display: flex;
     align-items: center;
-    left: 68%;
+    left: 70%;
     height: 6vh;
   }
   &__end-column-items-end {

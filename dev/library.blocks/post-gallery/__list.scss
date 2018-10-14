@@ -3,6 +3,8 @@
   flex-flow: wrap;
   justify-content: center;
   width: 100%;
+  padding: 0 1.3vw;
+  
   &_banners {
     justify-content: space-between;
     .post-gallery__item {
