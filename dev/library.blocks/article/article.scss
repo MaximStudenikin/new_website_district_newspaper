@@ -13,7 +13,6 @@
   }
   &__panel,&__panel-file {
     display: flex;
-    justify-content: space-between;
     align-content: center;
     width: 100%;
     @extend %_cut_val-30;
@@ -21,6 +20,9 @@
   &__panel-file{
     flex-wrap: wrap;
     justify-content: flex-start;
+  }
+  &__panel{
+    justify-content: space-between;
   }
   &__heading {
     @extend %_cut_val-30;
