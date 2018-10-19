@@ -1,0 +1,50 @@
+.sitemap {
+  position: absolute;
+  top: -999999px;
+  display: flex;
+  justify-content: center;
+  background: $black-shade;
+  width: 100%;
+  z-index: -1;
+
+  .heading, .text, .post-data, .link{
+    color: #fff;
+  }
+
+  &__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @extend %limiter;
+  }
+
+  &__row {
+    position: relative;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+    width: 100%;
+    @extend %_cut_val-30;
+
+    &_content-limited {
+      width: 32%;
+    }
+
+    &_big-content {
+      justify-content: flex-start;
+      flex-flow: nowrap;
+    }
+  }
+
+  &__block{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
+
+  &_active {
+    top: 10%;
+    z-index: 999;
+  }
+}

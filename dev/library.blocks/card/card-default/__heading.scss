@@ -1,7 +1,9 @@
 &__heading{
-  height: 10vh;
-  overflow: hidden;
   color: $black-shade;
+  &_not-fit{
+    height: 10vh;
+    overflow: hidden;
+    }
   &:hover{
     text-decoration: underline;
   }

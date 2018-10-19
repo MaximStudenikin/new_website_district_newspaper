@@ -3,7 +3,13 @@
   width: 25%;
   margin: 0 rem(24px) 0 0;
   overflow: hidden;
+
   &:last-child {
     margin: 0;
   }
+
+  @include medium {
+    width: 30%;
+  }
+
 }

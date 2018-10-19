@@ -1,8 +1,10 @@
 &__text {
+  color: $black-shade;
+  &_not-fit{
   height: 70px;
   column-width: 150px;
   overflow: hidden;
-  color: $black-shade;
+  }
   &:hover{
     text-decoration: underline;
   }

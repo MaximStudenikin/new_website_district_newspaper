@@ -9,6 +9,11 @@
     justify-content: space-between;
     .post-gallery__item {
       width: 32%;
+
+      @include medium {
+        margin: rem(15px) 0 0;
+        padding: 0;
+      }
     }
   }
 

@@ -1,4 +1,13 @@
-&_default{
+&_default {
   width: 25vw;
   height: 30vh;
+
+  @include large {
+    width: 30vw;
+  }
+
+  @include medium {
+    width: 30vw;
+    height: 35vh;
+  }
 }

@@ -2,7 +2,12 @@
   display: flex;
   width: 78%;
   @extend %limiter;
-  &_cut{
+
+  &_cut {
     @extend %_cut_val-30;
+  }
+
+  @include medium {
+    justify-content: space-evenly;
   }
 }
