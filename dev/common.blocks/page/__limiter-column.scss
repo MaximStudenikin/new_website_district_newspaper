@@ -10,4 +10,8 @@
   @include medium {
     justify-content: space-evenly;
   }
+  @include small{
+    width: 95%;
+  }
+
 }

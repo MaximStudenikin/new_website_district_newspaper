@@ -14,6 +14,12 @@
         margin: rem(15px) 0 0;
         padding: 0;
       }
+
+      @include small {
+        width: 30vw;
+      }
+
+      
     }
   }
 

@@ -1,3 +1,7 @@
 .header__serch {
   position: relative;
+
+  @include small {
+    right: 1%;
+  }
 }

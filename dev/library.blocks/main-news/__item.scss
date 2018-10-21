@@ -11,5 +11,7 @@
   @include medium {
     width: 30%;
   }
-
+  @include small {
+    width: 31%;
+  }
 }

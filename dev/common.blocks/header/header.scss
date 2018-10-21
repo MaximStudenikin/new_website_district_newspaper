@@ -13,4 +13,9 @@
   z-index: 998;
   padding: 1% 0;
   background: $white;
+
+  @include small {
+    padding: 2% 1%;
+  }
+
 }

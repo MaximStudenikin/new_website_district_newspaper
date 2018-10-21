@@ -8,6 +8,10 @@
   bottom: -15%;
   width: 100%;
   padding: rem(25px) 0;
+
+  @include small{
+    padding: rem(25px) rem(15px);
+  }
   
   @import '__row.scss';
   @import '__group.scss';

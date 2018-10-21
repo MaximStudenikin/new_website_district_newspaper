@@ -10,4 +10,9 @@
     width: 30vw;
     height: 35vh;
   }
+
+  @include small{
+    width: 30vw;
+    height: 30vh;
+  }
 }
