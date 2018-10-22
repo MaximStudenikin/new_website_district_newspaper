@@ -2,7 +2,7 @@
   width: 100vw;
   height: 75vh;
   background-size: cover;
-  background-position: center center;
+  background-position: center;
   background-attachment: fixed;
   &::after {
     z-index: 1;
@@ -14,5 +14,9 @@
     left: 0;
     opacity: .3;
     background: $black-dark-gradient;
+  }
+  @include iphone-4{
+    background-position: center;
+    background-attachment: inherit;
   }
 }

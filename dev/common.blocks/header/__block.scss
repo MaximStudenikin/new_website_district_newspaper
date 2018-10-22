@@ -4,4 +4,9 @@
   justify-content: space-between;
   align-items: center;
   @extend %limiter;
+
+  @include iphone-4 {
+    width: 100vw;
+    padding: 0 1%;
+  }
 }

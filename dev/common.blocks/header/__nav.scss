@@ -1,4 +1,8 @@
 .header__nav {
   position: relative;
   right: 5%;
+
+  @include iphone-4 {
+    display: none;
+  }
 }

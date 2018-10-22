@@ -18,4 +18,12 @@
     padding: 2% 1%;
   }
 
+  @include iphone-4 {
+    justify-content: flex-start;
+    align-items: center;
+    width: 100vw;
+    height: 10%;
+    padding: 0;
+  }
+
 }

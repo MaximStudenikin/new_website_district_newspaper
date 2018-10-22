@@ -3,6 +3,9 @@
   display: flex;
   width: 100%;
   overflow: hidden;
+  @include iphone-4{
+   flex-direction: column;
+  }
   
   @import './__img';
   @import './__card-data';

@@ -2,4 +2,9 @@
 	position: relative;
 	display: flex;
 	width: 20%;
+
+	@include iphone-4 {
+		display: block;
+		width: 40%;
+  }
 }

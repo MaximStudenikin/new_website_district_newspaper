@@ -15,4 +15,7 @@
     width: 30vw;
     height: 30vh;
   }
+  @include iphone-4{
+    width: 100%;
+  }
 }

@@ -6,4 +6,10 @@
   width: 100%;
   top: 6vw;
   @import "./_direction_colum";
+  @include iphone-4{
+    top: 18%;
+  }
+  @include iphone-4{
+    width: 100%;
+  }
 }
