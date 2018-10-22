@@ -14,4 +14,12 @@
   @include small{
     width: 30vw;
   }
+  @include iphone-4{
+    margin: 0;
+    width: 100%;
+    &:nth-child(n+5){
+      display: none;
+    }
+  }
+  
 }

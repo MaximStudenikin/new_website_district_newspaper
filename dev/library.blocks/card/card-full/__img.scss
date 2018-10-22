@@ -15,8 +15,9 @@
     opacity: .3;
     background: $black-dark-gradient;
   }
-  @include iphone-4{
+  @include iphone-4 {
     background-position: center;
     background-attachment: inherit;
+    height: 30vh;
   }
 }

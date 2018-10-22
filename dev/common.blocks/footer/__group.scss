@@ -3,4 +3,7 @@
   flex-direction: column;
   justify-content: space-between;
   width: 24vw;
+  @include iphone-4 {
+    width: 95%;
+  }
 }

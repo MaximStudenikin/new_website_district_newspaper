@@ -21,6 +21,7 @@
     @include iphone-4{
       position: relative;
       height: auto;
+      left: 0;
     }
   }
   &__center-column {
@@ -32,6 +33,7 @@
     @include iphone-4{
       position: relative;
       height: auto;
+      left: 0;
     }
   }
   &__end-column {
@@ -43,6 +45,7 @@
     @include iphone-4{
       position: relative;
       height: auto;
+      left: 0;
     }
   }
   &__end-column-items-end {
@@ -54,6 +57,7 @@
     @include iphone-4{
       position: relative;
       height: auto;
+      left: 0;
     }
   }
   &__header-page{

@@ -1,6 +1,9 @@
-&__row{
+&__row {
   display: flex;
   justify-content: space-between;
   width: 100%;
   @extend %limiter;
+  @include iphone-4 {
+    flex-direction: column;
+  }
 }

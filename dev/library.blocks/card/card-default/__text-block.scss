@@ -3,4 +3,7 @@
   flex-direction: column;
   justify-content: space-evenly;
   height: 220px;
+  @include iphone-4{
+    height: 55vh;
+  }
 }

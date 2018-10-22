@@ -7,6 +7,10 @@
   &:last-child{
     margin: 0;
   }
+
+  @include iphone-4{
+    margin: 0;
+  }
   
   @import './__item';
   @import './__link';

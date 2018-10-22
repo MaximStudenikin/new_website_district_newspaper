@@ -14,4 +14,7 @@
   @include small{
     width: 30vw;
   }
+  @include iphone-4{
+    width: 100%;
+  }
 }

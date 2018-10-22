@@ -9,4 +9,7 @@
   @include small{
    margin: 0;
   }
+  @include iphone-4{
+    margin: 0;
+  }
 }
