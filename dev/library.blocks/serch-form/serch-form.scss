@@ -7,11 +7,12 @@
   animation-iteration-count: 1;
 
   @include iphone-4 {
-    top: 0;
+    top: -4%;
     width: 50px;
     height: 50px;
     display: block;
   }
+
 
   @import "./__input/__input";
   @import "./__input/__input_open";

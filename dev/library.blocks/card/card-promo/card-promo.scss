@@ -1,6 +1,9 @@
 .card-promo{
   display: flex;
   width: 100%;
- 
+  @include iphone-4 {
+    flex-direction: column;
+  }
   @import './__text-block';
+  @import './__text';
 }

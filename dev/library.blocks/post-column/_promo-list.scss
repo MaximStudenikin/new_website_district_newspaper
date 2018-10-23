@@ -8,5 +8,8 @@
     &:first-child{
       margin: 0;
     }
+    @include iphone-4 {
+      width: 100%;
+    }
   }
 }

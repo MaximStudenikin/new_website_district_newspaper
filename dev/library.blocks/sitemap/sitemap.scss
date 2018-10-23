@@ -34,6 +34,9 @@
     &_big-content {
       justify-content: flex-start;
       flex-flow: nowrap;
+      @include iphone-4{
+        flex-flow: wrap;
+      }
     }
   }
 

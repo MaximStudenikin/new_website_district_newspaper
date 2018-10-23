@@ -3,6 +3,7 @@
   display: flex;
   width: 100%;
   overflow: hidden;
+  background: $black-shade;
   @include iphone-4{
    flex-direction: column;
   }

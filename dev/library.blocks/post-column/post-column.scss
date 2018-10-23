@@ -10,10 +10,13 @@
 
   @include iphone-4{
     margin: 0;
+    width: 100%;
   }
+  
   
   @import './__item';
   @import './__link';
   @import './__list';
+ 
   @import './_promo-list';
 }

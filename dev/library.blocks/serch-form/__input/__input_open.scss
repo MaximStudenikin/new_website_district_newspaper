@@ -11,4 +11,9 @@
   &:focus {
     outline: 1px solid $black-pastel;
   }
+  @include iphone-4 {
+    top: 48%;
+    font-size: 1.225rem;
+    width: 90vw;
+  }
 }
