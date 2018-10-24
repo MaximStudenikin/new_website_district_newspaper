@@ -20,6 +20,16 @@
     &:nth-child(n+5){
       display: none;
     }
+    &:nth-child(3n) {
+      margin: 0;
+    }
   }
+  @include iphone-4-landscape {
+    margin: 15px 0;
+  }
+  @include iphone-4-landscape {
+    overflow: visible;
+  }
+  
   
 }

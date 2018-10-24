@@ -12,6 +12,10 @@
   @include small{
     padding: rem(25px) rem(15px);
   }
+
+  @include iphone-4 {
+    bottom: -25%;
+  }
   
   @import '__row.scss';
   @import '__group.scss';

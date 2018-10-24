@@ -11,5 +11,11 @@
   }
   @include iphone-4{
     margin: 0;
+    height: 25vh;
+  }
+  @include iphone-4-landscape {
+    width: auto;
+    height: 40vh;
+    margin: 0 0 0 15px;
   }
 }

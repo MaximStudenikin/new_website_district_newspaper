@@ -2,4 +2,7 @@
   display: flex;
   flex-direction: column;
   width: 160vw;
+  @include iphone-4 {
+    width: 95%;
+  }
 }

@@ -1,6 +1,10 @@
 .heading {
   font-family: 'Roboto', Helvetica, Arial, sans-serif;
   font-weight: 700;
+  @include iphone-4 {
+    padding: 0 5%;
+  }
+  
 
   @import './_color_white.scss';
   @import './_line-bottom.scss';

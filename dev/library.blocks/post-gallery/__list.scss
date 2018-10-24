@@ -5,9 +5,10 @@
   width: 100%;
   padding: 0 1.3vw;
   overflow: hidden;
-  
+
   &_banners {
     justify-content: space-between;
+
     .post-gallery__item {
       width: 32%;
 
@@ -19,19 +20,24 @@
       @include small {
         width: 30vw;
       }
+
+      @include iphone-4 {
+        width: 100%;
+        margin: rem(15px) 0 0;
+      }
     }
-    
   }
 
-  @include iphone-4{
-   flex-flow: nowrap;
-   flex-direction: column;
-   padding: 0;
-   .post-gallery__list{
-     &:nth-child(n+3){
-       display: none;
-     }
-   }
+  @include iphone-4 {
+    flex-flow: nowrap;
+    flex-direction: column;
+    padding: 0;
+
+    .post-gallery__list {
+      &:nth-child(n+3) {
+        display: none;
+      }
+    }
   }
 
   @import './__list_banners';

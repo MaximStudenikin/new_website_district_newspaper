@@ -12,4 +12,10 @@
   @include iphone-4{
     display: none;
   }
+  @include iphone-4-landscape {
+    width: 90vw;
+    height: 39vh;
+    display: block;
+  }
+  
 }

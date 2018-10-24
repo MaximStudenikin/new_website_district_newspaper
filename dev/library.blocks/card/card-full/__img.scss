@@ -1,9 +1,4 @@
 &__img {
-  width: 100vw;
-  height: 75vh;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
   &::after {
     z-index: 1;
     content: "";
@@ -14,10 +9,5 @@
     left: 0;
     opacity: .3;
     background: $black-dark-gradient;
-  }
-  @include iphone-4 {
-    background-position: center;
-    background-attachment: inherit;
-    height: 30vh;
   }
 }

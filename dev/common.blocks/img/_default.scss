@@ -11,11 +11,18 @@
     height: 35vh;
   }
 
-  @include small{
+  @include small {
     width: 30vw;
     height: 30vh;
   }
-  @include iphone-4{
+
+  @include iphone-4 {
     width: 100%;
   }
+
+  @include iphone-4-landscape {
+    height: 75vh;
+  }
+
+
 }

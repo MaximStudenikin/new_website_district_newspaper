@@ -50,7 +50,9 @@
     @include iphone-4{
       font-size: rem(18px);
      }
-    
+     @include iphone-4-landscape {
+      padding: 0 5%;
+    }
   }
   &-img__copyright{
     position: absolute;

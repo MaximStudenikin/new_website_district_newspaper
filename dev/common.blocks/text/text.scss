@@ -3,6 +3,9 @@
   font-size: rem(18px);
   font-weight: 400;
   font-style: normal;
+  @include iphone-4 {
+    padding: 0 4%;
+  }
 
   @import './_size_small.scss';
   @import './_color_red.scss';

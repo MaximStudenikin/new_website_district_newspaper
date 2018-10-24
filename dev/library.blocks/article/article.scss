@@ -6,31 +6,42 @@
   align-items: center;
   width: 100%;
   padding: 0 25% 5%;
-  @include iphone-4{
-    padding: 0 5% 5%;
+
+  @include iphone-4 {
+    padding: 0;
   }
-  
+
   &__header {
     display: flex;
     flex-direction: column;
     width: 60%;
   }
-  &__panel,&__panel-file {
+
+  &__panel,
+  &__panel-file {
     display: flex;
     align-content: center;
     width: 100%;
     @extend %_cut_val-30;
   }
-  &__panel-file{
+
+  &__panel-file {
     flex-wrap: wrap;
     justify-content: flex-start;
   }
-  &__panel{
+
+  &__panel {
     justify-content: space-between;
+    @include iphone-4 {
+      justify-content: center;
+      padding: 0 5%;
+    }
   }
+
   &__heading {
     @extend %_cut_val-30;
   }
+
   p {
     font-family: 'Roboto', Helvetica, Arial, sans-serif;
     font-size: rem(18px);
@@ -38,15 +49,21 @@
     font-style: normal;
     padding: 0 15%;
     @extend %_cut_val-24;
-    @include iphone-4{
-      padding: 0;
+
+    @include iphone-4 {
+      padding: 0 5%;
       font-size: rem(16px);
     }
+    @include iphone-4-landscape {
+      padding: 0 5%;
+    }
   }
+
   strong {
     font-size: rem(20px);
     width: 100%;
     background: $white;
+
     span {
       float: left;
       margin-right: 5px;
@@ -54,10 +71,26 @@
       text-transform: uppercase;
       line-height: 55px;
       color: $red-origin;
+
+      @include iphone-4 {
+        float: none;
+        font-size: rem(18px);
+        text-transform: uppercase;
+        line-height: 0;
+        margin: 0;
+      }
     }
-    @include iphone-4{
+
+    @include iphone-4 {
+      padding: 0 5%;
       font-size: rem(18px);
     }
+
+    @include iphone-4-landscape {
+      padding: 0 5%;
+    }
+    
+
     @extend %_cut_val-24;
   }
 }

@@ -1,3 +1,11 @@
 &_full{
   width: 100vw;
+  height: 75vh;
+  @include iphone-4 {
+    height: 80vh;
+  }
+  @include iphone-4 {
+    background-position: center;
+    background-attachment: inherit;
+  }
 }

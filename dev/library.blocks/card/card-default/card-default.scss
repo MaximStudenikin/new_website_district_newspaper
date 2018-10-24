@@ -2,7 +2,16 @@
   position: relative;
   width: 100%;
   overflow: hidden;
+  @include iphone-4{
+    height: 90vh;
+  }
+
+  @include iphone-4-landscape {
+    overflow: visible;
+    height: auto;
+  }
  
+  
   @import './__text-block';
   @import './__heading';
   @import './__data';
