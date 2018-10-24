@@ -6,4 +6,7 @@
   @include iphone-4{
     height: 55vh;
   }
+  @include iphone-4-landscape {
+    height: 100%;
+  }
 }

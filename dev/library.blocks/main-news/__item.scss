@@ -11,9 +11,11 @@
   @include medium {
     width: 30%;
   }
+
   @include small {
     width: 31%;
   }
+  
   @include iphone-4{
     width: 100%;
     margin: 5% 0 0;
