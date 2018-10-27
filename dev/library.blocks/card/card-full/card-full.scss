@@ -4,10 +4,18 @@
   width: 100%;
   overflow: hidden;
   background: $black-shade;
-  @include iphone-4{
-   flex-direction: column;
+
+  @include iphone-4 {
+    flex-direction: column;
   }
-  
+
+  @include iphone-5-landscape{
+    flex-direction: column;
+  }
+  @include iphone-6-7-8{
+    flex-direction: column;
+  }
+
   @import './__img';
   @import './__card-data';
   @import './_post-data';

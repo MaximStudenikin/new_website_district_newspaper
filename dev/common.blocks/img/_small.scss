@@ -3,4 +3,14 @@
   @include iphone-4 {
     width: 100%;
   }
+  @include iphone-5-landscape {
+    overflow: hidden;
+    width: 100%;
+    height: 75vh;
+  }
+  @include iphone-6-7-8 {
+    overflow: hidden;
+    width: 100%;
+    height: 75vh;
+  }
 }

@@ -3,4 +3,10 @@
   @include iphone-4{
     font-size: rem(30px) / 1.7;
   }
+  @include iphone-5{
+    font-size: rem(30px) / 1.7;
+  }
+  @include iphone-6-7-8{
+    font-size: rem(30px) / 1.7;
+  }
 }

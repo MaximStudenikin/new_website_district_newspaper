@@ -3,10 +3,21 @@
   flex-direction: column;
   justify-content: space-evenly;
   height: 220px;
+  
   @include iphone-4{
     height: 55vh;
   }
   @include iphone-4-landscape {
     height: 100%;
   }
+  @include iphone-5{
+    height: 45vh;
+  }
+  @include iphone-5-landscape{
+    height: 45vh;
+  }
+  @include iphone-6-7-8{
+    height: 45vh;
+  }
+  
 }

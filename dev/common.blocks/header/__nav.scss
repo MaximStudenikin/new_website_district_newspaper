@@ -5,4 +5,10 @@
   @include iphone-4 {
     display: none;
   }
+  @include iphone-5 {
+    display: none;
+  }
+  @include iphone-6-7-8 {
+    display: none;
+  }
 }

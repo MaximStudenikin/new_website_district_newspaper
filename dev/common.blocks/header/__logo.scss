@@ -7,4 +7,12 @@
 		display: block;
 		width: 40%;
   }
+	@include iphone-5 {
+		display: block;
+		width: 40%;
+  }
+	@include iphone-6-7-8 {
+		display: block;
+		width: 40%;
+  }
 }

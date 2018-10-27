@@ -1,9 +1,19 @@
-&_post{
+&_post {
   position: relative;
-  display: flex;
-  align-items: center;
   width: 100%;
   overflow: hidden;
+  background-size: cover;
+  background-position: center;
   @extend %limiter;
   @extend %_cut_val-24;
+
+  
+  @include iphone-5 {
+    height: 75vmin;
+  }
+  
+  @include iphone-6-7-8 {
+    height: 75vmin;
+  }
+
 }

@@ -6,71 +6,93 @@
   width: 75vw;
   height: 5vh;
 
-  @include iphone-4{
+  @include iphone-4 {
     justify-content: space-around;
     flex-direction: column;
     width: 100%;
     height: 2%;
   }
+
   &__first-column {
     position: absolute;
     display: flex;
     align-items: center;
     left: 0;
     height: 6vh;
-    @include iphone-4{
+
+    @include iphone-4 {
       position: relative;
       height: auto;
       left: 0;
     }
   }
+
   &__center-column {
     position: absolute;
     display: flex;
     align-items: center;
     left: 35%;
     height: 6vh;
-    @include iphone-4{
+
+    @include iphone-4 {
       position: relative;
       height: auto;
       left: 0;
     }
   }
+
   &__end-column {
     position: absolute;
     display: flex;
     align-items: center;
     left: 70%;
     height: 6vh;
-    @include iphone-4{
+
+    @include iphone-4 {
       position: relative;
       height: auto;
       left: 0;
     }
   }
+
   &__end-column-items-end {
     position: absolute;
     display: flex;
     align-items: center;
     right: 0;
     height: 6vh;
-    @include iphone-4{
+
+    @include iphone-4 {
       position: relative;
       height: auto;
       left: 0;
     }
   }
-  &__header-page{
+
+  &__header-page {
     margin: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
+
+  @include iphone-4 {
+    height: 15vh;
+  }
+
+  @include iphone-4-landscape {
+    height: 20vh;
+  }
+
+  @include iphone-5 {
+    width: 100vw;
+    height: 20vh;
+  }
 }
 
-.section-header_page-header{
-    background: $black-pastel;
-    width: 100%;
-    max-width: 100%;
-    height: 15vh;
+.section-header_page-header {
+  background: $black-pastel;
+  width: 100%;
+  max-width: 100%;
+  height: 15vh;
 }

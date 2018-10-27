@@ -18,4 +18,9 @@
     height: 40vh;
     margin: 0 0 0 15px;
   }
+  @include iphone-6-7-8 {
+    width: auto;
+    height: 20vh;
+    margin: 0 0 0 15px;
+  }
 }

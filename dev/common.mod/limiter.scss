@@ -6,5 +6,7 @@
   @include iphone-4{
     max-width: 100%;
   }
- 
+  @include iphone-5{
+    max-width: 100%;
+  }
 }

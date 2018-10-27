@@ -7,39 +7,59 @@
   background: $red-shade;
   @extend %_cut_val-24;
   overflow: hidden;
-  @include iphone-4{
+
+  @include iphone-4 {
     width: auto;
-   }
+  }
+
+  @include iphone-5 {
+    width: auto;
+  }
+
   &__img {
     position: relative;
     width: 100%;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    &:hover{
-      .quoet-img__copyright{
-      opacity: 1;
+
+    &:hover {
+      .quoet-img__copyright {
+        opacity: 1;
       }
     }
-    @include iphone-4{
-     display: none;
+
+    @include iphone-4 {
+      display: none;
+    }
+
+    @include iphone-5 {
+      display: none;
     }
   }
+
   &__text-block {
     display: flex;
     flex-direction: column;
     padding: 5%;
     width: 100vw;
+
     &::before {
       content: '\201C';
       font-family: sans-serif;
       font-size: rem(72px);
       line-height: rem(22px);
-      @include iphone-4{
+
+      @include iphone-4 {
         content: none;
-       }
+      }
+
+      @include iphone-5 {
+        content: none;
+      }
     }
   }
+
   &__text {
     color: $white;
     font-style: italic;
@@ -47,14 +67,22 @@
     padding: 0;
     margin: 0;
     background: none;
-    @include iphone-4{
+
+    @include iphone-4 {
       font-size: rem(18px);
-     }
-     @include iphone-4-landscape {
+    }
+
+    @include iphone-4-landscape {
+      padding: 0 5%;
+    }
+
+    @include iphone-5 {
+      font-size: rem(18px);
       padding: 0 5%;
     }
   }
-  &-img__copyright{
+
+  &-img__copyright {
     position: absolute;
     margin: 0;
     bottom: 1%;
@@ -64,13 +92,19 @@
     opacity: 0;
     background: $black-origin;
   }
+
   &__autor {
     &::before {
       content: '\2014';
       padding: 0 rem(15px) 0 0;
     }
-    @include iphone-4{
+
+    @include iphone-4 {
       height: 30vh;
-     }
+    }
+
+    @include iphone-5 {
+      height: 30vh;
+    }
   }
 }

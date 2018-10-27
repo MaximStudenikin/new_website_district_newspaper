@@ -25,5 +25,19 @@
     height: 15%;
     padding: 0;
   }
+  @include iphone-5 {
+    justify-content: flex-start;
+    align-items: center;
+    width: 100vw;
+    height: 20vh;
+    padding: 0;
+  }
+  @include iphone-6-7-8 {
+    justify-content: flex-start;
+    align-items: center;
+    width: 100vw;
+    height: 20vh;
+    padding: 0;
+  }
 
 }
