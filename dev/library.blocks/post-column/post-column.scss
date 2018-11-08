@@ -26,9 +26,12 @@
     }
   }
 
+  @include iphone-6-7-8-landscape {
+    width: 75vw;
+  }
+
   @import './__item';
   @import './__link';
   @import './__list';
-
   @import './_promo-list';
 }

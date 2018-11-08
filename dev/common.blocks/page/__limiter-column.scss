@@ -26,4 +26,9 @@
     flex-direction: column;
   }
 
+  @include iphone-10-landscape {
+    max-width: 100%;
+    width: 95%;
+  }
+
 }

@@ -9,4 +9,7 @@
   @include iphone-6-7-8{
     font-size: rem(16px);
   }
+  @include iphone-10 {
+    font-size: rem(16px);
+  }
 }

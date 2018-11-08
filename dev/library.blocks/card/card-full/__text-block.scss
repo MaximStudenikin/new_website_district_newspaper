@@ -7,25 +7,44 @@
   position: absolute;
   width: 60vw;
   margin: 0 0 0 2vw;
-  @include iphone-4{
+
+  @include iphone-4 {
     width: 100%;
     position: relative;
     bottom: 0;
     margin: 0.25rem 0 0 0;
     height: 220px;
   }
-  @include iphone-5-landscape{
+
+  @include iphone-5-landscape {
     width: 100%;
     position: relative;
     bottom: 0;
     margin: 0.25rem 0 0 0;
     height: 220px;
   }
-  @include iphone-6-7-8{
+
+  @include iphone-6-7-8 {
     width: 100%;
     position: relative;
     bottom: 0;
     margin: 0.25rem 0 0 0;
     height: 220px;
+  }
+
+  @include iphone-6-7-8-plus {
+    height: 30vh;
+  }
+  
+  @include iphone-6-7-8-plus-landscape {
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    margin: 0.25rem 0 0 0;
+    height: 30vh;
+  }
+
+  @include iphone-10-landscape {
+    height: 50vh;
   }
 }

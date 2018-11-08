@@ -1,16 +1,29 @@
-&_small{
+&_small {
   width: 20vw;
+
   @include iphone-4 {
     width: 100%;
   }
+
   @include iphone-5-landscape {
     overflow: hidden;
     width: 100%;
     height: 75vh;
   }
+
   @include iphone-6-7-8 {
     overflow: hidden;
     width: 100%;
+    height: 35vh;
+  }
+
+  @include iphone-6-7-8-landscape {
     height: 75vh;
   }
+
+  @include iphone-10 {
+    overflow: hidden;
+    width: 100%;
+  }
+
 }

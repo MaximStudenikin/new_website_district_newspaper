@@ -18,15 +18,28 @@
   }
 
   @include iphone-4 {
-    margin: 20px 0 0;
+    margin: rem(20px) 0 0;
     width: 100%;
     overflow: inherit;
   }
-  
+
   @include iphone-5 {
-    margin: 20px 0 0;
+    margin: rem(20px) 0 0;
     width: 100%;
     overflow: inherit;
   }
+
+  @include iphone-6-7-8-landscape {
+    width: 75vw;
+    margin: rem(20px) 0 0;
+
+    &:last-child {
+      margin: rem(20px) 0 0;
+    }
+  }
+  @include iphone-10-landscape {
+    width: 30vw;
+  }
   
+
 }

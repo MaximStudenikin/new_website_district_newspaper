@@ -20,7 +20,16 @@
   }
   @include iphone-6-7-8 {
     width: auto;
-    height: 20vh;
-    margin: 0 0 0 15px;
+    height: 16vh;
+  }
+  @include iphone-6-7-8-landscape {
+    width: auto;
+    height: 30vh;
+    margin: 0;
+  }
+  @include iphone-10-landscape {
+    width: auto;
+    margin: 15px 0 0 0;
+    height: 40vh;
   }
 }

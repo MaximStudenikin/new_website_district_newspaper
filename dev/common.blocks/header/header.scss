@@ -25,6 +25,7 @@
     height: 15%;
     padding: 0;
   }
+
   @include iphone-5 {
     justify-content: flex-start;
     align-items: center;
@@ -32,11 +33,28 @@
     height: 20vh;
     padding: 0;
   }
+
   @include iphone-6-7-8 {
     justify-content: flex-start;
     align-items: center;
     width: 100vw;
-    height: 20vh;
+    height: 12vh;
+    padding: 0;
+  }
+
+  @include iphone-6-7-8-landscape {
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 16vh;
+    padding: 0;
+  }
+
+  @include iphone-6-7-8-plus-landscape {
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 16vh;
     padding: 0;
   }
 

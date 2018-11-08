@@ -16,6 +16,10 @@
   @include iphone-4 {
     bottom: -25%;
   }
+
+  @include iphone-6-7-8-landscape {
+    bottom: -25%;
+  }
   
   @import '__row.scss';
   @import '__group.scss';

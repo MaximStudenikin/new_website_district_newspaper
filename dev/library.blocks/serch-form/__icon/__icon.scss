@@ -6,17 +6,22 @@
   cursor: pointer;
   transition: 0.2s ease-in-out;
   transform: translate(-100%, -50%);
-  
+
   @include iphone-4 {
     width: 50px;
     height: 50px;
     display: block;
     transform: translate(0%, 0%);
   }
+
   @include iphone-5 {
     width: 50px;
     height: 50px;
     display: block;
+    transform: translate(0%, 0%);
+  }
+
+  @include iphone-6-7-8-landscape {
     transform: translate(0%, 0%);
   }
 

@@ -4,15 +4,35 @@
   width: 100%;
   padding: 0 1.3vw;
   @extend %_cut_val-30;
-  
-  @include iphone-4{
+
+  @include iphone-4 {
     flex-direction: column;
     padding: 0;
     margin: 0;
   }
-  @include iphone-5-landscape{
+
+  @include iphone-5-landscape {
     flex-direction: column;
     padding: 0;
     margin: 0;
+  }
+
+  @include iphone-6-7-8-landscape {
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+  }
+
+  @include iphone-6-7-8-plus {
+    margin: rem(35px) 0 0 0;
+  }
+
+  @include iphone-6-7-8-plus-landscape {
+    margin: rem(35px) 0 0 0;
+  }
+
+  @include iphone-10-landscape {
+    width: 100%;
+    height: 100vh;
   }
 }

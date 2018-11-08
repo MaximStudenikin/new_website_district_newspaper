@@ -15,6 +15,9 @@
   @include iphone-6-7-8{
     flex-direction: column;
   }
+  @include iphone-6-7-8-plus-landscape {
+    flex-direction: column;
+  }
 
   @import './__img';
   @import './__card-data';

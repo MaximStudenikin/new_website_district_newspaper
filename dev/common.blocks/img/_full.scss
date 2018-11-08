@@ -17,4 +17,19 @@
     background-attachment: inherit;
     height: 30vh;
   }
+  @include iphone-6-7-8 {
+    background-position: center;
+    background-attachment: inherit;
+    height: 60vh;
+  }
+  @include iphone-6-7-8-plus {
+    background-position: center;
+    background-attachment: inherit;
+    height: 40vh;
+  }
+  @include iphone-10-landscape {
+    background-position: center;
+    background-attachment: inherit;
+    height: 80vh;
+  }
 }

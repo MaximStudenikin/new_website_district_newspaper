@@ -6,6 +6,10 @@
   width: 100%;
   padding: 0 0 25px 0;
 
+  @include iphone-6-7-8-landscape {
+    padding: 0;
+  }
+
   @import './__list';
   @import './__item';
   @import './_add-post';

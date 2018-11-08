@@ -6,6 +6,10 @@
   padding: 0 0 25px 0;
   overflow: hidden;
 
+  @include iphone-10-landscape {
+    height: 100vmax;
+  }
+
   @import './__list';
   @import './__item';
   @import './_bg_black-shade';

@@ -12,4 +12,10 @@
   @include iphone-6-7-8 {
     flex-direction: column;
   }
+  @include iphone-6-7-8 {
+    flex-direction: column;
+  }
+  @include iphone-6-7-8-landscape {
+    flex-direction: column;
+  }
 }

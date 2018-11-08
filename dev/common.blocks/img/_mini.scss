@@ -25,5 +25,11 @@
   @include iphone-6-7-8 {
     display: none;
   }
+
+  @include iphone-10 {
+    width: 50vw;
+    height: 40vh;
+    display: block;
+  }
   
 }

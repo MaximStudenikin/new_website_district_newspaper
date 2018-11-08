@@ -15,14 +15,30 @@
   @include small {
     width: 31%;
   }
-  
-  @include iphone-4{
+
+  @include iphone-4 {
     width: 100%;
     margin: rem(15px) 0 0;
   }
-  @include iphone-5{
+
+  @include iphone-5 {
     width: 100%;
     margin: rem(15px) 0 0;
+    overflow: inherit;
+  }
+
+  @include iphone-6-7-8-landscape {
+    width: 100%;
+    margin: rem(15px) 0 0;
+    overflow: inherit;
+  }
+  @include iphone-6-7-8-plus-landscape {
+    width: 100%;
+    margin: rem(15px) 0 0;
+    overflow: inherit;
+  }
+  @include iphone-10-landscape {
+    width: auto;
     overflow: inherit;
   }
 }

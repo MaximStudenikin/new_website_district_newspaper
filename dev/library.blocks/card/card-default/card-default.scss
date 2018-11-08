@@ -1,9 +1,9 @@
-.card-default{
+.card-default {
   position: relative;
   width: 100%;
   overflow: hidden;
 
-  @include iphone-4{
+  @include iphone-4 {
     height: 60vmax;
   }
 
@@ -11,19 +11,38 @@
     overflow: visible;
     height: 100%;
   }
-  @include iphone-5{
+
+  @include iphone-5 {
     height: 74vmax;
     overflow: initial;
   }
-  @include iphone-5-landscape{
+
+  @include iphone-5-landscape {
     height: 74vmax;
     overflow: initial;
   }
-  @include iphone-6-7-8{
+
+  @include iphone-6-7-8 {
     height: 74vh;
     overflow: initial;
   }
- 
+
+  @include iphone-6-7-8-landscape {
+    height: auto;
+  }
+
+  @include iphone-6-7-8-plus {
+    height: 55vh;
+    overflow: initial;
+  }
+  @include iphone-10-landscape {
+    width: 100%;
+    height: auto;
+    overflow: visible;
+  }
+  
+  
+
 
   @import './__text-block';
   @import './__heading';

@@ -62,5 +62,19 @@
       margin: 0;
     }
   }
+  @include iphone-6-7-8-plus {
+    height: 58vh;
+    overflow: initial;
+  }
+  @include iphone-10-landscape {
+    margin: 0 15px 0 0;
+    width: 45vw;
+    &:nth-child(n+7) {
+      display: none;
+    }
 
+    &:nth-child(3n) {
+      margin: 0 15px 0 0;
+    }
+  }
 }

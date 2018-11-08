@@ -57,6 +57,10 @@
       @include iphone-5 {
         content: none;
       }
+
+      @include iphone-6-7-8-landscape {
+        content: none;
+      }
     }
   }
 
@@ -77,6 +81,11 @@
     }
 
     @include iphone-5 {
+      font-size: rem(18px);
+      padding: 0 5%;
+    }
+
+    @include iphone-6-7-8-landscape {
       font-size: rem(18px);
       padding: 0 5%;
     }
@@ -105,6 +114,10 @@
 
     @include iphone-5 {
       height: 30vh;
+    }
+
+    @include iphone-6-7-8 {
+      height: auto;
     }
   }
 }

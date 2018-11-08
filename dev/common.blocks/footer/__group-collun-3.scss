@@ -11,4 +11,8 @@
   @include iphone-6-7-8 {
     width: 100%;
   }
+  @include iphone-6-7-8-landscape {
+    flex-direction: column;
+    width: 95%;
+  }
 }

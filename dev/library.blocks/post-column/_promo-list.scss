@@ -1,18 +1,32 @@
-&_promo-list{
+&_promo-list {
 
   .post-column__item {
     display: flex;
     flex-direction: column;
     margin: rem(24px) 0 0 0;
     width: 50vw;
-    &:first-child{
+
+    &:first-child {
       margin: 0;
     }
+
     @include iphone-4 {
       width: 100%;
     }
+
     @include iphone-5 {
       width: 100%;
     }
+
+    @include iphone-6-7-8-landscape {
+      margin: rem(24px) 0 0 0;
+      width: 100%;
+    }
   }
+
+  @include iphone-6-7-8-landscape {
+    margin: 0;
+  }
+  
+ 
 }

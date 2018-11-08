@@ -1,6 +1,10 @@
 .card-mini{
   display: flex;
   width: 100%;
+  
+  @include iphone-10-landscape {
+    flex-direction: column;
+  }
 
   @import './__text-block';
   @import './__text';

@@ -15,6 +15,10 @@
     padding: 0;
   }
 
+  @include iphone-6-7-8-landscape {
+    padding: 0 5%;
+  }
+
   &__header {
     display: flex;
     flex-direction: column;
@@ -32,6 +36,10 @@
   &__panel-file {
     flex-wrap: wrap;
     justify-content: flex-start;
+
+    @include iphone-4 {
+      justify-content: center;
+    }
   }
 
   &__panel {
@@ -43,6 +51,12 @@
     }
 
     @include iphone-5-landscape {
+      justify-content: center;
+      padding: 0 5%;
+    }
+
+    @include iphone-6-7-8-landscape {
+      flex-direction: column;
       justify-content: center;
       padding: 0 5%;
     }
@@ -70,6 +84,11 @@
     }
 
     @include iphone-5-landscape {
+      padding: 0 5%;
+      font-size: rem(16px);
+    }
+
+    @include iphone-6-7-8-landscape {
       padding: 0 5%;
       font-size: rem(16px);
     }
@@ -120,6 +139,10 @@
     }
 
     @include iphone-5-landscape {
+      padding: 0 5%;
+    }
+
+    @include iphone-6-7-8-landscape {
       padding: 0 5%;
     }
 

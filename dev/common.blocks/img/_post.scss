@@ -15,5 +15,9 @@
   @include iphone-6-7-8 {
     height: 75vmin;
   }
+  
+  @include iphone-10 {
+    height: 75vmin;
+  }
 
 }
