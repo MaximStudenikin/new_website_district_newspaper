@@ -2,7 +2,7 @@
   display: flex;
   width: 100%;
   
-  @include iphone-10-landscape {
+  @include iphone-10 {
     flex-direction: column;
   }
 

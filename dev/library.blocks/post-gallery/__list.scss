@@ -33,6 +33,10 @@
         width: 100%;
         margin: rem(15px) 0 0;
       }
+      @include ipad-1-2-mini-air {
+        width: 30vw;
+        margin: rem(15px) 0 0;
+      }
     }
   }
 
@@ -59,7 +63,6 @@
       }
     }
   }
-  
 
   @import './__list_banners';
 }

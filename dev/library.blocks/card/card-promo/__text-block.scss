@@ -31,4 +31,7 @@
   @include iphone-6-7-8-plus {
     height: 25vh;
   }
+  @include ipad-1-2-mini-air {
+    width: 54vw;
+  }
 }

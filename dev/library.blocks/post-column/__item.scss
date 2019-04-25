@@ -40,6 +40,8 @@
   @include iphone-10-landscape {
     width: 30vw;
   }
-  
+  @include ipad-1-2-mini-air {
+    width: 30vw;
+  }
 
 }

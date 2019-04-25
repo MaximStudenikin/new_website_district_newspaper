@@ -9,6 +9,10 @@
   @include iphone-10-landscape {
     height: 100vmax;
   }
+  @include ipad-1-2-mini-air {
+    height: 125vmax;
+  }
+  
 
   @import './__list';
   @import './__item';

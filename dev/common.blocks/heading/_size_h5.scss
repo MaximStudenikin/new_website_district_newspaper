@@ -12,4 +12,7 @@
   @include iphone-10 {
     font-size: rem(16px);
   }
+  @include ipad-1-2-mini-air {
+    font-size: rem(18px);
+  }
 }

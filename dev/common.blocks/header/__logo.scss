@@ -22,4 +22,7 @@
 		display: block;
 		width: 40%;
 	}
+	@include ipad-1-2-mini-air {
+    width: 40%;
+  }
 }

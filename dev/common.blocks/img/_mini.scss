@@ -26,8 +26,12 @@
     display: none;
   }
 
+  @include ipad-1-2-mini-air {
+    display: none;
+  }
+
   @include iphone-10 {
-    width: 50vw;
+    width: 100vw;
     height: 40vh;
     display: block;
   }

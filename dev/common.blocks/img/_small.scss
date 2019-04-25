@@ -26,4 +26,7 @@
     width: 100%;
   }
 
+  @include ipad-1-2-mini-air {
+    width: 100vw;
+  }
 }

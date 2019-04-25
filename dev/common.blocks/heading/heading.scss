@@ -10,6 +10,9 @@
   @include iphone-6-7-8{
     padding: 0 5%;
   }
+  @include ipad-1-2-mini-air {
+    padding: 0;
+  }
 
   @import './_color_white.scss';
   @import './_line-bottom.scss';

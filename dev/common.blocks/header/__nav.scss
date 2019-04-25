@@ -20,4 +20,7 @@
   @include iphone-6-7-8-plus-landscape {
     display: none;
   }
+  @include ipad-1-2-mini-air {
+    display: none;
+  }
 }

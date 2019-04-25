@@ -30,6 +30,10 @@
     width: 75vw;
   }
 
+  @include ipad-1-2-mini-air {
+    margin: 0 rem(14px) 0 0;
+  }
+
   @import './__item';
   @import './__link';
   @import './__list';

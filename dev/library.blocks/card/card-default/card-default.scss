@@ -35,13 +35,19 @@
     height: 55vh;
     overflow: initial;
   }
+
   @include iphone-10-landscape {
     width: 100%;
     height: auto;
     overflow: visible;
   }
-  
-  
+
+  @include iphone-10 {
+    height: 65vh;
+  }
+ 
+
+
 
 
   @import './__text-block';

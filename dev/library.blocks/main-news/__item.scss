@@ -41,4 +41,7 @@
     width: auto;
     overflow: inherit;
   }
+  @include ipad-1-2-mini-air {
+    width: 30%;
+  }
 }

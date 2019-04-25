@@ -38,8 +38,11 @@
   }
   @include iphone-10 {
     width: 100%;
-    height: 60vh;
+    height: 40vh;
   }
-
+  @include ipad-1-2-mini-air {
+    width: 30vw;
+    height: 18vh;
+  }
 
 }

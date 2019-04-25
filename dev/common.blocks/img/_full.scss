@@ -32,4 +32,9 @@
     background-attachment: inherit;
     height: 80vh;
   }
+  @include iphone-10 {
+    background-position: center;
+    background-attachment: inherit;
+    height: 40vh;
+  }
 }
